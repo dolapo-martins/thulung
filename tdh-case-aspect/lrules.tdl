@@ -1,0 +1,4 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+noun-pc5-synth-adp-lex := noun-pc5-synth-adp-lex-rule.
+
+noun-pc11-synth-adp-lex := noun-pc11-synth-adp-lex-rule.
