@@ -26,4 +26,5 @@
 ((:path . "corpus0-926") (:content . "[0-926] IGT provided by the linguist, subset of the entire dataset."))
 ((:path . "corpus927-1854") (:content . "[927-1854] IGT provided by the linguist, subset of the entire dataset."))
 ((:path . "corpus0-1854") (:content . "[all] IGT provided by the linguist, subset of the entire dataset."))
+((:path . "lab2") (:content . "[0-926] Test suite for lab 2, subset of the entire dataset."))
 )
