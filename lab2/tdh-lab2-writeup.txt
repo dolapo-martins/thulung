@@ -23,9 +23,13 @@ Average # of parse per sentence: 3.89
 Sources of ambiguity: Multiple lexical entries have the same surface form. Multiple rules can be 
 applied to the same lexical entry. We also found that there is structural ambiguity, where one
 constituent can be attached to either NP or VP freely. Additionally, our grammar also has a lot of ambiguity
-due to coordination!
+due to coordination! There also appear to be multiple affixes that are both noun and verb affixes. 
+For example, /-laŋka/ is an ablative case marker but the provided choices file has it as both a noun and verb affix.
+The provided language text  has it as a CASE marker so removed the verb instance form our choices file. There is also the affix /-ka/ which can be either the genitive case marker or instrumental case marker. Lastly, almost every noun rule applied to a noun19-noun-lex leading to a lot of recursion based trees. That marker is a mood marker for hear-say but removed the applications until we can find a better analysis
+
+
 N.B. Another source of error is -thal. In our choices file, there is a noun and verb each with the same form -thal. 
-In our items file and literature, the noun form is /ʈhal/ not /thal/. Our grammar was edited to account for this. 
+In our items file and literature, the noun form is /ʈhal/ not /thal/. Our grammar was edited to account for this 
 
 10 items that parsed:
 ------------------------------------------------
@@ -92,14 +96,66 @@ search for', coordination, and 'come down'.
 Modified Grammar:
 ===============================================
 Total sentences parsed: 926
-Average # of parse per sentence: 38
-# of parses of most ambiguous sentence: 648
-Sources of ambiguity: The ambiguity from the original grammar still exists. Our improved grammar
+Average # of parse per sentence: 78
+# of parses of most ambiguous sentence: 1200
+Sources of ambiguity: We've resolved many sources of ambiguity wrt. to verbs, however, there is a lot of ambiguity with nouns.
+The ambiguity from the original grammar still exists. Our improved grammar
 added more ambiguity, since adding the case feature in nouns resulted in more rules licensing 
-the same surface form.
+the same surface form. This is especially true of certain affixes that can apply to various types of stems and can interact with multiple rules.
+Additionally, the coordination ambiguity still holds.
 
-The sentences have the same MRS for the modified grammar. So the semantic plausibility remains the
-same with the new grammar.
+We have more sentences now with only one parse tree!
+
+(1) bet-thal-ʦi ʔe
+make-_aux-_du _hs  
+And the two sisters took care of their brother K and looked after him.
+>>>The semantics don't make sense as there's a lot of meaningful content missing. There is only one stem 'make' but the sentence has a lot of additional meaning that is perhaps inferred from the context.
+
+(2)be-t-thal-ʦi ʔe
+do-_pst-_aux-_du _hs
+They gave him food and housed him.
+>>>Like sentence (1) there seems to be a lot situational/pragmatic content not realized in the actual utterance.
+
+(3)lʌks-ɖa ʔe
+go-3_sg._pst _hs 
+After that K was alone and later he went to the river to fish.
+>>> Looking at our data, the sentences seem to be from some form of prose. This implies that Thulung requires heavily on pragmatic meaning as the semantics from sentence to sentence do not encode a lot of information. This translation does not make sense give there is only "went".
+
+(4)lʌks-ɖa ʔe
+go-3_sg._pst _hs 
+He put it in the basket and then the next day he went to kill some fish.
+>>> This utterance is identical to (3) and yet it has a different meaning!
+
+(5)luk-ɖa ʔe
+come.out-3_sg._pst _hs
+Then the stone jumped down out of the basket making a falling sound.
+>>> No, this parse does not look reasonable in the semantics. 
+
+(6)mi-ba-m-wa ʔe
+_neg-be-_copy-_irr _hs 
+But there was nothing on earth called a human.
+>>> No, this does not make sense in the semantics
+
+(7)luk-ɖa ʔe
+come.out-3_sg._pst _hs
+First of all the thorn-laden thorny plant was born and it scratched its mother s womn and she bled a lot.
+>>> This does not make sense in the semantics
+
+(8) dyms-miri ʔe
+become-3_pl._pst _hs
+the thorn wrapping around trees with its thorns the tiger goes this way and that up and down hunting the bear acting lazy and eating a lot the monkey jumping around and destroying things Mini wearing a headdress and inspecting everyone Irma staying with her mother.
+>>>This definitely does not make sense in the semantics
+
+(9)be-thal-ɖy ʔe
+do-_aux-3_sg._pst._a _hs 
+The tiger went everywhere around the earth killing deer and goats without being seen.
+>>> No, this does not make sense in the semantics
+
+(10) ɖyl-thal-ɖy ʔe
+care.for-_aux-3_sg._pst._a _hs 
+Mini went here and there up and down looking and taking care of his mother and sister.
+>>> No, this parse does not seem reasonable.
+
 #TODO
 #analyze the same ten sentences
 
