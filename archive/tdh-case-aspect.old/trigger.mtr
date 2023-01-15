@@ -1,0 +1,29 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+in-marker_phik-ʦi_gr_1 := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG1 individual & #i ] >,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "in-marker_phik-ʦi" ] ].
+
+in-marker_phik-ʦi_gr_2 := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG2 individual & #i ] >,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "in-marker_phik-ʦi" ] ].
+
+in-marker_phik-ʦi_gr_3 := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG3 individual & #i ] >,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "in-marker_phik-ʦi" ] ].
+
+bhaɖa_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG0.E.ASPECT POT ] >,
+    FLAGS.TRIGGER "bhaɖa" ].
+
+bhara_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG0.E.ASPECT POT ] >,
+    FLAGS.TRIGGER "bhara" ].
+
+bhane_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "non_existing_rel" ] >,
+    FLAGS.TRIGGER "bhane" ].
