@@ -22,7 +22,10 @@ Average # of parse per sentence: 3.89
 # of parses of most ambiguous sentence: 24
 Sources of ambiguity: Multiple lexical entries have the same surface form. Multiple rules can be 
 applied to the same lexical entry. We also found that there is structural ambiguity, where one
-constituent can be attached to either NP or VP freely.
+constituent can be attached to either NP or VP freely. Additionally, our grammar also has a lot of ambiguity
+due to coordination!
+N.B. Another source of error is -thal. In our choices file, there is a noun and verb each with the same form -thal. 
+In our items file and literature, the noun form is /ʈhal/ not /thal/. Our grammar was edited to account for this. 
 
 10 items that parsed:
 ------------------------------------------------
