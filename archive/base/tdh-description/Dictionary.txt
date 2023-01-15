@@ -1,0 +1,8403 @@
+\_sh v3.0  621  MDF 4.0
+
+\lx a
+\ps interj
+\ge yes
+\dt 01/Mar/2013
+
+\lx a
+\ps interj
+\ge Yes
+\dt 09/Jul/2015
+
+\lx a-
+\ps pref.n
+\ge 1_sg._poss
+\dt 12/Feb/2013
+
+\lx -a
+\ps suf.v
+\ge 2_sg._imp
+\a -ja
+\dt 20/Oct/2015
+
+\lx -a
+\ps v.suf
+\ge 3_sg._npst
+\dt 15/Feb/2014
+
+\lx ABA
+\ps nep
+\ge now
+\dt 29/Jan/2013
+
+\lx ɑbɑi
+\ps interj
+\ge oh
+\dt 18/Feb/2013
+
+\lx abui
+\ps nep
+\ge oh.my
+\dt 22/May/2014
+
+\lx agobare
+\ps spat.adv
+\ge here.and.there
+\dt 05/Oct/2015
+
+\lx aki-
+\ps poss.pro
+\ge 1_pi._poss
+\dt 05/Oct/2015
+
+\lx akima
+\ps poss.pro
+\ge 1_pi._poss
+\dt 18/Feb/2014
+
+\lx akom
+\ps adv
+\ge this.much
+\a akkom
+\dt 01/Mar/2014
+
+\lx akoti
+\ps adv
+\ge this.much
+\ue nep eti
+\dt 01/Mar/2014
+
+\lx akotilo
+\ps temp.adv
+\ge at.this.time
+\dt 01/Mar/2014
+
+\lx akotima
+\ps temp.adv
+\ge after.this
+\dt 01/Mar/2014
+
+\lx al(s)
+\ps vi
+\ge fall.down
+\a als
+\a al
+\dt 09/Jul/2015
+
+\lx al(s)
+\ps vt
+\ge drop
+\a al
+\a als
+\dt 13/Oct/2015
+
+\lx ama
+\ps pro
+\ge 1_sg._poss
+\dt 04/Feb/2013
+
+\lx amʌi
+\ps inter
+\ge Oh.my
+\dt 19/Feb/2014
+
+\lx amʌi
+\ps interj
+\ge Goodness!
+\a mʌi
+\dt 19/Feb/2014
+
+\lx am(s)
+\ps vt
+\ge make.sleep
+\a ams
+\a am
+\dt 09/Jul/2015
+
+\lx anep
+\ps n
+\ge today
+\dt 19/Feb/2013
+
+\lx anep
+\ps temp.adv
+\ge today
+\dt 21/May/2014
+
+\a ane
+
+\lx ANI
+\ps nep
+\ge and
+\dt 29/Jan/2013
+
+\lx ano
+\ps spatial.adv
+\ge here
+\dt 18/Feb/2014
+
+\lx are
+\ps adv
+\ge like.this
+\dt 20/Oct/2015
+
+\lx areka
+\ps adv
+\ge like.this
+\dt 24/Feb/2014
+
+\lx arepmam
+\ps adv
+\ge like.this
+\dt 22/Feb/2014
+
+\lx aresaka
+\ps adv
+\ge like.this
+\dt 18/Feb/2014
+
+\lx asinɖa
+\ps spatial.adv
+\ge here
+\a ʌsinɖa
+\u
+\a ʌsi
+\dt 26/May/2014
+
+\lx asos
+\ps nep
+\ge Asos
+\dt 18/Feb/2014
+
+\lx aʈh
+\ps nep
+\ge eight
+\dt 23/May/2014
+
+\lx atha
+\ps temp.adv
+\ge now
+\dt 24/Feb/2014
+
+\lx athal
+\ps temp.adv
+\ge nowadays
+\dt 01/Mar/2014
+
+\lx athaldika
+\ps temp.adv
+\ge nowadays
+\dt 22/Feb/2014
+
+\lx atham
+\ps temp.adv
+\ge now
+\ue used after memlo or homlo or anep to express an event occurring from a certain time: memlo atham, from then on, homlo atham, from now on
+\dt 01/Mar/2014
+
+\lx athambili
+\ps temp.adv
+\ge nowadays
+\dt 01/Mar/2014
+
+\lx athjɵ
+\ps spatial.adv
+\ge over.here
+\a athɵ
+\dt 23/May/2014
+
+\lx athʌʦe
+\ps temp.adv
+\ge this.year
+\dt 01/Mar/2014
+
+\lx atwapŋa
+\ps adv
+\ge alone
+\uv go atwapŋa buŋu, I am alone, I live alone
+\dt 01/Mar/2014
+
+\lx aʦha
+\ps interj
+\ge Hey!
+\dt 22/Feb/2014
+
+\lx aʦhaŋa
+\ps adv
+\ge really
+\dt 19/Feb/2014
+
+\lx aʦi-
+\ps n.pref
+\ge 1_du._poss
+\dt 19/Feb/2014
+
+\lx AULA
+\ps nep
+\ge finger
+\dt 12/Mar/2013
+
+\lx aula
+\ps nep
+\ge finger
+\dt 23/May/2014
+
+\lx ba
+\ps vi
+\ge be
+\a bu
+\a bʰa
+\a baʈ
+\a bap
+\u
+\a bas
+\a baj
+\u
+\a bai
+\u
+\a bha
+\dt 20/Oct/2015
+
+\lx baʣe
+\ps nep
+\ge grandfather
+\dt 21/May/2014
+
+\lx baʣi
+\ps pn
+\ge Chetri
+\dt 23/May/2014
+
+\lx bae
+\ps n
+\ge floor
+\dt 22/Feb/2014
+
+\lx BAHINI
+\ps nep
+\ge y.sister
+\dt 29/Jan/2013
+
+\lx bahini
+\ps nep
+\ge y.sister
+\dt 26/May/2014
+
+\lx baja
+\ps n
+\ge Earth
+\dt 14/Feb/2013
+
+\lx bajehop
+\ps pn
+\ge Bayehop
+\dt 23/May/2014
+
+\lx bal
+\ps vt
+\ge wind.around
+\dt 27/Feb/2014
+
+\lx -bal
+\ps suf.v
+\ge _aux
+\dt 04/Feb/2013
+
+\lx -bʰal
+\ps suf.n
+\ge near
+\dt 18/Feb/2013
+
+\lx bala
+\ps nep
+\ge bracelet
+\dt 23/May/2014
+
+\lx balam
+\ps n
+\ge wooden.mallet
+\dt 14/Oct/2015
+
+\lx baːma
+\ps quest
+\ge where
+\gn used when talking to oneself while looking for something lost, includes disc. part ma
+\dt 05/Oct/2015
+
+\lx ban
+\ps vt
+\ge wear
+\a bha
+\a ba
+\a baː
+\ue to wear ornaments, like necklaces,
+garlands, hats; strange verb: has bamu
+as inf, but seems from conjugated
+forms to be a t stem
+\dt 13/Oct/2015
+
+\lx ban
+\ps nep
+\ge arrow
+\dt 23/May/2014
+
+\lx baŋge
+\ps nep
+\ge crooked
+\dt 23/May/2014
+
+\lx bante
+\ps quest
+\ge where
+\a bhante
+\dt 08/Jul/2015
+\a bhantɤ
+\a bhantɵ
+\a ba
+
+\lx bara
+\ps n
+\ge jackfruit
+\dt 12/Oct/2015
+
+\lx -bare
+\ps n.suf
+\ge around
+\dt 01/Mar/2014
+
+\lx basakhastap
+\ps p.n
+\ge Basakhastap
+\dt 17/Feb/2014
+
+\lx basi
+\ps v
+\ge _obl
+\a bas
+\u
+\a basik
+\dt 24/Feb/2014
+
+\lx basi
+\ps temp.adv
+\ge before
+\dt 01/Oct/2015
+
+\lx bassi
+\ps temp.adv
+\ge much.before
+\gn see basi
+\dt 01/Oct/2015
+
+\lx basta
+\ps temp.adv
+\ge yesterday
+\dt 01/Mar/2014
+
+\lx bau
+\ps nep
+\ge father
+\dt 17/Feb/2014
+
+\lx be
+\ps vt
+\ge do
+\a bo
+\a by
+\a bi
+\a bep
+\dt 05/Oct/2015
+
+\lx beba
+\ps kin
+\ge grandfather._voc
+\a bebeo
+\dt 22/May/2014
+
+\lx bebe
+\ps n
+\ge grandfather._voc
+\dt 20/Oct/2015
+
+\lx bela
+\ps nep
+\ge time
+\dt 18/Feb/2014
+
+\lx bendha
+\ps n
+\ge sheep
+\dt 28/Feb/2014
+
+\lx bep
+\ps kin
+\ge grandfather
+\dt 21/May/2014
+
+\lx beppap
+\ps n
+\ge ancestor
+\dt 18/Feb/2014
+
+\lx bery
+\ps nep
+\ge wrap
+\a bere
+\dt 23/May/2014
+
+\lx besari
+\ps nep
+\ge strongly
+\dt 18/Jun/2015
+
+\lx bet
+\ps vt
+\ge make
+\a ben
+\a beʈ
+\a be
+\ue only used in very limited context: with khirim benmu (make hole in bottom of beer making pot); pusym benmu (put a cover on a pot); jepu benmu (attach rope to basket for carrying); has very applicative sense
+\a beɖ
+\a ber
+\dt 13/Oct/2015
+
+\lx -beʈ
+\ps v.suf
+\ge _caus
+\a -ben
+\u
+\a -beɖ
+\dt 22/Feb/2014
+
+\lx betho
+\ps n
+\ge machete
+\dt 28/Feb/2014
+
+\lx BHADA
+\ps nep
+\ge pot
+\dt 14/Feb/2013
+
+\lx bhaɖa
+\ps nep
+\ge pot
+\dt 30/May/2014
+
+\lx bhaɖa
+\ps nep
+\ge pot
+\dt 10/Jul/2015
+
+\lx BHAI
+\ps nep
+\ge y.brother
+\dt 12/Mar/2013
+
+\lx bhai
+\ps nep
+\ge y.brother
+\dt 19/Feb/2014
+
+\lx -bhal
+\ps v.suff
+\ge _aux
+\dt 26/May/2014
+
+\lx BHALE
+\ps nep
+\ge cock
+\dt 13/Feb/2013
+
+\lx bhale
+\ps nep
+\ge cock
+\dt 22/Feb/2014
+
+\lx BHANDA
+\ps nep
+\ge than
+\dt 19/Feb/2013
+
+\lx bhanda
+\ps nep
+\ge _compar
+\dt 18/Feb/2014
+
+\lx bhandakheri
+\ps nep
+\ge during
+\dt 23/May/2014
+
+\lx bhane
+\ps Nep
+\ge quot
+\dt 14/Feb/2014
+
+\lx BHANSA
+\ps nep
+\ge food
+\dt 04/Feb/2013
+
+\lx bhansa
+\ps nep
+\ge kitchen
+\dt 23/May/2014
+
+\lx bhar
+\ps n
+\ge hearth.rack
+\dt 18/Jun/2015
+
+\lx bhari
+\ps nep
+\ge load
+\dt 23/May/2014
+
+\lx bhendakekepʦi
+\ps n
+\ge burr.species
+\ue lit. sheep plant
+\dt 28/Feb/2014
+
+\lx bherakhʌrkʌ
+\ps p.n
+\ge Bherakharka
+\dt 17/Feb/2014
+
+\lx bhog
+\ps nep
+\ge offering
+\dt 09/Jul/2015
+
+\lx bhreʣɵlpa
+\ps adj
+\ge lazy
+\dt 21/Feb/2014
+
+\lx bhrepa
+\ps adj
+\ge lazy
+\a bʰrepa
+\dt 28/Feb/2014
+
+\lx bhroksy
+\ps n
+\ge wild.goat
+\dt 08/Jul/2015
+
+\lx bhrʌpa
+\ps adj
+\ge delicious
+\dt 28/Feb/2014
+
+\lx bhrʌs
+\ps vi
+\ge be.delicious
+\a bhrʌ
+\dt 09/Jul/2015
+
+\lx bhrwa
+\ps n
+\ge steep.hill
+\dt 13/Oct/2015
+
+\lx bhʌi
+\ps nep
+\ge y.brother
+\dt 09/Jul/2015
+
+\lx bhur
+\ps vi
+\ge get.angry
+\dt 08/Jul/2015
+
+\lx bhʌtuwa
+\ps nep
+\ge migrant.worker
+\dt 22/May/2014
+
+\lx bi
+\ps vt
+\ge beg
+\a bit
+\dt 23/May/2014
+
+\lx bia
+\ps nep
+\ge marriage
+\dt 30/May/2014
+
+\lx bidja
+\ps nep
+\ge knowledge
+\dt 23/May/2014
+
+\lx BIHA
+\ps nep
+\ge marriage
+\dt 14/Feb/2013
+
+\lx bijan
+\ps nep
+\ge morning
+\dt 20/Oct/2015
+
+\lx bik
+\ps vi
+\ge come
+\a bi
+\dt 22/Feb/2014
+
+\lx bikhʌ
+\ps nep
+\ge poison
+\dt 23/May/2014
+
+\lx bipa
+\ps adj
+\ge rough
+\dt 18/Jun/2015
+
+\lx bisi
+\ps vr
+\ge agree
+\a bisiʈ
+\ue follows infinitive form; case marking that of verb before
+
+\a bimsi
+\a bisa
+\dt 01/Oct/2015
+
+\lx bju
+\ps n
+\ge eagle
+\dt 15/May/2014
+
+\lx blakʦi
+\ps n
+\ge lightening
+\gn used with ommu, to shoot, for 'flash'
+\dt 20/Oct/2015
+
+\lx blam
+\ps n
+\ge leaf
+\dt 07/Oct/2015
+
+\lx blansi
+\ps vr
+\ge dry.self
+\a blansiʈ
+\dt 27/Feb/2014
+
+\lx blat
+\ps vt
+\ge dry
+\a blan
+\a blaʈ
+\a blar
+\a blaɖ
+\dt 13/Oct/2015
+
+\lx bloː
+\ps n
+\ge snake
+\dt 27/Oct/2015
+
+\lx bloːʣy
+\ps n
+\ge storm
+\dt 14/Oct/2015
+
+\lx bloku
+\ps n
+\ge river
+\dt 19/Feb/2014
+
+\lx bluhadda
+\ps temp.adv
+\ge three.days.after.tomorrow
+\dt 01/Mar/2014
+
+\lx blunem
+\ps temp.adv
+\ge three.days.before.yesterday
+\dt 01/Mar/2014
+
+\lx bobop
+\ps n
+\ge owl
+\dt 23/Feb/2014
+
+\lx bok
+\ps vi
+\ge open
+\a bo:
+\dt 27/Feb/2014
+
+\lx bok
+\ps vt
+\ge shove.down
+\a bo
+\a boː
+\dt 13/Oct/2015
+
+\lx bokoli
+\ps n
+\ge hearth
+\dt 21/Feb/2014
+
+\lx bom
+\ps n
+\ge gourd
+\dt 24/Feb/2014
+
+\lx bomkhel
+\ps n
+\ge big.toe
+\dt 28/Feb/2014
+
+\lx bomlwa
+\ps n
+\ge thumb
+\dt 28/Feb/2014
+
+\lx bopsesi
+\ps n
+\ge fruit
+\dt 22/Feb/2014
+
+\lx botʦɵ
+\ps n
+\ge guest
+\dt 12/Oct/2015
+
+\lx brepʦo
+\ps n
+\ge finger
+\a bhrepʦo
+\u
+\ue aspirated initial is Deusa dialect
+\dt 28/Feb/2014
+
+\lx brihʌspati
+\ps nep
+\ge Jupiter
+\dt 19/Feb/2014
+
+\lx brimsʌŋ
+\ps n
+\ge bamboo.straw
+\dt 07/Oct/2015
+
+\lx brjaksibhitta
+\ps p.n
+\ge Bryaksibhitta
+\dt 19/Feb/2014
+
+\lx broksy
+\ps n
+\ge wild.goat
+\dt 28/Feb/2014
+
+\lx brol
+\ps vt
+\ge have.tired.legs
+\gn used with verb benmu
+\dt 13/Oct/2015
+
+\lx broluŋ
+\ps n
+\ge stone.wall
+\dt 15/Oct/2015
+
+\lx brwassai
+\ps ideo
+\ge hissing.sound
+\dt 18/Jun/2015
+
+\lx bʌʣʌi
+\ps nep
+\ge grandmother
+\dt 21/May/2014
+
+\lx bui
+\ps n
+\ge head
+\dt 24/Feb/2014
+
+\lx buk
+\ps vt
+\ge pile.up
+\a bu
+\a buː
+\dt 13/Oct/2015
+
+\lx bʌk
+\ps vi
+\ge arise
+\a bʌ
+\uv used with ʦokʦo, anger, for 'to get angry'
+\dt 27/Feb/2014
+
+\lx bʌk
+\ps vi
+\ge awaken
+\a bɤk
+\a bʌ
+\a bɤ
+\dt 27/Feb/2014
+
+\lx bʌk
+\ps vt
+\ge wash.away
+\a bʌː
+\gn inf form bv:mu, can take ideophonic prefix sep
+\dt 05/Oct/2015
+
+\lx buklo
+\ps n
+\ge chick
+\dt 07/Oct/2015
+
+\lx bulyly
+\ps n
+\ge thunder
+\dt 20/Oct/2015
+
+\lx bumethan
+\ps p.n
+\ge Bumethan
+\dt 17/Feb/2014
+
+\lx bʌnduk
+\ps nep
+\ge gun
+\dt 21/May/2014
+
+\lx bʌne
+\ps vt
+\ge make
+\a bʌny
+\a bɤne
+\a bɤny
+\a bɤn
+\ue more acceptable as bane bomu, but definitely used as a nativized verb
+\dt 05/Oct/2015
+
+\lx buŋma
+\ps n
+\ge flower
+\dt 19/Feb/2014
+
+\lx bʌŋpa
+\ps n
+\ge go.between
+\dt 19/Feb/2014
+
+\lx buŋtosi
+\ps p.n
+\ge Bungtosi
+\dt 18/Feb/2014
+
+\lx bʌr
+\ps vi
+\ge increase
+\dt 19/Feb/2014
+
+\lx BURA
+\ps nep
+\ge old.person
+\dt 15/Feb/2013
+
+\lx bura
+\ps np
+\ge elderly
+\dt 08/Jul/2015
+
+\lx bʌra
+\ps adj
+\ge large
+\dt 21/May/2014
+
+\lx -bʌri
+\ps nep
+\ge throughout
+\dt 18/Feb/2014
+
+\lx burkhum
+\ps n
+\ge cave
+\dt 15/Feb/2014
+
+\lx bʌrsa
+\ps nep
+\ge year
+\dt 23/May/2014
+
+\lx bʌru
+\ps nep
+\ge or
+\dt 23/Feb/2014
+
+\lx bʌrʌhʌʦhetra
+\ps p.n
+\ge Barahachetra
+\dt 19/Feb/2014
+
+\lx bʌt
+\ps vt
+\ge tie
+\a bʌn
+\a bʌʈ
+\a bʌr
+\dt 13/Oct/2015
+
+\lx bwa
+\ps n
+\ge pig
+\a ba
+\dt 14/Feb/2013
+
+\lx bwaŋpa
+\ps n
+\ge mediator
+\gn always word in pairs, for weddings
+\dt 07/Oct/2015
+
+\lx CHAKKA
+\ps nep
+\ge surprised
+\dt 04/Feb/2013
+
+\lx chattai
+\ps nep
+\ge cutting
+\dt 14/Feb/2014
+
+\lx ʣ
+\ps
+\ge
+\dt 20/Oct/2016
+
+\lx -ɖa
+\ps suf.v
+\ge 3_sg._pst
+\a -iɖa
+\a -la
+\u
+\dt 29/Jan/2013
+
+\lx -ɖa
+\ps suf.v
+\ge _purp
+\a -ra
+\dt 18/Feb/2013
+
+\lx -ɖa
+\ps suf.v
+\ge 2_sg._imp
+\a -a
+\a -ra
+\a -ta
+\dt 20/Oct/2015
+
+\lx ɖaɖa
+\ps nep
+\ge ridge
+\dt 08/Jul/2015
+
+\lx daʣju
+\ps nep
+\ge older.brother
+\dt 23/May/2014
+
+\lx DAHINE
+\ps nep
+\ge right
+\dt 12/Feb/2013
+
+\lx dajan
+\ps nep
+\ge right
+\dt 26/May/2014
+
+\lx dala
+\ps adv
+\ge fast
+\dt 26/May/2014
+
+\lx -ɖɑla
+\ps suf.n
+\ge above
+\a -ɖɤla
+\a -ɖɔla
+\dt 29/Jan/2013
+
+\lx ʣam
+\ps n
+\ge cooked.rice
+\dt 18/Feb/2014
+
+\lx ʣamke
+\ps n
+\ge meal
+\ue lit. rice and vegetables
+\dt 23/Feb/2014
+
+\lx dams
+\ps vi
+\ge disappear
+\dt 09/Jul/2015
+
+\lx dams
+\ps vt
+\ge lose
+\a dams
+\a dam
+\dt 13/Oct/2015
+
+\lx ʣana
+\ps nep
+\ge person
+\dt 26/May/2014
+
+\lx dape
+\ps nep
+\ge shelf
+\dt 18/Jun/2015
+
+\lx ɖar
+\ps vt
+\ge find
+\gn paunu
+\ue can also be used for to meet, even if this is usually grOmmu
+\dt 22/Feb/2014
+
+\lx darembu
+\ps p.n.
+\ge Darembu
+\a darim
+\dt 23/May/2014
+
+\lx ʣau
+\ps p.n
+\ge Jau
+\dt 29/Jan/2013
+
+\lx ʣaumo
+\ps n
+\ge daughter
+\dt 17/Feb/2014
+
+\lx ʣawaʣyʣimljakma
+\ps p.n.
+\ge Jawajyjimlyakma
+\dt 13/Feb/2013
+
+\lx dekhi
+\ps nep
+\ge from
+\dt 23/May/2014
+
+\lx del
+\ps n
+\ge village
+\dt 17/Feb/2014
+
+\lx ʣelam
+\ps n
+\ge death.by.accident
+\dt 12/Mar/2013
+
+\lx delmi
+\ps kin
+\ge sister.in.law
+\dt 22/Feb/2014
+
+\lx delphu
+\ps n
+\ge courtyard
+\dt 22/Feb/2014
+
+\lx delʦy
+\ps n
+\ge daughter.in.law
+\dt 14/Oct/2015
+
+\lx dem
+\ps vt
+\ge step.on
+\dt 01/Oct/2015
+
+\lx ʣem
+\ps n
+\ge wetland.plant
+\dt 19/Feb/2014
+
+\lx dende
+\ps n
+\ge punishment
+\dt 19/Feb/2014
+
+\lx -dep
+\ps cl
+\ge time
+\dt 18/Jun/2015
+
+\lx ɖep
+\ps vt
+\ge beat
+\a ɖe
+\gn used for people, grains
+\dt 05/Oct/2015
+
+\lx depʦinʌŋ
+\ps n
+\ge ritual.name
+\dt 23/May/2014
+
+\lx der
+\ps n
+\ge fingernail
+\dt 22/Feb/2014
+
+\lx derapu
+\ps p.n
+\ge Derapu
+\dt 17/Feb/2014
+
+\lx des
+\ps nep
+\ge country
+\dt 21/May/2014
+
+\lx ʣes
+\ps vi
+\ge speak
+\a ʣe
+\ue vt semantics but vi morphology
+\dt 13/Oct/2015
+
+\lx det
+\ps vt
+\ge fill.up
+\a deʈ
+\a den
+\a der
+\gn used with per to mean 'to trap'
+\dt 15/Oct/2015
+
+\lx ʣetha
+\ps nep
+\ge eldest
+\dt 23/May/2014
+
+\lx deu
+\ps pn
+\ge caste.name
+\dt 22/May/2014
+
+\lx deusa
+\ps pn
+\ge Deusa
+\dt 22/May/2014
+
+\lx deuta
+\ps nep
+\ge god
+\dt 23/May/2014
+
+\lx dewa
+\ps nep
+\ge priest
+\dt 18/Feb/2014
+
+\lx dha
+\ps vt
+\ge dig
+\dt 15/Feb/2014
+
+\lx ʣhakri
+\ps pn
+\ge Jhakri
+\dt 23/May/2014
+
+\lx dhali
+\ps spatial.adv
+\ge down
+\dt 15/Feb/2014
+
+\lx dhamu
+\ps n
+\ge sky
+\dt 28/Feb/2014
+
+\lx ʣhaps
+\ps vi
+\ge be.able
+\a ʣham
+\dt 13/Oct/2015
+
+\lx dhara
+\ps nep
+\ge water.tap
+\dt 26/May/2014
+
+\lx dhawa
+\ps adv
+\ge quickly
+\dt 18/Jun/2015
+
+\lx dher
+\ps nep
+\ge much
+\dt 24/Feb/2014
+
+\lx DHERAI
+\ps nep
+\ge much
+\dt 29/Jan/2013
+
+\lx dherai
+\ps nep
+\ge much
+\dt 14/Feb/2014
+
+\lx ʣherem
+\ps n
+\ge rib
+\dt 24/Feb/2014
+
+\lx ʣhet
+\ps vt
+\ge grip
+\a ʣhen
+\a ʣheɖ
+\a ʣheʈ
+\a ʣher
+\dt 13/Oct/2015
+
+\lx dhipri
+\ps nep
+\ge lamp
+\dt 28/Feb/2014
+
+\lx ʣhips
+\ps vi
+\ge rot
+\a ʣhip
+\u
+\a ʣhim
+\u
+\a ʣips
+\u
+\a ʣim
+\u
+\a ʣip
+\dt 27/Feb/2014
+
+\lx dhɤkʦikhrem
+\ps n
+\ge lover
+\dt 08/Jul/2015
+
+\lx ʣhoŋ-
+\ps ideo
+\ge suddenly
+\gn only used with kok(s), pick up
+\dt 05/Oct/2015
+
+\lx dhondro
+\ps nep
+\ge hole
+\dt 19/Feb/2014
+
+\lx ɖhɵr
+\ps n
+\ge deer
+\dt 08/Jul/2015
+
+\lx dhot
+\ps vt
+\ge continue
+\dt 02/Jun/2016
+
+\lx ʣhuks
+\ps vi
+\ge jump.down
+\a ʣhu
+\a ʣhuk
+\a ʣhus
+\dt 27/Feb/2014
+
+\lx ʣhuks
+\ps vi
+\ge land
+\ue birds, planes--to come down to earth from flying
+
+\a ʣhus
+\a ʣhuk
+\a ʣhu
+\dt 27/Feb/2014
+
+\lx dhʌmilo
+\ps nep
+\ge muddy
+\dt 23/May/2014
+
+\lx dhʌnukar
+\ps nep
+\ge bow
+\dt 23/May/2014
+
+\lx ʣhʌreni
+\ps pn
+\ge Jhoreni
+\dt 23/May/2014
+
+\lx dhʌrmati
+\ps nep
+\ge pious
+\dt 26/May/2014
+
+\lx ʣhʌtti
+\ps nep
+\ge throwing
+\ue adverb used with throwing in Nepali
+\dt 22/Feb/2014
+
+\lx dhwa
+\ps spatial.n
+\ge lower.down
+\gn can also be underneath, although that's usually gojy
+\dt 07/Oct/2015
+
+\lx dhypa
+\ps adj
+\ge long
+\dt 23/May/2014
+
+\lx ɖi
+\ps n
+\ge egg
+\dt 21/May/2014
+
+\lx -ɖi
+\ps suf.v
+\ge 1_pi._npst._a
+\a -li
+\dt 14/Feb/2013
+
+\lx -ɖi
+\ps suf.v
+\ge 3_pl
+\dt 11/Mar/2013
+
+\lx -ɖi
+\ps v.suf
+\ge 1_pi._pst
+\a -ti
+\u
+\a -li
+\u
+\a -iɖi
+\a -ri
+\dt 19/Feb/2014
+
+\lx ʣi
+\ps n
+\ge blessing
+\dt 21/Oct/2015
+\gn used with gwa:mu
+
+\lx ʣigijom
+\ps p.n
+\ge Jigiyom
+\dt 19/Feb/2014
+
+\lx ʣigijom
+\ps n
+\ge bird.type
+\a ʣigijomma
+\dt 28/Feb/2014
+
+\lx dika
+\ps temp.adv
+\ge tomorrow
+\dt 01/Mar/2014
+
+\lx DIKDAR
+\ps nep
+\ge exhausted
+\dt 29/Jan/2013
+
+\lx dikdar
+\ps nep
+\ge depressed
+\dt 26/May/2014
+
+\lx ʣikijoŋma
+\ps n
+\ge bird.type
+\dt 08/Jul/2015
+
+\lx diliʣu
+\ps p.n
+\ge North.wind
+\dt 19/Feb/2014
+
+\lx dilimduŋ
+\ps p.n
+\ge Dilimdung
+\dt 21/Feb/2014
+
+\lx dilimʣuŋ
+\ps p.n.
+\ge Dilimjung
+\dt 29/Jan/2013
+
+\lx dilwar
+\ps pn
+\ge Dilwar
+\dt 22/May/2014
+
+\lx din
+\ps nep
+\ge day
+\dt 14/Feb/2014
+
+\lx DINDINAI
+\ps nep
+\ge every.day
+\dt 04/Feb/2013
+
+\lx dindinai
+\ps nep
+\ge daily
+\dt 26/May/2014
+
+\lx dip
+\ps pn
+\ge Dip
+\dt 23/May/2014
+
+\lx diphu
+\ps temp.adv
+\ge later
+\dt 19/Feb/2014
+
+\lx dipluŋ
+\ps n
+\ge big.stone
+\dt 21/May/2014
+
+\lx ʣipte
+\ps nep
+\ge be.unsuccessful
+\ue with dymmu
+\dt 28/May/2014
+
+\lx dipti
+\ps nep
+\ge luster
+\dt 30/May/2014
+
+\lx diridin
+\ps n
+\ge ocean
+\dt 19/Feb/2014
+
+\lx ɖit
+\ps vt
+\ge leave
+\a ɖin
+\a ɖiʈ
+\a ɖiɖ
+\a ɖir
+\a ɖi
+\dt 13/Oct/2015
+
+\lx ʣit
+\ps nep
+\ge victory
+\dt 23/May/2014
+
+\lx ʣitdiwal
+\ps nep
+\ge insistent
+\dt 18/Jun/2015
+
+\lx ɖjɵ
+\ps vt
+\ge pick.up
+\a ɖjɵt
+\a ɖjɵp
+\dt 09/Jul/2015
+
+\lx djɵla
+\ps spat.n
+\ge straight.above
+\dt 01/Oct/2015
+
+\lx ʣjɵp
+\ps n
+\ge right
+\dt 23/Feb/2014
+
+\lx dodi
+\ps p.n.
+\ge Tibet
+\dt 23/May/2014
+
+\lx ʣokhana
+\ps nep
+\ge divination
+\dt 08/Jul/2015
+
+\lx ɖokpu
+\ps adj
+\ge big
+\dt 15/Feb/2014
+
+\lx dʰɤkʦikʰrem
+\ps n
+\ge mate
+\ue idiom
+\a dʰɔkʦikʰrem
+\dt 28/Feb/2014
+
+\lx -ʣɵl
+\ps v.suf
+\ge _aux
+\dt 15/Feb/2014
+
+\lx ɖomiphu
+\ps n
+\ge python
+\dt 25/Oct/2015
+
+\lx ʣɵmka
+\ps adv
+\ge carefully
+\a ʣɵŋka
+\ue lit. with care, with "good"
+\dt 08/Jul/2015
+
+\lx ʣon
+\ps n
+\ge leprosy
+\dt 17/Feb/2014
+
+\lx ʣɵpa
+\ps adj
+\ge nice
+\dt 19/Feb/2014
+
+\lx dɵr
+\ps n
+\ge deer
+\a dhɵr
+\u
+\ue aspirated version is Deusa
+\dt 28/Feb/2014
+
+\lx dorʣe
+\ps pn
+\ge Dorje
+\dt 23/May/2014
+
+\lx dos
+\a dhos
+\a dho:
+\a do:
+\ps vi
+\ge move
+\dt 13/Oct/2015
+
+\lx dʌ
+\ps n
+\ge field.work
+\gn used with locative, dvra lvmu, to go do field work
+\dt 08/Oct/2015
+
+\lx ʣu
+\ps n
+\ge cold
+\dt 15/Feb/2014
+
+\lx dʌhi
+\ps nep
+\ge curd
+\dt 23/May/2014
+
+\lx DUI
+\ps nep
+\ge two
+\dt 29/Jan/2013
+
+\lx dui
+\ps nep
+\ge two
+\dt 23/May/2014
+
+\lx ʣʌjʌpʌjʌ
+\ps nep
+\ge couple
+\dt 27/May/2014
+
+\lx dʌk
+\ps vt
+\ge flood
+\a dʌ
+\a dʌː
+\dt 13/Oct/2015
+
+\lx DUKHA
+\ps nep
+\ge suffering
+\dt 04/Feb/2013
+
+\lx dukhʌ
+\ps nep
+\ge suffering
+\dt 26/May/2014
+
+\lx dukhur
+\ps n
+\ge back.of.house
+\dt 08/Oct/2015
+
+\lx ʣʌks
+\ps vi
+\ge be.broken
+\a ʣʌ
+\a ʣʌk
+\a ʣʌ:
+\a ʣʌs
+\a ʣɤs
+\dt 13/Oct/2015
+
+\lx dʌksa
+\ps n
+\ge tree
+\a dɤksa
+\dt 28/Feb/2014
+
+\lx ɖʌksa
+\ps n
+\ge rhododendron
+
+\lx ɖʌk(s)
+\ps vt
+\ge drop
+\a ɖɤk
+\a ɖɤ
+\a ɖɤs
+\a ɖʌ
+\a ɖʌk
+\a ɖʌks
+\a ɖʌs
+\a ɖɤks
+\dt 09/Jul/2015
+
+\lx -ʣɯl
+\ps suf.v
+\ge _aux
+\dt 30/Jan/2013
+
+\lx -ɖʌːla
+\ps n.suf
+\ge above
+\a -ɖɤla
+\dt 14/Oct/2015
+
+\lx ʣʌmmai
+\ps nep
+\ge altogether
+\dt 23/May/2014
+
+\lx ʣʌmmʌi
+\ps nep
+\ge altogether
+\a ʣʌmmʌ
+\dt 26/May/2014
+
+\lx ɖuŋ
+\ps vt
+\ge drink
+\a ɖup
+\a ɖu
+\a ɖu:
+\dt 12/Oct/2015
+
+\lx ʣunbesi
+\ps p.n
+\ge Junbesi
+\dt 19/Feb/2014
+
+\lx ʣʌnʣʌn
+\ps nep
+\ge more.and.more
+\dt 09/Jul/2015
+
+\lx ʣʌŋgʌl
+\ps nep
+\ge forest
+\dt 15/Feb/2014
+
+\lx ʣʌŋgʌli
+\ps nep
+\ge forest.dweller
+\dt 26/May/2014
+
+\lx ɖupe
+\ps n
+\ge drink
+\dt 29/Jan/2013
+
+\lx duːtham
+\ps n
+\ge concerning
+\dt 27/Oct/2015
+
+\lx ʣuʈho
+\ps nep
+\ge ritually.unclean
+\dt 23/May/2014
+
+\lx ʣʌti
+\ps nep
+\ge as.much.as
+\dt 22/May/2014
+
+\lx ʣuwaʣu
+\ps p.n
+\ge Juwaju
+\dt 22/Feb/2014
+
+\lx dwak
+\ps vt
+\ge like
+\a dwa
+\a dwaː
+\dt 13/Oct/2015
+
+\lx ɖwa:bo
+\ps vt
+\ge weave
+\a ɖwa:be
+\u
+\a ɖwa:by
+\a
+\dt 12/Oct/2015
+
+\lx ɖwa:khom
+\ps n
+\ge loom
+\dt 12/Oct/2015
+
+\lx -ɖy
+\ps suf.v
+\ge 3_sg._pst._a
+\a -ly
+\a -iɖy
+\a -ty
+\u
+\a -ry
+\dt 22/Feb/2014
+
+\lx -ɖy
+\ps suf.v
+\ge _copy
+\dt 14/Feb/2013
+
+\lx -ɖy
+\ps suf.v
+\ge _copy
+\dt 14/Feb/2013
+
+\lx ʣyʣyli
+\ps body
+\ge incisor
+\dt 23/May/2014
+
+\lx dykha
+\ps nep
+\ge suffering
+\dt 28/Feb/2014
+
+\lx ɖyl
+\ps vt
+\ge care.for
+\dt 01/Mar/2013
+
+\lx ʣyl
+\ps vt
+\ge place
+\dt 04/Feb/2013
+
+\lx dylʦɵ
+\ps n
+\ge servant
+\dt 14/Oct/2015
+
+\lx ɖylymʦa
+\ps n
+\ge stick
+\a dylymʦɵ
+\dt 28/Feb/2014
+
+\lx ɖymla
+\ps n
+\ge culture
+\dt 12/Mar/2013
+
+\lx ɖymluŋ
+\ps n
+\ge pestle
+\dt 28/Feb/2014
+
+\lx dyms
+\ps vi
+\ge become
+\a dys
+\a dy
+\a dyŋ
+\a dym
+\a dyms
+\uv haŋko dypa==how long
+has it been
+\dt 08/Jul/2015
+
+\lx dyms
+\ps vt
+\ge finish
+\a dym
+\dt 27/Feb/2014
+
+\lx ɖyp
+\ps vt
+\ge grind
+\a ɖym
+\dt 23/Feb/2014
+
+\lx ʣyrpa
+\ps adj
+\ge sour
+\dt 14/Feb/2013
+
+\lx ɖy:
+\ps n
+\ge beer
+\dt 05/Oct/2015
+
+\lx ek
+\ps nep
+\ge one
+\dt 23/May/2014
+
+\lx ekdam
+\ps nep
+\ge very.much
+\dt 14/Feb/2014
+
+\lx EKLAI
+\ps nep
+\ge alone
+\dt 29/Jan/2013
+
+\lx eklai
+\ps nep
+\ge alone
+\dt 26/May/2014
+
+\lx es
+\ps vi
+\ge defecate
+\a e
+\dt 09/Jul/2015
+
+\lx ESO
+\ps nep
+\ge like.this
+\dt 12/Feb/2013
+
+\lx eso
+\ps nep
+\ge like.this
+\dt 26/May/2014
+
+\lx etha
+\ps nep
+\ge here
+\dt 24/Feb/2014
+
+\lx etha
+\ps temp.adv
+\ge now
+\dt 05/Oct/2015
+
+\lx gai
+\ps nep
+\ge cow
+\dt 23/May/2014
+
+\lx gaira
+\ps nep
+\ge depths
+\dt 08/Jul/2015
+
+\lx gana
+\ps pro
+\ge 2_sg
+\dt 04/Feb/2013
+
+\lx gani
+\ps pron
+\ge 2_pl
+\dt 11/Mar/2013
+
+\lx gaːpu
+\ps n
+\ge crow
+\dt 14/Oct/2015
+
+\lx GARDAKHERI
+\ps nep
+\ge doing
+\dt 29/Jan/2013
+
+\lx gaʦi
+\ps pro
+\ge 2_du
+\dt 21/May/2014
+
+\lx gelaksi
+\ps pn
+\ge Gelaksi
+\dt 23/May/2014
+
+\lx gele
+\ps adv
+\ge up
+\dt 01/Mar/2013
+
+\lx gersi
+\ps n
+\ge happiness
+\uv with dwamu means 'to be happy'
+\dt 21/Feb/2014
+
+\lx get
+\ps vi
+\ge come.up
+\a gen
+\a geʈ
+\a geɖ
+\a ger
+\a ge
+\dt 13/Oct/2015
+
+\lx GHATE
+\ps nep
+\ge decrease
+\dt 14/Feb/2013
+
+\lx ghlets
+\ps vi
+\ge be.leftover
+\a ghleɖ
+\a ghleʈ
+\a ghle:
+\a ghles
+\a ghle
+\dt 13/Oct/2015
+
+\lx ghlomi
+\ps n
+\ge hen
+\dt 22/Feb/2014
+
+\lx ghlɵts
+\ps vi
+\ge blister
+\a ghlɵʈ
+\a ghlɵs
+\a ghlɵː
+\a ghlɵr
+\a ghlɵɖ
+\dt 13/Oct/2015
+
+\lx ghlwas
+\ps vt
+\ge win
+\a ghlwa
+\a ghlwaː
+\dt 13/Oct/2015
+
+\lx ghora
+\ps nep
+\ge horse
+\dt 23/May/2014
+
+\lx ghram
+\ps n
+\ge disgust
+\ue used with verb lymu
+\dt 28/Feb/2014
+
+\lx ghrenem
+\ps n
+\ge nettle
+\dt 12/Oct/2015
+
+\lx ghrok
+\ps vt
+\ge throw
+\a ghro
+\a ghroː
+\dt 13/Oct/2015
+
+\lx ghrɵm(s)
+\ps vi
+\ge meet
+\a ghrɵm
+\a ghrɵms
+\dt 13/Oct/2015
+
+\lx ghumnepani
+\ps pn
+\ge Ghumnepani
+\dt 21/May/2014
+
+\lx ghumy
+\ps nep
+\ge wander
+\a ghume
+\dt 26/May/2014
+
+\lx ghʌrikoŋ
+\ps temp.adv
+\ge for.a.while
+\dt 05/Oct/2015
+
+\lx ghʌrikoŋka
+\ps temp.adv
+\ge some.time.later
+\dt 01/Oct/2015
+
+\lx ghʌʈe
+\ps nep
+\ge decrease
+\dt 30/May/2014
+
+\lx gidi
+\ps nep
+\ge brain
+\dt 21/May/2014
+
+\lx go
+\ps pro
+\ge 1_sg
+\dt 04/Feb/2013
+
+\lx go
+\ps n
+\ge inside
+\a -go
+\a gu
+\dt 20/Oct/2015
+
+\lx goːʣy
+\ps body
+\ge lap
+\dt 14/Oct/2015
+
+\lx goːʣyme
+\ps n
+\ge pregnant.woman
+\dt 14/Oct/2015
+
+\lx golaiʦa
+\ps nep
+\ge carpet
+\dt 23/May/2014
+
+\lx gonu
+\ps n
+\ge inside
+\dt 23/May/2014
+
+\lx goʈha
+\ps nep
+\ge shed
+\dt 23/May/2014
+
+\lx goʈhala
+\ps nep
+\ge herder
+\dt 23/May/2014
+
+\lx got(s)
+\ps vt
+\ge dry
+\a gon
+\a goː
+\a goʈ
+\a gos
+\a gons
+\dt 13/Oct/2015
+
+\lx grappai
+\ps ideo
+\ge forcefully
+\dt 18/Jun/2015
+
+\lx grem
+\ps n
+\ge branch
+\dt 13/Oct/2015
+
+\lx gro
+\ps n
+\ge big.cymbals
+\dt 07/Oct/2015
+
+\lx grʌhʌ
+\ps nep
+\ge eclipse
+\dt 26/May/2014
+
+\lx gu
+\ps pro
+\ge 3_sg
+\dt 04/Feb/2013
+
+\lx gui
+\ps pron
+\ge 1_pi
+\dt 12/Mar/2013
+
+\lx gʌks
+\ps vi
+\ge be.born
+\a gɤk
+\a gɤs
+\a gʌk
+\a gʌ
+\a gʌs
+\a gɑs
+\a gɑk
+\a gɤn
+\a gɤ
+\dt 08/Jul/2015
+
+\lx guku
+\ps pro
+\ge 1_pe
+\dt 21/May/2014
+
+\lx gʰumnepani
+\ps p.n.
+\ge Ghumnepani
+\dt 14/Feb/2014
+
+\lx gʌn
+\ps vi
+\ge sit
+\a gɤn
+\dt 27/Feb/2014
+
+\lx guŋgerba
+\ps n
+\ge thorn.species
+\dt 19/Feb/2014
+
+\lx gunɵ
+\ps n
+\ge sarong
+\dt 21/May/2014
+
+\lx -gunu
+\ps suf.n
+\ge inside
+\dt 29/Jan/2013
+
+\lx gupsy
+\ps n
+\ge tiger
+\dt 19/Feb/2013
+
+\lx gʌrdakheri
+\ps nep
+\ge while.doing
+\dt 26/May/2014
+
+\lx gʌt
+\ps vt
+\ge set.down
+\a gʌn
+\a gʌʈ
+\a gʌr
+\a gɤʈ
+\dt 13/Oct/2015
+
+\lx gutha
+\ps n
+\ge around
+\dt 18/Feb/2014
+
+\lx guʦi
+\ps pro
+\ge 3_du
+\dt 29/Jan/2013
+
+\lx guʦi
+\ps pro
+\ge 1_di
+\dt 22/Feb/2014
+
+\lx guʦuku
+\ps pro
+\ge 1_de
+\dt 19/Feb/2014
+
+\lx gwak
+\ps vt
+\ge give
+\a gwaː
+\a gwa
+\dt 12/Oct/2015
+
+\lx gwal
+\ps n
+\ge warm
+\dt 15/Feb/2014
+
+\lx gwala
+\ps n
+\ge offering
+\dt 28/Feb/2014
+
+\lx hai
+\ps interj
+\ge Hey
+\dt 23/Feb/2014
+
+\lx haikthjɵ
+\ps spatial.adv
+\ge further.down
+\dt 17/Feb/2014
+
+\lx hajy
+\ps spatial.adv
+\ge further.down
+\a ajy
+\u
+\a hujy
+\u
+\dt 17/Feb/2014
+
+\lx hala
+\ps adv
+\ge up
+\dt 15/Feb/2013
+
+\lx ham
+\ps ques
+\ge what
+\a haŋ
+\dt 22/Feb/2014
+
+\lx hamsi
+\ps quest
+\ge future.when
+\ue only used for non-past, non-completed events: hamsi nem lOni, when are you going back
+\dt 01/Mar/2014
+
+\lx haŋko
+\ps adv
+\ge how
+\a hɤŋko
+\a hamko
+\a hɑŋko
+\u
+\ue like nep. kati, used to express intensity, amount
+\dt 01/Mar/2014
+
+\lx haŋkolpa
+\ps adv
+\ge how.much
+\ue katro in Nepali
+\dt 28/Feb/2014
+
+\lx hanlim
+\ps n
+\ge bow
+\dt 28/Feb/2014
+
+\lx hano
+\ps spatial.adv
+\ge there
+\a hunu
+\u
+\a hanu
+\u
+\ue no contour specified, can be any elevation
+\a hono
+\dt 01/Mar/2014
+
+\lx hanolaŋka
+\ps spat.adv
+\ge from.there
+\a honlaŋka
+\dt 21/Oct/2015
+
+\lx hao
+\ps quest
+\ge why
+\dt 01/Oct/2015
+
+\lx hap
+\ps vt
+\ge hang
+\dt 01/Oct/2015
+
+\lx hapa
+\ps adv
+\ge a.lot
+\a happa
+\dt 01/Mar/2013
+
+\lx hap_si
+\ps vr
+\ge be.hanging
+\a hamsi
+\dt 05/Oct/2015
+
+\lx hari
+\ps vt
+\ge insist
+\gn verb is bomu, to do
+\dt 13/Oct/2015
+
+\lx hasiʈ
+\ps vr
+\ge be.spilled
+\a has
+\u
+\a hasi
+\a hasiɖ
+\dt 13/Oct/2015
+
+\lx hat
+\ps vt
+\ge spill
+\a han
+\a haʈ
+\a haɖ
+\a har
+\a ha
+\ge spill
+\dt 13/Oct/2015
+
+\lx he
+\ps quest
+\ge how
+\a heka
+\dt 18/Feb/2014
+
+\lx he
+\ps interj
+\ge what?
+\dt 22/Feb/2014
+
+\lx hela
+\ps vt
+\ge call
+\gn based on verb 'to do' bomu
+\dt 05/Oct/2015
+
+\lx hello
+\ps quest
+\ge past.when
+\ue hello bikni, when are you coming; used for already accomplished events that are in the past
+\dt 01/Mar/2014
+
+\lx hellolo
+\ps temp.adv
+\ge always
+\dt 21/Feb/2014
+
+\lx hellowo
+\ps temp.adv
+\ge never
+\ue used with negative verb
+\dt 23/Feb/2014
+
+\lx heŋa
+\ps ques
+\ge why
+\a ha
+\a hao
+\a heŋʌ
+\dt 01/Oct/2015
+
+\lx hepmam
+\ps adv
+\ge how
+\ue like nepali kasto; used in "how are you" hepmam buni; or hepmam mytsy, what kind of person, waht a person... 
+\dt 01/Mar/2014
+
+\lx herbiʦar
+\ps nep
+\ge care
+\dt 26/May/2014
+
+\lx HERCAR
+\ps nep
+\ge care
+\dt 29/Jan/2013
+
+\lx hesaka
+\ps adv
+\ge how
+\ue nepali kasari
+\dt 01/Mar/2014
+
+\lx hik
+\ps vt
+\ge grind
+\a hi
+\a hiː
+\dt 13/Oct/2015
+
+\lx hik
+\ps vt
+\ge turn
+\a hi
+\a hiː
+\dt 13/Oct/2015
+
+\lx hila
+\ps n
+\ge question
+\dt 15/Feb/2013
+
+\lx hiʦi
+\ps n
+\ge weasel
+\dt 05/Oct/2015
+
+\lx hjuʦɵ
+\ps n
+\ge accidental.death
+\ue two types of death: natural and accidental, with different rituals associated with each; Miyakma story offers one origin of bad deaths
+\dt 19/Feb/2014
+
+\lx HO
+\ps nep
+\ge _cop
+\dt 04/Feb/2013
+
+\lx ho
+\ps nep
+\ge _cop
+
+\lx ho
+\ps nep
+\ge _cop
+\dt 23/Feb/2014
+
+\lx hol
+\ps vt
+\ge open
+\dt 27/Feb/2014
+
+\lx hola
+\ps nep
+\ge maybe
+\dt 19/Feb/2014
+
+\lx homka
+\ps adv
+\ge like.this
+\a hoŋka
+\u
+\a homsaka
+\u
+\a omka
+\u
+\a omsaka
+\ue hoNka khari bom basi, you must work like this; used for how to do something
+\dt 01/Mar/2014
+
+\lx homlo
+\ps temp.adv
+\ge at.this.time
+\a omlo
+\dt 01/Mar/2014
+
+\lx homu
+\ps n
+\ge bear
+\dt 19/Feb/2013
+
+\lx hoŋkorma
+\ps n
+\ge flood
+\dt 13/Oct/2015
+
+\lx hoŋŋa
+\ps adv
+\ge like
+\ue used for comparison; gu go hoNNa bepa bu, she is like me
+\dt 01/Mar/2014
+
+\lx hopmam
+\ps adv
+\ge like
+\ue used for comparison with another person, for example; gu goo hopmam bu, she is like me
+
+\a hopma
+\a hopmaŋ
+\dt 20/Oct/2015
+
+\lx hopto
+\ps adj
+\ge empty
+\dt 21/Oct/2015
+
+\lx hor
+\ps vt
+\ge open
+\a
+\ue used for beans, peas, banana tree bark
+\dt 27/Feb/2014
+
+\lx horsiʈ
+\ps vr
+\ge open
+\a horsi
+\dt 28/Feb/2014
+
+\lx hot
+\ps vt
+\ge blow
+\a hon
+\a hoʈ
+\a hor
+\dt 13/Oct/2015
+
+\lx hu-
+\ps ideo
+\ge suddenly
+\gn only with ba:mu, to get up
+\dt 05/Oct/2015
+
+\lx hʌi
+\ps interj
+\ge OK
+\dt 23/Feb/2014
+
+\lx huk
+\ps vi
+\ge bark
+\a hu
+\a hu:
+\dt 13/Oct/2015
+
+\lx huk
+\ps vi
+\ge be.finished
+\a hu
+\a hu:
+\dt 13/Oct/2015
+
+\lx hʌlly
+\ps nep
+\ge shake
+\a hʌlle
+\dt 22/May/2014
+
+\lx huly
+\ps nep
+\ge bring.in
+\dt 18/Jun/2015
+
+\lx hʌm
+\ps vt
+\ge spread.out
+\a hʌmr
+\dt 20/Oct/2015
+
+\lx humje
+\ps n
+\ge shawl
+\dt 08/Oct/2015
+
+\lx huŋ
+\ps vi
+\ge enter
+\a hu
+\a hu:
+\dt 13/Oct/2015
+
+\lx hunthjɵ
+\ps spatial.adv
+\ge around.there
+\dt 01/Mar/2014
+\ue used for any elevation
+
+\lx hunu
+\ps spatial.adv
+\ge over.there
+\a hono
+\dt 01/Mar/2014
+
+\lx hunuhombu
+\ps spat.n
+\ge opposite.side
+\a honohombu
+\dt 20/Oct/2015
+
+\lx hunukthjɵ
+\ps spatial.adv
+\ge over.there
+\a hanukthjɵ
+\u
+\ue used only for things that are straight across
+\a hanokthjɵ
+\dt 01/Mar/2014
+
+\lx hunukthjɵ
+\ps spatial.adv
+\ge over.there
+\dt 01/Mar/2014
+
+\lx HUNUTA
+\ps nep
+\ge actually
+\dt 14/Feb/2013
+
+\lx hunʌtʌ
+\ps nep
+\ge even.though
+\dt 30/May/2014
+
+\lx hʌp
+\ps n
+\ge king
+\dt 15/Feb/2014
+
+\lx hur
+\ps vt
+\ge wash.head
+\dt 26/May/2014
+
+\lx hʌre
+\ps vt
+\ge lose
+\ue used with dymmu
+\dt 22/May/2014
+
+\lx hut
+\ps vi
+\ge fly
+\a hun
+\a huʈ
+\a hur
+\dt 13/Oct/2015
+
+\lx hʌtar
+\ps nep
+\ge hurry
+\dt 28/Feb/2014
+
+\lx hwak
+\ps vt
+\ge open
+\a hwa
+\a hwaː
+\dt 13/Oct/2015
+
+\lx i-
+\ps pref.n
+\ge 2_sg._poss
+\dt 12/Feb/2013
+
+\lx -i
+\ps suf.v
+\ge 1_sg._pst._copy
+\dt 29/Jan/2013
+
+\lx -i
+\ps suf.v
+\ge 1_pi._npst
+\dt 30/Jan/2013
+
+\lx -i
+\ps v.suf
+\ge 3_sg._pst._copy
+\dt 15/Feb/2014
+
+\lx iki-
+\ps pref.n
+\ge 1_pi._poss
+\dt 14/Feb/2013
+
+\lx ikima
+\ps pro
+\ge 1_pi._poss
+\dt 13/Feb/2013
+
+\lx ima
+\ps poss.pro
+\ge 2_sg._poss
+\dt 23/May/2014
+
+\lx -imi
+\ps v.suf
+\ge 1_pi>3_pl._npst
+\dt 18/Feb/2014
+
+\lx indija
+\ps p.n
+\ge India
+\dt 17/Feb/2014
+
+\lx ini-
+\ps n.pref
+\ge 2_pl._poss
+\dt 21/May/2014
+
+\lx irma
+\ps p.n
+\ge girl.name
+\dt 28/Feb/2014
+
+\lx iʦi-
+\ps pref.n
+\ge 1_di._poss
+\dt 30/Jan/2013
+
+\lx iʦima
+\ps poss.pro
+\ge 1_di._poss
+\dt 22/Feb/2014
+
+\lx jaga
+\ps n
+\ge Tibetan
+\dt 17/Feb/2014
+
+\lx jak
+\ps vt
+\ge hit
+\a ja
+\a jaː
+\dt 13/Oct/2015
+
+\lx jakke
+\ps adj
+\ge small
+\dt 12/Mar/2013
+
+\lx JAMMA
+\ps nep
+\ge all
+\dt 29/Jan/2013
+
+\lx jaŋ
+\ps adj
+\ge other
+\dt 18/Feb/2014
+
+\lx JANA
+\ps nep
+\ge person
+\dt 29/Jan/2013
+
+\lx JANJAN
+\ps nep
+\ge more.and.more
+\dt 01/Mar/2013
+
+\lx jaŋlo
+\ps temp.adv
+\ge sometimes
+\dt 15/Feb/2014
+
+\lx JATTI
+\ps nep
+\ge stick
+\dt 13/Feb/2013
+
+\lx JAYAPAYA
+\ps nep
+\a
+\ge couple
+\dt 13/Feb/2013
+
+\lx je
+\ps n
+\ge cloth
+\dt 23/May/2014
+
+\lx je
+\ps interj
+\ge _voc
+\dt 23/May/2014
+
+\lx je
+\ps n
+\ge field
+\dt 20/Oct/2015
+
+\lx jes
+\ps vi
+\ge cry.out
+\a je
+\dt 27/Feb/2014
+
+\lx jet
+\ps vt
+\ge call
+\a jen
+\a jeʈ
+\a jeɖ
+\a jer
+\dt 13/Oct/2015
+
+\lx JETHA
+\ps nep
+\ge older.brother
+\dt 01/Mar/2013
+
+\lx jimpe
+\ps n
+\ge youngest.boy
+\dt 07/Oct/2015
+
+\lx jimpi
+\ps kin
+\ge youngest
+\dt 22/Feb/2014
+
+\lx jo
+\ps n
+\ge salt
+\dt 30/Jan/2013
+
+\lx jok
+\ps vi
+\ge come.down
+\a jo
+\dt 14/Feb/2013
+
+\lx joŋbem
+\ps n
+\ge jewsharp
+\dt 05/Oct/2015
+
+\lx jum
+\ps n
+\ge power
+\dt 08/May/2013
+
+\lx jup
+\ps vt
+\ge twist
+\dt 18/Jun/2015
+
+\lx -jy
+\ps suf.n
+\ge _low._loc
+\dt 12/Feb/2013
+
+\lx ka
+\ps disc.part
+\ge inj
+\dt 05/Oct/2015
+\gn used after imperative forms to reinforce them
+
+\lx -ka
+\ps suf.n
+\ge _erg
+\dt 29/Jan/2013
+
+\lx -ka
+\ps suf.n
+\ge _instr
+\dt 13/Feb/2013
+
+\lx -ka
+\ps suf.n
+\ge _loc
+\dt 15/Feb/2013
+
+\lx kaijo
+\ps nep
+\ge comb
+\dt 28/Feb/2014
+
+\lx kʰakʦilipo
+\ps ideo
+\ge crowing.sound
+\dt 13/Feb/2013
+
+\lx kaku
+\ps pn
+\ge Kaku
+\dt 20/Oct/2016
+
+\lx KAM
+\ps nep
+\ge work
+\dt 29/Jan/2013
+
+\lx kam
+\ps nep
+\ge work
+\dt 22/May/2014
+
+\lx -kam
+\ps N.suff
+\ge _gen
+\dt 25/Jan/2013
+
+\lx KAMTI
+\ps nep
+\ge less
+\dt 14/Feb/2013
+
+\lx KANCHI
+\ps nep
+\ge youngest
+\dt 12/Mar/2013
+
+\lx kanʦha
+\ps nep
+\ge youngest
+\dt 23/May/2014
+
+\lx kanʦhi
+\ps nep
+\ge youngest
+\ue used with aula, finger, means
+babyfinger/pinkie
+\dt 23/May/2014
+
+\lx kanʦiaula
+\ps nep
+\ge baby.finger
+\dt 09/Jul/2015
+
+\lx kape
+\ps nep
+\ge forked.piece
+\dt 28/Feb/2014
+
+\lx KARAŋ
+\ps nep
+\ge rib
+\dt 29/Jan/2013
+
+\lx kaʈhmandu
+\ps p.n
+\ge Kathmandu
+\dt 19/Feb/2014
+
+\lx katʦi
+\ps nep
+\ge loin.cloth
+\dt 18/Jun/2015
+
+\lx katyry
+\ps n
+\ge sword
+\dt 28/Feb/2014
+
+\lx kaʦi
+\ps n
+\ge loincloth
+\dt 05/Oct/2015
+
+\lx kaʦopat
+\ps nep
+\ge marijuana
+\dt 23/May/2014
+
+\lx KAYO
+\ps nep
+\ge comb
+\dt 15/Feb/2013
+
+\lx ke
+\ps n
+\ge vegetables
+\dt 21/May/2014
+
+\lx kekuwa
+\ps p.n
+\ge Kekuwa
+\dt 19/Feb/2014
+
+\lx kemsi
+\ps vr
+\ge stick.onto
+\a kemsik
+\gn used of butter on knife; idiomatically, a person you can't get rid of
+\dt 20/Oct/2015
+
+\lx kerao
+\ps nep
+\ge pea
+\dt 21/May/2014
+
+\lx keraoje
+\ps n
+\ge bean.field
+\dt 20/Oct/2015
+
+\lx KHABO
+\ps nep
+\ge supporting.pole
+\dt 13/Feb/2013
+
+\lx khabo
+\ps nep
+\ge pole
+\dt 22/Feb/2014
+
+\lx khadi
+\ps n
+\ge hell
+\dt 19/Feb/2014
+
+\lx khaɖʌl
+\ps nep
+\ge ditch
+\dt 22/May/2014
+
+\lx khady
+\ps nep
+\ge press.hard
+\a khade
+\dt 23/May/2014
+
+\lx khakʦilip
+\ps p.n.
+\ge Khakcilip
+\dt 26/May/2014
+
+\lx khakʦilipo
+\ps onom
+\ge cock's.crowing
+\dt 28/May/2014
+
+\lx khal
+\ps n
+\ge Khaling
+\dt 18/Feb/2014
+
+\lx khali
+\ps nep
+\ge always
+\dt 01/Mar/2014
+
+\lx khali
+\ps nep
+\ge repeatedly
+\dt 01/Mar/2014
+
+\lx khalikhastap
+\ps p.n
+\ge Khalikhastap
+\dt 17/Feb/2014
+
+\lx khalkam
+\ps n
+\ge kind
+\dt 19/Feb/2014
+
+\lx khamba
+\ps n
+\ge Tibetan
+\dt 15/Feb/2014
+
+\lx khamsi
+\ps n
+\ge peach
+\dt 13/Oct/2015
+
+\lx KHANA
+\ps nep
+\ge food
+\dt 04/Feb/2013
+
+\lx khana
+\ps nep
+\ge food
+\dt 26/May/2014
+
+\lx khanapina
+\ps nep
+\ge food.drink
+\dt 26/May/2014
+
+\lx khap
+\ps vt
+\ge be.about.to
+\a khaps
+\a kham
+\dt 13/Oct/2015
+
+\lx khari
+\ps n
+\ge work
+\dt 21/Feb/2014
+
+\lx khary
+\ps nep
+\ge refine
+\a khare
+\dt 23/May/2014
+
+\lx KHASAE
+\ps nep
+\ge really
+\dt 13/Feb/2013
+
+\lx khat
+\ps vt
+\ge chase
+\a khan
+\a khaʈ
+\a khar
+\a khaɖ
+\dt 13/Oct/2015
+
+\lx khatelbu
+\ps n
+\ge second.son
+\dt 19/Feb/2014
+
+\lx khel
+\ps n
+\ge leg
+\dt 24/Feb/2014
+
+\lx khep
+\ps n
+\ge time
+\dt 15/Feb/2014
+
+\lx khep
+\ps nep
+\ge times
+\dt 28/Oct/2016
+
+\lx khes
+\ps vi
+\ge be.bitter
+\a khe
+\dt 13/Oct/2015
+
+\lx khet
+\ps vt
+\ge bring.up
+\a khen
+\a kheʈ
+\a kheɖ
+\dt 13/Oct/2015
+
+\lx khilam
+\ps n
+\ge butter
+\dt 12/Oct/2015
+
+\lx khili
+\ps n
+\ge bitter.plant
+\dt 13/Oct/2015
+
+\lx khjarerere
+\ps onom
+\ge scraping.sound
+\dt 23/May/2014
+
+\lx khlea
+\ps n
+\ge dog
+\dt 17/Feb/2014
+
+\lx khleu
+\ps p.n
+\ge Khleu
+\dt 21/Feb/2014
+
+\lx khli
+\ps vt
+\ge plant
+\a
+\u
+\dt 21/Feb/2014
+
+\lx khli
+\ps n
+\ge shit
+\dt 22/May/2014
+
+\lx khlosiʈ
+\ps vr
+\ge return
+\a khlosi
+\u
+\a khlomsi
+\dt 13/Oct/2015
+
+\lx khlosiʈ
+\ps vr
+\ge return
+\a khlosik
+\a khlosiɖ
+\u
+\a khlosi
+\u
+\a khlomsi
+\a khlos
+\dt 13/Oct/2015
+
+\lx khlʌk
+\ps vt
+\ge follow
+\a khlʌ
+\a khlʌː
+\dt 13/Oct/2015
+
+\lx khok
+\ps vt
+\ge cook
+\a khoː
+\a kho
+\dt 13/Oct/2015
+
+\lx khola
+\ps nep
+\ge river
+\dt 21/May/2014
+
+\lx khole
+\ps n
+\ge all
+\dt 28/Feb/2014
+
+\lx kholo
+\ps n
+\ge bad.luck
+\dt 22/Feb/2014
+
+\lx kholy
+\ps nep
+\ge open
+\a khole
+\dt 23/May/2014
+
+\lx khom
+\ps n
+\ge place
+\a
+\dt 28/Feb/2014
+
+\lx khomda
+\ps p.n
+\ge Shukra
+\dt 02/Jun/2016
+
+\lx khomʣɵl
+\ps n
+\ge goiter
+\dt 19/Feb/2014
+
+\lx khop
+\ps vt
+\ge gather
+\a khom
+\u
+\a
+\u
+\dt 21/May/2014
+
+\lx khop
+\ps n
+\ge thing
+\a
+\dt 28/Feb/2014
+
+\lx -khop
+\ps suf
+\ge _nmlz
+\a -khom
+\dt 17/Feb/2014
+
+\lx khophi
+\ps n
+\ge indentation
+\dt 08/Jul/2015
+
+\lx khopiltʌ
+\ps nep
+\ge hole
+\dt 19/Feb/2014
+
+\lx khor
+\ps nep
+\ge cell
+\dt 22/May/2014
+
+\lx khorsai
+\ps n
+\ge chili
+\dt 23/Feb/2014
+
+\lx khorsani
+\ps nep
+\ge chili
+\dt 14/Feb/2014
+
+\lx khosta
+\ps nep
+\ge outer.bark
+\dt 18/Jun/2015
+
+\lx khotle
+\ps adv
+\ge all
+\a khole
+\dt 01/Mar/2014
+
+\lx khoʈo
+\ps nep
+\ge rosin
+\dt 21/May/2014
+
+\lx khoʦɵ
+\ps ideo
+\ge suddenly
+\dt 18/Jun/2015
+
+\lx khrap
+\ps vi
+\ge cry
+\a khram
+\dt 13/Oct/2015
+
+\lx khrapsyly
+\ps adv
+\ge crying.manner
+\dt 23/May/2014
+
+\lx khrekhreja
+\ps adj
+\ge bumpy
+\dt 18/Jun/2015
+
+\lx khremsiʈ
+\ps vr
+\ge be.covered
+\a khremsi
+\u
+\a khremsiɖ
+\dt 28/Feb/2014
+
+\lx khremsiʈ
+\ps vr
+\ge cover.onesself
+\a khrems
+\u
+\a khremsi
+\dt 01/Mar/2014
+
+\lx khrep
+\ps vt
+\ge cover
+\a khrem
+\dt 27/Feb/2014
+
+\lx khreʈ
+\ps vt
+\ge bite
+\a khren
+\u
+\a khre
+\a khreɖ
+\dt 23/Feb/2014
+
+\lx khre(s)
+\ps vt
+\ge be.hit
+\a khres
+\a khre
+\dt 13/Oct/2015
+
+\lx khrip
+\ps vt
+\ge decide
+\a khrim
+\dt 13/Oct/2015
+
+\lx khu
+\ps vt
+\ge steal
+\dt 23/May/2014
+
+\lx khʌbʌr
+\ps nep
+\ge news
+\dt 22/May/2014
+
+\lx khudymbi
+\ps n
+\ge wood.mallet
+\dt 28/Feb/2014
+
+\lx khukurika
+\ps onom
+\ge cock's.crowing
+\dt 28/May/2014
+
+\lx khuli
+\ps n
+\ge path
+\a
+\dt 28/Feb/2014
+
+\lx khuliwasi
+\ps n
+\ge open.path
+\dt 28/Feb/2014
+
+\lx khʌlle
+\ps nep
+\ge go.between
+\dt 19/Feb/2014
+
+\lx khuly
+\ps n
+\ge earth
+\dt 09/Jul/2015
+
+\lx khur
+\ps vt
+\ge shave.off
+\a khur
+\dt 13/Oct/2015
+
+\lx khʌrikhola
+\ps p.n
+\ge Kharikhola
+\dt 15/Feb/2014
+
+\lx khuru
+\ps ideo
+\ge without.stopping
+\dt 18/Jun/2015
+
+\lx khurukhuru
+\ps nep
+\ge continuously
+\dt 24/Feb/2014
+
+\lx khʌs
+\ps nep
+\ge Chetri
+\dt 23/May/2014
+
+\lx khusi
+\ps vr
+\ge wear.on.head
+\a khumsi
+\dt 23/May/2014
+
+\lx khʌta
+\ps n
+\ge elopment
+\dt 28/Feb/2014
+
+\lx khʌu
+\ps n
+\ge mud.pot
+\dt 24/Feb/2014
+
+\lx khwak
+\ps vt
+\ge pierce
+\a khwa
+\a khwaː
+\ue by thorn or needle; ears, nose
+\dt 13/Oct/2015
+
+\lx khwakʦilik
+\ps p.n
+\ge Khakcilik
+\dt 21/Feb/2014
+
+\lx khwakʦilikpo
+\ps onomat
+\ge cock.crowing
+\dt 22/Feb/2014
+
+\lx khwaʦep
+\ps n
+\ge belly
+\dt 22/Feb/2014
+
+\lx ki
+\ps nep
+\ge or
+\dt 22/Feb/2014
+
+\lx -ki
+\ps v.suf
+\ge 3_sg>1_pi._npst
+\dt 18/Feb/2014
+
+\lx kiʦɵ
+\ps adv
+\ge a.little
+\a kiki
+\dt 22/Feb/2014
+
+\lx kjaksi
+\ps n
+\ge soybeans
+\dt 01/Oct/2015
+
+\lx kʰleu
+\ps p.n
+\ge Khleu
+
+\lx kluk
+\ps vt
+\ge take.out
+\a kluː
+\gn inf is klu:mu
+\dt 05/Oct/2015
+
+\lx klym
+\ps vt
+\ge bury
+\dt 05/Oct/2015
+
+\lx ko
+\ps num
+\ge one
+\dt 29/Jan/2013
+
+\lx kodep
+\ps adv
+\ge together
+\dt 21/Feb/2014
+
+\lx kodep
+\ps spat.adv
+\ge at.one.place
+\dt 05/Oct/2015
+
+\lx kodhym
+\ps num
+\ge ten
+\dt 09/Jul/2015
+
+\lx kodybi
+\ps n
+\ge wooden.hammer
+\dt 09/Jul/2015
+
+\lx kodym
+\ps num
+\ge ten
+\dt 01/Mar/2014
+
+\lx kojokojo
+\ps adv
+\ge together
+\ue used wheh people live together
+\dt 01/Mar/2014
+
+\lx kojoŋa
+\ps adv
+\ge together
+\ue gutsi kojoNa khari botsi, we work together
+\dt 01/Mar/2014
+
+\lx kokte
+\ps n
+\ge skin
+\dt 05/Oct/2015
+
+\lx kok(s)
+\ps vt
+\ge lift
+\a koː
+\a kok
+\a kos
+\gn inf ko:mu, used for heavy things
+\dt 20/Oct/2015
+
+\lx kol
+\ps vt
+\ge drive.away
+\dt 14/Feb/2014
+
+\lx koloŋ
+\ps n
+\ge times
+\dt 09/Jul/2015
+
+\lx kolpa
+\ps adj
+\ge large
+\dt 08/Jul/2015
+
+\lx kʰomda
+\ps p.n.
+\ge Khomda
+\dt 15/Feb/2013
+
+\lx koŋmi
+\ps adj
+\ge other
+\dt 17/Feb/2014
+
+\lx koŋŋa
+\ps adv
+\ge only
+\dt 30/Jan/2013
+
+\lx -kʰop
+\ps suf.v
+\ge _nmlz
+\dt 30/Jan/2013
+
+\lx kʰopʰi
+\ps nep
+\ge indentation
+\dt 28/Feb/2014
+
+\lx kopʦe
+\ps pn
+\ge Kopce
+\dt 26/May/2014
+
+\lx kor
+\ps vt
+\ge bring.somewhere
+\dt 01/Mar/2013
+
+\lx kora
+\ps n
+\ge thirst
+\a kwara
+\dt 19/Feb/2014
+
+\lx koreŋ
+\ps adj
+\ge dry
+\nt seems related to kora/kwara, thirst
+\dt 18/Jun/2015
+
+\lx korku
+\ps n
+\ge stream
+\dt 22/Feb/2014
+
+\lx korthjɵ
+\ps n
+\ge other.place
+\dt 28/Feb/2014
+
+\lx kot
+\ps vt
+\ge make.wet
+\a kon
+\a koʈ
+\a koɖ
+\dt 13/Oct/2015
+
+\lx koʈ
+\ps vt
+\ge pour
+\a kon
+\a koɖ
+\dt 05/Oct/2015
+
+\lx koʈo
+\ps np
+\ge how.much
+\dt 08/Jul/2015
+
+\lx ko:ro
+\ps n
+\ge landslide
+\dt 13/Oct/2015
+
+\lx krip
+\ps vt
+\ge cut
+\uv miksi krimmu
+\ue to close eyes
+
+\a krim
+\dt 27/Feb/2014
+
+\lx krisnesor
+\ps pn
+\ge caste.name
+\dt 23/May/2014
+
+\lx krokpu
+\ps n
+\ge cock
+\dt 22/Feb/2014
+
+\lx krok(s)
+\ps vt
+\ge plant.upright
+\a kro
+\a kros
+\a kroː
+\dt 13/Oct/2015
+
+\lx kruk
+\ps vi
+\ge roar
+\a kru
+\a kru:
+\dt 13/Oct/2015
+
+\lx krym
+\ps n
+\ge hunger
+\dt 21/Feb/2014
+
+\lx ku
+\ps n
+\ge water
+\dt 15/Feb/2013
+
+\lx -ku
+\ps suf.n
+\ge _gen
+\a -kku
+\dt 17/Feb/2014
+
+\lx -ku
+\ps v.suf
+\ge 1_pe
+\dt 21/May/2014
+
+\lx KUCO
+\ps nep
+\ge broom
+\dt 04/Feb/2013
+
+\lx kuiku
+\ps n
+\ge smoke
+\dt 28/Feb/2014
+
+\lx kʌks
+\ps vt
+\ge give.birth
+\a kʌ
+\a kɤs
+\a kʌk
+\a kʌː
+\dt 13/Oct/2015
+
+\lx kʌkʌjepma
+\ps n
+\ge small.sickle
+\dt 07/Oct/2015
+
+\lx kukumam
+\ps n
+\ge water.spring
+\ue lit. water's mother
+\dt 19/Feb/2014
+
+\lx kʰukurikã
+\ps ideo
+\ge crowing.sound
+\a kʰukurika
+\dt 19/Apr/2013
+
+\lx kʌl
+\ps body
+\ge face
+\dt 21/May/2014
+
+\lx kumsi
+\ps vr
+\ge bow
+\a kums
+\dt 20/Oct/2015
+\gn head or whole body
+
+\lx kʌmti
+\ps nep
+\ge less
+\dt 30/May/2014
+
+\lx kuna
+\ps nep
+\ge corner
+\dt 28/Feb/2014
+
+\lx kunɖo
+\ps pn
+\ge Kundo
+\dt 23/May/2014
+
+\lx kur
+\ps vt
+\ge carry
+\dt 30/Jan/2013
+
+\lx kʌrai
+\ps nep
+\ge cooking.pot
+\dt 21/May/2014
+
+\lx kurkutʦʌ
+\ps nep
+\ge heel
+\dt 23/May/2014
+
+\lx kʌrʌŋ
+\ps nep
+\ge rib
+\dt 26/May/2014
+
+\lx kutha
+\ps action.n
+\ge water.fetching
+\dt 01/Oct/2015
+
+\lx kʌtha
+\ps nep
+\ge story
+\dt 21/May/2014
+
+\lx kʌti
+\ps nep
+\ge how.much
+\dt 23/May/2014
+
+\lx kutyma
+\ps n
+\ge puppy
+\dt 28/Feb/2014
+
+\lx kuʦo
+\ps nep
+\ge broom
+\dt 26/May/2014
+
+\lx kwaː
+\ps n
+\ge mud
+\dt 27/Oct/2015
+
+\lx LA
+\ps nep
+\ge okay
+\dt 01/Mar/2013
+
+\lx la
+\ps ideo
+\ge suddenly
+\dt 18/Jun/2015
+
+\lx -la
+\ps suf.n
+\ge _high._loc
+\dt 15/Feb/2013
+
+\lx LAGI
+\ps nep
+\ge sake
+\dt 13/Feb/2013
+
+\lx lagi
+\ps nep
+\ge sake.of
+\dt 22/Feb/2014
+
+\lx -lai
+\ps suf.n
+\ge _dat
+\dt 29/Jan/2013
+
+\lx laimʌkʦym
+\ps n
+\ge bamboo.basket
+\ue small, tight weave, no longer made
+\dt 22/Feb/2014
+
+\lx lalaje
+\ps adj
+\ge very.red
+\dt 01/Oct/2015
+
+\lx lalam
+\ps n
+\ge red
+\a
+\dt 01/Oct/2015
+
+\lx laːle
+\ps adj
+\ge new
+\dt 27/Oct/2015
+
+\lx lalikundʌ
+\ps nep
+\ge marriage
+\dt 17/Feb/2014
+
+\lx lam
+\ps n
+\ge path
+\dt 01/Mar/2013
+
+\lx -lam
+\ps N.pref
+\ge _abl
+\a -laŋ
+\dt 15/Feb/2013
+
+\lx lamakuma
+\ps n
+\ge food
+\a lama
+\dt 15/Feb/2014
+
+\lx lamasam
+\ps n
+\ge plague
+\dt 13/Oct/2015
+
+\lx lamdi
+\ps n
+\ge path
+\a lapdi
+\dt 17/Feb/2014
+
+\lx lamdi(s)
+\ps vi
+\ge walk
+\a lɤmdi
+\a lɔmdi
+\a lamdiʈ
+\a lamdi
+\a lamdis
+\dt 13/Oct/2015
+
+\lx lamkane
+\ps pn
+\ge Lamkane
+\dt 21/May/2014
+
+\lx lamlema
+\ps pn
+\ge Lamlema
+\dt 13/Oct/2015
+
+\lx lamʦoko
+\ps n
+\ge door
+\a lam
+\dt 23/May/2014
+
+\lx -laŋka
+\ps suf.n
+\ge _abl
+\dt 14/Feb/2013
+
+\lx lannaʦɵ
+\ps pn
+\ge Lannachyo
+\dt 23/May/2014
+
+\lx latti
+\ps nep
+\ge kick
+\dt 23/May/2014
+
+\lx la:laŋ
+\ps n
+\ge ornament
+\dt 07/Oct/2015
+
+\lx -le
+\ps num.clas
+\ge _cl
+\dt 29/Jan/2013
+
+\lx -le
+\ps v.suf
+\ge _aux
+\ue used like -halnu in Nepali, means action is completed quickly
+
+\ue a bit mysterious in its phonology, seems to alternate between le and leT; also sometimes found, with some speakers, as lek/ljak...
+\dt 01/Mar/2014
+
+\lx lele
+\ps n
+\ge unconsciousness
+\ue used with dymmu to mean 'pass out'
+\dt 28/Feb/2014
+
+\lx leledym
+\ps p.n
+\ge yeti
+\a lɵlɵdym
+\dt 23/May/2014
+
+\lx -lem
+\ps num.clas
+\ge _day
+\ue in fact, not specifically the classifier for day, as it is lit. -le, the generic classifier, + m, but in essence always used to count days
+\dt 01/Mar/2014
+
+\lx lep
+\ps vt
+\ge lick
+\dt 13/Oct/2015
+\a lem
+
+\lx lepikpuri
+\ps n
+\ge bird.species
+\dt 28/Feb/2014
+
+\lx lepiʈpuri
+\ps n
+\ge bird.type
+\dt 09/Jul/2015
+
+\lx leʈ
+\ps vt
+\ge _aux
+\ue does not appear to have independent meaning; usually used as auxiliary, but also appears with -to converbs in which case appears to be independent verb
+\dt 20/Feb/2014
+
+\a len
+\u
+\a leɖ
+
+\lx -leʈ
+\ps suf.v
+\ge _aux
+\a -len
+\a -leɖ
+\u
+\a -lek
+\a -ljak
+\dt 04/Feb/2013
+
+\lx li
+\ps n
+\ge tooth
+\a ly
+\dt 09/Jul/2015
+
+\lx lima
+\ps n
+\ge lie
+\ue used with thenmu, to know' for 'to lie'
+\dt 20/Feb/2014
+
+\lx liser
+\ps n
+\ge millet
+\dt 18/Feb/2014
+
+\lx lisiʈ
+\ps vr
+\ge pretend
+\a lisi
+\a lis
+\dt 27/Feb/2014
+
+\lx -ljak
+\ps suf.v
+\ge _aux
+\a -lja
+\dt 01/Mar/2013
+
+\lx ljaks
+\ps vi
+\ge sprout
+\a lja
+\u
+\a ljak
+\a ljas
+\dt 27/Feb/2014
+
+\lx lju
+\ps n
+\ge bamboo
+\dt 22/May/2014
+
+\lx lo
+\ps n
+\ge frog
+\dt 14/Feb/2014
+
+\lx -lo
+\ps suf.v
+\ge _temp
+\dt 29/Jan/2013
+
+\lx lɤ
+\ps nep
+\ge OK
+\dt 09/Jul/2015
+
+\lx lodoro
+\ps n
+\ge thorn.plant
+\dt 19/Feb/2013
+
+\lx lohoro
+\ps nep
+\ge pestle
+\dt 28/Feb/2014
+
+\lx lok
+\ps vi
+\ge boil
+\a loː
+\gn lo:mu inf
+\dt 05/Oct/2015
+
+\lx lokha
+\ps n
+\ge loan
+\gn used with bomu or bimu for to borrow
+\dt 12/Oct/2015
+
+\lx loksʌŋ
+\ps n
+\ge plough
+\dt 21/Oct/2015
+
+\lx loːsy
+\ps n
+\ge hail
+\dt 20/Oct/2015
+
+\lx lowo
+\ps conj
+\ge or
+\dt 22/Feb/2014
+
+\lx lu
+\ps interj
+\ge hey
+\a lʌ
+\dt 22/Feb/2014
+
+\lx lʌ
+\ps interj
+\ge OK
+\dt 20/Oct/2015
+
+\lx lʌɖai
+\ps nep
+\ge war
+\dt 23/May/2014
+
+\lx lʌhai
+\ps nep
+\ge OK
+\dt 21/May/2014
+
+\lx luk
+\ps vi
+\ge come.out
+\a lu
+\a luː
+\a lus
+\u
+\ue lus found in Khakcilip 055
+\dt 13/Oct/2015
+
+\lx lʌk
+\ps vt
+\ge take.away
+\a lʌ:
+\a lʌ
+\dt 13/Oct/2015
+
+\lx lʌks
+\ps vi
+\ge go
+\a lʌ
+\a lʌs
+\a lʌk
+\a lʌks
+\a lɤk
+\u
+\a lɤ
+\u
+\a lɤs
+\u
+\a lɤks
+\dt 20/Oct/2015
+
+\lx lʌkʦa
+\ps n
+\ge neck
+\dt 22/Feb/2014
+
+\lx lʌkʦa
+\ps n
+\ge neck
+\a lɤkʦa
+\dt 28/Feb/2014
+
+\lx luŋ
+\ps n
+\ge stone
+\dt 30/Jan/2013
+
+\lx lʌŋkham
+\ps n
+\ge yeast
+\a lɤŋkham
+\dt 09/Jul/2015
+
+\lx lʌry
+\ps nep
+\ge fight
+\a lʌre
+\dt 23/May/2014
+
+\lx lwa
+\ps n
+\ge story
+\a la
+\dt 19/Feb/2013
+
+\lx lwa
+\ps n
+\ge language
+\dt 17/Feb/2014
+
+\lx lwa
+\ps n
+\ge arm
+\dt 23/Feb/2014
+
+\lx lwabrem
+\ps n
+\ge present
+\dt 19/Feb/2014
+
+\lx lwak
+\ps kin
+\ge y.sibling
+\a lak
+\ge
+\dt 28/Feb/2014
+
+\lx lwale
+\ps n
+\ge highlands
+\dt 21/Feb/2014
+
+\lx lwas
+\ps vt
+\ge see
+\a lwa
+\a la
+\ue by extension, also to find
+\dt 13/Oct/2015
+
+\lx lwasiʈ
+\ps vr
+\ge be.visible
+\a lwasi
+\ge be.visible
+\dt 13/Oct/2015
+
+\lx ly
+\ps vi
+\ge feel
+\dt 27/Feb/2014
+
+\lx lylypʦa
+\ps n
+\ge beer.pot
+\ue made of bamboo, includes a straw; used for storing water used in weaving
+\dt 28/Feb/2014
+
+\lx lymlaje
+\ps pn
+\ge Lumlaye
+\dt 21/May/2014
+
+\lx lyp
+\ps vt
+\ge dip.into.condiment
+\dt 01/Oct/2015
+
+\lx -m
+\ps suf.v
+\ge _nmlz
+\a -mim
+\dt 04/Feb/2013
+
+\lx -m
+\ps suf.v
+\ge _copy
+\dt 30/Jan/2013
+
+\lx ma
+\ps conj
+\ge and.then
+\a -ma
+\dt 15/Feb/2014
+
+\lx ma
+\ps n
+\ge grain
+\dt 19/Feb/2014
+
+\lx ma
+\ps interj
+\ge oh.my
+\dt 19/Feb/2014
+
+\lx -ma
+\ps suf.v
+\ge _pst._ptcp
+\a -mma
+\dt 15/Feb/2014
+
+\lx maila
+\ps nep
+\ge second.son
+\dt 19/Feb/2014
+
+\lx make
+\ps adv
+\ge long.ago
+\dt 25/Jan/2013
+
+\lx maːke
+\ps n
+\ge grains
+\uv lit. grain (ma) and vegetables (ke)
+\dt 28/Feb/2014
+
+\lx makte
+\ps n
+\ge top
+\gn clothing item
+\dt 07/Oct/2015
+
+\lx mal
+\ps vt
+\ge search.for
+\dt 12/Feb/2013
+
+\lx mala
+\ps conj
+\ge _cond
+\a -mala
+\u
+\a -la
+\dt 23/Feb/2014
+
+\lx malo
+\ps adv
+\ge just
+\dt 28/Feb/2014
+
+\lx mam
+\ps kin
+\ge mother
+\dt 28/Feb/2014
+
+\lx mantha
+\ps temp.adv
+\ge last.year
+\dt 01/Mar/2014
+
+\lx manthim
+\ps nep
+\ge without
+\dt 21/Feb/2014
+
+\lx mapahaŋ
+\ps p.n.
+\ge Mapahang
+\dt 15/Feb/2014
+
+\lx marai
+\ps nep
+\ge much
+\dt 14/Feb/2014
+
+\lx mari
+\ps nep
+\ge much
+\a marɤi
+\dt 08/Jul/2015
+
+\lx marikana
+\ps nep
+\ge powerfully
+\dt 18/Jun/2015
+
+\lx masi
+\ps n
+\ge black.lentil
+\dt 14/Oct/2015
+
+\lx maʔa
+\ps kin
+\ge mother._voc
+\dt 05/Oct/2015
+\a maʔao
+
+\lx meɖɖam
+\ps dem
+\ge that
+\dt 30/Jan/2013
+
+\lx mekom
+\ps adv
+\ge that.much
+\a mekkom
+\dt 01/Mar/2014
+
+\lx mekoti
+\ps adv
+\ge that.much
+\ue nep. teti
+\dt 01/Mar/2014
+
+\lx mekotilo
+\ps temp.adv
+\ge at.that.time
+\dt 01/Mar/2014
+
+\lx mekotima
+\ps temp.adv
+\ge after.that
+\dt 01/Mar/2014
+
+\lx mela
+\ps spatial.adv
+\ge up.there
+\dt 15/Feb/2014
+
+\lx memimka
+\ps conj
+\ge therefore
+\a memiŋka
+\dt 09/Jul/2015
+
+\lx memka
+\ps adv
+\ge like.that
+\ue used for how to do something
+\a memsaka
+\u
+\a meŋka
+\dt 01/Mar/2014
+
+\lx memlo
+\ps temp.adv
+\ge at.that.time
+\dt 01/Mar/2014
+
+\lx memma
+\ps temp.adv
+\ge then
+\dt 15/Feb/2014
+
+\lx memmimka
+\ps adv
+\ge therefore
+\a mɯmimka
+\a mɯmiŋka
+\a memmiŋka
+\dt 01/Mar/2014
+
+\lx memsaka
+\ps adv
+\ge like.that
+\dt 30/Jan/2013
+
+\lx mena
+\ps hes
+\ge um
+\dt 17/Feb/2014
+
+\lx meŋŋa
+\ps adv
+\ge like.that
+\ue gu meNNA bepa baira, he was doing like that person
+\dt 01/Mar/2014
+
+\lx meno
+\ps spatial.adv
+\ge there
+\dt 18/Feb/2014
+
+\lx menokthjɵ
+\ps spatial.adv
+\ge over.there
+\dt 01/Mar/2014
+
+\lx menu
+\ps spatial.adv
+\ge there
+\dt 01/Mar/2014
+
+\lx mepmam
+\ps adv
+\ge like.that
+\a mepmaŋa
+\dt 22/Feb/2014
+
+\lx mer
+\ps n
+\ge tail
+\dt 13/Feb/2013
+
+\lx meram
+\ps dem
+\ge that
+\a mɵram
+\dt 14/Feb/2014
+
+\lx mereŋa
+\ps adv
+\ge without
+\ue used not to express being without other people, but without action, or without things
+\uv (ham wo mebesaka,) go mereŋa buŋu, I am living without doing any work; mereŋa roŋro, I came here with nothing
+\dt 01/Mar/2014
+
+\lx meːsem
+\ps n
+\ge woman
+\dt 13/Oct/2015
+
+\lx mesi
+\ps spatial.adv
+\ge there
+\dt 17/Feb/2014
+
+\lx mesimma
+\ps temp.adv
+\ge after.that
+\dt 21/May/2014
+
+\a mesim
+
+\lx mesinɖa
+\ps spatial.adv
+\ge there
+\dt 01/Mar/2014
+
+\lx metta
+\ps spatial.adv
+\ge there
+\dt 19/Feb/2014
+
+\lx meʔe
+\ps interj
+\ge no
+\a mɔʔɔ
+\dt 12/Mar/2013
+
+\lx meʔelo
+\ps conj
+\ge even.though
+\dt 17/Feb/2014
+
+\lx mi-
+\ps pref.v
+\ge _neg
+\a me-
+\dt 29/Jan/2013
+
+\lx -mi
+\ps suf.v
+\ge 3_pl
+\dt 04/Feb/2013
+
+\lx mibu
+\ps vi
+\ge _neg._cop
+\a miju
+\dt 27/Feb/2014
+
+\lx mijakma
+\ps p.n.
+\ge Miyakma
+\dt 14/Feb/2013
+
+\lx miksi
+\ps n
+\ge eye
+\dt 12/Mar/2013
+
+\lx mile
+\ps nep
+\ge arrange
+\a mily
+\u
+\ue sometimes conjugated as a nativized verb, sometimes mile + bomu; from milaunu
+\dt 28/Feb/2014
+
+\lx mim
+\ps vt
+\ge think.about
+\dt 22/Feb/2014
+
+\lx mim
+\ps kin
+\ge grandmother
+\dt 21/May/2014
+
+\lx -mim
+\ps N.suff
+\ge _pl
+\dt 25/Jan/2013
+
+\lx mima
+\ps kin
+\ge grandmother._voc
+\dt 21/May/2014
+
+\lx mimsiʈ
+\ps vr
+\ge think
+\dt 13/Oct/2015
+
+\a mimsi
+\u
+\a mims
+\a mimsik
+
+\lx mina
+\ps interj
+\ge _hes
+\dt 02/Jun/2016
+
+\lx mina
+\ps n
+\ge ogre
+\dt 18/Jun/2015
+
+\lx mini
+\ps n
+\ge human
+\dt 15/Feb/2013
+
+\lx -miŋka
+\ps n.suf
+\ge because
+\dt 01/Oct/2015
+
+\lx mir
+\ps n
+\ge skill
+\dt 19/Feb/2014
+
+\lx -miri
+\ps suf.v
+\ge 3_pl._pst
+\a -mri
+\a -mɖi
+\dt 11/Mar/2013
+
+\lx mirnar
+\ps n
+\ge skill
+\dt 28/Feb/2014
+
+\lx mmm
+\ps interj
+\ge yum
+\dt 20/Oct/2015
+
+\lx mɵ
+\ps dem
+\ge that
+\dt 14/Feb/2014
+
+\lx mɵ
+\ps dem
+\ge that
+\a mɯr
+\a mɵk
+\a me
+\a mem
+\a mɯram
+\a meram
+\a mer
+\u
+\a mɵr
+\u
+\u
+\a
+\a mel
+\dt 23/May/2014
+
+\lx mɵmka
+\ps adv
+\ge like.that
+\dt 14/Feb/2014
+
+\lx mɵmma
+\ps temp.adv
+\ge then
+\dt 14/Feb/2014
+
+\lx mɵnu
+\ps adv
+\ge there
+\dt 09/Jul/2015
+
+\lx mop
+\ps vt
+\ge touch
+\a mom
+\u
+\a mo
+\u
+\a mob
+\dt 28/Feb/2014
+
+\lx moto
+\ps nep
+\ge decision
+\dt 28/Feb/2014
+
+\lx motu
+\ps n
+\ge decision
+\dt 09/Jul/2015
+
+\lx mɤʦe
+\ps nep
+\ge lift.up
+\a mɔʦy
+\a mɤʦe
+\a mɤʦy
+\u
+\ue seems to be nativized so that it's conjugated like a V-final vt
+\dt 28/Feb/2014
+
+\lx moʦy
+\ps n
+\ge wife
+\dt 13/Feb/2013
+
+\lx mu
+\ps n
+\ge fire
+\dt 21/May/2014
+
+\lx -mu
+\ps suf.v
+\ge _inf
+\a -m
+\dt 17/Feb/2014
+
+\lx mʌdes
+\ps pn
+\ge Tarai
+\dt 22/May/2014
+
+\lx mʌdise
+\ps nep
+\ge Tarai.person
+\dt 22/May/2014
+
+\lx mʌjena
+\ps nep
+\ge month
+\dt 19/Feb/2014
+
+\lx mukli
+\ps p.n
+\ge Mukli
+\dt 17/Feb/2014
+
+\lx muliʦɵ
+\ps n
+\ge councillor
+\dt 19/Feb/2014
+
+\lx muly
+\ps n
+\ge discussion
+\a like sahalla in nepali, means counsel, decision...
+\dt 28/Feb/2014
+
+\lx muːnam
+\ps n
+\ge month
+\dt 27/Oct/2015
+
+\lx muːnaŋ
+\ps n
+\ge monster
+\dt 27/Oct/2015
+
+\lx munaŋdin
+\ps pn
+\ge Munangdin
+\dt 23/May/2014
+
+\lx mʌni
+\ps nep
+\ge rich
+\dt 26/May/2014
+
+\lx munigaʈ
+\ps p.n
+\ge Munigat
+\dt 19/Feb/2014
+
+\lx mup
+\ps vt
+\ge cover.with.earth
+\a mum
+\dt 22/May/2014
+
+\lx mur
+\ps n
+\ge smell
+\dt 21/May/2014
+
+\lx murkhʌ
+\ps nep
+\ge ignorant
+\dt 26/May/2014
+
+\lx mʌtʦhem
+\ps n
+\ge sarong
+\gn long piece of cloth wrapped as skirt (but not batik ones, called lungi)
+\dt 07/Oct/2015
+
+\lx myːsy
+\ps n
+\ge buffalo
+\a me:sy
+\dt 27/Oct/2015
+
+\lx myʦy
+\ps n
+\ge person
+\dt 04/Feb/2013
+
+\lx -n
+\ps suf.v
+\ge 2_sg._copy
+\dt 01/Mar/2013
+
+\lx -n
+\ps v.suf
+\ge _copy._2_sg
+\dt 09/May/2014
+
+\lx -ŋ
+\ps suf.v
+\ge 1_sg._pst._p._copy
+\dt 04/Feb/2013
+
+\lx -na
+\ps suf.v
+\ge 2_sg
+\dt 04/Feb/2013
+
+\lx -ŋa
+\ps disc.part
+\ge _int
+\a -ŋʌ
+\dt 05/Oct/2015
+
+\lx ŋabuŋ
+\ps n
+\ge shyness
+\dt 30/May/2014
+
+\lx ŋado
+\ps adv
+\ge first
+\dt 19/Feb/2013
+
+\lx ŋadora
+\ps n
+\ge front.side
+\a ŋadara
+\dt 22/Feb/2014
+
+\lx nag
+\ps nep
+\ge snake.god
+\dt 23/May/2014
+
+\lx nagdʌhʌ
+\ps pn
+\ge Nagdaha
+\dt 23/May/2014
+
+\lx nahadda
+\ps temp.adv
+\ge day.after.tomorrow
+\dt 01/Mar/2014
+
+\lx naleɖaʈ
+\ps vt
+\ge mock
+\a naleɖan
+\u
+\a naleɖaɖ
+\u
+\a nale
+\ue in fact noun+verb construction; negative goes between nale and verbal element
+\dt 26/May/2014
+
+\lx nalemeɖaʈ
+\ps _neg_vt
+\ge _neg.mock
+\a nalemeɖan
+\dt 09/May/2014
+
+\lx nam
+\ps nep
+\ge name
+\dt 23/May/2014
+
+\lx ŋaːmi
+\ps n
+\ge old.woman
+\dt 20/Oct/2015
+
+\lx namphrʌŋma
+\ps n
+\ge lotus
+\dt 19/Feb/2014
+
+\lx namsyry
+\ps n
+\ge illicit.relationship
+\gn with bomu, to do
+\dt 07/Oct/2015
+
+\lx NANGLO
+\ps nep
+\ge winnow.basket
+\dt 04/Feb/2013
+
+\lx naŋlo
+\ps nep
+\ge winnow
+\dt 26/May/2014
+
+\lx nap
+\ps vt
+\ge squeeze
+\a nam
+\dt 02/Jun/2016
+
+\lx ŋar
+\ps vt
+\ge count
+\dt 14/Feb/2013
+
+\lx nardu
+\ps n
+\ge bamboo.grove
+\dt 18/Jun/2015
+
+\lx nari
+\ps nep
+\ge wrist
+\dt 23/May/2014
+
+\lx ŋaʦɵ
+\ps n
+\ge first.born
+\dt 19/Feb/2014
+
+\lx nau
+\ps nep
+\ge nine
+\dt 23/May/2014
+
+\lx ne
+\ps disc.part
+\ge _foc
+\dt 13/Feb/2013
+
+\lx nem
+\ps n
+\ge house
+\a nep
+\a neb
+\dt 10/Jul/2015
+
+\lx nem
+\ps n
+\ge day
+\dt 04/Feb/2013
+
+\lx nem
+\ps vt-i
+\ge smell
+\ue used with mur
+
+\a nems
+\a neŋ
+\dt 05/Oct/2015
+
+\lx nemhʌp
+\ps n
+\ge landlord
+\dt 14/Oct/2015
+
+\lx nemphu
+\ps n
+\ge daytime
+\dt 23/Feb/2014
+
+\lx nemsom
+\ps n
+\ge dawn
+\dt 09/Jul/2015
+
+\lx nemsoːso
+\ps n
+\ge daybreak
+\dt 14/Oct/2015
+
+\lx nemtha
+\ps n
+\ge evening
+\dt 28/Feb/2014
+
+\lx neonem
+\ps temp.adv
+\ge day.before.yesterday
+\dt 01/Mar/2014
+
+\lx nepal
+\ps p.n
+\ge Nepal
+\dt 19/Feb/2014
+
+\lx nepsuŋ
+\ps n
+\ge sun
+\a nemsuŋ
+\dt 23/May/2014
+
+\lx nepʦi
+\ps n
+\ge brain
+\dt 20/Oct/2015
+
+\lx nepʦy
+\ps body
+\ge brain
+\dt 21/May/2014
+
+\lx ni
+\ps disc.part
+\ge indeed
+\dt 11/Mar/2013
+
+\lx -ni
+\ps suf.v
+\ge 2_pl
+\dt 04/Feb/2013
+
+\lx -ni
+\ps v.suf
+\ge 1_sg>2_sg
+\dt 10/Jul/2015
+
+\lx -ŋi
+\ps suf.v
+\ge 1._sg._p
+\dt 13/Feb/2013
+
+\lx nijan
+\ps nep
+\ge justice
+\dt 22/May/2014
+
+\lx -ŋika
+\ps suf.v
+\ge 1_sg._p._imp
+\dt 18/Feb/2013
+
+\lx -nim
+\ps n.suf
+\ge _fem
+\dt 17/Feb/2014
+
+\lx ŋim
+\ps n
+\ge fear
+\dt 23/May/2014
+
+\lx -ŋiri
+\ps v.suf
+\ge 3_sg>1_sg._pst
+\dt 23/Feb/2014
+
+\lx -ŋiri
+\ps v.suf
+\ge 2_sg>1_sg._pst
+\dt 10/Jul/2015
+
+\lx -ŋiriʦi
+\ps v.suf
+\ge 3_du>1_sg._pst
+\dt 10/Jul/2015
+
+\lx ŋit(s)
+\ps vi
+\ge fear
+\a ŋis
+\a ŋiʈ
+\a ŋir
+\a ŋi
+\dt 13/Oct/2015
+
+\lx ŋjak
+\ps vt
+\ge cover.with.earth
+\a ŋjaː
+\dt 13/Oct/2015
+
+\lx ŋjel
+\ps n
+\ge womb
+\dt 19/Feb/2014
+
+\lx njɵ
+\ps vi
+\ge be.ill
+\dt 27/Feb/2014
+
+\lx -nna
+\ps suf.v
+\ge 2_sg._pst
+\dt 11/Mar/2013
+
+\lx -nni
+\ps suf.v
+\ge 2_pl._pst
+\dt 11/Mar/2013
+
+\lx -ŋni
+\ps v.suf
+\ge 2_pl>1_sg
+\dt 17/Feb/2014
+
+\lx ŋo
+\ps n
+\ge fish
+\dt 30/Jan/2013
+
+\lx noksy
+\ps n
+\ge monkey
+\dt 19/Feb/2013
+
+\lx nokʦho
+\ps n
+\ge priest
+\dt 23/May/2014
+
+\lx nophla
+\ps n
+\ge ear
+\dt 08/Oct/2015
+
+\lx nɵpli
+\ps n
+\ge arrow
+\dt 17/Feb/2014
+
+\lx ŋosiʈ
+\ps vr
+\ge awaken
+\a ŋosi
+\u
+\a ŋos
+\dt 27/Feb/2014
+
+\lx ŋosiʈ
+\ps vr
+\ge wake.up
+\a ŋos
+\u
+\a ŋosiɖ
+\u
+\a ŋosi
+\dt 27/Feb/2014
+
+\lx -ŋri
+\ps suf.v
+\ge 1_sg._pst._p
+\dt 15/Feb/2014
+
+\a -ŋɖi
+
+\lx -ŋro
+\ps suf.v
+\ge 1_sg._pst._s
+\a -ŋoro
+\dt 01/Mar/2013
+
+\lx -nu
+\ps suf.n
+\ge _loc._dist
+\a -no
+\dt 05/Oct/2015
+
+\lx nʌ
+\ps n
+\ge mind
+\ue very useful word: can mean mind, heart, desire, wish, hope; used with bomu
+\dt 28/Feb/2014
+
+\lx -ŋu
+\ps suf.v
+\ge 1_sg._npst
+\dt 15/Feb/2013
+
+\lx nʌbo
+\ps vt
+\ge desire
+\a nʌby
+\u
+\ue follows a verb: khari bepa na bomu, I desire to work; sisimu na bomu, I desire to learn; bomu is to do
+\dt 28/Feb/2014
+
+\lx nuhy
+\ps nep
+\ge wash
+\a nuhe
+\dt 26/May/2014
+
+\lx -num
+\ps suf.n
+\ge _com
+\a -nuŋ
+\dt 29/Jan/2013
+
+\lx nʌŋ
+\ps n
+\ge name
+\a nɤŋ
+\dt 28/May/2014
+
+\lx nʌːna
+\ps temp.adv
+\ge the.year.before.last
+\dt 01/Mar/2014
+
+\lx ŋur
+\ps vi
+\ge roar
+\dt 23/May/2014
+
+\lx nʌuka
+\ps temp.adv
+\ge the.year.after.next
+\dt 01/Mar/2014
+
+\lx nʌ_bo
+\ps vt
+\ge think
+\gn first word=mind, second is bomu
+\dt 05/Oct/2015
+
+\lx nwa
+\ps num
+\ge two
+\a nɔ
+\a nwak
+\a na
+\dt 15/Feb/2013
+
+\lx ny
+\ps disc.part
+\ge _hort
+\a -ny
+\dt 11/Mar/2013
+
+\lx ny
+\ps vi
+\ge be.auspicious
+\dt 18/Feb/2014
+
+\lx o
+\ps dem
+\ge this
+\a ol
+\u
+\a or
+\u
+\a om
+\dt 28/Feb/2014
+
+\lx o
+\ps interj
+\ge hey
+\ue used with a first name or vocative form
+\dt 21/May/2014
+
+\lx oɖɖa
+\ps spat.adv
+\ge here
+\dt 21/May/2014
+
+\lx oganem
+\ps n
+\ge palace
+\dt 17/Feb/2014
+
+\lx ok
+\ps vi
+\ge crow
+\a o
+\a o:
+\dt 13/Oct/2015
+
+\lx okom
+\ps adv
+\ge how.much
+\dt 08/Jul/2015
+
+\lx ol
+\ps n
+\ge light
+\dt 12/Oct/2015
+
+\lx op
+\ps vt
+\ge shoot
+\a om
+\u
+\a ob
+\dt 17/Feb/2014
+
+\lx oram
+\ps dem
+\ge this
+\a o
+\a or
+\dt 15/Feb/2013
+
+\lx ORAR
+\ps Nep
+\ge cave
+\dt 08/May/2013
+
+\lx orar
+\ps nep
+\ge cave
+\dt 21/May/2014
+
+\lx otta
+\ps spatial.adv
+\ge here
+\dt 22/Feb/2014
+
+\lx -p
+\ps suf.v
+\ge _npst._ptcp._copy
+\dt 13/Feb/2013
+
+\lx -pa
+\ps suf.v
+\ge __npst._ptcp
+\dt 29/Jan/2013
+
+\lx PACARI
+\ps nep
+\ge after
+\dt 29/Jan/2013
+
+\lx PACCHI
+\ps nep
+\ge after
+\dt 29/Jan/2013
+
+\lx PAHILA
+\ps nep
+\ge first
+\dt 12/Feb/2013
+
+\lx pakha
+\ps n
+\ge outside
+\dt 19/Feb/2014
+
+\lx PAKHORA
+\ps nep
+\ge arm
+\dt 12/Feb/2013
+
+\lx pakhura
+\ps nep
+\ge arm
+\dt 26/May/2014
+
+\lx palika
+\ps temp.adv
+\ge next.year
+\dt 01/Mar/2014
+
+\lx palkoti
+\ps n
+\ge sweet.potato
+\dt 05/Oct/2015
+
+\lx palo
+\ps nep
+\ge turn
+\dt 21/May/2014
+
+\lx paluŋ
+\ps n
+\ge fishnet
+\dt 30/Jan/2013
+
+\lx panʣi
+\ps n
+\ge nest
+\dt 07/Oct/2015
+
+\lx pap
+\ps kin
+\ge father
+\dt 28/Feb/2014
+
+\lx par
+\ps n
+\ge wound
+\dt 18/Feb/2014
+
+\lx PARAMPARAI
+\ps nep
+\ge traditional
+\dt 14/Feb/2013
+
+\lx parbum
+\ps n
+\ge headdress
+\dt 23/May/2014
+
+\lx parbuŋ
+\ps n
+\ge headdress
+\dt 28/Feb/2014
+
+\lx pari
+\ps n
+\ge heaven
+\dt 19/Feb/2014
+
+\lx PARNE
+\ps nep
+\ge _obl
+\dt 11/Mar/2013
+
+\lx paruwaŋ
+\ps n
+\ge knife
+\dt 14/Feb/2014
+
+\lx pasirym
+\ps n
+\ge feather
+\dt 19/Feb/2014
+
+\lx pasyrym
+\ps n
+\ge feather
+\dt 08/Oct/2015
+
+\lx PATAK
+\ps nep
+\ge times
+\dt 30/Jan/2013
+
+\lx patsoksi
+\ps p.n
+\ge Pacoksi
+\dt 29/Jan/2013
+
+\lx patta
+\ps nep
+\ge finding
+\dt 14/Feb/2014
+
+\lx paʦoksi
+\ps p.n
+\ge Pachoksi
+\dt 21/Feb/2014
+
+\lx pe
+\ps n
+\ge left
+\dt 22/Feb/2014
+
+\lx pe
+\ps vt
+\ge eat
+\a po
+\a py
+\a pi
+\u
+\a pep
+\dt 28/Feb/2014
+
+\lx pel
+\ps n
+\ge shadow
+\ue also used for spirit
+\dt 28/Feb/2014
+
+\lx penthika
+\ps adv
+\ge sequentially
+\uv go penthika sɵu (i am telling it in order, sequentially)
+\dt 01/Mar/2014
+
+\lx peperʦɵ
+\a peperʦa
+\ps n
+\ge pincers
+\dt 01/Oct/2015
+
+\lx per
+\ps vt
+\ge pinch
+\dt 22/Feb/2014
+
+\lx per
+\ps n
+\ge trap
+\dt 15/Oct/2015
+
+\lx phaʣi
+\ps n
+\ge sack
+\dt 28/Feb/2014
+
+\lx phal
+\ps vt
+\ge destroy
+\dt 27/Feb/2014
+
+\lx phantiŋ
+\ps n
+\ge turn.taking
+\gn used for sequentially alternating turns during rice pounding, often used with -ka to indicate 'by
+pounding in alternation'
+\dt 07/Oct/2015
+
+\lx phar
+\ps spatial.n
+\ge near
+\dt 22/Feb/2014
+
+\lx phar
+\ps n
+\ge proximity
+\dt 28/Feb/2014
+
+\lx pharbuŋ
+\ps n
+\ge headdress
+\dt 08/Jul/2015
+
+\lx phe-
+\ps ideo
+\ge suddenly
+\gn used with hemmu, to disappear from view
+\dt 07/Oct/2015
+
+\lx PHERI
+\ps nep
+\ge again
+\dt 30/Jan/2013
+
+\lx pheri
+\ps nep
+\ge again
+\dt 17/Feb/2014
+
+\lx phet
+\ps vt
+\ge serve.out
+\a phe
+\a pheʈ
+\a pheɖ
+\a phen
+\a pher
+\ue most often food, but can also refer to knocking something over and having all the contents fall out
+\dt 13/Oct/2015
+
+\lx phik
+\ps vt
+\ge pour.into
+\a phi
+\a phiː
+\dt 13/Oct/2015
+
+\lx phik
+\ps vt
+\ge put.in
+\a phi:
+\u
+\a phi
+\dt 28/Feb/2014
+
+\lx phit
+\ps vt
+\ge bring.here
+\a phin
+\a phiʈ
+\a phir
+\a phiɖ
+\dt 13/Oct/2015
+
+\lx phjak(s)
+\ps vt
+\ge tear
+\a phja
+\a phjak
+\a phjas
+\a phjaː
+\ue eg thread, rope
+
+\dt 13/Oct/2015
+
+\lx phjaphjaksa
+\ps n
+\ge bow.and.arrow
+\dt 08/Jul/2015
+
+\lx phlɵ-
+\ps v.pref
+\ge suddenly
+\dt 19/Feb/2014
+\uv used with lumu
+
+\lx phoka
+\ps n
+\ge ash
+\dt 21/May/2014
+
+\lx phop
+\ps vt
+\ge hug
+\a phom
+
+\lx phos
+\ps vi
+\ge vomit
+\a pho
+\dt 27/Feb/2014
+
+\lx phot
+\ps vt
+\ge scatter
+\a phoɖ
+\a phoʈ
+\a phon
+\dt 20/Oct/2015
+
+\lx phoʦɵl
+\ps n
+\ge strainer
+\gn made of bamboo
+\dt 08/Oct/2015
+
+\lx pho:mu
+\ps n
+\ge snow
+\dt 13/Oct/2015
+
+\lx phʌ
+\ps vi
+\ge argue
+\a phu
+\dt 14/Oct/2015
+
+\lx phʌk
+\ps vt
+\ge rouse
+\a phʌ
+\a phʌː
+\a phɤk
+\a phɤ
+\dt 13/Oct/2015
+
+\lx phul
+\ps vt
+\ge sniff.around
+\ue used of pigs rooting around, sniffing and digging a little
+\dt 27/Feb/2014
+
+\lx phʌl
+\ps vt
+\ge cut
+\dt 19/Feb/2014
+
+\lx phuli
+\ps n
+\ge work.share
+\gn used with bomu for reciprocal work sharing
+\dt 08/Oct/2015
+
+\lx phuliku
+\ps p.n
+\ge Phuliku
+\uv old name for Mukli, etymology in Miyakma story
+\dt 19/Feb/2014
+
+\lx phuliʦɵ
+\ps n
+\ge field.worker
+\dt 07/Oct/2015
+
+\lx phum
+\ps vt
+\ge insert
+\gn used for ovens, pockets, holes; insertion from side, not top
+\dt 01/Oct/2015
+
+\lx phʌnko
+\ps nep
+\ge round
+\dt 23/May/2014
+
+\lx phʌrke
+\ps nep
+\ge return
+\dt 22/May/2014
+
+\lx phʌsi
+\ps vr
+\ge dress
+\a phʌŋsi
+\u
+\a phʌmsi
+\dt 26/May/2014
+
+\lx phuttai
+\ps nep
+\ge suddenly
+\dt 20/Oct/2015
+
+\lx phwi
+\ps ideo
+\ge rustling.sound
+\dt 08/Jul/2015
+
+\lx pi
+\ps vt
+\ge break
+\dt 22/Feb/2014
+
+\lx pi
+\ps vt
+\ge break
+\dt 14/Oct/2015
+
+\lx pindi
+\ps n
+\ge porch
+\dt 12/Feb/2013
+
+\lx pir
+\ps nep
+\ge worry
+\dt 09/Jul/2015
+
+\lx piri
+\ps ideo
+\ge suddenly
+\dt 02/Jun/2016
+
+\lx piʦʌm
+\ps pn
+\ge Picham
+\dt 23/May/2014
+
+\lx plan
+\ps n
+\ge sleeping.mat
+\gn made from rice stalks or corn stalks
+\dt 07/Oct/2015
+
+\lx plemʦi
+\ps n
+\ge dark.red.lentil
+\dt 05/Oct/2015
+
+\lx plep
+\ps vt
+\ge fold
+\a plem
+\dt 22/Feb/2014
+
+\lx plepte
+\ps adj
+\ge flat
+\dt 22/Feb/2014
+
+\lx plʌkplʌjem
+\ps adj
+\ge smooth
+\dt 01/Oct/2015
+
+\lx plʌplʌja
+\ps adj
+\ge smooth
+\dt 18/Jun/2015
+
+\lx plwas
+\ps vt
+\ge forget
+\a pla
+\a plwa
+\dt 13/Oct/2015
+
+\lx plym
+\ps vt
+\ge dip.into
+\dt 19/Feb/2014
+
+\lx plys
+\ps vt
+\ge remove
+\gn shoes, clothes, glasses, jewelry, hats
+\dt 05/Oct/2015
+
+\lx po
+\ps n
+\ge chicken
+\dt 13/Feb/2013
+
+\lx pokhari
+\ps nep
+\ge pond
+\dt 14/Feb/2014
+
+\lx polym
+\ps n
+\ge hole
+\dt 22/Feb/2014
+
+\lx popnar
+\ps p.n.
+\ge Popnar
+\dt 08/May/2013
+
+\lx popʦʌm
+\ps n
+\ge hill
+\dt 08/Oct/2015
+
+\lx porɵktam
+\ps n
+\ge bird.type
+\dt 08/Jul/2015
+
+\lx porɵptam
+\ps n
+\ge bird.type
+\dt 28/Feb/2014
+
+\lx PRATHA
+\ps nep
+\ge system
+\dt 13/Feb/2013
+
+\lx prok
+\ps vi
+\ge jump
+\a pro
+\a pro:
+\dt 13/Oct/2015
+
+\lx prʌme
+\ps n
+\ge Rai.woman
+\dt 28/Feb/2014
+
+\lx prʌŋ
+\ps vt
+\ge create
+\a prɤ
+\a prʌː
+\a prʌ
+\dt 13/Oct/2015
+
+\lx prʌsiʈ
+\ps vr
+\ge be.established
+\a prʌs
+\u
+\a prʌsi
+\dt 27/Feb/2014
+
+\lx prʌtha
+\ps nep
+\ge usage
+\dt 30/May/2014
+
+\lx prʌʦɵ
+\ps n
+\ge Rai
+\dt 22/Feb/2014
+
+\lx pʌija
+\ps p.n
+\ge Paiya
+\dt 15/Feb/2014
+
+\lx pʌila
+\ps nep
+\ge first
+\dt 26/May/2014
+
+\lx pul
+\ps nep
+\ge bridge
+\dt 21/May/2014
+
+\lx pʌrjo
+\ps nep
+\ge _obl
+\dt 26/May/2014
+
+\lx pʌrne
+\ps nep
+\ge _obl
+\dt 24/Feb/2014
+
+\lx pʌrʌmpʌrai
+\ps nep
+\ge in.order
+\ue as in, according to tradition
+\dt 30/May/2014
+
+\lx put
+\ps vi
+\ge spring.out
+\a pun
+\a puʈ
+\a puɖ
+\dt 13/Oct/2015
+
+\lx pʰuʈ
+\ps vt
+\ge argue
+\a pʰun
+\dt 12/Feb/2013
+
+\lx pʌtta
+\ps nep
+\ge find
+\ue used with bomu
+\dt 21/May/2014
+
+\lx pʌʈʌk
+\ps nep
+\ge time
+\dt 26/May/2014
+
+\lx pʌʦhi
+\ps nep
+\ge after
+\dt 14/Feb/2014
+
+\lx pʌʦʌri
+\ps nep
+\ge afterwards
+\dt 26/May/2014
+
+\lx pʰwi
+\ps ideo
+\ge rustling.sound
+\dt 01/Mar/2013
+
+\lx pyrym
+\ps n
+\ge ginger
+\dt 18/Feb/2014
+
+\lx -ra
+\ps suf.n
+\ge _loc
+\a -ɖa
+\u
+\a -ɖɖa
+\dt 11/Mar/2013
+
+\lx RAHECHA
+\ps nep
+\ge _evid
+\dt 12/Feb/2013
+
+\lx raimo
+\ps n
+\ge sieve
+\gn flat-bottomed
+\dt 15/Oct/2015
+
+\lx -ram
+\ps n.suf
+\ge _abl
+\dt 17/Feb/2014
+
+\lx rambokhom
+\ps pn
+\ge Rambokhom
+\dt 23/May/2014
+
+\lx RAMITA
+\ps nep
+\ge scene
+\dt 29/Jan/2013
+
+\lx ramli
+\ps p.n.
+\ge Ramli
+\dt 15/Feb/2014
+
+\lx -ramma
+\ps suf.n
+\ge _abl
+\dt 01/Mar/2013
+
+\lx rat
+\ps nep
+\ge night
+\dt 23/May/2014
+
+\lx ratonarato
+\ps nep
+\ge bright.red
+\dt 21/May/2014
+
+\lx re
+\ps disc.part
+\ge _foc
+\dt 18/Feb/2013
+
+\lx reka
+\ps nep
+\ge line
+\dt 22/Feb/2014
+
+\lx remsi
+\ps n
+\ge bush.type
+\ue has many long branches
+\dt 24/Feb/2014
+
+\lx rep
+\ps vt
+\ge look
+\a rem
+\a repr
+\a reb
+\dt 20/Oct/2015
+
+\lx resepma
+\ps n
+\ge paddy.rice
+\dt 18/Feb/2014
+
+\lx ret
+\ps vt
+\ge bring
+\a ren
+\a reʈ
+\a rer
+\dt 13/Oct/2015
+
+\lx reʈhiʈ
+\ps vt
+\ge bring.to
+\dt 17/Feb/2014
+
+\lx reʦebuŋ
+\ps n
+\ge flower.type
+\dt 22/Feb/2014
+
+\lx reʦha
+\ps disc.part
+\ge it.seems
+\dt 15/Feb/2014
+
+\lx reʦɵkuma
+\ps n
+\ge orphan.girl
+\dt 05/Oct/2015
+
+\lx reʦɵkupa
+\ps n
+\ge orphan.boy
+\dt 05/Oct/2015
+
+\lx reʦukupa
+\ps n
+\ge orphan
+\dt 21/Feb/2014
+
+\lx ri
+\ps kin
+\ge sibling
+\a ribuŋ
+\dt 28/Feb/2014
+
+\lx ridym
+\ps n
+\ge custom
+\dt 28/Feb/2014
+
+\lx rime
+\ps kin
+\ge sisters.husbands.sister
+\dt 22/Feb/2014
+
+\lx rimsiʈ
+\ps vr
+\ge hide.from.view
+\a rims
+\u
+\a rimsi
+\a rimsiɖ
+\dt 28/Feb/2014
+
+\lx rip
+\ps vt
+\ge sprinkle
+\a rim
+\u
+\a ri
+\a rib
+\dt 24/Feb/2014
+
+\lx rip
+\ps vt
+\ge block.from.view
+\a rim
+\u
+\a
+\u
+\a
+\dt 14/Oct/2015
+
+\lx ripʣuŋ
+\ps n
+\ge shade
+\a rimʣuŋ
+\dt 28/Feb/2014
+
+\lx ris
+\ps vi
+\ge laugh
+\a ri
+\dt 09/Jul/2015
+
+\lx RITI
+\ps nep
+\ge system
+\dt 14/Feb/2013
+
+\lx riti
+\ps nep
+\ge custom
+\dt 30/May/2014
+
+\lx riʦi
+\ps n
+\ge sour.fruit
+\dt 14/Feb/2013
+
+\lx riʦikuma
+\ps kin
+\ge sister
+\dt 21/May/2014
+
+\lx riʦikuwa
+\ps kin
+\ge brother
+\dt 21/May/2014
+
+\lx riʦɵ
+\ps kin
+\ge sister
+\dt 22/Feb/2014
+
+\lx rju
+\ps kin
+\ge sisters.husbands.brother
+\dt 22/Feb/2014
+
+\lx rok
+\ps vi
+\ge come
+\a ro
+\dt 30/Jan/2013
+
+\lx rokphaʈ
+\ps vi
+\ge arrive
+\a rompha
+\a rokpha
+\a rokphaɖ
+\dt 18/Jun/2015
+
+\lx rokthi
+\ps vi
+\ge arrive
+\a rothi
+\dt 21/May/2014
+
+\lx rɵm
+\ps n
+\ge body
+\dt 17/Feb/2014
+
+\lx roŋga
+\ps n
+\ge niche.in.cave
+\dt 24/Feb/2014
+
+\lx rɵpʦym
+\ps vt
+\ge grab
+\ue tsymmu is to catch, and r* adds an adverbial quality of speed, suddenness
+
+\lx rʌbuʈkhom
+\ps pn
+\ge Robutkhom
+\dt 23/May/2014
+
+\lx rʌk
+\ps vt
+\ge sprinkle
+\a rʌ
+\dt 13/Oct/2015
+\a rʌː
+\uv used for blessing as well, eg biting little bits of ginger and spitting them
+
+\lx rukh
+\ps nep
+\ge tree
+\dt 15/May/2014
+
+\lx rʌŋma
+\ps n
+\ge spell
+\dt 23/Feb/2014
+
+\lx rwak
+\ps vi
+\ge say
+\a rwak
+\a rwa
+\a ra
+\a rwa:
+\a rwap
+\dt 13/Oct/2015
+
+\lx ry
+\ps n
+\ge inauspicious.action
+\dt 11/Mar/2013
+
+\lx -sa
+\ps suf.v
+\ge _cvb
+\a -saka
+\dt 29/Jan/2013
+
+\lx -sa
+\ps suf.v
+\ge _aux
+\a -san
+\a -saʈ
+\a -sak
+\dt 24/Feb/2014
+
+\lx -sa
+\ps v.suf
+\ge _ben
+\a -sak
+\u
+\a -saʈ
+\u
+\a -saɖ
+\u
+\ue as with other auxiliaries, the phonology is unclear
+\dt 01/Mar/2014
+
+\lx sae
+\ps n
+\ge spiritual.energy
+\ue can be killed using an effigy, usually resulting in real person dying; used with the verb 'to fold' when killing, with to awaken, when rebirthing
+\dt 22/Feb/2014
+
+\lx saebuŋ
+\ps n
+\ge flower.type
+\dt 22/Feb/2014
+
+\lx SAHALLA
+\ps nep
+\ge advice
+\dt 29/Jan/2013
+
+\lx saila
+\ps nep
+\ge third.son
+\dt 19/Feb/2014
+
+\lx sakham
+\ps n
+\ge spiritual.power
+\dt 24/Feb/2014
+
+\lx saktisali
+\ps nep
+\ge power
+\dt 21/May/2014
+
+\lx sal
+\ps vt
+\ge pick.out
+\ue used with pomu, means 'devour'
+\dt 21/May/2014
+
+\lx sal
+\ps nep
+\ge year
+\dt 23/May/2014
+
+\lx saːle
+\ps n
+\ge thread
+\dt 13/Oct/2015
+
+\lx sam
+\ps vt
+\ge catch
+\dt 01/Mar/2013
+
+\lx sama
+\ps n
+\ge clan
+\dt 13/Feb/2013
+
+\lx SAMAE
+\ps nep
+\ge time
+\dt 29/Jan/2013
+
+\lx samae
+\ps nep
+\ge time
+\dt 26/May/2014
+
+\lx SAMMA
+\ps nep
+\ge until
+\dt 14/Feb/2013
+
+\lx samrip
+\ps n
+\ge throat
+\dt 01/Mar/2013
+
+\lx sano
+\ps nep
+\ge small
+\dt 22/Feb/2014
+
+\lx sarki
+\ps n
+\ge urine
+\dt 18/Feb/2013
+
+\lx saro
+\ps nep
+\ge much
+\dt 01/Mar/2014
+
+\lx sars
+\ps vi
+\ge urinate
+\a sar
+\dt 27/Feb/2014
+
+\lx saseʈ
+\ps vt
+\ge sacrifice
+\a sasen
+\u
+\a saseɖ
+\u
+\a sase
+\dt 22/Feb/2014
+
+\lx SAT
+\ps nep
+\ge seven
+\dt 29/Jan/2013
+
+\lx sat
+\ps nep
+\ge seven
+\dt 22/Feb/2014
+
+\lx sat
+\ps vi
+\ge dry
+\a san
+\a saʈ
+\a sa
+\a sa:
+\dt 13/Oct/2015
+
+\lx saʈ
+\ps suf.v
+\ge _aux
+\a san
+\dt 14/Feb/2013
+
+\lx sekre
+\ps n
+\ge sand
+\dt 15/Feb/2014
+
+\lx sel
+\ps n
+\ge iron
+\dt 01/Oct/2015
+
+\lx seːlam
+\ps n
+\ge leaf
+\dt 14/Oct/2015
+
+\lx selʣaŋ
+\ps pn
+\ge Seljang
+\dt 23/May/2014
+
+\lx sem
+\ps n
+\ge hair
+\dt 11/Mar/2013
+
+\lx semsʌŋ
+\ps n
+\ge firewood
+\dt 05/Oct/2015
+
+\lx sep-
+\ps ideo
+\ge suddenly
+\gn used with verb bv:mu, wash away
+\dt 05/Oct/2015
+
+\lx ser
+\ps n
+\ge louse
+\dt 13/Feb/2013
+
+\lx ser
+\ps n
+\ge bone
+\dt 01/Mar/2013
+
+\lx serɖar
+\ps n
+\ge remains
+\dt 28/Feb/2014
+
+\lx seruli
+\ps n
+\ge jackal
+\dt 12/Oct/2015
+
+\lx ses
+\ps vi
+\ge fart
+\a se
+\dt 09/Jul/2015
+
+\lx set
+\ps vt
+\ge kill
+\a sen
+\a -seʈ
+\a seʈ
+\a ser
+\a seɖ
+\a se
+\dt 13/Oct/2015
+
+\lx sewari
+\ps n
+\ge headdress.adornment
+\dt 01/Mar/2013
+
+\lx si
+\ps vi
+\ge die
+\dt 29/Jan/2013
+
+\lx si
+\ps body
+\ge mouth
+\dt 23/May/2014
+
+\lx -si
+\ps v.suf
+\ge _refl
+\a -s
+\u
+\a -sik
+\u -siʈ
+\dt 24/Feb/2014
+
+\lx -si
+\ps v.suf
+\ge _nmlz
+\dt 17/Feb/2014
+
+\lx sihar-susar
+\ps nep
+\ge care-_echo
+\dt 02/Jun/2016
+
+\lx -sik
+\ps suf.v
+\ge _aux
+\dt 01/Mar/2013
+
+\lx sikar
+\ps nep
+\ge hunting
+\dt 14/Feb/2014
+
+\lx sikewamaŋkewa
+\ps n
+\ge bird.type
+\a sikewa
+\dt 30/May/2014
+
+\lx sintha
+\ps n
+\ge night
+\dt 23/Feb/2014
+
+\lx SIP
+\ps nep
+\ge skill
+\dt 13/Feb/2013
+
+\lx sip
+\ps nep
+\ge skill
+\dt 28/May/2014
+
+\lx SIPALO
+\ps nep
+\ge skilled
+\dt 13/Feb/2013
+
+\lx sipalo
+\ps nep
+\ge skilled
+\dt 28/May/2014
+
+\lx sir
+\ps nep
+\ge top
+\dt 23/May/2014
+
+\lx sirto
+\ps nep
+\ge tribute
+\a sir
+\ue used with verb phAmu
+\dt 30/May/2014
+
+\lx sisi
+\ps n
+\ge blood
+\dt 01/Mar/2013
+
+\lx sisigarku
+\ps n
+\ge sacrifice
+\dt 09/Jul/2015
+
+\lx sit
+\ps vt
+\ge teach
+\a sin
+\a siː
+\dt 13/Oct/2015
+
+\lx -siʈ
+\ps suf.v
+\ge _aux
+\dt 01/Mar/2013
+
+\lx sjaŋ
+\ps vt
+\ge clean.house
+\dt 23/Feb/2014
+
+\lx -so
+\ps v.suf
+\ge _aux
+\a -sok
+\a -soɖ
+\u
+\ue used to express completion of action (nepali paThaunu, -dinu, -saknu...)
+\a -soʈ
+\dt 01/Mar/2014
+
+\lx sɵ
+\ps n
+\ge meat
+\dt 17/Feb/2014
+
+\lx sɵ
+\ps vt
+\ge tell
+\dt 10/Jul/2015
+
+\a sɵj
+
+\lx sɵbdi
+\ps n
+\ge forest
+\a sɵpdi
+\dt 05/Oct/2015
+
+\lx soʣam
+\ps n
+\ge valuables
+\ue mostly pots and money
+\dt 22/Feb/2014
+
+\lx -sok
+\ps suf.v
+\ge _aux
+\dt 12/Mar/2013
+
+\lx sɵkhli
+\ps n
+\ge hunting
+\dt 15/Feb/2014
+
+\lx sokmu
+\ps n
+\ge forest
+\dt 15/Feb/2014
+
+\lx soksɵ
+\ps n
+\ge monkey
+\dt 07/Oct/2015
+
+\lx sɵl
+\ps vt
+\ge wash
+\dt 26/May/2014
+
+\lx sɵlehaʈ
+\ps vt
+\ge pour.out.suddenly
+\a sɵlehan
+\a sɵlehaɖ
+\dt 15/Feb/2014
+
+\lx sɵlɵp
+\ps n
+\ge shoes
+\dt 07/Oct/2015
+
+\lx sɵlsi
+\ps vr
+\ge wash
+\ue wash body, bathe
+\a sɵlsip
+\dt 26/May/2014
+
+\lx sɵmdi
+\ps n
+\ge prayer
+\ue also used for "story" with makem before it
+\dt 23/Feb/2014
+
+\lx sɵna
+\ps n
+\ge gold
+\dt 08/Oct/2015
+
+\lx sɵp
+\ps vt
+\ge wash
+\a sɵm
+\dt 26/May/2014
+
+\lx sɵpsɵp
+\ps n
+\ge riverbank
+\dt 19/Feb/2014
+
+\lx sɵpsyri
+\ps n
+\ge dry.leaves
+\dt 19/Feb/2014
+
+\lx sor
+\ps n
+\ge uncooked.rice
+\dt 28/Feb/2014
+
+\lx sɵrlole
+\ps n
+\ge worship
+\dt 18/Feb/2014
+
+\lx sɵt
+\ps vt
+\ge bring.down
+\a sɵn
+\a sɵʈ
+\a sɵr
+\dt 13/Oct/2015
+
+\lx sote
+\ps n
+\ge bamboo.pipe
+\gn used for blowing in fire
+\dt 08/Oct/2015
+
+\lx so:ʣam
+\ps n
+\ge pot
+\dt 14/Oct/2015
+
+\lx su
+\ps num
+\ge three
+\a suk
+\dt 30/Jan/2013
+
+\lx subu
+\ps n
+\ge earth
+\dt 18/Feb/2014
+
+\lx subupo
+\ps n
+\ge cock
+\dt 22/May/2014
+
+\lx sʌdhai
+\ps nep
+\ge always
+\dt 09/Jul/2015
+
+\lx sʌdhʌi
+\ps nep
+\ge always
+\dt 21/Feb/2014
+
+\lx suːhadda
+\ps temp.adv
+\ge two.days.after.tomorrow
+\dt 01/Mar/2014
+
+\lx suk
+\ps vt
+\ge pierce
+\a suː
+\dt 13/Oct/2015
+
+\lx sʌk
+\ps vt
+\ge skewer
+\ue used for putting something in a small hole, like threading a needle
+\a sʌ
+\a sʌː
+\dt 13/Oct/2015
+
+\lx suːka
+\ps temp.adv
+\ge two.years.after.next
+\dt 01/Mar/2014
+
+\lx sukra
+\ps p.n
+\ge Venus
+\dt 19/Feb/2014
+
+\lx sʌksi
+\ps n
+\ge chestnut
+\dt 12/Oct/2015
+
+\lx sʌlla
+\ps nep
+\ge decision
+\dt 24/Feb/2014
+
+\lx sʌmmʌ
+\ps nep
+\ge until
+\dt 18/Feb/2014
+
+\lx sʌŋ
+\ps n
+\ge wood
+\dt 21/Feb/2014
+
+\lx suːna
+\ps temp.adv
+\ge two.years.before.last
+\dt 01/Mar/2014
+
+\lx suːnem
+\ps temp.adv
+\ge two.days.before.yesterday
+\dt 01/Mar/2014
+
+\lx sunkosi
+\ps p.n
+\ge Sunkosi
+\dt 19/Feb/2014
+
+\lx surta
+\ps nep
+\ge worry
+\dt 08/Jul/2015
+
+\lx sʌs
+\ps vi
+\ge heal
+\a sʌ
+\a sʌː
+\dt 13/Oct/2015
+
+\lx sʌsiʈ
+\a sʌs
+\u
+\a sʌsi
+\a sʌsiɖ
+\ps vr
+\ge be.skewered
+\dt 13/Oct/2015
+
+\lx sʌsur
+\ps nep
+\ge father.in.law
+\a sʌsura
+\dt 26/May/2014
+
+\lx sʌsural
+\ps nep
+\ge father.in.law.home
+\dt 22/May/2014
+
+\lx sʌʈʈama
+\ps nep
+\ge instead
+\a sʌʈʈa
+\dt 30/May/2014
+
+\lx sʌttʌ
+\ps nep
+\ge instead
+\dt 09/Jul/2015
+
+\lx swad
+\ps nep
+\ge taste
+\dt 30/May/2014
+
+\lx swaːla
+\ps n
+\ge young.man
+\dt 14/Oct/2015
+
+\lx swaːlame
+\ps n
+\ge young.woman
+\dt 14/Oct/2015
+
+\lx swaŋ
+\ps vi
+\ge flee
+\a swa
+\a swaː
+\dt 13/Oct/2015
+
+\lx swaphem
+\ps n
+\ge winnowing.basket
+\dt 23/Feb/2014
+
+\lx swarepo
+\ps n
+\ge cock
+\dt 28/Feb/2014
+
+\lx sy
+\ps ques
+\ge who
+\dt 04/Feb/2013
+
+\lx synkhra
+\ps n
+\ge wooden.mortar
+\gn large, used for pounding rice
+\dt 07/Oct/2015
+
+\lx sys
+\ps vi
+\ge itch
+\a sy
+\dt 09/Jul/2015
+
+\lx -t
+\ps v.suf
+\ge _pst
+\a -ʈ
+\u
+\a -ɖ
+\dt 01/Mar/2014
+
+\lx -ta
+\ps suf.v
+\ge _aux
+\dt 01/Mar/2013
+
+\lx -tʰa
+\ps suf.v
+\ge _aux
+\dt 01/Mar/2013
+
+\lx tabo
+\ps nep
+\ge copper
+\dt 28/Feb/2014
+
+\lx TADA
+\ps nep
+\ge far
+\dt 01/Mar/2013
+
+\lx taɖha
+\ps nep
+\ge far
+\dt 08/Jul/2015
+
+\lx -tʰal
+\ps suf.v
+\ge _aux
+\dt 29/Jan/2013
+
+\lx tam
+\ps vt
+\ge set.aside
+\ue used with ritual words
+\dt 23/May/2014
+
+\lx tamaʣu
+\ps p.n
+\ge wind.name
+\dt 19/Feb/2014
+
+\lx tamaŋ
+\ps pn
+\ge Tamang
+\dt 23/May/2014
+
+\lx tan
+\ps vi
+\ge fall
+\a taː
+\a ta
+\dt 13/Oct/2015
+
+\lx taŋmadu
+\ps n
+\ge banana.tree
+\ue old ritual word
+\dt 19/Feb/2014
+
+\lx tarapa
+\ps n
+\ge son
+\dt 21/Feb/2014
+
+\lx taro
+\ps nep
+\ge far
+\dt 21/May/2014
+
+\lx tatasɵm
+\ps adj
+\ge various
+\dt 08/Jul/2015
+
+\lx ʈau
+\ps nep
+\ge place
+\dt 17/Feb/2014
+
+\lx ter
+\ps vt
+\ge turn
+\dt 18/Jun/2015
+
+\lx tha
+\ps nep
+\ge know
+\ue with bumu
+\dt 23/May/2014
+
+\lx tha
+\ps nep
+\ge know
+\dt 09/Jul/2015
+
+\lx ʈhakro
+\ps n
+\ge bamboo.brush
+\dt 28/Feb/2014
+
+\lx thal
+\ps nep
+\ge pond
+\dt 14/Feb/2014
+
+\lx -thal
+\ps v.suf
+\ge _aux
+\ue expresses habitual action
+
+\uv gani ham bonthalni--what do you do, what are you doing nowadays
+\dt 01/Mar/2014
+
+\lx tham
+\ps vi
+\ge get.lost
+\dt 05/Oct/2015
+
+\lx thama
+\ps temp.adv
+\ge later
+\dt 22/Feb/2014
+
+\lx than
+\ps nep
+\ge fixed.length.of.cloth
+\dt 23/May/2014
+
+\lx than
+\ps nep
+\ge metal.pot
+\dt 02/Jun/2016
+
+\lx -than
+\ps nep
+\ge classifier
+\ue used for pots, for rolls of cloth
+\dt 22/Feb/2014
+
+\lx -thap
+\ps suf.v
+\ge _aux
+\dt 26/May/2014
+
+\lx thari
+\ps n
+\ge time
+\dt 15/Feb/2014
+
+\lx tharsaŋ
+\ps n
+\ge pole
+\dt 20/Oct/2015
+
+\lx -thaʈ
+\ps suf.v
+\ge _aux
+\a -than
+\dt 18/Jun/2015
+
+\lx that(s)
+\ps vt
+\ge remove
+\a than
+\a thas
+\a thaʈ
+\ue used with prefix (?) la
+\dt 13/Oct/2015
+
+\lx ʈhau
+\ps nep
+\ge place
+\dt 20/Oct/2015
+
+\lx thep
+\ps vt
+\ge pinch
+\a them
+\u
+\ue used with nettles to mean 'pick'
+\dt 21/May/2014
+
+\lx thepʦo
+\ps nep
+\ge flat
+\dt 09/Jul/2015
+
+\lx thesi_thet
+\ps vt
+\ge know
+\a thesi_theʈ
+\a thesi_theɖ
+\a thesi_then
+\dt 01/Oct/2015
+
+\lx thet
+\ps vt
+\ge understand
+\a then
+\a the
+\a theʈ
+\a ther
+\dt 13/Oct/2015
+
+\lx -thi
+\ps v.suf
+\ge _aux
+\a -thiʈ
+\u
+\ue adds a notion of speed to the action
+\dt 01/Mar/2014
+
+\lx THIAKKAI
+\ps nep
+\ge exactly
+\dt 14/Feb/2013
+
+\lx thijo
+\ps nep
+\ge _pst._cop
+\dt 21/May/2014
+
+\lx THIK
+\ps nep
+\ge ready
+\dt 12/Feb/2013
+\a THIKKA
+
+\lx ʈhikkʌ
+\ps nep
+\ge ready
+\dt 23/Feb/2014
+
+\lx ʈhikʌ
+\ps nep
+\ge ready
+\a ʈhik
+\dt 26/May/2014
+
+\lx thjɵ
+\ps n.suf
+\ge near
+\a thjo
+\u
+\a kthjɵ
+\dt 17/Feb/2014
+
+\lx -thjɵ
+\ps n.suf
+\ge around
+\ue used in combination with a number of spatial elements but also nominal, to mean around, near the place where...
+\dt 01/Mar/2014
+
+\lx thjɵ(s)
+\ps vt
+\ge hear
+\a thjɵs
+\a thjɵ
+\dt 13/Oct/2015
+
+\lx ʈhjʌkkʌi
+\ps nep
+\ge at.the.same.time
+\dt 30/May/2014
+
+\lx thok
+\ps vi
+\ge ripen
+\a tho
+\dt 13/Oct/2015
+
+\lx ʈhok
+\ps nep
+\ge thing
+\dt 28/Feb/2014
+
+\lx thoke
+\ps nep
+\ge hit
+\dt 09/Jul/2015
+
+\lx thokor
+\ps pn
+\ge Thokor
+\dt 23/May/2014
+
+\lx thoŋ-
+\ps ideo
+\ge suddenly
+\gn only with konmu, to pour, make wet
+\dt 05/Oct/2015
+
+\lx thɵrsi
+\ps n
+\ge happy
+\ng used with verb dwamu to mean 'be
+happy'
+\dt 18/Jun/2015
+
+\lx -thʌ
+\ps v.suf
+\ge _aux
+\a -thʌʈ
+\ue expresses perfective action; very close (perhaps identical) to so
+\dt 01/Mar/2014
+
+\lx thʌk
+\ps vt
+\ge hide
+\a thʌ
+\a thʌː
+\dt 13/Oct/2015
+
+\lx thʌkpuri
+\ps n
+\ge belt
+\dt 21/May/2014
+
+\lx thuluŋ
+\ps n
+\ge Thulung
+\a thulu
+\u
+\dt 19/Feb/2014
+
+\lx thʌŋki
+\ps n
+\ge resin
+\dt 21/May/2014
+
+\lx thuny
+\ps nep
+\ge imprison
+\a thune
+\dt 23/May/2014
+
+\lx thupary
+\ps nep
+\ge heap
+\a thupare
+\dt 21/May/2014
+
+\lx thupro
+\ps nep
+\ge many
+\dt 23/May/2014
+
+\lx thuri
+\ps n
+\ge shuttle
+\ue shuttle used in weaving
+\dt 22/Feb/2014
+
+\lx thʌsa
+\ps n
+\ge resin.pine
+\gn pinus roxburghii
+\dt 05/Oct/2015
+
+\lx thʌsiʈ
+\ps vr
+\ge hide
+\a thʌs
+\u
+\a thʌsi
+\a thʌsiɖ
+\u
+\a thɤnsi
+\dt 26/May/2014
+
+\lx thʌʦe
+\ps n
+\ge year
+\dt 17/Feb/2014
+
+\lx ʈhwak
+\ps vt
+\ge hit
+\a ʈhak
+\a ʈhwaː
+\gn wa in Mukli, a: in Deusa
+\dt 14/Oct/2015
+
+\lx thyrmu
+\ps n
+\ge smoldering.embers
+\dt 01/Oct/2015
+
+\lx thyr(s)
+\ps vt
+\ge send
+\a thyrs
+\a thyr
+\dt 10/Jul/2015
+
+\lx thyt(s)
+\ps vt
+\ge pull
+\a thyn
+\a thyʈ
+\a thys
+\a thyr
+\ue -s variant exceptional but found in
+Ghumne PAni 56
+\dt 13/Oct/2015
+
+\lx tibet
+\ps p.n
+\ge Tibet
+\dt 17/Feb/2014
+
+\lx tibetan
+\ps n
+\ge Tibetan
+\dt 18/Feb/2014
+
+\lx TIN
+\ps nep
+\ge three
+\dt 29/Jan/2013
+
+\lx tin
+\ps nep
+\ge three
+\dt 22/Feb/2014
+
+\lx tʰiʈ
+\ps suf.v
+\ge _aux
+\a tʰin
+\dt 19/Apr/2013
+
+\lx -tʰjo
+\ps suf.n
+\ge near
+\dt 01/Mar/2013
+
+\lx -to
+\ps suf.v
+\ge _cvb
+\a -tto
+\dt 30/Jan/2013
+
+\lx -to
+\ps suf.v
+\ge 1_sg>3._pst
+\a -uto
+\u
+\dt 13/Feb/2013
+
+\lx tɵlɵmram
+\ps adv
+\ge quickly
+\dt 20/Oct/2016
+
+\lx toŋbasʌŋ
+\ps n
+\ge beer.pot
+\dt 24/Feb/2014
+
+\lx toŋdo
+\ps kin
+\ge eldest.male
+\dt 22/Feb/2014
+
+\lx toŋdy
+\ps n
+\ge first.son
+\dt 28/Feb/2014
+
+\lx toŋma
+\ps kin
+\ge eldest.female
+\dt 22/Feb/2014
+
+\lx ʈoʈa
+\ps nep
+\ge hole
+\dt 20/Oct/2015
+
+\lx tɤtha
+\ps n
+\ge fixed.date
+\dt 08/Jul/2015
+
+\lx to:si
+\ps n
+\ge Tosi
+\dt 12/Oct/2015
+
+\lx tʌ
+\ps nep
+\ge indeed
+\dt 18/Feb/2014
+
+\lx -tʌ
+\ps v.suf
+\ge _aux
+\a -ta
+\u
+\ue again, somewhat unclear: seems to be found mostly with gAnmu, to sit, with the meaning of durative.
+\dt 01/Mar/2014
+
+\lx tuhura
+\ps nep
+\ge orphan
+\dt 28/Feb/2014
+
+\lx tukisaːle
+\ps n
+\ge thread.spool
+\dt 13/Oct/2015
+
+\lx tukumʦim
+\ps n
+\ge darkness
+\dt 14/Oct/2015
+
+\lx tukuni
+\ps n
+\ge small.wooden.jug
+\dt 08/Oct/2015
+
+\lx tʌmakhu
+\ps nep
+\ge pipe
+\dt 23/May/2014
+
+\lx tʌŋtʌŋ
+\ps adv
+\ge one.by.one
+\a tɤŋtɤŋ
+\u
+\ue eg things lined up, even humans
+\dt 01/Mar/2014
+
+\lx tʌŋtʌŋjʌ
+\ps adv
+\ge in.a.row
+\dt 12/Oct/2015
+
+\lx tura
+\ps nep
+\ge orphan
+\dt 26/May/2014
+
+\lx tʌre
+\ps nep
+\ge cross
+\a with dymmu
+\dt 23/May/2014
+
+\lx tʌrʌ
+\ps nep
+\ge but
+\dt 23/Feb/2014
+
+\lx tʌrʌ
+\ps nep
+\ge but
+\dt 09/Jul/2015
+
+\lx twap
+\ps n
+\ge self
+\a tap
+\a twak
+\a tak
+\dt 15/Feb/2013
+
+\lx twatwasɵm
+\ps adj
+\ge each.one's.own
+\dt 17/Feb/2014
+
+\lx tyry-
+\ps v.pref
+\ge suddenly
+\uv used with phenmu, to serve out
+\dt 01/Mar/2014
+
+\lx ʦa
+\ps vt
+\ge roast
+\dt 17/Feb/2014
+
+\lx ʦai
+\ps nep
+\ge _contr
+\dt 08/Jul/2015
+
+\lx ʦanʦagrʌ
+\ps n
+\ge bird.type
+\a ʦanʦakru
+\dt 28/May/2014
+
+\lx ʦape
+\ps n
+\ge food
+\dt 29/Jan/2013
+
+\lx ʦaps
+\ps vt
+\ge be.able
+\a ʦap
+\u
+\a ʦam
+\dt 06/May/2014
+
+\lx ʦar
+\ps vt
+\ge make.fall
+\dt 15/May/2014
+
+\lx -ʦe
+\ps v.suf
+\ge _aux
+\ue for now, only found with Ammu, to sleep; has a process kind of meaning it seems, not clear; perhaps continuous action
+\dt 01/Mar/2014
+
+\lx -ʦʰe
+\ps suf.v
+\ge _aux
+\dt 11/Mar/2013
+
+\lx ʦekla
+\ps n
+\ge bird.type
+\dt 19/Feb/2013
+
+\lx ʦemphra
+\ps n
+\ge bird.type
+\dt 22/May/2014
+
+\lx ʦer
+\ps n
+\ge cocks.comb
+\dt 22/Feb/2014
+
+\lx ʦerkhu
+\ps pn
+\ge Cerkhu
+\dt 22/May/2014
+
+\lx ʦet
+\ps vt
+\ge hang
+\a ʦeɖ
+\a ʦeʈ
+\a ʦen
+\dt 13/Oct/2015
+
+\lx ʦeʈ_si
+\ps vr
+\ge hang
+\a ʦesik
+\dt 05/Oct/2015
+
+\lx ʦha
+\ps nep
+\ge cop
+\dt 14/Feb/2014
+
+\lx ʦha
+\ps ideo
+\ge suddenly
+\gn only with ghromu, throw
+\dt 05/Oct/2015
+
+\lx ʦhaga
+\ps pn
+\ge Chaga
+\dt 23/May/2014
+
+\lx ʦhaku
+\ps n
+\ge highlands
+\dt 15/Feb/2014
+
+\lx ʦhari
+\ps kin
+\ge youngest
+\dt 23/Feb/2014
+
+\lx ʦhas
+\ps vi
+\ge spread
+\a ʦha
+\dt 27/Feb/2014
+
+\lx ʦhaskur
+\ps pn
+\ge Chaskur
+\dt 20/Oct/2016
+
+\lx ʦhaubis
+\ps nep
+\ge twenty-four
+\dt 23/May/2014
+
+\lx ʦhe
+\ps v.suf
+\ge _aux
+\dt 09/Jul/2015
+
+\lx ʦhela
+\ps nep
+\ge stone
+\dt 21/May/2014
+
+\lx ʦhet
+\ps vt
+\ge know
+\a ʦhen
+\a ʦheʈ
+\a ʦheː
+\a ʦheɖ
+\dt 13/Oct/2015
+
+\lx ʦheu
+\ps nep
+\ge middle.of
+\dt 23/May/2014
+
+\lx ʦhi
+\ps vt
+\ge sweep
+\dt 23/Feb/2014
+
+\lx ʦhi
+\ps ideo
+\ge sound.of.displeasure
+\dt 08/Jul/2015
+
+\lx ʦhimuri
+\ps n
+\ge broom
+\dt 14/Oct/2015
+
+\lx ʦhipʣi
+\ps n
+\ge peeled.bamboo
+\dt 28/Feb/2014
+
+\lx ʦhiritaŋti
+\ps n
+\ge bird.type
+\dt 08/Jul/2015
+
+\lx ʦhokʦo
+\ps n
+\ge anger
+\dt 20/Feb/2014
+\uv used with bʌmu to mean 'get angry'
+
+\lx ʦhɵm
+\ps adv
+\ge very
+\dt 15/Feb/2014
+
+\lx ʦhora
+\ps nep
+\ge son
+\dt 23/May/2014
+
+\lx ʦhori
+\ps nep
+\ge daughter
+\dt 17/Feb/2014
+
+\lx ʦhɵs
+\ps vi
+\ge get.done.quickly
+\a ʦhɵ
+\dt 13/Oct/2015
+
+\lx ʦhʌ
+\ps nep
+\ge _cop
+\dt 19/Feb/2014
+
+\lx ʦhʌkkʌ
+\ps nep
+\ge in.surprise
+\dt 26/May/2014
+
+\lx ʦhʌkkʌi
+\ps nep
+\ge amazed
+\dt 23/Feb/2014
+
+\lx ʦhʌkʌr
+\ps nep
+\ge wood.rack
+\dt 18/Jun/2015
+
+\lx ʦhʌle
+\ps nep
+\ge deceive
+\ue with bomu
+\dt 23/May/2014
+
+\lx ʦhʌrke
+\ps nep
+\ge sprinkle
+\dt 22/May/2014
+
+\lx -ʦi
+\ps suf.v
+\ge _du
+\dt 29/Jan/2013
+
+\lx -ʦi
+\ps suf.v
+\ge _du
+\dt 08/May/2013
+
+\lx ʦʰi
+\ps ideo
+\ge dislike.sound
+\dt 15/Feb/2013
+
+\lx ʦikipa
+\ps n
+\ge flea
+\dt 13/Feb/2013
+
+\lx ʦimʈa
+\ps nep
+\ge fire.tongs
+\dt 21/May/2014
+
+\lx ʦintan
+\ps nep
+\ge meditation
+\dt 26/May/2014
+
+\lx -ʦip
+\ps suf.n
+\ge _du
+\dt 29/Jan/2013
+
+\lx ʦirimaksi
+\ps ideo
+\ge sudden.bite
+\ue kind of bite given by fleas and lice
+\dt 10/Jul/2015
+
+\lx ʦitokipatoki
+\ps nep
+\ge sinner
+\en ??
+\dt 09/Jul/2015
+
+\lx ʦiz
+\ps nep
+\ge thing
+\dt 17/Feb/2014
+
+\lx ʦja
+\ps n
+\ge Tibetan
+\dt 15/Feb/2014
+
+\lx ʦjamo
+\ps n
+\ge Tibetan.girl
+\dt 17/Feb/2014
+
+\lx ʦjapljapkai
+\ps ideo
+\ge falling.sound
+\dt 12/Feb/2013
+
+\lx ʦjar
+\ps onom
+\ge bird.sound
+\dt 22/May/2014
+
+\lx ʦɵ
+\ps n
+\ge child
+\dt 28/Feb/2014
+
+\a ʦɵtʦɵ
+
+\lx ʦoko
+\ps ideo
+\ge suddenly
+\gn with Djomu, to pick up
+\dt 05/Oct/2015
+
+\lx -ʦoko
+\ps suf.v
+\ge 1_de._pst
+\dt 19/Feb/2014
+
+\lx ʦɵm
+\ps vt
+\ge begin.to
+\dt 18/Feb/2014
+
+\lx ʦomsʌŋ
+\ps n
+\ge forked.piece
+\ue used in building huts, houses, to support main beam
+\dt 28/Feb/2014
+
+\lx ʦoŋkhi
+\ps n
+\ge cactus
+\dt 24/Feb/2014
+
+\lx ʦɵr
+\ps num
+\ge seven
+\en should actually be yetle (this is special Lakpa dialect?)
+\dt 09/Jul/2015
+
+\lx ʦɵrʦi
+\ps n
+\ge bamboo.basket
+\dt 23/Feb/2014
+
+\lx ʦoʦuku
+\ps p.n
+\ge Chochuku
+\dt 19/Feb/2014
+
+\lx ʦʌi
+\ps nep
+\ge _contr
+\dt 22/May/2014
+
+\lx ʦʌi
+\ps nep
+\ge contr
+\dt 18/Jun/2015
+
+\lx ʦʌk
+\ps vt
+\ge close
+\a ʦʌ
+\a ʦʌː
+\dt 13/Oct/2015
+
+\lx ʦʌk
+\ps vt
+\ge know
+\a ʦʌ
+\dt 22/Feb/2014
+
+\lx ʦʌk
+\ps vt
+\ge know
+\a ʦʌ
+\a ʦɤ
+\a ʦɤk
+\dt 09/Jul/2015
+
+\lx ʦʌkpu
+\ps n
+\ge bird
+\dt 19/Feb/2014
+
+\lx -ʦuku
+\ps v.suf
+\ge 1_de._npst
+\dt 13/Oct/2015
+
+\lx ʦʌkʌr
+\ps n
+\ge hearth.rack
+\dt 13/Oct/2015
+
+\lx ʦʌk(s)
+\ps vt
+\ge snap
+\ue used for long things
+\a ʦʌ
+\a ʦʌk
+\a ʦʌs
+\a ʦʌː
+\a ʦɤk
+\dt 13/Oct/2015
+
+\lx ʦʌŋ
+\ps body
+\ge back
+\dt 23/May/2014
+
+\lx ʦʌŋkha
+\ps nep
+\ge clever
+\dt 21/May/2014
+
+\lx ʦʌŋra
+\ps temp.adv
+\ge after
+\a ʦɤŋra
+\dt 01/Mar/2014
+
+\lx ʦɯr
+\ps num
+\ge seven
+\dt 11/Mar/2013
+
+\lx ʦʌrʦʌre
+\ps p.n.
+\ge Charchare
+\dt 21/May/2014
+
+\lx ʦwaʈʈai
+\ps nep
+\ge rapidly
+\dt 23/May/2014
+
+\lx ʦy
+\ps n
+\ge thorn
+\dt 01/Mar/2013
+
+\lx ʦyl
+\ps n
+\ge curse
+\ue part of a ritual of blessing, where sins are forgiven; used with mommu, to mean 'be forgive', and with dymmu to mean 'have sins'
+\en Allen has aspirated
+\dt 10/Jul/2015
+
+\lx ʦym
+\ps vt
+\ge catch
+\a ʦymr
+\dt 20/Oct/2015
+
+\lx ʦyplo
+\ps n
+\ge clay.pot
+\dt 21/Feb/2014
+
+\lx ʦysy
+\ps n
+\ge grandchild
+\dt 15/May/2014
+
+\lx ʦyːsy
+\ps n
+\ge raspberry
+\dt 08/Oct/2015
+
+\lx u-
+\ps pref.n
+\ge 3_sg._poss
+\dt 12/Feb/2013
+
+\lx -u
+\ps suf.v
+\ge 1_sg>3._npst
+\a -pu
+\dt 13/Feb/2013
+
+\lx -u
+\ps v.suf
+\ge 1_sg._a._copy
+\dt 19/Feb/2014
+
+\lx ʌbʌ
+\ps nep
+\ge now
+\dt 14/Feb/2014
+
+\lx ʌbʌi
+\ps interj
+\ge oh
+\dt 08/Jul/2015
+
+\lx udikam
+\ps temp.adv
+\ge the.next.day
+\dt 01/Mar/2014
+
+\lx ʌgunu
+\ps spat.adv
+\ge in.here
+\dt 21/May/2014
+
+\lx uhem
+\ps pro
+\ge _rel._pro
+\dt 23/Feb/2014
+
+\lx ʌhʌi
+\ps interj
+\ge Ahay!
+\dt 20/Oct/2015
+
+\lx ʌlʣhe
+\ps nep
+\ge be.entangled
+\dt 23/May/2014
+
+\lx ʌlmʌle
+\ps nep
+\ge be.stuck
+\nt almalinu means potter about, but in this
+case, inability to take action
+\dt 18/Jun/2015
+
+\lx uma
+\ps poss.pro
+\ge 3_sg._poss
+\dt 23/May/2014
+
+\lx ʌms
+\ps vi
+\ge sleep
+\a ʌm
+\a ʌŋ
+\a ɤŋ
+\a ɤm
+\dt 09/Jul/2015
+
+\lx uni-
+\ps pref.n
+\ge 3_pl._poss
+\dt 08/May/2013
+
+\lx ʌni
+\ps nep
+\ge then
+\dt 01/Mar/2014
+
+\lx unima
+\ps pro
+\ge 3_pl._poss
+\dt 08/May/2013
+
+\lx ʌnu
+\ps spat.adv
+\ge this.direction
+\dt 26/May/2014
+
+\lx upali
+\ps temp.adv
+\ge the.next.year
+\dt 15/Feb/2014
+
+\lx upija
+\ps nep
+\ge flea
+\dt 22/Feb/2014
+
+\lx ʌpthero
+\ps nep
+\ge difficult
+\dt 09/Jul/2015
+
+\lx ʌthʌwa
+\ps nep
+\ge otherwise
+\dt 22/Feb/2014
+
+\lx utpʌtti
+\ps nep
+\ge origin
+\dt 26/May/2014
+
+\lx uʦi
+\ps pref.n
+\ge 3_du._poss
+\dt 08/May/2013
+
+\lx uʦi-
+\ps pref.n
+\ge 3_du._poss
+\dt 08/May/2013
+
+\lx uʦima
+\ps pro
+\ge 3_du._poss
+\dt 08/May/2013
+
+\lx -wa
+\ps suf.v
+\ge _irr
+\a -ba
+\a -ja
+\dt 14/Feb/2013
+
+\lx waː
+\ps kin
+\ge older.sibling
+\a wa
+\dt 12/Oct/2015
+
+\lx wadakhor
+\ps n
+\ge wetland.plant.type
+\dt 19/Feb/2014
+
+\lx wae
+\ps n
+\ge lowlands
+\dt 15/Feb/2014
+
+\lx waelʌŋma
+\ps p.n
+\ge Wailungma
+\dt 22/Feb/2014
+
+\lx waethɵm
+\ps pn
+\ge caste.name
+\dt 22/May/2014
+
+\lx waeʦhapte
+\ps n
+\ge lowlands
+\dt 21/Feb/2014
+
+\lx wailuŋma
+\ps p.n.
+\ge Wailungma
+\dt 13/Feb/2013
+
+\lx wak
+\ps vi
+\ge burn
+\a wa
+\a waː
+\dt 13/Oct/2015
+
+\lx waku
+\ps n
+\ge swim
+\gn used with bomu
+\dt 08/Oct/2015
+
+\lx walwak
+\ps kin
+\ge sibling
+\dt 28/Feb/2014
+
+\lx waŋ
+\ps adj
+\ge other
+\dt 14/Feb/2013
+
+\lx waŋkhresi
+\ps n
+\ge sandalwood
+\dt 19/Feb/2014
+
+\lx wap
+\ps vt
+\ge scoop.out
+\a wam
+\u
+\a wab
+\dt 19/Feb/2014
+
+\lx wat
+\ps vt
+\ge chop
+\a wan
+\a waʈ
+\a war
+\dt 13/Oct/2015
+
+\lx wata
+\ps n
+\ge copper
+\dt 28/Feb/2014
+
+\lx wo
+\ps adv
+\ge also
+\dt 29/Jan/2013
+
+\lx -wop
+\ps num.class
+\ge grain.like.shape
+\dt 19/Feb/2014
+
+\lx wos
+\ps n
+\ge boy
+\dt 18/Feb/2014
+
+\lx wosʦɵ
+\ps n
+\ge boy
+\dt 28/Feb/2014
+
+\lx woʦy
+\ps n
+\ge husband
+\dt 13/Feb/2013
+
+\lx -y
+\ps suf.v
+\ge 3_sg._npst._a
+\a -jy
+\dt 23/Feb/2014
+
+\lx -yɖy
+\ps v.suf
+\ge 3_sg._pst._a
+\a -jyɖy
+\u -yry
+\dt 23/Feb/2014
+
+\lx ʔa
+\ps interj
+\ge Aah
+\dt 23/May/2014
+
+\lx -ʔa
+\ps n.suf
+\ge _voc
+\dt 12/Oct/2015
+
+\lx ʔe
+\ps disc.part
+\ge _hs
+\dt 29/Jan/2013
+
+\lx ʔei
+\ps interj
+\ge hey
+\dt 05/Oct/2015
+
+\lx ʔã
+\ps interj
+\ge yes
+\dt 08/Jul/2015
+
+\lx -?ba
+\ps suf.v
+\ge _aux
+\dt 01/Mar/2014
+
+\lx -?bes
+\ps suf.v
+\ge _aux
+\dt 01/Mar/2014
+
+\lx ?ŋabuŋ
+\ps n
+\ge shyness
+\dt 28/Feb/2014
+
+\lx ?nɯtʰɤm
+\ps n
+\ge decision
+\a nɯtʰɔm
+\dt 28/Feb/2014
+
+\lx ?pʰjapʰjaksa
+\ps n
+\ge bow.and.arrow
+\dt 28/Feb/2014
+
+\lx ?sisigarku
+\ps n
+\ge sacrifice
+\dt 28/Feb/2014
+
+\lx ?tɤtʰa
+\ps n
+\ge fixed.date
+\dt 15/Feb/2013
+
+\lx ?ʦʰiritaŋti
+\ps n
+\ge bird.type
+\dt 28/Feb/2014

@@ -1,0 +1,1051 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Grammar of Thulung
+;;; created at:
+;;;     Sun Jan 15 07:04:27 UTC 2023
+;;; based on Matrix customization system version of:
+;;;     Fri 10 Jun 2022 12:58:58 AM UTC
+;;;
+;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
+
+non-mod-lex-item := lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Matrix Type Addenda
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+basic-head-comp-phrase :+ [ SYNSEM [ LIGHT -,
+             LOCAL.CAT.MC #mc ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+head :+ [ PRON bool,
+    FORM form,
+    AUX bool ].
+
++np :+ [ CASE-MARKED bool,
+    CASE case ].
+
+png :+ [ PER person,
+    NUM number ].
+
+basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+; We can't just use the V-final and V-initial word
+; order modules together to get a good free word order
+; module. The root of the problem seems to be that we
+; need the subject to be able to attach inside the
+; object(s) for VSO and OSV, but at the same time, we
+; don't want complete flexibility on order of attachment
+; when the verb is in the middle -- that would give
+; spurious ambiguity.  This solution adopts the xmod
+; hierarchy to enforce right-first attachment.  That is,
+; all arguments appears to the right of the verb must
+; attach before all arguments appearing to the left.  The
+; linguistic prediction of this analysis is that free
+; word order languages do not have a consistent VP
+; consituent, even when the verb and object are adjacent
+; (OV order).  Using a separate feature for tracking
+; argument attachment (as opposed to modifier
+; attachment).  We might be able to collapse these one
+; day, but that's not obvious.
+
+synsem :+ [ ATTACH xmod ].
+
+; We'll need to add identification of ATTACH between
+;     mother and head-daughter for all other kinds of phrases
+;     if we do this.  Just for illustration, I'm putting it
+;     in for head-adjunct phrases here:
+
+head-mod-phrase :+ [ SYNSEM.ATTACH #attach,
+    HEAD-DTR.SYNSEM.ATTACH #attach ].
+
+;;;;;;;;;;;;;;
+;;; Features
+;;;;;;;;;;;;;;
+
+;;; Person
+
+person := *top*.
+1st := person.
+2nd := person.
+3rd := person.
+
+;;; Number
+
+number := *top*.
+du := number.
+pl := number.
+sg := number.
+de := du.
+di := du.
+pe := pl.
+pi := pl.
+
+;;; Case
+
+case := *top*.
+NOM := case.  ; NOM
+ERG := case.  ; ERG
+DAT := case.  ; DAT
+in := case.  ; in
+all := case.  ; all
+ABL := case.  ; ABL
+GEN := case.  ; GEN
+INS := case.  ; INSTR
+COM := case.  ; COM
+lev := case.  ; levLOC
+hiL := case.  ; hiLOC
+loL := case.  ; loLOC
+LOC := case.  ; LOC
+
+;;; Form
+
+form := *top*.
+nonfinite := form.
+finite := form.
+
+;;; Aspect
+
+POT := aspect.
+HAB := aspect.
+CAU := aspect.
+DETR := aspect.
+BEN := aspect.
+DEF := aspect.
+STA := aspect.
+PON := aspect.
+RES := aspect.
+ITF := aspect.
+APX := aspect.
+
+;;;;;;;;;;;;;;;;;;;
+;;; Lexical Types
+;;;;;;;;;;;;;;;;;;;
+
+;;; Nouns
+
+noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & no-hcons-lex-item & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] >,
+                           COMPS < >,
+                           SUBJ < >,
+                           SPEC < > ],
+    ARG-ST < #spr > ].
+
+noun9-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun12-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun19-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun24-noun-lex := noun-lex & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc22-rule-dtr & noun-pc26-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun27-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun28-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun32-noun-lex := noun-lex & noun-pc13-rule-dtr & noun-pc22-rule-dtr & noun-pc30-rule-dtr & noun-pc4-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun34-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun47-noun-lex := noun-lex & noun-pc16-rule-dtr & noun-pc36-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun51-noun-lex := noun-lex & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc26-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun54-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun59-noun-lex := noun-lex & noun-pc13-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun110-noun-lex := noun-lex & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+noun111-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                         NUM du ] ] ].
+
+noun112-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                         NUM sg ] ] ].
+
+noun113-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                         NUM pl ] ] ].
+
+noun114-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG [ PER 3rd,
+                                         NUM sg ] ] ].
+
+noun115-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.HEAD [ PRON +,
+                            CASE all,
+                            CASE-MARKED + ] ].
+
+noun116-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
+noun117-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG [ PER 1st,
+                                         NUM sg ] ] ].
+
+noun118-noun-lex := noun-lex.
+
+;;; Verbs
+
+verb-lex := non-mod-lex-item &
+  [ SYNSEM [ LOCAL.CAT.HEAD verb,
+             L-QUE - ] ].
+
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
+  [ SYNSEM [ L-QUE -,
+             LOCAL [ CAT [ HEAD.AUX -,
+                           VAL [ SPEC < >,
+                                 SUBJ < #subj > ] ],
+                     CONT.HOOK.XARG #xarg ] ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT cat-sat &
+                               [ VAL [ SPR < >,
+                                       COMPS < > ] ],
+                           CONT.HOOK.INDEX #xarg ] ] ].
+
+aux-lex := verb-lex & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
+             L-QUE - ] ].
+
+intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
+    ARG-ST.FIRST.LOCAL.CAT.HEAD +np ].
+
+transitive-verb-lex := main-verb-lex & transitive-lex-item & verb-pc61-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD +np ],
+             #comps &
+             [ LOCAL.CAT cat-sat &
+                         [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD +np ] ] > ].
+
+NOM-intransitive-verb-lex := intransitive-verb-lex &
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                [ CASE NOM ],
+    SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL.CAT.HEAD.CASE-MARKED + ] > ].
+
+ERG-DAT-transitive-verb-lex := transitive-verb-lex &
+  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE ERG ] ],
+             [ LOCAL.CAT.HEAD noun &
+                              [ CASE DAT ] ] >,
+    SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.HEAD.CASE-MARKED + ] >,
+                           COMPS < [ LOCAL.CAT.HEAD.CASE-MARKED + ] > ] ].
+
+verb3-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc3-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc58-rule-dtr & verb-pc59-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb5-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc22-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc42-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc50-rule-dtr & verb-pc55-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc68-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb8-verb-lex := intransitive-verb-lex.
+
+verb12-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc11-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb47-verb-lex := transitive-verb-lex & verb-pc14-rule-dtr & verb-pc17-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr.
+
+verb49-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc10-rule-dtr & verb-pc11-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc22-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc28-rule-dtr & verb-pc29-rule-dtr & verb-pc3-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc42-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc50-rule-dtr & verb-pc52-rule-dtr & verb-pc55-rule-dtr & verb-pc6-rule-dtr & verb-pc60-rule-dtr & verb-pc66-rule-dtr & verb-pc68-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc77-rule-dtr & verb-pc8-rule-dtr & verb-pc81-rule-dtr & verb-pc9-rule-dtr.
+
+verb51-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc60-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb53-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc10-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc81-rule-dtr & verb-pc9-rule-dtr.
+
+verb56-verb-lex := transitive-verb-lex.
+
+verb58-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc28-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc58-rule-dtr & verb-pc59-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb85-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb93-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc10-rule-dtr & verb-pc11-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc22-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc28-rule-dtr & verb-pc29-rule-dtr & verb-pc3-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc42-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc50-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc68-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc81-rule-dtr & verb-pc9-rule-dtr.
+
+verb129-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc42-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb132-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc50-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb133-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc22-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc42-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc50-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc68-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb168-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc11-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc42-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb200-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc59-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb202-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb208-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc50-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb234-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc52-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb235-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc52-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb253-verb-lex := transitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+verb259-verb-lex := intransitive-verb-lex & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc77-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr.
+
+;;; Auxiliaries
+
+subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPEC < >,
+                             COMPS < #comps >,
+                             SUBJ < #subj > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ HEAD noun &
+                                  [ CASE #case ],
+                             VAL [ SUBJ < >,
+                                   SPR < >,
+                                   SPEC < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SUBJ < unexpressed &
+                                        [ LOCAL.CAT.HEAD.CASE #case ] >,
+                                 COMPS < >,
+                                 SPR < >,
+                                 SPEC < > ],
+                           HEAD verb &
+                                [ AUX - ] ] ] > ].
+
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item.
+
+aux1-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
+
+aux2-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
+
+aux3-aux-lex := subj-raise-aux-no-pred &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ].
+
+;;; Complementizers
+
+;;; Others
+
+;;; Case-marking adpositions
+;;; Case marking adpositions are constrained not to
+;;; be modifiers.
+
+case-marking-adp-lex := non-local-none-lex-item & raise-sem-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD adp &
+                            [ CASE #case,
+                              MOD < > ],
+                       VAL [ SPR < >,
+                             SUBJ < >,
+                             COMPS < #comps >,
+                             SPEC < > ] ],
+    ARG-ST < #comps &
+             [ LOCAL.CAT [ VAL.SPR < >,
+                           HEAD noun &
+                                [ CASE #case,
+                                  CASE-MARKED - ] ] ] > ].
+
+;;; Adverbs
+
+;;;;;;;;;;;;;;;;;;;
+;;; Lexical Rules
+;;;;;;;;;;;;;;;;;;;
+
+;;; Intermediate rule types
+
+verb-pc16-rule-dtr := word-or-lexrule.
+verb-pc52-rule-dtr := word-or-lexrule.
+verb-pc60-rule-dtr := word-or-lexrule.
+verb-pc28-rule-dtr := word-or-lexrule.
+verb-pc17-rule-dtr := word-or-lexrule.
+verb-pc21-rule-dtr := word-or-lexrule.
+noun-pc26-rule-dtr := word-or-lexrule.
+noun-pc35-rule-dtr := word-or-lexrule.
+noun-pc4-rule-dtr := word-or-lexrule.
+verb-pc1-rule-dtr := word-or-lexrule.
+noun-pc22-rule-dtr := word-or-lexrule.
+verb-pc33-rule-dtr := word-or-lexrule.
+verb-pc58-rule-dtr := word-or-lexrule.
+verb-pc59-rule-dtr := word-or-lexrule.
+verb-pc45-rule-dtr := word-or-lexrule.
+verb-pc6-rule-dtr := word-or-lexrule.
+verb-pc18-rule-dtr := word-or-lexrule.
+verb-pc13-rule-dtr := word-or-lexrule.
+verb-pc69-rule-dtr := word-or-lexrule.
+verb-pc26-rule-dtr := word-or-lexrule.
+noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr := word-or-lexrule.
+verb-pc68-rule-dtr := word-or-lexrule.
+verb-pc81-rule-dtr := word-or-lexrule.
+noun-pc39-rule-dtr := word-or-lexrule.
+noun-pc2-rule-dtr := word-or-lexrule.
+noun-pc5-rule-dtr := word-or-lexrule.
+verb-pc11-rule-dtr := word-or-lexrule.
+verb-pc7-rule-dtr := word-or-lexrule.
+verb-pc14-rule-dtr := word-or-lexrule.
+noun-pc10-rule-dtr := word-or-lexrule.
+verb-pc19-rule-dtr := word-or-lexrule.
+verb-pc15-rule-dtr := word-or-lexrule.
+verb-pc8-rule-dtr := word-or-lexrule.
+verb-pc9-rule-dtr := word-or-lexrule.
+verb-pc77-rule-dtr := word-or-lexrule.
+verb-pc32-rule-dtr := word-or-lexrule.
+noun-pc19-rule-dtr := word-or-lexrule.
+verb-pc25-rule-dtr := word-or-lexrule.
+verb-pc66-rule-dtr := word-or-lexrule.
+noun-pc25-rule-dtr := word-or-lexrule.
+noun-pc16-rule-dtr := word-or-lexrule.
+verb-pc3-rule-dtr := word-or-lexrule.
+noun-pc12-rule-dtr := word-or-lexrule.
+verb-pc20-rule-dtr := word-or-lexrule.
+verb-pc49-rule-dtr := word-or-lexrule.
+noun-pc13-rule-dtr := word-or-lexrule.
+noun-pc30-rule-dtr := word-or-lexrule.
+verb-pc42-rule-dtr := word-or-lexrule.
+verb-pc36-rule-dtr := word-or-lexrule.
+verb-pc40-rule-dtr := word-or-lexrule.
+verb-pc50-rule-dtr := word-or-lexrule.
+verb-pc55-rule-dtr := word-or-lexrule.
+noun-pc23-rule-dtr := word-or-lexrule.
+verb-pc10-rule-dtr := word-or-lexrule.
+noun-pc18-rule-dtr := word-or-lexrule.
+verb-pc23-rule-dtr := word-or-lexrule.
+noun-pc9-rule-dtr := word-or-lexrule.
+noun-pc34-rule-dtr := word-or-lexrule.
+verb-pc29-rule-dtr := word-or-lexrule.
+verb-pc12-rule-dtr := word-or-lexrule.
+verb-pc24-rule-dtr := word-or-lexrule.
+verb-pc22-rule-dtr := word-or-lexrule.
+noun-pc1-rule-dtr := word-or-lexrule.
+noun-pc36-rule-dtr := word-or-lexrule.
+noun-pc11-rule-dtr := word-or-lexrule.
+verb-pc61-rule-dtr := word-or-lexrule.
+
+;;; Lexical rule types
+
+noun-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc1-rule-dtr ].
+
+noun-pc1_lrt1-lex-rule := noun-pc1-lex-rule-super.
+
+noun-pc2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc2-rule-dtr ].
+
+noun-pc2_lrt1-lex-rule := noun-pc2-lex-rule-super.
+
+noun-pc4-lex-rule-super := add-only-no-ccont-rule & noun-pc13-rule-dtr &
+  [ DTR noun-pc4-rule-dtr ].
+
+noun-pc4_lrt1-lex-rule := infl-lex-rule & noun-pc4-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE LOC,
+                            CASE-MARKED + ] ].
+
+noun-pc4-synth-adp-lex-rule := const-lex-rule & noun-pc4-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc5-lex-rule-super := add-only-no-ccont-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc4-rule-dtr &
+  [ DTR noun-pc5-rule-dtr ].
+
+noun-pc5_lrt1-lex-rule := infl-lex-rule & noun-pc5-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE ERG,
+                            CASE-MARKED + ] ].
+
+noun-pc5_lrt2-lex-rule := infl-lex-rule & noun-pc5-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE INS,
+                            CASE-MARKED + ] ].
+
+noun-pc5-synth-adp-lex-rule := const-lex-rule & noun-pc5-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc7-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun12-noun-lex ].
+
+noun-pc7_lrt1-lex-rule := noun-pc7-lex-rule-super.
+
+noun-pc9-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc22-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc9-rule-dtr ].
+
+noun-pc9_lrt1-lex-rule := noun-pc9-lex-rule-super.
+
+noun-pc10-lex-rule-super := add-only-no-ccont-rule & noun-pc11-rule-dtr & noun-pc13-rule-dtr &
+  [ DTR noun-pc10-rule-dtr ].
+
+noun-pc10_lrt1-lex-rule := infl-lex-rule & noun-pc10-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE GEN,
+                            CASE-MARKED + ] ].
+
+noun-pc10-synth-adp-lex-rule := const-lex-rule & noun-pc10-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc11-lex-rule-super := add-only-no-ccont-rule & noun-pc13-rule-dtr &
+  [ DTR noun-pc11-rule-dtr ].
+
+noun-pc11_lrt1-lex-rule := infl-lex-rule & noun-pc11-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE DAT,
+                            CASE-MARKED + ] ].
+
+noun-pc11-synth-adp-lex-rule := const-lex-rule & noun-pc11-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc12-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc11-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc22-rule-dtr & noun-pc25-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc12-rule-dtr ].
+
+noun-pc12_lrt1-lex-rule := noun-pc12-lex-rule-super.
+
+noun-pc13-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun-pc13-rule-dtr ].
+
+noun-pc13_lrt1-lex-rule := noun-pc13-lex-rule-super.
+
+noun-pc15-lex-rule-super := add-only-no-ccont-rule & noun-pc16-rule-dtr & noun-pc36-rule-dtr &
+  [ DTR noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr ].
+
+noun-pc15_lrt1-lex-rule := infl-lex-rule & noun-pc15-lex-rule-super.
+
+noun-pc15_lrt2-lex-rule := infl-lex-rule & noun-pc15-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE LOC,
+                            CASE-MARKED + ] ].
+
+noun-pc15-synth-adp-lex-rule := const-lex-rule & noun-pc15-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc16-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun-pc16-rule-dtr ].
+
+noun-pc16_lrt1-lex-rule := noun-pc16-lex-rule-super.
+
+noun-pc18-lex-rule-super := add-only-no-ccont-rule &
+  [ DTR noun-pc18-rule-dtr ].
+
+noun-pc18_lrt1-lex-rule := infl-lex-rule & noun-pc18-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE hiL,
+                            CASE-MARKED + ] ].
+
+noun-pc18-synth-adp-lex-rule := const-lex-rule & noun-pc18-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc19-lex-rule-super := add-only-no-ccont-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc19-rule-dtr ].
+
+noun-pc19_lrt1-lex-rule := infl-lex-rule & noun-pc19-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE COM,
+                            CASE-MARKED + ] ].
+
+noun-pc19-synth-adp-lex-rule := const-lex-rule & noun-pc19-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc22-lex-rule-super := add-only-no-ccont-rule & noun-pc13-rule-dtr &
+  [ DTR noun-pc22-rule-dtr ].
+
+noun-pc22_lrt1-lex-rule := infl-lex-rule & noun-pc22-lex-rule-super.
+
+noun-pc22_lrt2-lex-rule := infl-lex-rule & noun-pc22-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE ABL,
+                            CASE-MARKED + ] ].
+
+noun-pc22_lrt3-lex-rule := infl-lex-rule & noun-pc22-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE GEN,
+                            CASE-MARKED + ] ].
+
+noun-pc22-synth-adp-lex-rule := const-lex-rule & noun-pc22-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc23-lex-rule-super := add-only-no-ccont-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc25-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc23-rule-dtr ].
+
+noun-pc23_lrt1-lex-rule := infl-lex-rule & noun-pc23-lex-rule-super.
+
+noun-pc23_lrt2-lex-rule := infl-lex-rule & noun-pc23-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE lev,
+                            CASE-MARKED + ] ].
+
+noun-pc23-synth-adp-lex-rule := const-lex-rule & noun-pc23-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc25-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc25-rule-dtr ].
+
+noun-pc25_lrt1-lex-rule := noun-pc25-lex-rule-super.
+
+noun-pc26-lex-rule-super := add-only-no-ccont-rule &
+  [ DTR noun-pc26-rule-dtr ].
+
+noun-pc26_lrt1-lex-rule := infl-lex-rule & noun-pc26-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE ABL,
+                            CASE-MARKED + ] ].
+
+noun-pc26-synth-adp-lex-rule := const-lex-rule & noun-pc26-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc28-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun28-noun-lex ].
+
+noun-pc28_lrt1-lex-rule := noun-pc28-lex-rule-super.
+
+noun-pc29-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc22-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr ].
+
+noun-pc29_lrt1-lex-rule := noun-pc29-lex-rule-super.
+
+noun-pc30-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc22-rule-dtr & noun-pc4-rule-dtr &
+  [ DTR noun-pc30-rule-dtr ].
+
+noun-pc30_lrt1-lex-rule := noun-pc30-lex-rule-super.
+
+noun-pc31-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun34-noun-lex ].
+
+noun-pc31_lrt1-lex-rule := noun-pc31-lex-rule-super.
+
+noun-pc33-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
+  [ DTR noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr ].
+
+noun-pc33_lrt1-lex-rule := noun-pc33-lex-rule-super.
+
+noun-pc34-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc35-rule-dtr &
+  [ DTR noun-pc34-rule-dtr ].
+
+noun-pc34_lrt1-lex-rule := noun-pc34-lex-rule-super.
+
+noun-pc35-lex-rule-super := add-only-no-ccont-rule &
+  [ DTR noun-pc35-rule-dtr ].
+
+noun-pc35_lrt1-lex-rule := infl-lex-rule & noun-pc35-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE COM,
+                            CASE-MARKED + ] ].
+
+noun-pc35-synth-adp-lex-rule := const-lex-rule & noun-pc35-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE in,
+                            CASE-MARKED - ] ].
+
+noun-pc36-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc16-rule-dtr &
+  [ DTR noun-pc36-rule-dtr ].
+
+noun-pc36_lrt1-lex-rule := noun-pc36-lex-rule-super.
+
+noun-pc38-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun54-noun-lex ].
+
+noun-pc38_lrt1-lex-rule := noun-pc38-lex-rule-super.
+
+noun-pc39-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+  [ DTR noun-pc39-rule-dtr ].
+
+noun-pc39_lrt1-lex-rule := noun-pc39-lex-rule-super.
+
+noun-pc43-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun9-noun-lex ].
+
+noun-pc43_lrt1-lex-rule := noun-pc43-lex-rule-super.
+
+noun-pc44-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR noun110-noun-lex ].
+
+noun-pc44_lrt1-lex-rule := noun-pc44-lex-rule-super.
+
+verb-pc1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc1-rule-dtr ].
+
+verb-pc1_lrt1-lex-rule := verb-pc1-lex-rule-super.
+
+verb-pc3-lex-rule-super := infl-lex-rule & val-change-with-ccont-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc3-rule-dtr ].
+
+verb-pc3_lrt1-lex-rule := subj-rem-tr-op-lex-rule & local-change-only-lex-rule & verb-pc3-lex-rule-super & xarg-change-only-ccont-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT DETR ].
+
+verb-pc6-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc6-rule-dtr ].
+
+verb-pc6_lrt1-lex-rule := verb-pc6-lex-rule-super.
+
+verb-pc7-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc7-rule-dtr ].
+
+verb-pc7_lrt1-lex-rule := verb-pc7-lex-rule-super.
+
+verb-pc8-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc16-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc8-rule-dtr ].
+
+verb-pc8_lrt1-lex-rule := verb-pc8-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT BEN ].
+
+verb-pc9-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc9-rule-dtr ].
+
+verb-pc9_lrt1-lex-rule := verb-pc9-lex-rule-super.
+
+verb-pc10-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc81-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc10-rule-dtr ].
+
+verb-pc10_lrt1-lex-rule := verb-pc10-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT APX ].
+
+verb-pc11-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc11-rule-dtr ].
+
+verb-pc11_lrt1-lex-rule := verb-pc11-lex-rule-super.
+
+verb-pc12-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc12-rule-dtr ].
+
+verb-pc12_lrt1-lex-rule := verb-pc12-lex-rule-super.
+
+verb-pc13-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc13-rule-dtr ].
+
+verb-pc13_lrt1-lex-rule := verb-pc13-lex-rule-super.
+
+verb-pc14-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb-pc14-rule-dtr ].
+
+verb-pc14_lrt1-lex-rule := verb-pc14-lex-rule-super.
+
+verb-pc15-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc15-rule-dtr ].
+
+verb-pc15_lrt1-lex-rule := verb-pc15-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT HAB ].
+
+verb-pc16-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc16-rule-dtr ].
+
+verb-pc16_lrt1-lex-rule := verb-pc16-lex-rule-super.
+
+verb-pc17-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr &
+  [ DTR verb-pc17-rule-dtr ].
+
+verb-pc17_lrt1-lex-rule := verb-pc17-lex-rule-super.
+
+verb-pc18-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc33-rule-dtr &
+  [ DTR verb-pc18-rule-dtr ].
+
+verb-pc18_lrt1-lex-rule := verb-pc18-lex-rule-super.
+
+verb-pc19-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc19-rule-dtr ].
+
+verb-pc19_lrt1-lex-rule := verb-pc19-lex-rule-super.
+
+verb-pc20-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb-pc20-rule-dtr ].
+
+verb-pc20_lrt1-lex-rule := verb-pc20-lex-rule-super.
+
+verb-pc21-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc21-rule-dtr ].
+
+verb-pc21_lrt1-lex-rule := verb-pc21-lex-rule-super.
+
+verb-pc22-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc22-rule-dtr ].
+
+verb-pc22_lrt1-lex-rule := verb-pc22-lex-rule-super.
+
+verb-pc23-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc23-rule-dtr ].
+
+verb-pc23_lrt1-lex-rule := verb-pc23-lex-rule-super.
+
+verb-pc24-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc24-rule-dtr ].
+
+verb-pc24_lrt1-lex-rule := verb-pc24-lex-rule-super.
+
+verb-pc25-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc25-rule-dtr ].
+
+verb-pc25_lrt1-lex-rule := verb-pc25-lex-rule-super.
+
+verb-pc26-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr &
+  [ DTR verb-pc26-rule-dtr ].
+
+verb-pc26_lrt1-lex-rule := verb-pc26-lex-rule-super.
+
+verb-pc28-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc28-rule-dtr ].
+
+verb-pc28_lrt1-lex-rule := verb-pc28-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT STA ].
+
+verb-pc29-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc29-rule-dtr ].
+
+verb-pc29_lrt1-lex-rule := verb-pc29-lex-rule-super.
+
+verb-pc32-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb-pc32-rule-dtr ].
+
+verb-pc32_lrt1-lex-rule := verb-pc32-lex-rule-super.
+
+verb-pc33-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr &
+  [ DTR verb-pc33-rule-dtr ].
+
+verb-pc33_lrt1-lex-rule := verb-pc33-lex-rule-super.
+
+verb-pc36-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc40-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc36-rule-dtr ].
+
+verb-pc36_lrt1-lex-rule := verb-pc36-lex-rule-super.
+
+verb-pc40-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb-pc40-rule-dtr ].
+
+verb-pc40_lrt1-lex-rule := verb-pc40-lex-rule-super.
+
+verb-pc42-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc42-rule-dtr ].
+
+verb-pc42_lrt1-lex-rule := verb-pc42-lex-rule-super.
+
+verb-pc45-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr &
+  [ DTR verb-pc45-rule-dtr ].
+
+verb-pc45_lrt1-lex-rule := verb-pc45-lex-rule-super.
+
+verb-pc46-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb5-verb-lex ].
+
+verb-pc46_lrt1-lex-rule := verb-pc46-lex-rule-super.
+
+verb-pc49-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc33-rule-dtr &
+  [ DTR verb-pc49-rule-dtr ].
+
+verb-pc49_lrt1-lex-rule := verb-pc49-lex-rule-super.
+
+verb-pc50-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc50-rule-dtr ].
+
+verb-pc50_lrt1-lex-rule := verb-pc50-lex-rule-super.
+
+verb-pc52-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc52-rule-dtr ].
+
+verb-pc52_lrt1-lex-rule := verb-pc52-lex-rule-super.
+
+verb-pc52_lrt2-lex-rule := verb-pc52-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT DEF ].
+
+verb-pc55-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc55-rule-dtr ].
+
+verb-pc55_lrt1-lex-rule := verb-pc55-lex-rule-super.
+
+verb-pc55_lrt2-lex-rule := verb-pc55-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT DEF ].
+
+verb-pc58-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc59-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc58-rule-dtr ].
+
+verb-pc58_lrt1-lex-rule := verb-pc58-lex-rule-super.
+
+verb-pc59-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc59-rule-dtr ].
+
+verb-pc59_lrt1-lex-rule := verb-pc59-lex-rule-super.
+
+verb-pc60-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc23-rule-dtr & verb-pc24-rule-dtr & verb-pc25-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc60-rule-dtr ].
+
+verb-pc60_lrt1-lex-rule := verb-pc60-lex-rule-super.
+
+verb-pc61-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb-pc61-rule-dtr ].
+
+verb-pc61_lrt1-lex-rule := verb-pc61-lex-rule-super.
+
+verb-pc62-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb58-verb-lex ].
+
+verb-pc62_lrt1-lex-rule := verb-pc62-lex-rule-super.
+
+verb-pc63-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb49-verb-lex ].
+
+verb-pc63_lrt1-lex-rule := verb-pc63-lex-rule-super.
+
+verb-pc64-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb49-verb-lex ].
+
+verb-pc64_lrt1-lex-rule := verb-pc64-lex-rule-super.
+
+verb-pc65-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb49-verb-lex ].
+
+verb-pc65_lrt1-lex-rule := verb-pc65-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT RES ].
+
+verb-pc66-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr &
+  [ DTR verb-pc66-rule-dtr ].
+
+verb-pc66_lrt1-lex-rule := verb-pc66-lex-rule-super.
+
+verb-pc67-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb49-verb-lex ].
+
+verb-pc67_lrt1-lex-rule := verb-pc67-lex-rule-super.
+
+verb-pc68-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc22-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc36-rule-dtr & verb-pc40-rule-dtr & verb-pc42-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc50-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc68-rule-dtr ].
+
+verb-pc68_lrt1-lex-rule := verb-pc68-lex-rule-super.
+
+verb-pc69-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc69-rule-dtr ].
+
+verb-pc69_lrt1-lex-rule := verb-pc69-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT HAB ].
+
+verb-pc72-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc16-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb5-verb-lex ].
+
+verb-pc72_lrt1-lex-rule := verb-pc72-lex-rule-super.
+
+verb-pc73-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc20-rule-dtr & verb-pc26-rule-dtr & verb-pc33-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr &
+  [ DTR verb49-verb-lex ].
+
+verb-pc73_lrt1-lex-rule := verb-pc73-lex-rule-super.
+
+verb-pc74-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb49-verb-lex ].
+
+verb-pc74_lrt1-lex-rule := verb-pc74-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT ITF ].
+
+verb-pc77-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb-pc77-rule-dtr ].
+
+verb-pc77_lrt1-lex-rule := verb-pc77-lex-rule-super.
+
+verb-pc78-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb202-verb-lex ].
+
+verb-pc78_lrt1-lex-rule := verb-pc78-lex-rule-super.
+
+verb-pc81-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb-pc81-rule-dtr ].
+
+verb-pc81_lrt1-lex-rule := verb-pc81-lex-rule-super.
+
+verb-pc82-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb5-verb-lex ].
+
+verb-pc82_lrt1-lex-rule := verb-pc82-lex-rule-super.
+
+verb-pc83-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc52-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb234-verb-lex ].
+
+verb-pc83_lrt1-lex-rule := verb-pc83-lex-rule-super.
+
+verb-pc84-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ DTR verb168-verb-lex ].
+
+verb-pc84_lrt1-lex-rule := verb-pc84-lex-rule-super.
+
+verb-pc85-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc15-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc21-rule-dtr & verb-pc24-rule-dtr & verb-pc26-rule-dtr & verb-pc29-rule-dtr & verb-pc32-rule-dtr & verb-pc33-rule-dtr & verb-pc45-rule-dtr & verb-pc49-rule-dtr & verb-pc6-rule-dtr & verb-pc61-rule-dtr & verb-pc66-rule-dtr & verb-pc69-rule-dtr & verb-pc7-rule-dtr & verb-pc8-rule-dtr & verb-pc9-rule-dtr &
+  [ DTR verb253-verb-lex ].
+
+verb-pc85_lrt1-lex-rule := verb-pc85-lex-rule-super.
+
+subj-rem-tr-op-lex-rule := subj-and-comps-change-only-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #sind,
+                                            CAT [ HEAD [ MOD #mod,
+                                                         KEYS #keys ],
+                                                  VAL #val ] ],
+                                    NON-LOCAL #nl ] >,
+                           COMPS #rest ],
+    C-CONT.HOOK.XARG #sind,
+    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < unexpressed >,
+                               COMPS < [ LOCAL [ CONT.HOOK.INDEX #sind,
+                                                 CAT [ HEAD [ MOD #mod,
+                                                              KEYS #keys ],
+                                                       VAL #val ] ],
+                                         NON-LOCAL #nl ] . #rest > ] ].
+
+;;;;;;;;;;;;;;;;;;;
+;;; Phrasal Types
+;;;;;;;;;;;;;;;;;;;
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+head-initial-head-nexus := head-initial &
+  [ SYNSEM.ATTACH lmod,
+    HEAD-DTR.SYNSEM.ATTACH notmod-or-lmod ].
+
+head-final-head-nexus := head-final &
+  [ SYNSEM.ATTACH rmod ].
+
+head-subj-phrase := decl-head-subj-phrase & head-initial-head-nexus.
+
+subj-head-phrase := decl-head-subj-phrase & head-final-head-nexus.
+
+; The head of head-comp-phrase can't be: ['adp']
+
+head-comp-phrase := basic-head-1st-comp-phrase & head-initial-head-nexus &
+  [ SYNSEM.LOCAL.CAT.HEAD +nvjrcdmo &
+                          [ AUX - ] ].
+
+comp-head-phrase := basic-head-1st-comp-phrase & head-final-head-nexus.
+
+head-comp-phrase-2 := basic-head-2nd-comp-phrase & head-initial-head-nexus.
+
+comp-head-phrase-2 := basic-head-2nd-comp-phrase & head-final-head-nexus.
+
+; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
+; introduced to match the semantic effect of bare NPs in your language.
+
+bare-np-phrase := basic-bare-np-phrase &
+  [ C-CONT.RELS.LIST < [ PRED "exist_q_rel" ] > ].
+
+basic-filler-phrase :+ [ SYNSEM.NON-LOCAL.SLASH.LIST < >,
+    ARGS < [ SYNSEM [ LOCAL #slash,
+                      NON-LOCAL.SLASH.LIST < > ] ],
+           [ SYNSEM.NON-LOCAL.SLASH.LIST < #slash > ] > ].
+
+extracted-subj-phrase := basic-extracted-subj-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb ].
+
+;;; Wh-question-related phrasal types
+
+;;;;;;;;;;;;;;;;;;
+;;; Coordination
+;;;;;;;;;;;;;;;;;;
+
+;;; Coordination Strategy 1
+
+vp1-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+vp1-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   COORD-REL.PRED "_and_coord_rel" ] ].
+
+clause :+ [ SYNSEM.NON-LOCAL.QUE.LIST < > ].

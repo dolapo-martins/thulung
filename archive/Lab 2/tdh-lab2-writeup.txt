@@ -1,0 +1,212 @@
+Thulung Lab2
+Zoe Fang
+Dolapo Martins
+
+
+1. Yes!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. The initial choices file did not generate any red asterisks on the website, so we were able to 
+download and load the grammar without making changes. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+3. The corpus has around 1900 sentences, so we split the corpus in half and test on the first half 
+which contains 926 sentences.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+================================================
+Initial Run:
+================================================
+Total sentences parsed: 926
+Average # of parse per sentence: 3.89
+# of parses of most ambiguous sentence: 24
+Sources of ambiguity: Multiple lexical entries have the same surface form. Multiple rules can be 
+applied to the same lexical entry. We also found that there is structural ambiguity, where one
+constituent can be attached to either NP or VP freely. Additionally, our grammar also has a lot of ambiguity
+due to coordination! There also appear to be multiple affixes that are both noun and verb affixes. 
+For example, /-laŋka/ is an ablative case marker but the provided choices file has it as both a noun and verb affix.
+The provided language text  has it as a CASE marker so removed the verb instance form our choices file. There is also the affix /-ka/ which can be either the genitive case marker or instrumental case marker. Lastly, almost every noun rule applied to a noun19-noun-lex leading to a lot of recursion based trees. That marker is a mood marker for hear-say but removed the applications until we can find a better analysis
+
+
+N.B. Another source of error is -thal. In our choices file, there is a noun and verb each with the same form -thal. 
+In our items file and literature, the noun form is /ʈhal/ not /thal/. Our grammar was edited to account for this 
+
+10 items that parsed:
+------------------------------------------------
+lo   be-to   rok-ɖa
+frog do-_cvb come-3_sg._pst
+He came to ask for the frogs.
+The 3rd person in [e] makes sense as it links the frog to the action. TAM values are not specified 
+in [x], but they link the auxiliary 'do' and 'come'. However, there is no relation between 'ask' 
+and 'frog'. 
+
+dyms-ɖa           ʔe
+become-3_sg._pst  _hs
+When he went it became time to go home
+The '_hs_n_rel' does not seem to correspond to 'go home', but is linked with [x].
+
+lʌks-thal-ɖa 	    ʔe
+go-_aux-3_sg._pst   _hs
+During the winter he went down to the lower elevations.
+The translation offers additional locative and temporal information about . '_hs_n_rel' is 
+identified with third person subject of 'go'.
+
+mapahaŋ   rwak-ma
+Mapahang  speak-_pst._ptcp
+The king had a younger brother called Mapahang.
+The constituent for 'king' cannot be found in the MRS, but '_say_v_rel' does link its second argument with 'exist', which also links to 'Mapahang'.
+
+dyms   mɵ   ʦa-ma            sɵ-ra
+become that roast-_pst._ptcp meat-_loc
+Nowadays when we eat roasted meat it has a salty taste in that roasted meat.
+The MRS makes sense, but the translation does not. The second argument of 'become' is linked to 
+the second argument of 'roast', and the first argument of 'become' is linked to the L-INDEX of
+the coordination.
+
+si-mu     lam
+die-_inf  path
+They said that however a person has died it should not be difficult to show the path for dealing with body. We will create a path for dying .
+The second argument of 'die' (why is there two?) is linked to the sole argument of 'path'. The 
+sentence makes sense semantically.
+
+moʦy dyms-ʦi
+wife become-_du
+After that they became a couple there they became husband and wife.
+The first argument of 'exist' is linked to the second argument of 'become', but the first argument of 'become' is linked to a prop-or-ques, which does not make sense.
+
+be-thal-ɖy            ʔe
+do-_aux-3_sg._pst._a  _hs 
+When I roar from the ridge look down in the depths he said he s so fast that by the time the sound 
+carries he s in the opposite place.
+The second argument of 'do' is linked with the argument n 'exist' in '_hs_n_rel'. The semantics of 
+this sentence makes sense.
+
+be-ɖy             ʔe
+do-3_sg._pst._a   _hs 
+Mini told his mother Be angry with him tell him to hold still otherwise I will shoot and kill him with my bow and arrow
+This sentence has the same MRS as the above example. The only difference is the lack of an 
+auxiliary.
+
+mijakma mal-ɖa           jok-ɖa               ʔe-ma
+Miyakma search.for-_purp come.down-3_sg._pst _hs-and.then
+Then they fixed a date and Khomda came to get Miyakma.
+The MRS for this sentence makes sense. The entity 'Miyakma' is identified in 'exist', 'Miyakma', 
+search for', coordination, and 'come down'. 
+===============================================
+Modified Grammar:
+===============================================
+Total sentences parsed: 926
+Average # of parse per sentence: 78
+# of parses of most ambiguous sentence: 1200
+Sources of ambiguity: We've resolved many sources of ambiguity wrt. to verbs, however, there is a lot of ambiguity with nouns.
+The ambiguity from the original grammar still exists. Our improved grammar
+added more ambiguity, since adding the case feature in nouns resulted in more rules licensing 
+the same surface form. This is especially true of certain affixes that can apply to various types of stems and can interact with multiple rules.
+Additionally, the coordination ambiguity still holds.
+
+We have more sentences now with only one parse tree!
+
+(1) bet-thal-ʦi ʔe
+make-_aux-_du _hs  
+And the two sisters took care of their brother K and looked after him.
+>>>The semantics don't make sense as there's a lot of meaningful content missing. There is only one stem 'make' but the sentence has a lot of additional meaning that is perhaps inferred from the context.
+
+(2)be-t-thal-ʦi ʔe
+do-_pst-_aux-_du _hs
+They gave him food and housed him.
+>>>Like sentence (1) there seems to be a lot situational/pragmatic content not realized in the actual utterance.
+
+(3)lʌks-ɖa ʔe
+go-3_sg._pst _hs 
+After that K was alone and later he went to the river to fish.
+>>> Looking at our data, the sentences seem to be from some form of prose. This implies that Thulung requires heavily on pragmatic meaning as the semantics from sentence to sentence do not encode a lot of information. This translation does not make sense give there is only "went".
+
+(4)lʌks-ɖa ʔe
+go-3_sg._pst _hs 
+He put it in the basket and then the next day he went to kill some fish.
+>>> This utterance is identical to (3) and yet it has a different meaning!
+
+(5)luk-ɖa ʔe
+come.out-3_sg._pst _hs
+Then the stone jumped down out of the basket making a falling sound.
+>>> No, this parse does not look reasonable in the semantics. 
+
+(6)mi-ba-m-wa ʔe
+_neg-be-_copy-_irr _hs 
+But there was nothing on earth called a human.
+>>> No, this does not make sense in the semantics
+
+(7)luk-ɖa ʔe
+come.out-3_sg._pst _hs
+First of all the thorn-laden thorny plant was born and it scratched its mother s womn and she bled a lot.
+>>> This does not make sense in the semantics
+
+(8) dyms-miri ʔe
+become-3_pl._pst _hs
+the thorn wrapping around trees with its thorns the tiger goes this way and that up and down hunting the bear acting lazy and eating a lot the monkey jumping around and destroying things Mini wearing a headdress and inspecting everyone Irma staying with her mother.
+>>>This definitely does not make sense in the semantics
+
+(9)be-thal-ɖy ʔe
+do-_aux-3_sg._pst._a _hs 
+The tiger went everywhere around the earth killing deer and goats without being seen.
+>>> No, this does not make sense in the semantics
+
+(10) ɖyl-thal-ɖy ʔe
+care.for-_aux-3_sg._pst._a _hs 
+Mini went here and there up and down looking and taking care of his mother and sister.
+>>> No, this parse does not seem reasonable
+
+===============================================
+Testsuite:
+===============================================
+Total sentences parsed: 20
+Average # of parse per sentence: 1.25
+# of parses of most ambiguous sentence: 400
+Sources of ambiguity: Recursive applications of rules to noun affixes
+This had 57% coverage!
+
+#TODO
+Although we have sentences that parse, none of them make sense in the semantics due to the nature of the language. It relies heavily on pragmatics.
+See previous explanations!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4/5.
+We modified the case section and TAM section in the grammar. According to our source material, 
+Thulung displays a split case system where pronouns and common nouns display different alignment in SAO. Instead of a nominative-accusative system that the original grammar documents, we change
+it to a tripartite case system of nominative, ergative, and dative. The morphemes for ergative and
+dative already exist in the choices file, so we assigned corresponding case feature to them. 
+However, we have not set constraints to these morphemes, as the split is based on individual verb/
+noun, and the noun types in the original grammar do not account for their case behavior.
+
+The ergative case marker was removed from the below example. It should be ungrammatical, even though our language relies heavily on pragmatics.
+				u-ri-ʦip ser thyr-ɖy
+				3_sg._poss-sibling-_du  louse send-3_sg._pst._a
+
+We also modified the aspect section. We added aspect HAB to the grammar. The original grammar only
+has pot as the sole aspect value.
+
+For example, the below examples tests that the grammar returns ungrammatical because the wrong aspect marker is used.
+				jok-bhara-ɖa ʔe
+				come.down-_aux-3_sg._pst _hs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6. Our test suite was specific to case, aspect. We did make some modifications to number but these are not tested
+7. A lot of ambiguity results from verb rules that have the same(?) function. A lot of parse trees 
+have the same structure, but the rules connecting nodes are different. We also have two choices file that do not share the same lexicon. It would be better if we can combine them. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

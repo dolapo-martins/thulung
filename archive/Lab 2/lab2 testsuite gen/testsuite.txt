@@ -1,0 +1,192 @@
+Language: thulung
+Language code: tdh
+Lines: orth gloss translat
+Author: Dolapo Martins, Zoe Fang
+Date: January 13, 2023
+Source a: https://shs.hal.science/halshs-00004760/document
+Source b: https://journals.linguisticsociety.org/proceedings/index.php/BLS/article/viewFile/1036/819
+Source c: https://escholarship.org/uc/item/6vm893kj
+Source d: provided item file
+
+
+#1
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+bet-thal-ʦi ʔe
+make-_aux-_du _hs
+'And the two sisters took care of their brother K and looked after him.''
+
+#2
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+bet-ʦi ʔe
+make-_du _hs
+'And the two sisters took care of their brother K and looked after him.'
+
+#3
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+be-thal-ɖy ʔe
+do-_aux-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+
+#4
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+be-ɖy ʔe
+do-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+
+#5
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {case}
+u-ri-ʦip-lai ser thyr-ɖy
+3_sg._poss-sibling-_du-_dat louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+
+#6
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {case}
+u-ri-ʦip ser thyr-ɖy
+3_sg._poss-sibling-_du  louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+
+#7
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {case}
+u-ri-ʦip-ka ser thyr-ɖy
+3_sg._poss-sibling-_du-_erg louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+
+#8
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+jok-thal-ɖa ʔe
+come.down-_aux-3_sg._pst _hs
+'When it was time to go down to retun home he dug down into the mud inside the cave and hid the food he had brought and then went down.'
+
+#9
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+jok-bhara-ɖa ʔe
+come.down-_aux-3_sg._pst _hs
+'When it was time to go down to retun home he dug down into the mud inside the cave and hid the food he had brought and then went down.'
+
+#10
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+mi-ba-m-thal-mi-wa ʔe
+_neg-be-_copy-_aux-3_pl-_irr _hs
+'But there weren t any others called humans anywhere on earth.'
+
+#11
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+mi-ba-m-mi-wa ʔe
+_neg-be-_copy-3_pl-_irr _hs
+'But there weren t any others called humans anywhere on earth.'
+
+#12
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+mi-ba-m-bhaɖa-mi-wa ʔe
+_neg-be-_copy-_aux-3_pl-_irr _hs
+'But there weren t any others called humans anywhere on earth.'
+
+#13
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {case}
+ʣʌmmʌi mɵ wo nwa-le ri-ʦip-ka rep-thal-ʦi
+altogether that also two-_cl sibling-_du-_erg look-_aux-_du
+'His two sisters looked after him.'
+
+#14
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {case}
+ʣʌmmʌi mɵ wo nwa-le ri-ʦip rep-thal-ʦi
+altogether that also two-_cl sibling-_du look-_aux-_du
+'His two sisters looked after him.'
+
+#15
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+ʣʌmmʌi mɵ wo nwa-le ri-ʦip-ka rep-ʦi
+altogether that also two-_cl sibling-_du-_erg look-_du
+'His two sisters looked after him.'
+
+#16
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {case}
+ʣʌmmʌi mɵ wo nwa-le ri-ʦip-lai rep-thal-ʦi
+altogether that also two-_cl sibling-_du-_erg look-_aux-_du
+'His two sisters looked after him.'
+
+#17
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {case}
+nem bʌne-sa mɵ-gunu u-ri khakʦilip-lai am-sa
+house make-_cvb that-inside 3_sg._poss-sibling Khakcilip-_dat make.sleep-_cvb
+'Then after that they made a house out of pieces of big bamboo and put their brother K to sleep inside it.'
+
+#18
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {case}
+nem bʌne-sa mɵ-gunu u-ri khakʦilip-ka am-sa
+house make-_cvb that-inside 3_sg._poss-sibling Khakcilip-_dat make.sleep-_cvb
+'Then after that they made a house out of pieces of big bamboo and put their brother K to sleep inside it.'
+
+#19
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {case}
+nem bʌne-sa mɵ-gunu u-ri khakʦilip-lai am-sa
+house make-_cvb that-inside 3_sg._poss-sibling Khakcilip-_erg make.sleep-_cvb
+'Then after that they made a house out of pieces of big bamboo and put their brother K to sleep inside it.'
+
+#20
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {case}
+nem bʌne-sa mɵ-gunu u-ri khakʦilip am-sa
+house make-_cvb that-inside 3_sg._poss-sibling Khakcilip make.sleep-_cvb
+'Then after that they made a house out of pieces of big bamboo and put their brother K to sleep inside it.'
+
+
