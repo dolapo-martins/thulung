@@ -44,10 +44,6 @@ PNG.PER : PNG.PER
   * <> *
 
 PNG.NUM : PNG.NUM
-  pi <> pi
-  pe <> pe
-  di <> di
-  de <> de
   sg <> sg
   pl <> pl
   du <> du
@@ -60,17 +56,7 @@ E.TENSE : E.TENSE
   * <> *
 
 E.ASPECT : E.ASPECT
-  POT <> POT
-  HAB <> HAB
-  CAU <> CAU
-  DETR <> DETR
-  BEN <> BEN
-  DEF <> DEF
-  STA <> STA
-  PON <> PON
-  RES <> RES
-  ITF <> ITF
-  APX <> APX
+  pot <> pot
   * <> *
 
 E.MOOD : E.MOOD
