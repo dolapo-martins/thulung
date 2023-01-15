@@ -1,0 +1,150 @@
+Thulung Lab2
+Zoe Fang
+Dolapo Martins
+
+
+1. Yes!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+2. The initial choices file did not generate any red asterisks on the website, so we were able to 
+download and load the grammar without making changes. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+3. The corpus has around 1900 sentences, so we split the corpus in half and test on the first half 
+which contains 926 sentences.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+================================================
+Initial Run:
+================================================
+Total sentences parsed: 926
+Average # of parse per sentence: 3.89
+# of parses of most ambiguous sentence: 24
+Sources of ambiguity: Multiple lexical entries have the same surface form. Multiple rules can be 
+applied to the same lexical entry. We also found that there is structural ambiguity, where one
+constituent can be attached to either NP or VP freely.
+
+10 items that parsed:
+------------------------------------------------
+lo   be-to   rok-ɖa
+frog do-_cvb come-3_sg._pst
+He came to ask for the frogs.
+The 3rd person in [e] makes sense as it links the frog to the action. TAM values are not specified 
+in [x], but they link the auxiliary 'do' and 'come'. However, there is no relation between 'ask' 
+and 'frog'. 
+
+dyms-ɖa           ʔe
+become-3_sg._pst  _hs
+When he went it became time to go home
+The '_hs_n_rel' does not seem to correspond to 'go home', but is linked with [x].
+
+lʌks-thal-ɖa 	    ʔe
+go-_aux-3_sg._pst   _hs
+During the winter he went down to the lower elevations.
+The translation offers additional locative and temporal information about . '_hs_n_rel' is 
+identified with third person subject of 'go'.
+
+mapahaŋ   rwak-ma
+Mapahang  speak-_pst._ptcp
+The king had a younger brother called Mapahang.
+The constituent for 'king' cannot be found in the MRS, but '_say_v_rel' does link its second argument with 'exist', which also links to 'Mapahang'.
+
+dyms   mɵ   ʦa-ma            sɵ-ra
+become that roast-_pst._ptcp meat-_loc
+Nowadays when we eat roasted meat it has a salty taste in that roasted meat.
+The MRS makes sense, but the translation does not. The second argument of 'become' is linked to 
+the second argument of 'roast', and the first argument of 'become' is linked to the L-INDEX of
+the coordination.
+
+si-mu     lam
+die-_inf  path
+They said that however a person has died it should not be difficult to show the path for dealing with body. We will create a path for dying .
+The second argument of 'die' (why is there two?) is linked to the sole argument of 'path'. The 
+sentence makes sense semantically.
+
+moʦy dyms-ʦi
+wife become-_du
+After that they became a couple there they became husband and wife.
+The first argument of 'exist' is linked to the second argument of 'become', but the first argument of 'become' is linked to a prop-or-ques, which does not make sense.
+
+be-thal-ɖy            ʔe
+do-_aux-3_sg._pst._a  _hs 
+When I roar from the ridge look down in the depths he said he s so fast that by the time the sound 
+carries he s in the opposite place.
+The second argument of 'do' is linked with the argument n 'exist' in '_hs_n_rel'. The semantics of 
+this sentence makes sense.
+
+be-ɖy             ʔe
+do-3_sg._pst._a   _hs 
+Mini told his mother Be angry with him tell him to hold still otherwise I will shoot and kill him with my bow and arrow
+This sentence has the same MRS as the above example. The only difference is the lack of an 
+auxiliary.
+
+mijakma mal-ɖa           jok-ɖa               ʔe-ma
+Miyakma search.for-_purp come.down-3_sg._pst _hs-and.then
+Then they fixed a date and Khomda came to get Miyakma.
+The MRS for this sentence makes sense. The entity 'Miyakma' is identified in 'exist', 'Miyakma', 
+search for', coordination, and 'come down'. 
+===============================================
+Modified Grammar:
+===============================================
+Total sentences parsed: 926
+Average # of parse per sentence: 38
+# of parses of most ambiguous sentence: 648
+Sources of ambiguity: The ambiguity from the original grammar still exists. Our improved grammar
+added more ambiguity, since adding the case feature in nouns resulted in more rules licensing 
+the same surface form.
+
+The sentences have the same MRS for the modified grammar. So the semantic plausibility remains the
+same with the new grammar.
+#TODO
+#analyze the same ten sentences
+
+===============================================
+Testsuite:
+===============================================
+Total sentences parsed: 20
+Average # of parse per sentence: ?
+# of parses of most ambiguous sentence: ?
+Sources of ambiguity: ?
+
+#TODO
+#analyze 10 sentences
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4/5.
+We modified the case section and TAM section in the grammar. According to our source material, 
+Thulung displays a split case system where pronouns and common nouns display different alignment in SAO. Instead of a nominative-accusative system that the original grammar documents, we change
+it to a tripartite case system of nominative, ergative, and dative. The morphemes for ergative and
+dative already exist in the choices file, so we assigned corresponding case feature to them. 
+However, we have not set constraints to these morphemes, as the split is based on individual verb/
+noun, and the noun types in the original grammar do not account for their case behavior.
+
+#TODO insert example
+
+We also modified the aspect section. We added aspect HAB to the grammar. The original grammar only
+has pot as the sole aspect value.
+
+#TODO insert example
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6. #TODO Further work
+7. A lot of ambiguity results from verb rules that have the same(?) function. A lot of parse trees 
+have the same structure, but the rules connecting nodes are different. We also have two choices file that do not share the same lexicon. It would be better if we can combine them. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
