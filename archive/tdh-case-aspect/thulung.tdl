@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Thulung
 ;;; created at:
-;;;     Sun Jan 15 06:50:17 UTC 2023
+;;;     Sun Jan 15 07:04:27 UTC 2023
 ;;; based on Matrix customization system version of:
 ;;;     Fri 10 Jun 2022 12:58:58 AM UTC
 ;;;
@@ -142,7 +142,7 @@ noun9-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-
 noun12-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
-noun19-noun-lex := noun-lex & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc29-or-noun-pc33-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+noun19-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 noun24-noun-lex := noun-lex & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc22-rule-dtr & noun-pc26-rule-dtr &
@@ -175,38 +175,40 @@ noun59-noun-lex := noun-lex & noun-pc13-rule-dtr &
 noun110-noun-lex := noun-lex & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
-noun111-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc29-or-noun-pc33-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+noun111-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 2nd,
                                          NUM du ] ] ].
 
-noun112-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc29-or-noun-pc33-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+noun112-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 2nd,
                                          NUM sg ] ] ].
 
-noun113-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc29-or-noun-pc33-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+noun113-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 2nd,
                                          NUM pl ] ] ].
 
-noun114-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc29-or-noun-pc33-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+noun114-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 3rd,
                                          NUM sg ] ] ].
 
-noun115-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc29-or-noun-pc33-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+noun115-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD [ PRON +,
                             CASE all,
                             CASE-MARKED + ] ].
 
-noun116-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc29-or-noun-pc33-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
+noun116-noun-lex := noun-lex & noun-pc1-rule-dtr & noun-pc10-rule-dtr & noun-pc11-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr & noun-pc16-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc2-rule-dtr & noun-pc22-rule-dtr & noun-pc23-rule-dtr & noun-pc25-rule-dtr & noun-pc30-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc36-rule-dtr & noun-pc39-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr & noun-pc9-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
 noun117-noun-lex := noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 1st,
                                          NUM sg ] ] ].
+
+noun118-noun-lex := noun-lex.
 
 ;;; Verbs
 
@@ -369,73 +371,72 @@ case-marking-adp-lex := non-local-none-lex-item & raise-sem-lex-item &
 
 ;;; Intermediate rule types
 
-verb-pc17-rule-dtr := word-or-lexrule.
-noun-pc25-rule-dtr := word-or-lexrule.
-verb-pc32-rule-dtr := word-or-lexrule.
-verb-pc50-rule-dtr := word-or-lexrule.
-noun-pc29-or-noun-pc33-rule-dtr := word-or-lexrule.
-noun-pc22-rule-dtr := word-or-lexrule.
-verb-pc18-rule-dtr := word-or-lexrule.
-verb-pc26-rule-dtr := word-or-lexrule.
-verb-pc23-rule-dtr := word-or-lexrule.
-noun-pc26-rule-dtr := word-or-lexrule.
-verb-pc36-rule-dtr := word-or-lexrule.
-verb-pc59-rule-dtr := word-or-lexrule.
-noun-pc13-rule-dtr := word-or-lexrule.
-verb-pc11-rule-dtr := word-or-lexrule.
-verb-pc22-rule-dtr := word-or-lexrule.
-verb-pc40-rule-dtr := word-or-lexrule.
-verb-pc42-rule-dtr := word-or-lexrule.
-noun-pc19-rule-dtr := word-or-lexrule.
-verb-pc68-rule-dtr := word-or-lexrule.
-verb-pc20-rule-dtr := word-or-lexrule.
-verb-pc21-rule-dtr := word-or-lexrule.
-verb-pc49-rule-dtr := word-or-lexrule.
-verb-pc14-rule-dtr := word-or-lexrule.
-verb-pc19-rule-dtr := word-or-lexrule.
-verb-pc24-rule-dtr := word-or-lexrule.
-verb-pc33-rule-dtr := word-or-lexrule.
 verb-pc16-rule-dtr := word-or-lexrule.
 verb-pc52-rule-dtr := word-or-lexrule.
-verb-pc61-rule-dtr := word-or-lexrule.
+verb-pc60-rule-dtr := word-or-lexrule.
+verb-pc28-rule-dtr := word-or-lexrule.
+verb-pc17-rule-dtr := word-or-lexrule.
+verb-pc21-rule-dtr := word-or-lexrule.
+noun-pc26-rule-dtr := word-or-lexrule.
+noun-pc35-rule-dtr := word-or-lexrule.
+noun-pc4-rule-dtr := word-or-lexrule.
+verb-pc1-rule-dtr := word-or-lexrule.
+noun-pc22-rule-dtr := word-or-lexrule.
+verb-pc33-rule-dtr := word-or-lexrule.
 verb-pc58-rule-dtr := word-or-lexrule.
-verb-pc13-rule-dtr := word-or-lexrule.
-verb-pc9-rule-dtr := word-or-lexrule.
-noun-pc36-rule-dtr := word-or-lexrule.
-verb-pc77-rule-dtr := word-or-lexrule.
-noun-pc16-rule-dtr := word-or-lexrule.
-noun-pc15-rule-dtr := word-or-lexrule.
-verb-pc7-rule-dtr := word-or-lexrule.
-verb-pc69-rule-dtr := word-or-lexrule.
-verb-pc3-rule-dtr := word-or-lexrule.
-noun-pc9-rule-dtr := word-or-lexrule.
-verb-pc15-rule-dtr := word-or-lexrule.
-noun-pc34-rule-dtr := word-or-lexrule.
-noun-pc1-rule-dtr := word-or-lexrule.
-verb-pc12-rule-dtr := word-or-lexrule.
-noun-pc11-rule-dtr := word-or-lexrule.
-verb-pc55-rule-dtr := word-or-lexrule.
+verb-pc59-rule-dtr := word-or-lexrule.
 verb-pc45-rule-dtr := word-or-lexrule.
-noun-pc10-rule-dtr := word-or-lexrule.
 verb-pc6-rule-dtr := word-or-lexrule.
+verb-pc18-rule-dtr := word-or-lexrule.
+verb-pc13-rule-dtr := word-or-lexrule.
+verb-pc69-rule-dtr := word-or-lexrule.
+verb-pc26-rule-dtr := word-or-lexrule.
+noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr := word-or-lexrule.
+verb-pc68-rule-dtr := word-or-lexrule.
+verb-pc81-rule-dtr := word-or-lexrule.
 noun-pc39-rule-dtr := word-or-lexrule.
 noun-pc2-rule-dtr := word-or-lexrule.
-verb-pc8-rule-dtr := word-or-lexrule.
-noun-pc12-rule-dtr := word-or-lexrule.
-verb-pc10-rule-dtr := word-or-lexrule.
-verb-pc28-rule-dtr := word-or-lexrule.
-verb-pc81-rule-dtr := word-or-lexrule.
-verb-pc66-rule-dtr := word-or-lexrule.
-verb-pc29-rule-dtr := word-or-lexrule.
-noun-pc4-rule-dtr := word-or-lexrule.
-verb-pc60-rule-dtr := word-or-lexrule.
-verb-pc25-rule-dtr := word-or-lexrule.
-noun-pc23-rule-dtr := word-or-lexrule.
-noun-pc18-rule-dtr := word-or-lexrule.
-noun-pc35-rule-dtr := word-or-lexrule.
-noun-pc30-rule-dtr := word-or-lexrule.
-verb-pc1-rule-dtr := word-or-lexrule.
 noun-pc5-rule-dtr := word-or-lexrule.
+verb-pc11-rule-dtr := word-or-lexrule.
+verb-pc7-rule-dtr := word-or-lexrule.
+verb-pc14-rule-dtr := word-or-lexrule.
+noun-pc10-rule-dtr := word-or-lexrule.
+verb-pc19-rule-dtr := word-or-lexrule.
+verb-pc15-rule-dtr := word-or-lexrule.
+verb-pc8-rule-dtr := word-or-lexrule.
+verb-pc9-rule-dtr := word-or-lexrule.
+verb-pc77-rule-dtr := word-or-lexrule.
+verb-pc32-rule-dtr := word-or-lexrule.
+noun-pc19-rule-dtr := word-or-lexrule.
+verb-pc25-rule-dtr := word-or-lexrule.
+verb-pc66-rule-dtr := word-or-lexrule.
+noun-pc25-rule-dtr := word-or-lexrule.
+noun-pc16-rule-dtr := word-or-lexrule.
+verb-pc3-rule-dtr := word-or-lexrule.
+noun-pc12-rule-dtr := word-or-lexrule.
+verb-pc20-rule-dtr := word-or-lexrule.
+verb-pc49-rule-dtr := word-or-lexrule.
+noun-pc13-rule-dtr := word-or-lexrule.
+noun-pc30-rule-dtr := word-or-lexrule.
+verb-pc42-rule-dtr := word-or-lexrule.
+verb-pc36-rule-dtr := word-or-lexrule.
+verb-pc40-rule-dtr := word-or-lexrule.
+verb-pc50-rule-dtr := word-or-lexrule.
+verb-pc55-rule-dtr := word-or-lexrule.
+noun-pc23-rule-dtr := word-or-lexrule.
+verb-pc10-rule-dtr := word-or-lexrule.
+noun-pc18-rule-dtr := word-or-lexrule.
+verb-pc23-rule-dtr := word-or-lexrule.
+noun-pc9-rule-dtr := word-or-lexrule.
+noun-pc34-rule-dtr := word-or-lexrule.
+verb-pc29-rule-dtr := word-or-lexrule.
+verb-pc12-rule-dtr := word-or-lexrule.
+verb-pc24-rule-dtr := word-or-lexrule.
+verb-pc22-rule-dtr := word-or-lexrule.
+noun-pc1-rule-dtr := word-or-lexrule.
+noun-pc36-rule-dtr := word-or-lexrule.
+noun-pc11-rule-dtr := word-or-lexrule.
+verb-pc61-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -518,7 +519,7 @@ noun-pc13-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 noun-pc13_lrt1-lex-rule := noun-pc13-lex-rule-super.
 
 noun-pc15-lex-rule-super := add-only-no-ccont-rule & noun-pc16-rule-dtr & noun-pc36-rule-dtr &
-  [ DTR noun-pc15-rule-dtr ].
+  [ DTR noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr ].
 
 noun-pc15_lrt1-lex-rule := infl-lex-rule & noun-pc15-lex-rule-super.
 
@@ -609,7 +610,7 @@ noun-pc28-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 noun-pc28_lrt1-lex-rule := noun-pc28-lex-rule-super.
 
 noun-pc29-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc22-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
-  [ DTR noun-pc29-or-noun-pc33-rule-dtr ].
+  [ DTR noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr ].
 
 noun-pc29_lrt1-lex-rule := noun-pc29-lex-rule-super.
 
@@ -624,7 +625,7 @@ noun-pc31-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 noun-pc31_lrt1-lex-rule := noun-pc31-lex-rule-super.
 
 noun-pc33-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc18-rule-dtr & noun-pc19-rule-dtr & noun-pc34-rule-dtr & noun-pc35-rule-dtr & noun-pc4-rule-dtr & noun-pc5-rule-dtr &
-  [ DTR noun-pc29-or-noun-pc33-rule-dtr ].
+  [ DTR noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr ].
 
 noun-pc33_lrt1-lex-rule := noun-pc33-lex-rule-super.
 
