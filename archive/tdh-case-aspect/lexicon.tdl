@@ -1321,10 +1321,6 @@ woʦy_1 := noun19-noun-lex &
   [ STEM < "ʈhok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
 
-ʔe := noun19-noun-lex &
-  [ STEM < "ʔe" >,
-    SYNSEM.LKEYS.KEYREL.PRED "__hs_n_rel" ].
-
 ʣam_1 := noun19-noun-lex &
   [ STEM < "ʣam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cooked.rice_n_rel" ].
@@ -1640,6 +1636,10 @@ reʦha := noun116-noun-lex &
 go_2 := noun117-noun-lex &
   [ STEM < "go" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+ʔe := noun118-noun-lex &
+  [ STEM < "ʔe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "__hs_n_rel" ].
 
 ;;; Adjectives
 
