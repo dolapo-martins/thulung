@@ -154,21 +154,20 @@ The tiger went everywhere around the earth killing deer and goats without being 
 (10) ɖyl-thal-ɖy ʔe
 care.for-_aux-3_sg._pst._a _hs 
 Mini went here and there up and down looking and taking care of his mother and sister.
->>> No, this parse does not seem reasonable.
-
-#TODO
-#analyze the same ten sentences
+>>> No, this parse does not seem reasonable
 
 ===============================================
 Testsuite:
 ===============================================
 Total sentences parsed: 20
-Average # of parse per sentence: ?
-# of parses of most ambiguous sentence: ?
-Sources of ambiguity: ?
+Average # of parse per sentence: 1.25
+# of parses of most ambiguous sentence: 400
+Sources of ambiguity: Recursive applications of rules to noun affixes
+This had 57% coverage!
 
 #TODO
-#analyze 10 sentences
+Although we have sentences that parse, none of them make sense in the semantics due to the nature of the language. It relies heavily on pragmatics.
+See previous explanations!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4/5.
 We modified the case section and TAM section in the grammar. According to our source material, 
@@ -178,15 +177,19 @@ dative already exist in the choices file, so we assigned corresponding case feat
 However, we have not set constraints to these morphemes, as the split is based on individual verb/
 noun, and the noun types in the original grammar do not account for their case behavior.
 
-#TODO insert example
+The ergative case marker was removed from the below example. It should be ungrammatical, even though our language relies heavily on pragmatics.
+				u-ri-ʦip ser thyr-ɖy
+				3_sg._poss-sibling-_du  louse send-3_sg._pst._a
 
 We also modified the aspect section. We added aspect HAB to the grammar. The original grammar only
 has pot as the sole aspect value.
 
-#TODO insert example
+For example, the below examples tests that the grammar returns ungrammatical because the wrong aspect marker is used.
+				jok-bhara-ɖa ʔe
+				come.down-_aux-3_sg._pst _hs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6. #TODO Further work
+6. Our test suite was specific to case, aspect. We did make some modifications to number but these are not tested
 7. A lot of ambiguity results from verb rules that have the same(?) function. A lot of parse trees 
 have the same structure, but the rules connecting nodes are different. We also have two choices file that do not share the same lexicon. It would be better if we can combine them. 
 
