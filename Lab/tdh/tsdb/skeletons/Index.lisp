@@ -20,8 +20,7 @@
 ;;;
 
 (
-((:path . "corpus0-926") (:content . "[0-926] IGT provided by the linguist, subset of the entire dataset."))
-((:path . "corpus927-1854") (:content . "[927-1854] IGT provided by the linguist, subset of the entire dataset."))
-((:path . "corpus0-1854") (:content . "[all] IGT provided by the linguist, subset of the entire dataset."))
-((:path . "lab2") (:content . "Custom test suite."))
+((:path . "matrix") (:content . "matrix: A test suite created automatically from the test sentences given in the Grammar Matrix questionnaire."))
+; New test suites here. For example:
+; ((:path . "new-test-suite") (:content . "New Test Suite: A description of the new test suite located at the subdirectory new-test-suite."))
 )

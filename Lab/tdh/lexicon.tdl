@@ -1855,34 +1855,6 @@ nalemeɖaʈ := verb5-verb-lex &
   [ STEM < "nalemeɖaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "__neg.mock_v_rel" ].
 
-ba_1 := verb8-verb-lex &
-  [ STEM < "ba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
-
-dam_1 := verb8-verb-lex &
-  [ STEM < "dam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_disappear_v_rel" ].
-
-hopmam_1 := verb8-verb-lex &
-  [ STEM < "hopmam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_like.this_v_rel" ].
-
-kholy_1 := verb8-verb-lex &
-  [ STEM < "kholy" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
-
-lʌks_1 := verb8-verb-lex &
-  [ STEM < "lʌks" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
-
-phʌrke_1 := verb8-verb-lex &
-  [ STEM < "phʌrke" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_return_v_rel" ].
-
-ʌlmʌle_1 := verb8-verb-lex &
-  [ STEM < "ʌlmʌle" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be.stuck_v_rel" ].
-
 bet := verb12-verb-lex &
   [ STEM < "bet" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
@@ -1939,7 +1911,7 @@ tha := verb49-verb-lex &
   [ STEM < "tha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-ʌlmʌle_2 := verb49-verb-lex &
+ʌlmʌle_1 := verb49-verb-lex &
   [ STEM < "ʌlmʌle" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.stuck_v_rel" ].
 
@@ -1963,7 +1935,7 @@ sɵʈ := verb49-verb-lex &
   [ STEM < "sɵʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring.down_v_rel" ].
 
-lʌks_2 := verb49-verb-lex &
+lʌks_1 := verb49-verb-lex &
   [ STEM < "lʌks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
@@ -2095,7 +2067,7 @@ naleɖaʈ := verb49-verb-lex &
   [ STEM < "ʣyl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_place_v_rel" ].
 
-kholy_2 := verb49-verb-lex &
+kholy_1 := verb49-verb-lex &
   [ STEM < "kholy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
 
@@ -2207,7 +2179,7 @@ al_1 := verb49-verb-lex &
   [ STEM < "al" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall.down_v_rel" ].
 
-ba_2 := verb49-verb-lex &
+ba_1 := verb49-verb-lex &
   [ STEM < "ba" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
@@ -2350,10 +2322,6 @@ a := verb58-verb-lex &
 al_2 := verb58-verb-lex &
   [ STEM < "al" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall.down_v_rel" ].
-
-ba_3 := verb58-verb-lex &
-  [ STEM < "ba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_wear_v_rel" ].
 
 bhrʌ := verb58-verb-lex &
   [ STEM < "bhrʌ" >,
@@ -2535,27 +2503,27 @@ be_2 := verb93-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-dam_2 := verb93-verb-lex &
+dam := verb93-verb-lex &
   [ STEM < "dam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_disappear_v_rel" ].
 
-hopmam_2 := verb93-verb-lex &
+hopmam := verb93-verb-lex &
   [ STEM < "hopmam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_like.this_v_rel" ].
 
-kholy_3 := verb93-verb-lex &
+kholy_2 := verb93-verb-lex &
   [ STEM < "kholy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
 
-lʌks_3 := verb93-verb-lex &
+lʌks_2 := verb93-verb-lex &
   [ STEM < "lʌks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-phʌrke_2 := verb93-verb-lex &
+phʌrke := verb93-verb-lex &
   [ STEM < "phʌrke" >,
     SYNSEM.LKEYS.KEYREL.PRED "_return_v_rel" ].
 
-ʌlmʌle_3 := verb93-verb-lex &
+ʌlmʌle_2 := verb93-verb-lex &
   [ STEM < "ʌlmʌle" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.stuck_v_rel" ].
 
@@ -2699,7 +2667,7 @@ dym := verb93-verb-lex &
   [ STEM < "dym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_become_v_rel" ].
 
-ba_4 := verb93-verb-lex &
+ba_2 := verb93-verb-lex &
   [ STEM < "ba" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
