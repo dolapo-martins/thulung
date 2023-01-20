@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Thulung
 ;;; created at:
-;;;     Fri Jan 20 04:12:17 UTC 2023
+;;;     Fri Jan 20 04:21:16 UTC 2023
 ;;; based on Matrix customization system version of:
 ;;;     Fri 10 Jun 2022 12:58:58 AM UTC
 ;;;
@@ -29,15 +29,15 @@ head :+ [ PRON bool,
 +np :+ [ CASE-MARKED bool,
     CASE case ].
 
-inflected :+ [ VERB49-VERB-OR-VERB58-VERB-OR-VERB93-VERB-FLAG luk,
-    VERB49-VERB-FLAG luk,
-    VERB49-VERB-OR-VERB53-VERB-OR-VERB93-VERB-FLAG luk,
-    TRANSITIVE-VERB-OR-VERB3-VERB-OR-VERB49-VERB-OR-VERB93-VERB-FLAG luk ].
+inflected :+ [ VERB49-VERB-FLAG luk,
+    VERB49-VERB-OR-VERB58-VERB-OR-VERB93-VERB-FLAG luk,
+    TRANSITIVE-VERB-OR-VERB3-VERB-OR-VERB49-VERB-OR-VERB93-VERB-FLAG luk,
+    VERB49-VERB-OR-VERB53-VERB-OR-VERB93-VERB-FLAG luk ].
 
-infl-satisfied :+ [ VERB49-VERB-OR-VERB58-VERB-OR-VERB93-VERB-FLAG na-or-+,
-    VERB49-VERB-FLAG na-or-+,
-    VERB49-VERB-OR-VERB53-VERB-OR-VERB93-VERB-FLAG na-or-+,
-    TRANSITIVE-VERB-OR-VERB3-VERB-OR-VERB49-VERB-OR-VERB93-VERB-FLAG na-or-+ ].
+infl-satisfied :+ [ VERB49-VERB-FLAG na-or-+,
+    VERB49-VERB-OR-VERB58-VERB-OR-VERB93-VERB-FLAG na-or-+,
+    TRANSITIVE-VERB-OR-VERB3-VERB-OR-VERB49-VERB-OR-VERB93-VERB-FLAG na-or-+,
+    VERB49-VERB-OR-VERB53-VERB-OR-VERB93-VERB-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number ].
@@ -109,9 +109,9 @@ lev := case.  ; levLOC
 hiL := case.  ; hiLOC
 loL := case.  ; loLOC
 LOC := case.  ; LOC
-ERG+INS := case.
-ERG := ERG+INS.
-INS := ERG+INS.
+INS+ERG := case.
+INS := INS+ERG.
+ERG := INS+ERG.
 
 ;;; Form
 
@@ -469,59 +469,59 @@ case-marking-adp-lex := non-local-none-lex-item & raise-sem-lex-item &
 
 ;;; Intermediate rule types
 
-verb-pc17-rule-dtr := word-or-lexrule.
-verb-pc24-rule-dtr := word-or-lexrule.
-verb-pc59-rule-dtr := word-or-lexrule.
-verb-pc12-rule-dtr := word-or-lexrule.
 noun-pc25-rule-dtr := word-or-lexrule.
-verb-pc33-rule-dtr := word-or-lexrule.
-verb-pc58-rule-dtr := word-or-lexrule.
-verb-pc81-rule-dtr := word-or-lexrule.
-verb-pc69-rule-dtr := word-or-lexrule.
-noun-pc39-rule-dtr := word-or-lexrule.
-verb-pc11-rule-dtr := word-or-lexrule.
-verb-pc60-rule-dtr := word-or-lexrule.
-verb-pc22-rule-dtr := word-or-lexrule.
-verb-pc52-rule-dtr := word-or-lexrule.
-verb-pc55-rule-dtr := word-or-lexrule.
-noun-pc23-rule-dtr := word-or-lexrule.
-noun-pc16-rule-dtr := word-or-lexrule.
-noun-pc12-rule-dtr := word-or-lexrule.
-verb-pc50-rule-dtr := word-or-lexrule.
-verb-pc29-rule-dtr := word-or-lexrule.
-noun-pc9-rule-dtr := word-or-lexrule.
-verb-pc16-rule-dtr := word-or-lexrule.
-noun-pc2-rule-dtr := word-or-lexrule.
 verb-pc42-rule-dtr := word-or-lexrule.
-verb-pc45-rule-dtr := word-or-lexrule.
-CASE-MARKING-rule-dtr := word-or-lexrule.
-noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr := word-or-lexrule.
-verb-pc32-rule-dtr := word-or-lexrule.
-verb-pc13-rule-dtr := word-or-lexrule.
-verb-pc20-rule-dtr := word-or-lexrule.
-noun-pc22-rule-dtr := word-or-lexrule.
-verb-pc36-rule-dtr := word-or-lexrule.
-verb-pc9-rule-dtr := word-or-lexrule.
-verb-pc40-rule-dtr := word-or-lexrule.
-noun-pc13-rule-dtr := word-or-lexrule.
 noun-pc36-rule-dtr := word-or-lexrule.
+verb-pc36-rule-dtr := word-or-lexrule.
+verb-pc14-rule-dtr := word-or-lexrule.
+noun-pc22-rule-dtr := word-or-lexrule.
+verb-pc59-rule-dtr := word-or-lexrule.
+verb-pc68-rule-dtr := word-or-lexrule.
+noun-pc15-or-noun-pc29-or-noun-pc33-rule-dtr := word-or-lexrule.
+verb-pc40-rule-dtr := word-or-lexrule.
+verb-pc16-rule-dtr := word-or-lexrule.
+noun-pc16-rule-dtr := word-or-lexrule.
+verb-pc22-rule-dtr := word-or-lexrule.
+noun-pc30-rule-dtr := word-or-lexrule.
+noun-pc13-rule-dtr := word-or-lexrule.
+verb-pc9-rule-dtr := word-or-lexrule.
+verb-pc26-rule-dtr := word-or-lexrule.
+verb-pc19-rule-dtr := word-or-lexrule.
+verb-pc13-rule-dtr := word-or-lexrule.
+verb-pc69-rule-dtr := word-or-lexrule.
+verb-pc23-rule-dtr := word-or-lexrule.
+verb-pc25-rule-dtr := word-or-lexrule.
+noun-pc39-rule-dtr := word-or-lexrule.
+verb-pc12-rule-dtr := word-or-lexrule.
+noun-pc1-rule-dtr := word-or-lexrule.
+verb-pc18-rule-dtr := word-or-lexrule.
+verb-pc55-rule-dtr := word-or-lexrule.
 verb-pc61-rule-dtr := word-or-lexrule.
 verb-pc21-rule-dtr := word-or-lexrule.
-verb-pc23-rule-dtr := word-or-lexrule.
 verb-pc77-rule-dtr := word-or-lexrule.
-verb-pc19-rule-dtr := word-or-lexrule.
-verb-pc7-rule-dtr := word-or-lexrule.
-noun-pc1-rule-dtr := word-or-lexrule.
-verb-pc26-rule-dtr := word-or-lexrule.
-verb-pc25-rule-dtr := word-or-lexrule.
-verb-pc18-rule-dtr := word-or-lexrule.
-verb-pc49-rule-dtr := word-or-lexrule.
-noun-pc30-rule-dtr := word-or-lexrule.
-verb-pc14-rule-dtr := word-or-lexrule.
-verb-pc6-rule-dtr := word-or-lexrule.
-verb-pc1-rule-dtr := word-or-lexrule.
-verb-pc68-rule-dtr := word-or-lexrule.
 verb-pc66-rule-dtr := word-or-lexrule.
+verb-pc1-rule-dtr := word-or-lexrule.
+verb-pc49-rule-dtr := word-or-lexrule.
+verb-pc81-rule-dtr := word-or-lexrule.
+verb-pc33-rule-dtr := word-or-lexrule.
+verb-pc29-rule-dtr := word-or-lexrule.
+noun-pc2-rule-dtr := word-or-lexrule.
+verb-pc24-rule-dtr := word-or-lexrule.
+verb-pc17-rule-dtr := word-or-lexrule.
+verb-pc6-rule-dtr := word-or-lexrule.
+noun-pc9-rule-dtr := word-or-lexrule.
+verb-pc58-rule-dtr := word-or-lexrule.
+verb-pc20-rule-dtr := word-or-lexrule.
+verb-pc45-rule-dtr := word-or-lexrule.
+verb-pc50-rule-dtr := word-or-lexrule.
+CASE-MARKING-rule-dtr := word-or-lexrule.
+noun-pc12-rule-dtr := word-or-lexrule.
+noun-pc23-rule-dtr := word-or-lexrule.
+verb-pc52-rule-dtr := word-or-lexrule.
+verb-pc7-rule-dtr := word-or-lexrule.
+verb-pc11-rule-dtr := word-or-lexrule.
+verb-pc60-rule-dtr := word-or-lexrule.
+verb-pc32-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -685,7 +685,7 @@ CASE-MARKING-lex-rule-super := add-only-no-ccont-rule & noun-pc13-rule-dtr &
         [ INFLECTED #infl ] ].
 
 ERG+INSTR-case-marker-lex-rule := CASE-MARKING-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CAT.HEAD [ CASE ERG+INS,
+  [ SYNSEM.LOCAL.CAT.HEAD [ CASE INS+ERG,
                             CASE-MARKED + ] ].
 
 DAT-case-marker-lex-rule := CASE-MARKING-lex-rule-super & infl-lex-rule &
@@ -1103,9 +1103,8 @@ APX-marker-lex-rule := ASPECT-MARKING-lex-rule-super & add-only-no-ccont-rule &
   [ DTR.INFLECTED.VERB49-VERB-OR-VERB53-VERB-OR-VERB93-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT APX ].
 
-CAU-marker-lex-rule := ASPECT-MARKING-lex-rule-super & causative-to-arg2-itr-op-lex-rule & causative-to-arg2-tr-op-lex-rule & same-non-local-lex-rule &
-  [ C-CONT.RELS.LIST < [ PRED "causative_rel" ] >,
-    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT CAU ].
+CAU-marker-lex-rule := ASPECT-MARKING-lex-rule-super & add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT CAU ].
 
 BEN-marker-lex-rule := ASPECT-MARKING-lex-rule-super & add-only-no-ccont-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT BEN ].
@@ -1119,57 +1118,9 @@ DEF-marker-lex-rule := ASPECT-MARKING-lex-rule-super & add-only-no-ccont-rule &
 PON-marker-lex-rule := ASPECT-MARKING-lex-rule-super & add-only-no-ccont-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT PON ].
 
-causative-to-arg2-itr-op-lex-rule := scopal-rel-lex-rule & same-spr-lex-rule & same-spec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.VAL [ SPR < >,
-                                                    COMPS < > ] ] >,
-                           COMPS < [ LOCAL [ CONT.HOOK.INDEX #arg2,
-                                             CAT [ HEAD [ MOD #mod,
-                                                          KEYS #keys ],
-                                                   VAL #val ] ],
-                                     NON-LOCAL #nl ] > ],
-    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg2,
-                                                CAT [ HEAD [ MOD #mod,
-                                                             KEYS #keys ],
-                                                      VAL #val ] ],
-                                        NON-LOCAL #nl ] >,
-                               COMPS < > ] ].
-
 obj-rem-op-lex-rule := comps-change-only-lex-rule & no-ccont-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
     DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < unexpressed . #comps > ].
-
-scopal-rel-lex-rule := lex-rule &
-  [ C-CONT [ RELS.LIST < event-relation &
-                         [ LBL #ltop,
-                           ARG0 #hidx,
-                           ARG1 #arg1,
-                           ARG2 #arg2,
-                           ARG3 #harg ] >,
-             HOOK [ LTOP #ltop,
-                    INDEX #hidx,
-                    XARG #arg1 ],
-             HCONS.LIST < qeq &
-                          [ HARG #harg,
-                            LARG #scoped ] > ],
-    SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX #arg1 ] >,
-    DTR.SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX #arg2 ] >,
-                       CONT.HOOK.LTOP #scoped ] ].
-
-causative-to-arg2-tr-op-lex-rule := scopal-rel-lex-rule & same-spr-lex-rule & same-spec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.VAL [ SPR < >,
-                                                    COMPS < > ] ] >,
-                           COMPS < [ LOCAL [ CONT.HOOK.INDEX #arg2,
-                                             CAT [ HEAD [ MOD #mod,
-                                                          KEYS #keys ],
-                                                   VAL #val ] ],
-                                     NON-LOCAL #nl ],
-                                   #comp > ],
-    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg2,
-                                                CAT [ HEAD [ MOD #mod,
-                                                             KEYS #keys ],
-                                                      VAL #val ] ],
-                                        NON-LOCAL #nl ] >,
-                               COMPS < #comp > ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
