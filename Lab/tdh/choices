@@ -79,6 +79,8 @@ section=tense-aspect-mood
     aspect11_supertype1_name=aspect
 
 section=evidentials
+evidential-definition=build
+  evidential1_name=hearsay
 
 section=other-features
 form-fin-nf=on
@@ -2321,6 +2323,15 @@ section=morphology
       verb-pc86_lrt10_lri1_orth=-bal
       verb-pc86_lrt10_lri2_inflecting=yes
       verb-pc86_lrt10_lri2_orth=-bhal
+  verb-pc87_name=HEARSAY-marker
+  verb-pc87_order=suffix
+  verb-pc87_inputs=verb
+    verb-pc87_lrt2_name=hearsay-marking-lrt
+      verb-pc87_lrt2_feat1_name=evidential
+      verb-pc87_lrt2_feat1_value=hearsay
+      verb-pc87_lrt2_feat1_head=verb
+      verb-pc87_lrt2_lri1_inflecting=yes
+      verb-pc87_lrt2_lri1_orth=-ʔe
 
 section=toolbox-import
 
