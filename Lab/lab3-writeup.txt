@@ -1,0 +1,44 @@
+Ling567
+Thulung
+Zoe Fang, Dolapo Martins
+Lab3
+
+
+######################################################################################
+1. 
+Three changes:
+- case marking
+ Pc4, 11, 5, 10,15(lrt2), 22(lrt2, lrt3), 23(lrt2), 26, 
+ Edited pc34 to take Any Noun
+- aspect marking
+ pc3, pc8, pc15, pc28,52(lrt2), 55(lrt2), pc10
+- adposition
+- removed verb5.
+=================================================
+Initial grammar on test corpus
+=================================================
+Total sentences parsed: 926
+Average # of parse per sentence: 78
+# of parses of most ambiguous sentence: 1200
+Sources of ambiguity: We've resolved many sources of ambiguity wrt. to verbs, however, there is a lot of ambiguity with nouns.
+The ambiguity from the original grammar still exists. Our improved grammar
+added more ambiguity, since adding the case feature in nouns resulted in more rules licensing 
+the same surface form. This is especially true of certain affixes that can apply to various types of stems and can interact with multiple rules.
+Additionally, the coordination ambiguity still holds.
+=================================================
+Initial grammar on testsuite
+=================================================
+
+=================================================
+Improved grammar on test corpus
+=================================================
+
+=================================================
+Improved grammar on testsuite
+=================================================
+######################################################################################
+2/3. Documentation of phenomena and improvements
+- Case
+In the initial grammar there are 
+- Aspect
+- Evidentiality/Adposition
