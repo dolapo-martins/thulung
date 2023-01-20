@@ -1,0 +1,2 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+CASE-MARKING-synth-adp-lex := CASE-MARKING-synth-adp-lex-rule.
