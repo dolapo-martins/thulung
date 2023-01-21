@@ -20,10 +20,8 @@ Initial grammar on test corpus
 Total sentences parsed: 926
 Average # of parse per sentence: 78
 # of parses of most ambiguous sentence: 1200
-Sources of ambiguity: We've resolved many sources of ambiguity wrt. to verbs, however, there is a lot of ambiguity with nouns.
-The ambiguity from the original grammar still exists. Our improved grammar
-added more ambiguity, since adding the case feature in nouns resulted in more rules licensing 
-the same surface form. This is especially true of certain affixes that can apply to various types of stems and can interact with multiple rules.
+Sources of ambiguity: There is a lot of ambiguity with verbs. For example, 'ba' has four lexical entries, but three of them have the same semantic value.
+
 Additionally, the coordination ambiguity still holds.
 =================================================
 Initial grammar on testsuite
