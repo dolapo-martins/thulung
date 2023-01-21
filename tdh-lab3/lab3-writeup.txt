@@ -15,7 +15,9 @@ Average # of parse per sentence: 78
 Sources of ambiguity: There is a lot of ambiguity with verbs. For example, 'ba' has four lexical entries, 
 but three of them have the same semantic value. We also see ambiguity in verb lexical rules, where several 
 lexical rules are applied to form the same VP. For example, '-ka' can be attached as either an ERG or 
-INSTR marker. The same ambiguity applies to noun lexical entries and lexical rules.
+INSTR marker. The same ambiguity applies to noun lexical entries and lexical rules. 
+Lastly, as we'll talk about more in-depth below, the hearsay marker is a great source of ambiguity that doubles all of our trees.
+It can attach to any nominalizable-sentence.
 
 10 items that parsed:
 -------------------------------------------------
@@ -81,6 +83,7 @@ Miyakma search.for-_purp come.down-3_sg._pst _hs-and.then
 Then they fixed a date and Khomda came to get Miyakma.
 The MRS for this sentence makes sense. The entity 'Miyakma' is identified in 'exist', 'Miyakma', 
 search for', coordination, and 'come down'. 
+
 =================================================
 Initial grammar on testsuite
 =================================================
@@ -132,10 +135,154 @@ Tag x4 identifies the argument of 'exist' with the second argument of 'come', wh
 =================================================
 Improved grammar on test corpus
 =================================================
+Total sentences parsed: 103
+Average # of parses per sentence: 14.52 
+# of parses of most ambiguous sentence: 80
+Sources of ambiguity: Same as in initial grammar section above. The hearsay marker is not being parsed correctly and is our biggest source of ambiguity, despite adding it as an evidential in the matrix. 
+
+lo   be-to   rok-ɖa
+frog do-_cvb come-3_sg._pst
+He came to ask for the frogs.
+The 3rd person in [x] makes sense as it links the frog to the action. TAM values are not specified in [e] except for aspect, but they link the auxiliary 'do' and 'come'. However, there is no relation between 'ask' and 'frog'. 
+
+dyms-ɖa           ʔe
+become-3_sg._pst  _hs
+When he went it became time to go home
+The '_hs_n_rel' does not seem to correspond to 'go home', but is linked with [x].
+
+lʌks-thal-ɖa        ʔe
+go-_aux-3_sg._pst   _hs
+During the winter he went down to the lower elevations.
+The translation offers additional locative and temporal information about . '_hs_n_rel', which is the hearsay marker. is identified with third person subject of 'go'.
+
+mapahaŋ   rwak-ma
+Mapahang  speak-_pst._ptcp
+The king had a younger brother called Mapahang.
+The constituent for 'king' cannot be found in the MRS, but '_say_v_rel' does link its second argument with 'exist', which also links to 'Mapahang'.
+
+dyms   mɵ   ʦa-ma            sɵ-ra
+become that roast-_pst._ptcp meat-_loc
+Nowadays when we eat roasted meat it has a salty taste in that roasted meat.
+The MRS makes sense, but the translation does not. The second argument of 'become' is linked to 
+the second argument of 'roast', and the first argument of 'become' is linked to the L-INDEX of
+the coordination.
+
+si-mu     lam
+die-_inf  path
+They said that however a person has died it should not be difficult to show the path for dealing with body. We will create a path for dying. 
+The second argument of 'die' (why is there two?) is linked to the sole argument of 'path'. The 
+sentence makes sense semantically.
+
+moʦy dyms-ʦi
+wife become-_du
+After that they became a couple there they became husband and wife.
+The first argument of 'exist' is linked to the second argument of 'become', but the first argument of 'become' is linked to a prop-or-ques, which does not make sense.
+
+be-thal-ɖy            ʔe
+do-_aux-3_sg._pst._a  _hs 
+When I roar from the ridge look down in the depths he said he s so fast that by the time the sound 
+carries he s in the opposite place. 
+The second argument of 'do' is linked with the argument n 'exist' in '_hs_n_rel'. The semantics of 
+this sentence makes sense.
+
+be-ɖy             ʔe
+do-3_sg._pst._a   _hs 
+Mini told his mother Be angry with him tell him to hold still otherwise I will shoot and kill him with my bow and arrow 
+This sentence has the same MRS as the above example. The only difference is the lack of an auxiliary.
+
+mijakma mal-ɖa           jok-ɖa               ʔe-ma
+Miyakma search.for-_purp come.down-3_sg._pst _hs-and.then
+Then they fixed a date and Khomda came to get Miyakma.
+The MRS for this sentence makes sense. The entity 'Miyakma' is identified in 'exist', 'Miyakma', 
+search for', coordination, and 'come down'. 
 
 =================================================
 Improved grammar on testsuite
 =================================================
+Total sentences parsed: 8
+Average # of parses per sentence: 7
+# of parses of most ambiguous sentence: 32
+Sources of ambiguity: The ambiguity here is pretty much all due to the interpretation of the hearsay marker.
+We have defined it as an evidential, however, it keeps getting interpreted as a case marking adposition, even though we have not define it as such in our choices file. 
+Two trees are generated because it either goes from lexical entry > bare-NP or it undergoes lexical entry > case-marking-synth-adp-lex > bare-NP. 
+There are also a few duplicate lexical entries we missed. For example /ba_1/ and /ba_2/ are both semantically the same "be".
+
+(1) bet-thal-ʦi ʔe
+make-_aux-_du _hs
+'And the two sisters took care of their brother K and looked after him.'
+>>> Ignoring our loose translations, the sentence parses into something like "The two/pair continue to make [X happen]".
+This makes sense given the affixes attached. _du represents the dual number marker (we have not handled pronouns yet).
+And habitual affix /-thal/ contributes the ongoing nature of the semantics. And 'make' is an intransitive verb as defined in our grammar. 
+Tag [x4] is arg1 for 'make', arg0 for 'exist', and arg0 for the hearsay marker. 
+This is valid as [x4] is the pragmatically(?) known thing the pair was making happen.
+
+(2) *bet-ʦi ʔe
+make-_du _hs
+*'And the two sisters took care of their brother K and looked after him.'
+>>> It's surprising that our grammar parsed this sentence but it does make sense in the semantics.
+This would roughly mean "The pair make". 
+In hindsight, given 'make' is defined as an intransitive verb, the hearsay marker /-ʔe/ and pragmatics might be doing some lifting as to what was made. 
+But based on our language's known semantics (so far), this makes sense. 
+Tag [x4] is arg1 for 'make', arg0 for 'exist', and arg0 for the hearsay marker. This is valid as [x4] is the pragmatically(?) known thing the pair made.
+
+(3) be-thal-ɖy ʔe
+do-_aux-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+>>> This parses roughly to "The 3rd-sg entity('3_sg', '_a') did (do + _pst) X habitually (_aux/ thal)". 
+It makes sense. Tag [x4] is arg1 for 'do', arg0 for 'exist', and arg0 for the hearsay marker. 
+This is valid as [x4] is the pragmatically(?) known thing the 3sg agent was doing.
+
+(4) *be-ɖy ʔe
+do-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+>>> Like the analysis in (2) we incorrectly marked this ungrammatical but it actually does make sense in the semantics.
+This parses roughly to "The 3rd-sg entity('3_sg', '_a') did (do + _pst) X (_aux/ thal) in the past". 
+It differs with (3) with respect to 3 in the habitual nature of X. Tag [x4] is arg1 for 'do', arg0 for 'exist', and arg0 for the hearsay marker. 
+This is valid as [x4] is the pragmatically(?) known thing the 3sg agent did.
+
+(5) u-ri-ʦip-lai ser thyr-ɖy
+3_sg._poss-sibling-_du-_dat louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+>>> The semantics of this sentence make sense. 
+The 3sg agent sent (send + _past) a louse to (two, /_du/) of their siblings.
+Tag [x4] is arg0 to the first exist relation and the sibling relation (predicate?), meaning there existed siblings.
+Tag [x9] is arg0 to the second exist relation and the bone predicate, meaning there existed a bone. 
+These are all also coidentified with the label 'h' which is the label for the send relation. 'send' takes three arguments. 
+An underspecified arg0 corresponding to the agent, and arg1 and arg2 corresponding to the two objects [x4] and [x9].
+
+(6) *u-ri-ʦip ser thyr-ɖy
+_sg._poss-sibling-_du  louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+>>> The semantics don't make sense here because the dative marker is missing. This could very well read "He sent his sisters to a louse". 
+There are two args for the verb but there is no marking on the object. This language has overt object marking. 
+The semantics in the MRS are like in (5) but is not properly accounting for the case marker.
+
+(7) *u-ri-ʦip-ka ser thyr-ɖy
+3_sg._poss-sibling-_du-_erg louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+>>> The semantics don't make sense because the ergative case marker was used, where the dative is expected. 
+This should not have parsed. The semantics in the MRS are like in (5) but is not properly accounting for the case marker.
+
+(8) jok-thal-ɖa ʔe
+come.down-_aux-3_sg._pst _hs
+'When it was time to go down to retun home he dug down into the mud inside the cave and hid the food he had brought and then went down.'
+>>> This parses roughly as the '3sg entity went down'. 
+This does not make sense semantically (and we should not have marked it as such) because /jok/ is of type verb49-verb-lex, 
+which is a class of transitive verbs. There is a semantic role unfilled. 
+Tag [x4] is arg1 for 'come.down', arg0 for 'exist', and arg0 for the hearsay marker. 
+This is, however, invalid as [e2], arg0 for 'come.down', is unspecified and the role is missing.
+
+N.B.1 - Our improved grammar doesn't parse for any of the new phenomena we added in the test suite (10-20).
+This suggests that our implementation of case and aspect markings are either somehow incorrect. 
+For the valence-changing aspectivizers, this makes sense because we have not added any valence changing operations.
+But it is odd that none of them would parse, even the ones we marked grammatical. Perhaps we need to add constraints?
+It's also possible that (10-20) are incorrectly formed for Thulung. 
+These are sentences that we crafted and our judgments are clearly wrong.
+
+N.B.2 - In thulung, there is no overt nominative case marking. 
+We suspect this might also be a pro-drop language because the verb can mark the agreement features. See (1)-(4) as examples.
+
+
 ######################################################################################
 2. Documentation of phenomena
 %%%
