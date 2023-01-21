@@ -1,0 +1,190 @@
+Language: thulung
+Language code: tdh
+Lines: orth gloss translat
+Author: Dolapo Martins, Zoe Fang
+Date: January 20, 2023
+Source a: https://shs.hal.science/halshs-00004760/document
+Source b: https://journals.linguisticsociety.org/proceedings/index.php/BLS/article/viewFile/1036/819
+Source c: https://escholarship.org/uc/item/6vm893kj
+Source d: provided item file
+
+
+#1
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+bet-thal-ʦi ʔe
+make-_aux-_du _hs
+'And the two sisters took care of their brother K and looked after him.''
+
+#2
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+bet-ʦi ʔe
+make-_du _hs
+'And the two sisters took care of their brother K and looked after him.'
+
+#3
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+be-thal-ɖy ʔe
+do-_aux-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+
+#4
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+be-ɖy ʔe
+do-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+
+#5
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {case}
+u-ri-ʦip-lai ser thyr-ɖy
+3_sg._poss-sibling-_du-_dat louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+
+#6
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {case}
+u-ri-ʦip ser thyr-ɖy
+3_sg._poss-sibling-_du  louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+
+#7
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {case}
+u-ri-ʦip-ka ser thyr-ɖy
+3_sg._poss-sibling-_du-_erg louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+
+#8
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+jok-thal-ɖa ʔe
+come.down-_aux-3_sg._pst _hs
+'When it was time to go down to retun home he dug down into the mud inside the cave and hid the food he had brought and then went down.'
+
+#9
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+jok-bhara-ɖa ʔe
+come.down-_aux-3_sg._pst _hs
+'When it was time to go down to retun home he dug down into the mud inside the cave and hid the food he had brought and then went down.'
+
+#10
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {case}
+gu-ka ʦʌi siʈ-ɖy ʔe
+3_sg-_erg _contr teach-3_sg._pst._a _hs
+'She taught K'
+
+#11
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {case}
+gu ʦʌi siʈ-ɖy ʔe
+3_sg _contr teach-3_sg._pst._a _hs
+'She taught K'
+
+#12
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {case}
+Gu-lai ʦʌi siʈ-ɖy ʔe
+3_sg-_dat _contr teach-3_sg._pst._a _hs
+'She taught K'
+
+#13
+Source: d
+Vetted: f
+Judgment: g
+Phenomena: {evidentials}
+gu-ka ʦʌi siʈ-ɖy
+3_sg-_erg _contr teach-3_sg._pst._a
+'She taught K'
+
+#14
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {case}
+gu-ka gana khre-ɖy
+3_sg-_erg 2_sg hit-3_sg._pst._a
+'He hit you'
+
+#15
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {case}
+gu-ka gana-lai khre-ɖy
+3_sg-_erg 2_sg-_dat hit-3_sg._pst._a
+'He hit you'
+
+#16
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {case}
+gu-kam gana-lai khre-ɖy
+3_sg-_gen 2_sg-_dat hit-3_sg._pst._a
+'He hit you'
+
+#17
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+gu-ka me-lai si-be-ɖy
+3_sg-_erg that-_dat die-_cau-3_sg._pst._a
+'He ordered her to die.'
+
+#18
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {aspect}
+gu-ka me-lai si-ɖy
+3_sg-_erg that-_dat die-3_sg._pst._a
+'He ordered her to die.'
+
+#19
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+gu-ka me-lai seʈ-ɖy
+3_sg-_erg that-_dat kill-3_sg._pst._a
+'He killed her.'
+
+#20
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {aspect}
+thʌk-thaɖ-ɖy
+hide-_itf-3_sg._pst._a
+'He hid all of a sudden.'
