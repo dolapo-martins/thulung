@@ -6,28 +6,25 @@ Lab3
 
 ######################################################################################
 1. 
-Three changes:
-- case marking
- Pc4, 11, 5, 10,15(lrt2), 22(lrt2, lrt3), 23(lrt2), 26, 
- Edited pc34 to take Any Noun
-- aspect marking
- pc3, pc8, pc15, pc28,52(lrt2), 55(lrt2), pc10
-- adposition
-- removed verb5.
 =================================================
 Initial grammar on test corpus
 =================================================
-Total sentences parsed: 926
+Total sentences parsed: 90
 Average # of parse per sentence: 78
 # of parses of most ambiguous sentence: 1200
-Sources of ambiguity: There is a lot of ambiguity with verbs. For example, 'ba' has four lexical entries, but three of them have the same semantic value. We also see ambiguity in verb lexical rules, where several lexical rules are applied to form the same VP. For example, '-ka' can be attached as either an ERG or INSTR marker. The same ambiguity applies to noun lexical entries and lexical rules.
+Sources of ambiguity: There is a lot of ambiguity with verbs. For example, 'ba' has four lexical entries, 
+but three of them have the same semantic value. We also see ambiguity in verb lexical rules, where several 
+lexical rules are applied to form the same VP. For example, '-ka' can be attached as either an ERG or 
+INSTR marker. The same ambiguity applies to noun lexical entries and lexical rules.
 
 10 items that parsed:
 -------------------------------------------------
 lo   be-to   rok-ɖa
 frog do-_cvb come-3_sg._pst
 He came to ask for the frogs.
-The 3rd person in [x] makes sense as it links the frog to the action. TAM values are not specified in [e] except for aspect, but they link the auxiliary 'do' and 'come'. However, there is no relation between 'ask' and 'frog'. 
+The 3rd person in [x] makes sense as it links the frog to the action. TAM values are not specified in [e] 
+except for aspect, but they link the auxiliary 'do' and 'come'. However, there is no relation between 'ask' 
+and 'frog'. 
 
 dyms-ɖa           ʔe
 become-3_sg._pst  _hs
@@ -37,12 +34,14 @@ The '_hs_n_rel' does not seem to correspond to 'go home', but is linked with [x]
 lʌks-thal-ɖa 	    ʔe
 go-_aux-3_sg._pst   _hs
 During the winter he went down to the lower elevations.
-The translation offers additional locative and temporal information about . '_hs_n_rel', which is the hearsay marker. is identified with third person subject of 'go'.
+The translation offers additional locative and temporal information about . '_hs_n_rel', which is the 
+hearsay marker. is identified with third person subject of 'go'.
 
 mapahaŋ   rwak-ma
 Mapahang  speak-_pst._ptcp
 The king had a younger brother called Mapahang.
-The constituent for 'king' cannot be found in the MRS, but '_say_v_rel' does link its second argument with 'exist', which also links to 'Mapahang'.
+The constituent for 'king' cannot be found in the MRS, but '_say_v_rel' does link its second argument with
+ 'exist', which also links to 'Mapahang'.
 
 dyms   mɵ   ʦa-ma            sɵ-ra
 become that roast-_pst._ptcp meat-_loc
@@ -53,14 +52,16 @@ the coordination.
 
 si-mu     lam
 die-_inf  path
-They said that however a person has died it should not be difficult to show the path for dealing with body. We will create a path for dying. 
+They said that however a person has died it should not be difficult to show the path for dealing with body. 
+We will create a path for dying. 
 The second argument of 'die' (why is there two?) is linked to the sole argument of 'path'. The 
 sentence makes sense semantically.
 
 moʦy dyms-ʦi
 wife become-_du
 After that they became a couple there they became husband and wife.
-The first argument of 'exist' is linked to the second argument of 'become', but the first argument of 'become' is linked to a prop-or-ques, which does not make sense.
+The first argument of 'exist' is linked to the second argument of 'become', but the first argument of 
+'become' is linked to a prop-or-ques, which does not make sense.
 
 be-thal-ɖy            ʔe
 do-_aux-3_sg._pst._a  _hs 
@@ -71,7 +72,8 @@ this sentence makes sense.
 
 be-ɖy             ʔe
 do-3_sg._pst._a   _hs 
-Mini told his mother Be angry with him tell him to hold still otherwise I will shoot and kill him with my bow and arrow 
+Mini told his mother Be angry with him tell him to hold still otherwise I will shoot and kill him with 
+my bow and arrow 
 This sentence has the same MRS as the above example. The only difference is the lack of an auxiliary.
 
 mijakma mal-ɖa           jok-ɖa               ʔe-ma
@@ -88,16 +90,45 @@ Average # of parse per sentence: 1.33
 Sources of ambiguity: Same grammar, same ambiguity
 
 6 items that parsed:
+(We have been advised to ignore the translation.)
 -------------------------------------------------
 bet-thal-ʦi ʔe
 make-_aux-_du _hs
 'And the two sisters took care of their brother K and looked after him.''
-Tag x4 identities the second argument of 'make' with the first argument of 'exist' and the first argument of 'hearsay'. We have seen hearsay being identified with both NP and VP, which both make sense semantically.
+Tag x4 identities the second argument of 'make' with the first argument of 'exist' and the first argument 
+of 'hearsay'. We have seen hearsay being identified with both NP and VP, which both make sense semantically.
 
 bet-ʦi ʔe
 make-_du _hs
 'And the two sisters took care of their brother K and looked after him.'
 Same MRS as the sentence above, except for the lack of specification on aspect.
+
+be-thal-ɖy ʔe
+do-_aux-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+Same MRS as the sentence above and above. Past tense which should be illustrated by 'ɖy' does not appear in 
+TAM, but that does not affect semantics.
+
+be-ɖy ʔe
+do-3_sg._pst._a _hs
+'The tiger went everywhere around the earth killing deer and goats without being seen.'
+Similar structure as previous MRS, only that tag x4 identifies the second argument of 'do' with arguments in 
+'hearsay' and 'exist'. 
+
+u-ri-ʦip-ka ser thyr-ɖy
+3_sg._poss-sibling-_du-_erg louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+Tag x4 identifies the argument of 'exist' with 'sibling' and the sendee of 'send' and has 3rd person value.
+Tag x9 identifies the argument of another 'exist' with 'louse' and the sent item of 'send'. Semantics 
+makes sense.
+
+jok-thal-ɖa ʔe
+come.down-_aux-3_sg._pst _hs
+'When it was time to go down to retun home he dug down into the mud inside the cave and hid the food he had 
+brought and then went down.'
+Tag x4 identifies the argument of 'exist' with the second argument of 'come', which does not make sense.
+'come' should not be taking a second argument. Also, the PNG is not specified in [x] of x4.
+
 =================================================
 Improved grammar on test corpus
 =================================================
@@ -106,8 +137,126 @@ Improved grammar on test corpus
 Improved grammar on testsuite
 =================================================
 ######################################################################################
-2/3. Documentation of phenomena and improvements
+2. Documentation of phenomena
+%%%
+Note: the '_' appears at the beginning of predicate in all lexemes. We could consider removing them in the
+future.
+=================================================
 - Case
-In the initial grammar there are 
+=================================================
+#15 [grammatical]
+gu-ka gana-lai khre-ɖy
+3_sg-_erg 2_sg-_dat hit-3_sg._pst._a
+'He hit you'
+
+#16 [ungrammatical]
+gu-kam gana-lai khre-ɖy
+3_sg-_gen 2_sg-_dat hit-3_sg._pst._a
+'He hit you'
+
+Thulung has a tripartite case system for common nouns, where the subject takes NOM case and has no morphological
+Marker, the agent takes ERG case, and the object takes DAT case. There are also additional cases outside of 
+the relationship of SAO. In the example illustrated above, #15 is grammatical because agent carries an ERG marker,
+And the object carries a DAT marker. On the contrary, #16 is ungrammatical because the agent is taking a GEN case
+marker. 
+
+=================================================
 - Aspect
-- Evidentiality/Adposition
+=================================================
+#17 [grammatical]
+gu-ka me-lai si-be-ɖy
+3_sg-_erg that-_dat die-_cau-3_sg._pst._a
+'He ordered her to die.'
+
+#18 [ungrammatical]
+gu-ka me-lai si-ɖy
+3_sg-_erg that-_dat die-3_sg._pst._a
+'He ordered her to die.'
+
+Causative is one of the aspects that can be attached to verbs in Thulung. Causative adds one grammatical rule to the
+complement list of the verb. For example, the verb 'die' is an intransitive verb, and once a causative marker is 
+attached to the verb stem, it can take an object, which is illustrated in #17. On the contrary, 'die' cannot take
+an object, which is marked with the dative case in #18, without a causative marker.
+
+=================================================
+- Evidentiality
+=================================================
+#10 [grammatical]
+gu-ka ʦʌi siʈ-ɖy ʔe
+3_sg-_erg _contr teach-3_sg._pst._a _hs
+'She taught K'
+
+#13 [grammatical]
+gu-ka ʦʌi siʈ-ɖy
+3_sg-_erg _contr teach-3_sg._pst._a
+'She taught K'
+
+Thulung has an evidential marker 'ʔe'. It is very common to see this marker at the end of each sentence in story-telling.
+The initial grammar identifies the hearsay marker as a case marking adposition. However, the function of case marking
+does not correspond to the real usage of 'ʔe'. As illustrated above, both sentences are grammatical with or without
+the hearsay marker. 
+
+3. Documentation of improvements
+=================================================
+- Case
+=================================================
+In the initial grammar, several position classes have lexical rules that specify case marking suffixes. We see a lot of 
+overlapping noun-pc or noun types in their possible inputs, so we created a new position class 45 called 'CASE-MARKING',
+whose possible inputs are the union of all the possible inputs from the individual PCs. Each case marking suffix is listed
+as a separate lrt under this new position class. After creating noun-pc45, we removed all the individual case-marking PCs,
+including noun-pc4, pc10, pc23(lrt2), etc.. 
+
+Part of this change is reflected in irules.tdl as follows:
+ERG+INSTR-case-marker-suffix :=
+%suffix (* -ka)
+ERG+INSTR-case-marker-lex-rule.
+
+u-ri-ʦip-ka ser thyr-ɖy
+3_sg._poss-sibling-_du-_erg louse send-3_sg._pst._a
+'He sent a louse to his sisters.'
+
+The above sentence should be grammatical, since the agent is marked as ergative.
+
+=================================================
+- Aspect
+=================================================
+In the initial grammar, several position classes have lexical rules that specify aspect marking suffixes. We see a lot of 
+overlapping verb-pc or verb types in their possible inputs, so we created a verb-pc86 called 'ASPECT-MARKING', whose
+possible inputs are the union of all the possible inputs from the individual verb PCs. Each aspect marking suffix is listed
+as a separate lrt under this new position class. After creating verb-pc86, we removed all the individual aspect-marking PCs,
+including verb-pc3, pc15, pc52(lrt2), etc.. 
+
+Part of this change is reflected in irules.tdl as follows:
+CAU-marker-suffix :=
+%suffix (* -be)
+CAU-marker-lex-rule.
+
+thʌk-thaɖ-ɖy
+hide-_itf-3_sg._pst._a
+'He hid all of a sudden.'
+
+The above sentence should be grammatical (but not yet according to our grammar).
+
+=================================================
+- Evidentiality
+=================================================
+‘ʔe’ has been inferred to be an adposition case marker by the matrix, which led us to take a closer look. Then we found out that 
+‘ʔe’ is the evidential hearsay marker. We added a new verb-pc87, whose aspect feature has value 'hearsay', and that allows ‘ʔe’ 
+to be a suffix to all verbs.
+
+This change is reflected in irules.tdl as follows:
+hearsay-marking-lrt-suffix :=
+%suffix (* -ʔe)
+hearsay-marking-lrt-lex-rule.
+
+bet-ʦi ʔe
+make-_du _hs
+'And the two sisters took care of their brother K and looked after him.'
+
+The above sentence should be grammatical, since the hearsay marker is attached to a VP.
+
+=================================================
+- Additional Changes
+=================================================
+We merged two verb types and removed the one (verb5) containing duplicates. The motivation of this merge is that we have found 'ba'
+being the surface form of two verb types, which have the same feature values. 
