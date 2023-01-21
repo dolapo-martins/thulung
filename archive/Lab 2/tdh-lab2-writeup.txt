@@ -160,7 +160,7 @@ Mini went here and there up and down looking and taking care of his mother and s
 Testsuite:
 ===============================================
 Total sentences parsed: 20
-Average # of parse per sentence: 1.25
+Average # of parse per sentence: 1.33
 # of parses of most ambiguous sentence: 400
 Sources of ambiguity: Recursive applications of rules to noun affixes
 This had 57% coverage!
