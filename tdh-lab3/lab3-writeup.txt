@@ -88,7 +88,7 @@ search for', coordination, and 'come down'.
 Initial grammar on testsuite
 =================================================
 Total sentences parsed: 20
-Average # of parse per sentence: 1.33
+Average # of parse per sentence: 68
 # of parses of most ambiguous sentence: 400
 Sources of ambiguity: Same grammar, same ambiguity
 
