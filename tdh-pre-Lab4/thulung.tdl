@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Thulung
 ;;; created at:
-;;;     Thu Jan 26 06:00:17 UTC 2023
+;;;     Thu Jan 26 06:14:38 UTC 2023
 ;;; based on Matrix customization system version of:
 ;;;     Fri 10 Jun 2022 12:58:58 AM UTC
 ;;;
@@ -30,19 +30,19 @@ head :+ [ PRON bool,
 +np :+ [ CASE-MARKED bool,
     CASE case ].
 
-inflected :+ [ VERB5-TRANSITIVE-VERB-FLAG luk,
-    TRANSITIVE-VERB-FLAG luk,
-    VERB58-INTRANSITIVE-VERB-FLAG luk,
+inflected :+ [ VERB58-INTRANSITIVE-VERB-FLAG luk,
+    VERB5-TRANSITIVE-VERB-FLAG luk,
     INTRANSITIVE-VERB-FLAG luk,
+    POSSESSIVE-FLAG luk,
     VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG luk,
-    POSSESSIVE-FLAG luk ].
+    TRANSITIVE-VERB-FLAG luk ].
 
-infl-satisfied :+ [ VERB5-TRANSITIVE-VERB-FLAG na-or-+,
-    TRANSITIVE-VERB-FLAG na-or-+,
-    VERB58-INTRANSITIVE-VERB-FLAG na-or-+,
+infl-satisfied :+ [ VERB58-INTRANSITIVE-VERB-FLAG na-or-+,
+    VERB5-TRANSITIVE-VERB-FLAG na-or-+,
     INTRANSITIVE-VERB-FLAG na-or-+,
+    POSSESSIVE-FLAG na-or-+,
     VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG na-or-+,
-    POSSESSIVE-FLAG na-or-+ ].
+    TRANSITIVE-VERB-FLAG na-or-+ ].
 
 png :+ [ PERNUM pernum ].
 
@@ -94,8 +94,8 @@ du := pernum.
 2pl := 2nd & pl & 1sg+2pl.
 3pl := 3rd & pl & 1sg+3pl.
 1sg := 1st & 1sg+2sg & 1sg+3sg & 1sg+2du & 1sg+3du & 1sg+2pl & 1sg+3pl.
-2sg := 2nd & 2sg+plain & polite+2sg & 1sg+2sg.
-3sg := 3rd & 3sg+plain & polite+3sg & 1sg+3sg.
+2sg := 2nd & 2sg+plain & 2sg+polite & 1sg+2sg.
+3sg := 3rd & 3sg+plain & 3sg+polite & 1sg+3sg.
 1polite := 1st & polite.
 2polite := 2nd & polite.
 3polite := 3rd & polite.
@@ -104,16 +104,16 @@ du := pernum.
 3plain := 3rd & plain.
 2sg+plain := pernum.
 plain := 2sg+plain & 3sg+plain.
-polite+2sg := pernum.
-polite := polite+2sg & polite+3sg.
+2sg+polite := pernum.
+polite := 2sg+polite & 3sg+polite.
 3sg+plain := pernum.
-1st+sg := pernum.
-1st := 1st+sg.
-sg := 1st+sg.
-polite+3sg := pernum.
-3rd+pl := pernum.
-3rd := 3rd+pl.
-pl := 3rd+pl.
+sg+1st := pernum.
+sg := sg+1st.
+1st := sg+1st.
+3sg+polite := pernum.
+pl+3rd := pernum.
+pl := pl+3rd.
+3rd := pl+3rd.
 1sg+2sg := sg.
 1sg+3sg := sg.
 1sg+2du := pernum.
@@ -197,7 +197,7 @@ noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & n
                        HEAD.POSSESSOR nonpossessive,
                        POSSESSUM nonpossessive ] ].
 
-COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & nominal-PLURALIZATION-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc25-rule-dtr & should-these-be-verb-pcs-rule-dtr &
+COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & nominal-PLURALIZATION-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
     INFLECTED.POSSESSIVE-FLAG - ].
 
@@ -211,20 +211,20 @@ COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-d
 
 2nd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & nominal-PLURALIZATION-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM polite+2sg ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 2sg+polite ] ].
 
 3rd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG.PERNUM 3sg+plain ] ].
 
-indefinite-pronoun-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc25-rule-dtr & should-these-be-verb-pcs-rule-dtr &
+indefinite-pronoun-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
-borrowed-from-Nepali-evidential-like-noun-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc25-rule-dtr & should-these-be-verb-pcs-rule-dtr.
+borrowed-from-Nepali-evidential-like-noun-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr.
 
 1st-person-singular-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 1st+sg ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM sg+1st ] ].
 
 1st-person-dual-exclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -243,20 +243,20 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := noun-lex & COMPARATIVE-rul
 
 3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & nominal-PLURALIZATION-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM polite+3sg ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 3sg+polite ] ].
 
 3rd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 3rd+pl ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM pl+3rd ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
-2nd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & COMPARATIVE-rule-dtr & noun-pc12-rule-dtr & noun-pc25-rule-dtr &
+2nd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & COMPARATIVE-rule-dtr & noun-pc12-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
 
-PERSONAL-PRONOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & noun-pc25-rule-dtr & should-these-be-verb-pcs-rule-dtr &
+PERSONAL-PRONOUNS-noun-lex := noun-lex & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
 ;;; Verbs
@@ -265,7 +265,7 @@ verb-lex := non-mod-lex-item & 1sg_pst_p-rule-dtr & 2_sg-or-verb-pc21-or-verb-pc
   [ SYNSEM [ LOCAL.CAT.HEAD verb,
              L-QUE - ] ].
 
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1de_npst-rule-dtr & 1sg_pst_s-1_sg_npst-rule-dtr & 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr & converb-and-ending-rule-dtr &
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1de_npst-or-1sg_pst_s-1_sg_npst-rule-dtr & 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr & converb-and-ending-rule-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
@@ -408,56 +408,54 @@ case-marking-adp-lex := non-local-none-lex-item & raise-sem-lex-item &
 
 ;;; Intermediate rule types
 
-IRREALIS-MOOD-rule-dtr := word-or-lexrule.
-1sg_pst_s-1_sg_npst-rule-dtr := word-or-lexrule.
-noun-pc15-rule-dtr := word-or-lexrule.
+should-these-be-verb-pcs-rule-dtr := word-or-lexrule.
+CASE-MARKING-rule-dtr := word-or-lexrule.
+NOMINALIZATION-rule-dtr := word-or-lexrule.
 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr := word-or-lexrule.
 noun-pc12-rule-dtr := word-or-lexrule.
-nominal-PLURALIZATION-rule-dtr := word-or-lexrule.
-verb-pc18-rule-dtr := word-or-lexrule.
-noun-pc13-rule-dtr := word-or-lexrule.
-verb-pc16-rule-dtr := word-or-lexrule.
-NOMINALIZATION-rule-dtr := word-or-lexrule.
 verb-pc19-rule-dtr := word-or-lexrule.
 DU-noun-suffix-rule-dtr := word-or-lexrule.
-1DE_PST-rule-dtr := word-or-lexrule.
-noun-pc25-rule-dtr := word-or-lexrule.
-verb-pc20-rule-dtr := word-or-lexrule.
-1de_npst-rule-dtr := word-or-lexrule.
-should-these-be-verb-pcs-rule-dtr := word-or-lexrule.
-REVISIT-tsi-mi-rule-dtr := word-or-lexrule.
-1sg_pst_p-rule-dtr := word-or-lexrule.
-converb-and-ending-rule-dtr := word-or-lexrule.
-noun-pc16-rule-dtr := word-or-lexrule.
 2_sg-or-verb-pc21-or-verb-pc9-rule-dtr := word-or-lexrule.
-verb-pc6-rule-dtr := word-or-lexrule.
-1SG-3SG_NPST-rule-dtr := word-or-lexrule.
-verb-pc12-rule-dtr := word-or-lexrule.
-verb-pc14-rule-dtr := word-or-lexrule.
-verb-pc17-rule-dtr := word-or-lexrule.
-verb-pc13-rule-dtr := word-or-lexrule.
-GENITIVIZATION-rule-dtr := word-or-lexrule.
-INSIDE-adposition-rule-dtr := word-or-lexrule.
-verb-pc7-rule-dtr := word-or-lexrule.
-CASE-MARKING-rule-dtr := word-or-lexrule.
+noun-pc13-rule-dtr := word-or-lexrule.
 verb-pc1-rule-dtr := word-or-lexrule.
+IRREALIS-MOOD-rule-dtr := word-or-lexrule.
+1de_npst-or-1sg_pst_s-1_sg_npst-rule-dtr := word-or-lexrule.
+verb-pc12-rule-dtr := word-or-lexrule.
+verb-pc17-rule-dtr := word-or-lexrule.
+INSIDE-adposition-rule-dtr := word-or-lexrule.
+1SG-3SG_NPST-rule-dtr := word-or-lexrule.
+verb-pc18-rule-dtr := word-or-lexrule.
+noun-pc16-rule-dtr := word-or-lexrule.
+verb-pc6-rule-dtr := word-or-lexrule.
+verb-pc20-rule-dtr := word-or-lexrule.
+REVISIT-tsi-mi-rule-dtr := word-or-lexrule.
+verb-pc14-rule-dtr := word-or-lexrule.
+verb-pc7-rule-dtr := word-or-lexrule.
+1DE_PST-rule-dtr := word-or-lexrule.
+1sg_pst_p-rule-dtr := word-or-lexrule.
+GENITIVIZATION-rule-dtr := word-or-lexrule.
 COMPARATIVE-rule-dtr := word-or-lexrule.
+verb-pc13-rule-dtr := word-or-lexrule.
+nominal-PLURALIZATION-rule-dtr := word-or-lexrule.
+converb-and-ending-rule-dtr := word-or-lexrule.
+noun-pc15-rule-dtr := word-or-lexrule.
+verb-pc16-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
-Possessive-lex-rule-super := CASE-MARKING-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & lex-rule & noun-pc13-rule-dtr & noun-pc25-rule-dtr &
+Possessive-lex-rule-super := CASE-MARKING-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & lex-rule & noun-pc13-rule-dtr &
   [ INFLECTED [ POSSESSIVE-FLAG +,
-                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
                 VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
                 INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb ],
+                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                TRANSITIVE-VERB-FLAG #transitive-verb ],
     DTR COMMON-NOUNS-noun-lex &
-        [ INFLECTED [ VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
-                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+        [ INFLECTED [ VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
                       INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                      VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb ] ] ].
+                      VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                      TRANSITIVE-VERB-FLAG #transitive-verb ] ] ].
 
 1st-Person-Possessive-lex-rule := Possessive-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT [ HEAD #head,
@@ -638,7 +636,7 @@ NON-POSSESSIVE-lex-rule := Possessive-lex-rule-super & nonpossessive-lex-rule-1.
                                    SUBJ #subj,
                                    COMPS #comps ] ] ] ].
 
-DU-noun-suffix-lex-rule-super := CASE-MARKING-rule-dtr & INSIDE-adposition-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc25-rule-dtr &
+DU-noun-suffix-lex-rule-super := CASE-MARKING-rule-dtr & INSIDE-adposition-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr &
   [ INFLECTED #infl,
     DTR DU-noun-suffix-rule-dtr &
         [ INFLECTED #infl ] ].
@@ -653,7 +651,7 @@ nominal-PLURALIZATION-lex-rule-super := CASE-MARKING-rule-dtr & add-only-no-ccon
 make_plural_2nd-3rd-pronouns-lex-rule := nominal-PLURALIZATION-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
 
-noun-pc12-lex-rule-super := CASE-MARKING-rule-dtr & COMPARATIVE-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc25-rule-dtr &
+noun-pc12-lex-rule-super := CASE-MARKING-rule-dtr & COMPARATIVE-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr &
   [ INFLECTED #infl,
     DTR noun-pc12-rule-dtr &
         [ INFLECTED #infl ] ].
@@ -692,19 +690,12 @@ noun-pc22_lrt1-lex-rule := COMPARATIVE-lex-rule-super.
 
 locative-genitivation-lex-rule := COMPARATIVE-lex-rule-super.
 
-INSIDE-adposition-lex-rule-super := CASE-MARKING-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr & noun-pc25-rule-dtr &
+INSIDE-adposition-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
     DTR INSIDE-adposition-rule-dtr &
         [ INFLECTED #infl ] ].
 
 noun-pc23_lrt1-lex-rule := INSIDE-adposition-lex-rule-super.
-
-noun-pc25-lex-rule-super := CASE-MARKING-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr &
-  [ INFLECTED #infl,
-    DTR noun-pc25-rule-dtr &
-        [ INFLECTED #infl ] ].
-
-noun-pc25_lrt1-lex-rule := noun-pc25-lex-rule-super.
 
 participle-lex-rule-super := CASE-MARKING-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr &
   [ INFLECTED #infl,
@@ -884,7 +875,7 @@ verb-pc21_lrt1-lex-rule := verb-pc21-lex-rule-super.
 
 1de_npst-lex-rule-super := 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1sg_pst_p-rule-dtr & IRREALIS-MOOD-rule-dtr & NOMINALIZATION-rule-dtr & REVISIT-tsi-mi-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc16-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc6-rule-dtr & verb-pc7-rule-dtr &
   [ INFLECTED #infl,
-    DTR 1de_npst-rule-dtr &
+    DTR 1de_npst-or-1sg_pst_s-1_sg_npst-rule-dtr &
         [ INFLECTED #infl ] ].
 
 verb-pc22_lrt1-lex-rule := 1de_npst-lex-rule-super.
@@ -942,7 +933,7 @@ verb-pc40_lrt1-lex-rule := 1SG-3SG_NPST-lex-rule-super.
 
 1sg_pst_s-1_sg_npst-lex-rule-super := 1sg_pst_p-rule-dtr & IRREALIS-MOOD-rule-dtr & NOMINALIZATION-rule-dtr & REVISIT-tsi-mi-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc7-rule-dtr &
   [ INFLECTED #infl,
-    DTR 1sg_pst_s-1_sg_npst-rule-dtr &
+    DTR 1de_npst-or-1sg_pst_s-1_sg_npst-rule-dtr &
         [ INFLECTED #infl ] ].
 
 verb-pc42_lrt1-lex-rule := 1sg_pst_s-1_sg_npst-lex-rule-super.
@@ -989,7 +980,7 @@ verb-pc66_lrt1-lex-rule := IRREALIS-MOOD-lex-rule-super.
 
 verb-pc67_lrt1-lex-rule := 2PL-1SG_NPST-lex-rule-super.
 
-verb-pc68-lex-rule-super := 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1de_npst-rule-dtr & 1sg_pst_p-rule-dtr & 1sg_pst_s-1_sg_npst-rule-dtr & 2_sg-or-verb-pc21-or-verb-pc9-rule-dtr & IRREALIS-MOOD-rule-dtr & NOMINALIZATION-rule-dtr & REVISIT-tsi-mi-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc16-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc6-rule-dtr & verb-pc7-rule-dtr &
+verb-pc68-lex-rule-super := 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1de_npst-or-1sg_pst_s-1_sg_npst-rule-dtr & 1sg_pst_p-rule-dtr & 2_sg-or-verb-pc21-or-verb-pc9-rule-dtr & IRREALIS-MOOD-rule-dtr & NOMINALIZATION-rule-dtr & REVISIT-tsi-mi-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc16-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc6-rule-dtr & verb-pc7-rule-dtr &
   [ INFLECTED #infl,
     DTR 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr &
         [ INFLECTED #infl ] ].

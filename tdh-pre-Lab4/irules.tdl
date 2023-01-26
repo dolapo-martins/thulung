@@ -133,10 +133,6 @@ noun-pc23_lrt1-suffix :=
 %suffix (* -gunu)
 noun-pc23_lrt1-lex-rule.
 
-noun-pc25_lrt1-suffix :=
-%suffix (* -m)
-noun-pc25_lrt1-lex-rule.
-
 noun-pc34_lrt1-suffix :=
 %suffix (* -ma)
 noun-pc34_lrt1-lex-rule.
