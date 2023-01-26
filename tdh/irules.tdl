@@ -556,7 +556,3 @@ APX-marker-lex-rule.
 APX-marker-suffix2 :=
 %suffix (* -bhal)
 APX-marker-lex-rule.
-
-hearsay-marking-lrt-suffix :=
-%suffix (* -ʔe)
-hearsay-marking-lrt-lex-rule.

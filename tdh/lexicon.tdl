@@ -2799,6 +2799,10 @@ pheʈ := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "pheʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_serve.out_v_rel" ].
 
+ʔe := hearsay-evidential-marker-verb-lex &
+  [ STEM < "ʔe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hearsay_v_rel" ].
+
 ;;; Auxiliaries
 
 bhaɖa := aux1-aux-lex &
