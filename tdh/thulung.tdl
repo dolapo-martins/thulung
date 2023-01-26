@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Thulung
 ;;; created at:
-;;;     Thu Jan 26 06:37:54 UTC 2023
+;;;     Thu Jan 26 06:52:41 UTC 2023
 ;;; based on Matrix customization system version of:
 ;;;     Fri 10 Jun 2022 12:58:58 AM UTC
 ;;;
@@ -30,18 +30,18 @@ head :+ [ PRON bool,
 +np :+ [ CASE-MARKED bool,
     CASE case ].
 
-inflected :+ [ TRANSITIVE-VERB-FLAG luk,
-    INTRANSITIVE-VERB-FLAG luk,
-    POSSESSIVE-FLAG luk,
+inflected :+ [ POSSESSIVE-FLAG luk,
     VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG luk,
+    TRANSITIVE-VERB-FLAG luk,
     VERB5-TRANSITIVE-VERB-FLAG luk,
+    INTRANSITIVE-VERB-FLAG luk,
     VERB58-INTRANSITIVE-VERB-FLAG luk ].
 
-infl-satisfied :+ [ TRANSITIVE-VERB-FLAG na-or-+,
-    INTRANSITIVE-VERB-FLAG na-or-+,
-    POSSESSIVE-FLAG na-or-+,
+infl-satisfied :+ [ POSSESSIVE-FLAG na-or-+,
     VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG na-or-+,
+    TRANSITIVE-VERB-FLAG na-or-+,
     VERB5-TRANSITIVE-VERB-FLAG na-or-+,
+    INTRANSITIVE-VERB-FLAG na-or-+,
     VERB58-INTRANSITIVE-VERB-FLAG na-or-+ ].
 
 png :+ [ PERNUM pernum ].
@@ -94,26 +94,26 @@ du := pernum.
 2pl := 2nd & pl.
 3pl := 3rd & pl.
 1sg := 1st & sg.
-2sg := 2nd & sg & 2sg+plain & polite+2sg.
-3sg := 3rd & sg & 3sg+plain & 3sg+polite.
+2sg := 2nd & sg & plain+2sg & polite+2sg.
+3sg := 3rd & sg & plain+3sg & polite+3sg.
 1polite := 1st & polite.
 2polite := 2nd & polite.
 3polite := 3rd & polite.
 1plain := 1st & plain.
 2plain := 2nd & plain.
 3plain := 3rd & plain.
-2sg+plain := pernum.
-plain := 2sg+plain & 3sg+plain.
+plain+2sg := pernum.
+plain := plain+2sg & plain+3sg.
 polite+2sg := pernum.
-polite := polite+2sg & 3sg+polite.
-3sg+plain := pernum.
+polite := polite+2sg & polite+3sg.
+plain+3sg := pernum.
 1st+sg := pernum.
 1st := 1st+sg.
 sg := 1st+sg.
-3sg+polite := pernum.
-pl+3rd := pernum.
-pl := pl+3rd.
-3rd := pl+3rd.
+polite+3sg := pernum.
+3rd+pl := pernum.
+3rd := 3rd+pl.
+pl := 3rd+pl.
 
 ;;; Possession
 
@@ -191,6 +191,9 @@ noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & n
                        HEAD.POSSESSOR nonpossessive,
                        POSSESSUM nonpossessive ] ].
 
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+
 COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & nominal-PLURALIZATION-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
     INFLECTED.POSSESSIVE-FLAG - ].
@@ -201,7 +204,7 @@ COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-d
 
 2nd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 2sg+plain ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM plain+2sg ] ].
 
 2nd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & nominal-PLURALIZATION-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -209,7 +212,7 @@ COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-d
 
 3rd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 3sg+plain ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM plain+3sg ] ].
 
 indefinite-pronoun-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc12-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
@@ -237,11 +240,11 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := noun-lex & COMPARATIVE-rul
 
 3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & nominal-PLURALIZATION-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 3sg+polite ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM polite+3sg ] ].
 
 3rd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM pl+3rd ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd+pl ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
@@ -253,13 +256,15 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := noun-lex & COMPARATIVE-rul
 PERSONAL-PRONOUNS-noun-lex := noun-lex & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
+hearsay-discourse-marker-noun-lex := no-spr-noun-lex.
+
 ;;; Verbs
 
 verb-lex := non-mod-lex-item & 1sg_pst_p-rule-dtr & 2_sg-or-verb-pc21-or-verb-pc9-rule-dtr & GENITIVIZATION-rule-dtr & IRREALIS-MOOD-rule-dtr & NOMINALIZATION-rule-dtr & REVISIT-tsi-mi-rule-dtr & verb-pc1-rule-dtr & verb-pc12-rule-dtr & verb-pc13-rule-dtr & verb-pc14-rule-dtr & verb-pc16-rule-dtr & verb-pc17-rule-dtr & verb-pc18-rule-dtr & verb-pc19-rule-dtr & verb-pc20-rule-dtr & verb-pc6-rule-dtr & verb-pc7-rule-dtr &
   [ SYNSEM [ LOCAL.CAT.HEAD verb,
              L-QUE - ] ].
 
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1de_npst-rule-dtr & 1sg_pst_s-1_sg_npst-rule-dtr & 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr & converb-and-ending-rule-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
@@ -269,7 +274,8 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
                  [ LOCAL [ CAT cat-sat &
                                [ VAL [ SPR < >,
                                        COMPS < > ] ],
-                           CONT.HOOK.INDEX #xarg ] ] ].
+                           CONT.HOOK.INDEX #xarg ] ],
+    INFLECTED.VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG + ].
 
 aux-lex := verb-lex & basic-icons-lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
@@ -285,9 +291,10 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
                               [ CASE real-case ] ] >,
     INFLECTED [ INTRANSITIVE-VERB-FLAG +,
                 TRANSITIVE-VERB-FLAG na-or--,
+                VERB58-INTRANSITIVE-VERB-FLAG +,
                 VERB5-TRANSITIVE-VERB-FLAG na-or-- ] ].
 
-transitive-verb-lex := main-verb-lex & transitive-lex-item & 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1de_npst-rule-dtr & 1sg_pst_s-1_sg_npst-rule-dtr & 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr & converb-and-ending-rule-dtr &
+transitive-verb-lex := main-verb-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD +np &
                               [ CASE real-case ] ],
@@ -299,8 +306,7 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item & 1DE_PST-rule-dtr & 
                                 [ CASE real-case ] ] ] >,
     INFLECTED [ TRANSITIVE-VERB-FLAG +,
                 VERB58-INTRANSITIVE-VERB-FLAG na-or--,
-                VERB5-TRANSITIVE-VERB-FLAG +,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG + ] ].
+                VERB5-TRANSITIVE-VERB-FLAG + ] ].
 
 NOM-intransitive-verb-lex := intransitive-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
@@ -317,13 +323,7 @@ ERG-DAT-transitive-verb-lex := transitive-verb-lex &
 
 verb5-TRANSITIVE-verb-lex := transitive-verb-lex.
 
-verb58-INTRANSITIVE-verb-lex := intransitive-verb-lex & 1DE_PST-rule-dtr & 1SG-3SG_NPST-rule-dtr & 1de_npst-rule-dtr & 1sg_pst_s-1_sg_npst-rule-dtr & 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr & converb-and-ending-rule-dtr &
-  [ INFLECTED [ VERB58-INTRANSITIVE-VERB-FLAG +,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG + ] ].
-
-hearsay-evidential-marker-verb-lex := intransitive-verb-lex &
-  [ INFLECTED [ VERB58-INTRANSITIVE-VERB-FLAG na-or--,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+verb58-INTRANSITIVE-verb-lex := intransitive-verb-lex.
 
 ;;; Auxiliaries
 
@@ -408,53 +408,53 @@ case-marking-adp-lex := non-local-none-lex-item & raise-sem-lex-item &
 ;;; Intermediate rule types
 
 verb-pc13-rule-dtr := word-or-lexrule.
-1SG-3SG_NPST-rule-dtr := word-or-lexrule.
-verb-pc19-rule-dtr := word-or-lexrule.
-verb-pc12-rule-dtr := word-or-lexrule.
-NOMINALIZATION-rule-dtr := word-or-lexrule.
-noun-pc15-rule-dtr := word-or-lexrule.
-1de_npst-rule-dtr := word-or-lexrule.
-INSIDE-adposition-rule-dtr := word-or-lexrule.
 verb-pc20-rule-dtr := word-or-lexrule.
-noun-pc16-rule-dtr := word-or-lexrule.
-IRREALIS-MOOD-rule-dtr := word-or-lexrule.
+nominal-PLURALIZATION-rule-dtr := word-or-lexrule.
+COMPARATIVE-rule-dtr := word-or-lexrule.
+verb-pc18-rule-dtr := word-or-lexrule.
+GENITIVIZATION-rule-dtr := word-or-lexrule.
+noun-pc13-rule-dtr := word-or-lexrule.
+verb-pc17-rule-dtr := word-or-lexrule.
+CASE-MARKING-rule-dtr := word-or-lexrule.
+INSIDE-adposition-rule-dtr := word-or-lexrule.
 converb-and-ending-rule-dtr := word-or-lexrule.
 verb-pc1-rule-dtr := word-or-lexrule.
-verb-pc18-rule-dtr := word-or-lexrule.
-REVISIT-tsi-mi-rule-dtr := word-or-lexrule.
-DU-noun-suffix-rule-dtr := word-or-lexrule.
-2_sg-or-verb-pc21-or-verb-pc9-rule-dtr := word-or-lexrule.
-noun-pc13-rule-dtr := word-or-lexrule.
-CASE-MARKING-rule-dtr := word-or-lexrule.
-verb-pc7-rule-dtr := word-or-lexrule.
-1DE_PST-rule-dtr := word-or-lexrule.
-1sg_pst_p-rule-dtr := word-or-lexrule.
-nominal-PLURALIZATION-rule-dtr := word-or-lexrule.
-verb-pc6-rule-dtr := word-or-lexrule.
-verb-pc16-rule-dtr := word-or-lexrule.
-1sg_pst_s-1_sg_npst-rule-dtr := word-or-lexrule.
-verb-pc17-rule-dtr := word-or-lexrule.
-GENITIVIZATION-rule-dtr := word-or-lexrule.
-COMPARATIVE-rule-dtr := word-or-lexrule.
-verb-pc14-rule-dtr := word-or-lexrule.
 noun-pc12-rule-dtr := word-or-lexrule.
-should-these-be-verb-pcs-rule-dtr := word-or-lexrule.
+verb-pc7-rule-dtr := word-or-lexrule.
+1de_npst-rule-dtr := word-or-lexrule.
+verb-pc12-rule-dtr := word-or-lexrule.
+1sg_pst_p-rule-dtr := word-or-lexrule.
+verb-pc6-rule-dtr := word-or-lexrule.
+verb-pc14-rule-dtr := word-or-lexrule.
+IRREALIS-MOOD-rule-dtr := word-or-lexrule.
 3pl-3sg-or-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr := word-or-lexrule.
+verb-pc19-rule-dtr := word-or-lexrule.
+NOMINALIZATION-rule-dtr := word-or-lexrule.
+1DE_PST-rule-dtr := word-or-lexrule.
+noun-pc15-rule-dtr := word-or-lexrule.
+should-these-be-verb-pcs-rule-dtr := word-or-lexrule.
+1sg_pst_s-1_sg_npst-rule-dtr := word-or-lexrule.
+DU-noun-suffix-rule-dtr := word-or-lexrule.
+1SG-3SG_NPST-rule-dtr := word-or-lexrule.
+2_sg-or-verb-pc21-or-verb-pc9-rule-dtr := word-or-lexrule.
+noun-pc16-rule-dtr := word-or-lexrule.
+verb-pc16-rule-dtr := word-or-lexrule.
+REVISIT-tsi-mi-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 Possessive-lex-rule-super := CASE-MARKING-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & lex-rule & noun-pc13-rule-dtr &
   [ INFLECTED [ POSSESSIVE-FLAG +,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                INTRANSITIVE-VERB-FLAG #intransitive-verb,
                 VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
                 VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                INTRANSITIVE-VERB-FLAG #intransitive-verb,
                 VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb ],
     DTR COMMON-NOUNS-noun-lex &
-        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                      VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+        [ INFLECTED [ VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
                       VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
                       VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb ] ] ].
 
 1st-Person-Possessive-lex-rule := Possessive-lex-rule-super & infl-lex-rule &

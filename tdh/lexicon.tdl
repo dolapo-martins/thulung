@@ -1637,6 +1637,10 @@ ganimim := 2nd-person-plural-pronoun-noun-lex &
   [ STEM < "ganimim" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
+ʔe := hearsay-discourse-marker-noun-lex &
+  [ STEM < "ʔe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hearsay_n_rel" ].
+
 ;;; Adjectives
 
 ;;; Case-marking adpositions
@@ -2798,10 +2802,6 @@ sɵ_4 := verb58-INTRANSITIVE-verb-lex &
 pheʈ := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "pheʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_serve.out_v_rel" ].
-
-ʔe := hearsay-evidential-marker-verb-lex &
-  [ STEM < "ʔe" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hearsay_v_rel" ].
 
 ;;; Auxiliaries
 
