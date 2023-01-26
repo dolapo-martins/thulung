@@ -560,27 +560,3 @@ APX-marker-lex-rule.
 hearsay-marking-lrt-suffix :=
 %suffix (* -ʔe)
 hearsay-marking-lrt-lex-rule.
-
-2sg_A-1sg_P-suffix :=
-%suffix (* -ŋiri)
-2sg_A-1sg_P-lex-rule.
-
-3sg_A-1sg_P-suffix :=
-%suffix (* -ŋiri)
-3sg_A-1sg_P-lex-rule.
-
-2d_A-1sg_P-suffix :=
-%suffix (* -ŋiriʦi)
-2d_A-1sg_P-lex-rule.
-
-3d_A-1sg_P-suffix :=
-%suffix (* -ŋiriʦi)
-3d_A-1sg_P-lex-rule.
-
-2pl_A-1sg_P-suffix :=
-%suffix (* -ŋirini)
-2pl_A-1sg_P-lex-rule.
-
-3pl_A-1sg_P-suffix :=
-%suffix (* -ŋirimi)
-3pl_A-1sg_P-lex-rule.
