@@ -7,9 +7,9 @@ No-Aspect-Aspect-Marker-lex := No-Aspect-Aspect-Marker-lex-rule.
 
 Non-Past-Tense-lex := Non-Past-Tense-lex-rule.
 
-Past-Tense-lex := Past-Tense-lex-rule.
+Past-Tense-Zero-Morpheme-lex := Past-Tense-Zero-Morpheme-lex-rule.
 
-Unspecified-Agent-Role-Past-Tense-Transitive-lex := Unspecified-Agent-Role-Past-Tense-Transitive-lex-rule.
+Underspecified-Agent-Role-Past-Tense-Transitive-lex := Underspecified-Agent-Role-Past-Tense-Transitive-lex-rule.
 
 1sg-Patient-Past-lex := 1sg-Patient-Past-lex-rule.
 

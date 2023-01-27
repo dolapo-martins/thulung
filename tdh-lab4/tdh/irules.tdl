@@ -117,10 +117,6 @@ noun-pc15_lrt2-suffix :=
 %suffix (* -nim)
 noun-pc15_lrt2-lex-rule.
 
-noun-pc16_lrt1-suffix :=
-%suffix (* -mi)
-noun-pc16_lrt1-lex-rule.
-
 noun-pc22_lrt1-suffix :=
 %suffix (* -ram)
 noun-pc22_lrt1-lex-rule.
@@ -133,15 +129,7 @@ noun-pc23_lrt1-suffix :=
 %suffix (* -gunu)
 noun-pc23_lrt1-lex-rule.
 
-noun-pc34_lrt1-suffix :=
-%suffix (* -ma)
-noun-pc34_lrt1-lex-rule.
-
-noun-pc36_lrt1-suffix1 :=
-%suffix (* -mu)
-noun-pc36_lrt1-lex-rule.
-
-noun-pc36_lrt1-suffix2 :=
+noun-pc36_lrt1-suffix :=
 %suffix (* -ɖy)
 noun-pc36_lrt1-lex-rule.
 
@@ -224,6 +212,10 @@ irrealis-noun-complementation-relativizer-lex-rule.
 alternative-non-finite-past-relativization-prefix :=
 %prefix (* -ma)
 alternative-non-finite-past-relativization-lex-rule.
+
+nominalize-suffix :=
+%suffix (* -m)
+nominalize-lex-rule.
 
 verb-pc1_lrt1-suffix1 :=
 %suffix (* -mu)
@@ -433,6 +425,10 @@ APX-marker-suffix2 :=
 %suffix (* -bhal)
 APX-marker-lex-rule.
 
+Past-Tense-overt-suffix :=
+%suffix (* -t)
+Past-Tense-overt-lex-rule.
+
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-suffix1 :=
 %suffix (* -ŋiri)
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule.
@@ -492,6 +488,14 @@ APX-marker-lex-rule.
 3sg-or-3du-Agent-1pi-Patient-Past-Tense-suffix :=
 %suffix (* -saɖɖa)
 3sg-or-3du-Agent-1pi-Patient-Past-Tense-lex-rule.
+
+3du-Agent-Underspecified-Patient-Past-Tense-suffix :=
+%suffix (* -ʦi)
+3du-Agent-Underspecified-Patient-Past-Tense-lex-rule.
+
+3sg-Agent-3sg-Patient-Past-Tense-suffix :=
+%suffix (* -to)
+3sg-Agent-3sg-Patient-Past-Tense-lex-rule.
 
 1sg-Non-Past-suffix :=
 %suffix (* -ŋu)
