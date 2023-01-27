@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Thulung
 ;;; created at:
-;;;     Fri Jan 27 09:14:53 UTC 2023
+;;;     Fri Jan 27 09:21:11 UTC 2023
 ;;; based on Matrix customization system version of:
 ;;;     Thu 28 Jul 2022 12:31:08 AM UTC
 ;;;
@@ -30,35 +30,35 @@ head :+ [ PRON bool,
 +np :+ [ CASE-MARKED bool,
     CASE case ].
 
-inflected :+ [ INTRANSITIVE-VERB-FLAG luk,
+inflected :+ [ CASE-POSITION-CLASS-FLAG luk,
+    VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG luk,
     VERB58-INTRANSITIVE-VERB-FLAG luk,
-    TRANSITIVE-VERB-FLAG luk,
-    1PI-PATIENT-PAST-FLAG luk,
+    VERB5-TRANSITIVE-VERB-FLAG luk,
     POSSESSIVE-POSITION-CLASS-FLAG luk,
-    CASE-POSITION-CLASS-FLAG luk,
-    ASPECT-POSITION-CLASS-FLAG luk,
     1SG-PATIENT-PAST-FLAG luk,
+    ASPECT-POSITION-CLASS-FLAG luk,
+    TRANSITIVE-VERB-FLAG luk,
     1DI-PATIENT-PAST-FLAG luk,
     1DE-PATIENT-PAST-FLAG luk,
-    VERB5-TRANSITIVE-VERB-FLAG luk,
-    VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG luk,
+    INTRANSITIVE-VERB-FLAG luk,
+    1PE-PATIENT-PAST-FLAG luk,
     TENSE-POSITION-CLASS-FLAG luk,
-    1PE-PATIENT-PAST-FLAG luk ].
+    1PI-PATIENT-PAST-FLAG luk ].
 
-infl-satisfied :+ [ INTRANSITIVE-VERB-FLAG na-or-+,
+infl-satisfied :+ [ CASE-POSITION-CLASS-FLAG na-or-+,
+    VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG na-or-+,
     VERB58-INTRANSITIVE-VERB-FLAG na-or-+,
-    TRANSITIVE-VERB-FLAG na-or-+,
-    1PI-PATIENT-PAST-FLAG na-or-+,
+    VERB5-TRANSITIVE-VERB-FLAG na-or-+,
     POSSESSIVE-POSITION-CLASS-FLAG na-or-+,
-    CASE-POSITION-CLASS-FLAG na-or-+,
-    ASPECT-POSITION-CLASS-FLAG na-or-+,
     1SG-PATIENT-PAST-FLAG na-or-+,
+    ASPECT-POSITION-CLASS-FLAG na-or-+,
+    TRANSITIVE-VERB-FLAG na-or-+,
     1DI-PATIENT-PAST-FLAG na-or-+,
     1DE-PATIENT-PAST-FLAG na-or-+,
-    VERB5-TRANSITIVE-VERB-FLAG na-or-+,
-    VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG na-or-+,
+    INTRANSITIVE-VERB-FLAG na-or-+,
+    1PE-PATIENT-PAST-FLAG na-or-+,
     TENSE-POSITION-CLASS-FLAG na-or-+,
-    1PE-PATIENT-PAST-FLAG na-or-+ ].
+    1PI-PATIENT-PAST-FLAG na-or-+ ].
 
 png :+ [ PERNUM pernum ].
 
@@ -100,44 +100,44 @@ pernum := *top*.
 du := pernum.
 2nd := pernum.
 1du := 1st & du.
-1du_incl := 1du & 1du_incl+3du+2du.
+1du_incl := 1du & 1du_incl+2du+3du.
 1du_excl := 1du.
-2du := 2nd & 3du+2du.
+2du := 2nd & 2du+3du.
 1pl := 1st & pl.
 1pl_incl := 1pl.
 1pl_excl := 1pl.
-2pl := 2nd & pl & 2pl+2sg+3sg+3du+2du.
-3pl := 3rd & pl & 2pl+3pl+2sg+3sg+3du+2du.
+2pl := 2nd & pl & 3sg+2sg+2du+3du+2pl.
+3pl := 3rd & pl & 3sg+2sg+2du+3du+3pl+2pl.
 1sg := 1st & sg.
-2sg := 2nd & plain+2sg & polite+2sg & 2sg+3sg.
+2sg := 2nd & plain+2sg & polite+2sg & 3sg+2sg.
 1polite := 1st & polite.
-2polite := 2nd & polite & pl+2polite.
-3polite := 3rd & polite & pl+3polite.
+2polite := 2nd & polite & 2polite+pl.
+3polite := 3rd & polite & 3polite+pl.
 1plain := 1st & plain.
 2plain := 2nd & plain.
 3plain := 3rd & plain.
 plain+2sg := pernum.
 plain := plain+2sg & plain+3sg.
 polite+2sg := pernum.
-polite := polite+2sg & polite+3sg.
+polite := polite+2sg & 3sg+polite.
 plain+3sg := pernum.
-3sg := plain+3sg & polite+3sg & 2sg+3sg & 3du+3sg.
+3sg := plain+3sg & 3sg+polite & 3sg+2sg & 3sg+3du.
 sg+1st := pernum.
 sg := sg+1st.
 1st := sg+1st.
-polite+3sg := pernum.
-pl+3rd := pernum.
-3rd := pl+3rd.
-pl+2polite := pernum.
-pl := pl+2polite & pl+3polite.
-pl+3polite := pl+3rd.
-2sg+3sg := sg & 2pl+2sg+3sg+3du+2du.
-3du := 3du+2du & 3du+3sg.
-2pl+3pl+2sg+3sg+3du+2du := pernum.
-2pl+2sg+3sg+3du+2du := 2pl+3pl+2sg+3sg+3du+2du.
-3du+2du := 2pl+2sg+3sg+3du+2du & 1du_incl+3du+2du.
-3du+3sg := 2pl+2sg+3sg+3du+2du & 3rd.
-1du_incl+3du+2du := du.
+3sg+polite := pernum.
+3rd+pl := pernum.
+3rd := 3rd+pl.
+2polite+pl := pernum.
+pl := 2polite+pl & 3polite+pl.
+3polite+pl := 3rd+pl.
+3sg+2sg := sg & 3sg+2sg+2du+3du+2pl.
+3du := 2du+3du & 3sg+3du.
+3sg+2sg+2du+3du+3pl+2pl := pernum.
+3sg+2sg+2du+3du+2pl := 3sg+2sg+2du+3du+3pl+2pl.
+2du+3du := 3sg+2sg+2du+3du+2pl & 1du_incl+2du+3du.
+3sg+3du := 3rd & 3sg+2sg+2du+3du+2pl.
+1du_incl+2du+3du := du.
 
 ;;; Possession
 
@@ -213,7 +213,7 @@ noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & n
                        HEAD.POSSESSOR nonpossessive,
                        POSSESSUM nonpossessive ] ].
 
-COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & nominal-pluralization-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
+COMMON-NOUNS-noun-lex := noun-lex & CASE-POSITION-CLASS-rule-dtr & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & nominal-pluralization-rule-dtr & noun-pc12-rule-dtr & noun-pc13-rule-dtr & noun-pc15-rule-dtr & noun-pc16-rule-dtr & should-these-be-verb-pcs-rule-dtr &
   [ C-CONT.RELS.LIST < [ ARG0.PNG.PERNUM 3sg ] >,
     INFLECTED [ CASE-POSITION-CLASS-FLAG -,
                 POSSESSIVE-POSITION-CLASS-FLAG - ] ].
@@ -226,10 +226,11 @@ COMMON-NOUNS-noun-lex := noun-lex & COMPARATIVE-rule-dtr & DU-noun-suffix-rule-d
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG.PERNUM plain+2sg ] ].
 
-2nd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & nominal-pluralization-rule-dtr &
+2nd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & CASE-POSITION-CLASS-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & nominal-pluralization-rule-dtr & noun-pc13-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG.PERNUM polite+2sg ],
-    INFLECTED.POSSESSIVE-POSITION-CLASS-FLAG - ].
+    INFLECTED [ CASE-POSITION-CLASS-FLAG -,
+                POSSESSIVE-POSITION-CLASS-FLAG - ] ].
 
 3rd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -259,14 +260,15 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := noun-lex & COMPARATIVE-rul
 1st-person-plural-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
-3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & nominal-pluralization-rule-dtr &
+3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex & CASE-POSITION-CLASS-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & nominal-pluralization-rule-dtr & noun-pc13-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM polite+3sg ],
-    INFLECTED.POSSESSIVE-POSITION-CLASS-FLAG - ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 3sg+polite ],
+    INFLECTED [ CASE-POSITION-CLASS-FLAG -,
+                POSSESSIVE-POSITION-CLASS-FLAG - ] ].
 
 3rd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM pl+3rd ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd+pl ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
@@ -307,13 +309,13 @@ POSSESSIVE-PRONOUNS-noun-lex := noun-lex.
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
 
 2pl-or-2polite-poss-pronoun-noun-lex := 2nd-Poss-Pronoun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl+2polite ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2polite+pl ].
 
 3du-poss-pronoun-noun-lex := 3rd-Poss-Pronoun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
 
 3pl-or-3polite-poss-pronoun-noun-lex := 3rd-Poss-Pronoun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl+3polite ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3polite+pl ].
 
 ;;; Verbs
 
@@ -495,62 +497,63 @@ case-marking-adp-lex := non-local-none-lex-item & raise-sem-lex-item &
 
 ;;; Intermediate rule types
 
-should-these-be-verb-pcs-rule-dtr := word-or-lexrule.
 TENSE-POSITION-CLASS-rule-dtr := word-or-lexrule.
-COMPARATIVE-rule-dtr := word-or-lexrule.
-Past-Agent-Role-Marker-rule-dtr := word-or-lexrule.
-INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-TENSE-MARKING-rule-dtr := word-or-lexrule.
-verb-pc6-dy-rule-dtr := word-or-lexrule.
-verb-pc9-rule-dtr := word-or-lexrule.
-noun-pc12-rule-dtr := word-or-lexrule.
-noun-pc16-rule-dtr := word-or-lexrule.
-verb-pc20-rule-dtr := word-or-lexrule.
-POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
-nominal-pluralization-rule-dtr := word-or-lexrule.
-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr := word-or-lexrule.
-HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
-INSIDE-adposition-rule-dtr := word-or-lexrule.
-Past-Patient-Role-Marker-rule-dtr := word-or-lexrule.
-verb-pc18-rule-dtr := word-or-lexrule.
-GENITIVIZATION-rule-dtr := word-or-lexrule.
-noun-pc15-rule-dtr := word-or-lexrule.
-verb-pc13-rule-dtr := word-or-lexrule.
-verb-pc14-rule-dtr := word-or-lexrule.
 noun-pc13-rule-dtr := word-or-lexrule.
-verb-pc1-rule-dtr := word-or-lexrule.
+Past-Agent-Role-Marker-rule-dtr := word-or-lexrule.
+nominal-pluralization-rule-dtr := word-or-lexrule.
+INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-TENSE-MARKING-rule-dtr := word-or-lexrule.
+should-these-be-verb-pcs-rule-dtr := word-or-lexrule.
+Past-Patient-Role-Marker-rule-dtr := word-or-lexrule.
+verb-pc20-rule-dtr := word-or-lexrule.
+HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
+POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+CASE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+verb-pc6-dy-rule-dtr := word-or-lexrule.
+INSIDE-adposition-rule-dtr := word-or-lexrule.
+3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr := word-or-lexrule.
 DU-noun-suffix-rule-dtr := word-or-lexrule.
+noun-pc16-rule-dtr := word-or-lexrule.
+noun-pc12-rule-dtr := word-or-lexrule.
+verb-pc14-rule-dtr := word-or-lexrule.
+verb-pc13-rule-dtr := word-or-lexrule.
+noun-pc15-rule-dtr := word-or-lexrule.
+verb-pc18-rule-dtr := word-or-lexrule.
+verb-pc9-rule-dtr := word-or-lexrule.
+GENITIVIZATION-rule-dtr := word-or-lexrule.
+COMPARATIVE-rule-dtr := word-or-lexrule.
+verb-pc1-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 POSSESSIVE-POSITION-CLASS-lex-rule-super := DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & lex-rule &
   [ INFLECTED [ POSSESSIVE-POSITION-CLASS-FLAG +,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
                 CASE-POSITION-CLASS-FLAG #case-position-class,
+                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 TENSE-POSITION-CLASS-FLAG #tense-position-class,
-                ASPECT-POSITION-CLASS-FLAG #aspect-position-class ],
+                ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     DTR POSSESSIVE-POSITION-CLASS-rule-dtr &
-        [ INFLECTED [ 1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
-                      1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+        [ INFLECTED [ CASE-POSITION-CLASS-FLAG #case-position-class,
                       VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
-                      CASE-POSITION-CLASS-FLAG #case-position-class,
+                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                      1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                       TENSE-POSITION-CLASS-FLAG #tense-position-class,
-                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class ] ] ].
+                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                      1PI-PATIENT-PAST-FLAG #1pi-patient-past ] ] ].
 
 1st-Person-Possessive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT [ HEAD #head,
@@ -738,7 +741,7 @@ DU-noun-suffix-lex-rule-super := INSIDE-adposition-rule-dtr & add-only-no-ccont-
 
 noun-pc2_lrt1-lex-rule := DU-noun-suffix-lex-rule-super.
 
-nominal-pluralization-lex-rule-super := DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule & infl-lex-rule &
+nominal-pluralization-lex-rule-super := CASE-POSITION-CLASS-rule-dtr & DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & noun-pc13-rule-dtr &
   [ INFLECTED #infl,
     DTR nominal-pluralization-rule-dtr &
         [ INFLECTED #infl ] ].
@@ -813,35 +816,35 @@ noun-pc38-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 noun-pc38_lrt1-lex-rule := noun-pc38-lex-rule-super.
 
-CASE-POSITION-CLASS-lex-rule-super := DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule & nominal-pluralization-rule-dtr & noun-pc13-rule-dtr &
+CASE-POSITION-CLASS-lex-rule-super := DU-noun-suffix-rule-dtr & INSIDE-adposition-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule & noun-pc13-rule-dtr &
   [ INFLECTED [ CASE-POSITION-CLASS-FLAG +,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
                 VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
                 POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 TENSE-POSITION-CLASS-FLAG #tense-position-class,
-                ASPECT-POSITION-CLASS-FLAG #aspect-position-class ],
-    DTR COMMON-NOUNS-noun-lex &
-        [ INFLECTED [ 1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR CASE-POSITION-CLASS-rule-dtr &
+        [ INFLECTED [ VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
                       VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
-                      1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
                       VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                      VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
                       POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                      1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                       TENSE-POSITION-CLASS-FLAG #tense-position-class,
-                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class ] ] ].
+                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                      1PI-PATIENT-PAST-FLAG #1pi-patient-past ] ] ].
 
 ERG+INSTR-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD [ CASE ERG+INS,
@@ -1007,33 +1010,33 @@ means-because-lex-rule := Adverbs-lex-rule-super.
 
 ASPECT-POSITION-CLASS-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-TENSE-MARKING-rule-dtr & Past-Agent-Role-Marker-rule-dtr & Past-Patient-Role-Marker-rule-dtr & TENSE-POSITION-CLASS-rule-dtr & val-change-with-ccont-lex-rule & verb-pc1-rule-dtr & verb-pc14-rule-dtr & verb-pc18-rule-dtr & verb-pc20-rule-dtr & verb-pc6-dy-rule-dtr & verb-pc9-rule-dtr &
   [ INFLECTED [ ASPECT-POSITION-CLASS-FLAG +,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
-                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
                 CASE-POSITION-CLASS-FLAG #case-position-class,
-                TENSE-POSITION-CLASS-FLAG #tense-position-class ],
+                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                TENSE-POSITION-CLASS-FLAG #tense-position-class,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     DTR verb-lex &
-        [ INFLECTED [ 1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
-                      1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+        [ INFLECTED [ CASE-POSITION-CLASS-FLAG #case-position-class,
                       VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
                       POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
-                      CASE-POSITION-CLASS-FLAG #case-position-class,
-                      TENSE-POSITION-CLASS-FLAG #tense-position-class ] ] ].
+                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                      1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                      TENSE-POSITION-CLASS-FLAG #tense-position-class,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                      1PI-PATIENT-PAST-FLAG #1pi-patient-past ] ] ].
 
 STA-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
   [ DTR.INFLECTED.VERB58-INTRANSITIVE-VERB-FLAG +,
@@ -1088,11 +1091,11 @@ Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marki
 
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1SG-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg+3sg ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg+2sg ].
 
 2-or-3-du-Agent-1sg-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1SG-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du+2du ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du+3du ].
 
 2pl-Agent-1sg-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1SG-PATIENT-PAST-FLAG +,
@@ -1104,7 +1107,7 @@ Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marki
 
 2sg-2du-2pl-3sg-3pl-or-3du-Agent-1de-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1DE-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl+3pl+2sg+3sg+3du+2du ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg+2sg+2du+3du+3pl+2pl ].
 
 2pl-Agent-1de-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1DE-PATIENT-PAST-FLAG +,
@@ -1124,7 +1127,7 @@ Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marki
 
 2sg-2du-2pl-3sg-or-3du-Agent-1pe-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1PE-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl+2sg+3sg+3du+2du ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg+2sg+2du+3du+2pl ].
 
 3pl-Agent-1pe-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1PE-PATIENT-PAST-FLAG +,
@@ -1132,7 +1135,7 @@ Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marki
 
 3sg-or-3du-Agent-1pi-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1PI-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du+3sg ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg+3du ].
 
 Unspecified-Agent-Role-Past-Tense-Transitive-lex-rule := Past-Agent-Role-Marker-lex-rule-super.
 
@@ -1140,161 +1143,161 @@ Unspecified-Agent-Role-Past-Tense-Transitive-lex-rule := Past-Agent-Role-Marker-
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
 Past-Patient-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & Past-Agent-Role-Marker-rule-dtr & add-only-no-ccont-rule &
-  [ INFLECTED [ INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
-                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+  [ INFLECTED [ VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
                 CASE-POSITION-CLASS-FLAG #case-position-class,
+                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                INTRANSITIVE-VERB-FLAG #intransitive-verb,
                 TENSE-POSITION-CLASS-FLAG #tense-position-class,
-                ASPECT-POSITION-CLASS-FLAG #aspect-position-class ],
+                ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                TRANSITIVE-VERB-FLAG #transitive-verb ],
     DTR Past-Patient-Role-Marker-rule-dtr &
-        [ INFLECTED [ INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
-                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                      VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
-                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+        [ INFLECTED [ VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
                       CASE-POSITION-CLASS-FLAG #case-position-class,
+                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
                       TENSE-POSITION-CLASS-FLAG #tense-position-class,
-                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class ] ] ].
+                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                      TRANSITIVE-VERB-FLAG #transitive-verb ] ] ].
 
 1sg-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
   [ INFLECTED [ 1SG-PATIENT-PAST-FLAG +,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                1DI-PATIENT-PAST-FLAG #1di-patient-past,
                 1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
 
 1de-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
   [ INFLECTED [ 1DE-PATIENT-PAST-FLAG +,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                    1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ].
 
 1di-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
   [ INFLECTED [ 1DI-PATIENT-PAST-FLAG +,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
                 1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ].
 
 1pe-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
   [ INFLECTED [ 1PE-PATIENT-PAST-FLAG +,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1DE-PATIENT-PAST-FLAG #1de-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
 
 1pi-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
   [ INFLECTED [ 1PI-PATIENT-PAST-FLAG +,
-                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                1DI-PATIENT-PAST-FLAG #1di-patient-past,
                 1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                    1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                1DI-PATIENT-PAST-FLAG #1di-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                    1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                    1DI-PATIENT-PAST-FLAG #1di-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
 
 Underspecified-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
-  [ INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+  [ INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ] ].
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ] ].
 
 3pl-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
-  [ INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+  [ INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
 2du-Patient-Past-Tr-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
-  [ INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+  [ INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ].
 
 2pl-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
-  [ INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+  [ INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
 
 3sg-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
-  [ INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+  [ INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
 
 3du-Patient-Past-lex-rule := Past-Patient-Role-Marker-lex-rule-super &
-  [ INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+  [ INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                 1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                 1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
-    DTR.INFLECTED [ 1PI-PATIENT-PAST-FLAG #1pi-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
+    DTR.INFLECTED [ 1DE-PATIENT-PAST-FLAG #1de-patient-past,
                     1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                    1PE-PATIENT-PAST-FLAG #1pe-patient-past,
                     1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                    1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                    1PE-PATIENT-PAST-FLAG #1pe-patient-past ],
+                    1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ].
 
 INTRANSITIVE-TENSE-ROLE-MARKING-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & add-only-no-ccont-rule &
@@ -1316,7 +1319,7 @@ INTRANSITIVE-TENSE-ROLE-MARKING-lex-rule-super := GENITIVIZATION-rule-dtr & HEAR
                    CONT.HOOK.INDEX.E.TENSE nonpast ] ].
 
 1di-or-2du-or-3du-lex-rule := INTRANSITIVE-TENSE-ROLE-MARKING-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl+3du+2du,
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl+2du+3du,
                    CONT.HOOK.INDEX.E.TENSE tense ] ].
 
 1de-Past-lex-rule := INTRANSITIVE-TENSE-ROLE-MARKING-lex-rule-super & infl-lex-rule &
@@ -1388,33 +1391,37 @@ add-hearsay-marker-lex-rule := HEARSAY-Marking-Position-Class-lex-rule-super & h
 
 TENSE-POSITION-CLASS-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-TENSE-MARKING-rule-dtr & Past-Agent-Role-Marker-rule-dtr & Past-Patient-Role-Marker-rule-dtr & lex-rule &
   [ INFLECTED [ TENSE-POSITION-CLASS-FLAG +,
-                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
-                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
-                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
                 CASE-POSITION-CLASS-FLAG #case-position-class,
-                ASPECT-POSITION-CLASS-FLAG #aspect-position-class ],
+                VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                1PI-PATIENT-PAST-FLAG #1pi-patient-past ],
     DTR TENSE-POSITION-CLASS-rule-dtr &
-        [ INFLECTED [ 1PE-PATIENT-PAST-FLAG #1pe-patient-past,
-                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
-                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
-                      1PI-PATIENT-PAST-FLAG #1pi-patient-past,
-                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
-                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
-                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
-                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
+        [ INFLECTED [ CASE-POSITION-CLASS-FLAG #case-position-class,
                       VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG #verb5-transitive-verb-or-verb58-intransitive-verb,
+                      VERB58-INTRANSITIVE-VERB-FLAG #verb58-intransitive-verb,
+                      VERB5-TRANSITIVE-VERB-FLAG #verb5-transitive-verb,
                       POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
-                      CASE-POSITION-CLASS-FLAG #case-position-class,
-                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class ] ] ].
+                      1DE-PATIENT-PAST-FLAG #1de-patient-past,
+                      1SG-PATIENT-PAST-FLAG #1sg-patient-past,
+                      INTRANSITIVE-VERB-FLAG #intransitive-verb,
+                      1PE-PATIENT-PAST-FLAG #1pe-patient-past,
+                      ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      1DI-PATIENT-PAST-FLAG #1di-patient-past,
+                      1PI-PATIENT-PAST-FLAG #1pi-patient-past ] ] ].
+
+obj-rem-op-lex-rule := comps-change-only-lex-rule & no-ccont-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
+    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < unexpressed . #comps > ].
 
 obj-prom-from-arg3of3-op-lex-rule := subj-and-comps-change-only-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #sidx ] >,
@@ -1422,10 +1429,6 @@ obj-prom-from-arg3of3-op-lex-rule := subj-and-comps-change-only-lex-rule &
                                    [ ] > ],
     DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < #oarg,
                                      [ LOCAL.CONT.HOOK.INDEX #sidx ] > ].
-
-obj-rem-op-lex-rule := comps-change-only-lex-rule & no-ccont-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
-    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < unexpressed . #comps > ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
