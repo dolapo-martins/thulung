@@ -78,9 +78,6 @@ E.TENSE : E.TENSE
 E.ASPECT : E.ASPECT
   POT <> POT
   HAB <> HAB
-  CAU <> CAU
-  DETR <> DETR
-  BEN <> BEN
   DEF <> DEF
   STA <> STA
   PON <> PON

@@ -305,7 +305,7 @@ wa_2 := COMMON-NOUNS-noun-lex &
   [ STEM < "wa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_older.sibling_n_rel" ].
 
-ama := COMMON-NOUNS-noun-lex &
+ama_1 := COMMON-NOUNS-noun-lex &
   [ STEM < "ama" >,
     SYNSEM.LKEYS.KEYREL.PRED "_1_sg._poss_n_rel" ].
 
@@ -561,7 +561,7 @@ hʌp := COMMON-NOUNS-noun-lex &
   [ STEM < "hʌp" >,
     SYNSEM.LKEYS.KEYREL.PRED "_king_n_rel" ].
 
-ikima := COMMON-NOUNS-noun-lex &
+ikima_1 := COMMON-NOUNS-noun-lex &
   [ STEM < "ikima" >,
     SYNSEM.LKEYS.KEYREL.PRED "_1_pi._poss_n_rel" ].
 
@@ -1221,7 +1221,7 @@ uhem := COMMON-NOUNS-noun-lex &
   [ STEM < "uhem" >,
     SYNSEM.LKEYS.KEYREL.PRED "__rel._pro_n_rel" ].
 
-unima := COMMON-NOUNS-noun-lex &
+unima_1 := COMMON-NOUNS-noun-lex &
   [ STEM < "unima" >,
     SYNSEM.LKEYS.KEYREL.PRED "_3_pl._poss_n_rel" ].
 
@@ -1640,6 +1640,50 @@ ganimim := 2nd-person-plural-pronoun-noun-lex &
 ʔe := hearsay-discourse-marker-noun-lex &
   [ STEM < "ʔe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hearsay_n_rel" ].
+
+ama_2 := 1st-Poss-Pronoun-noun-lex &
+  [ STEM < "ama" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+ima := 2nd-Poss-Pronoun-noun-lex &
+  [ STEM < "ima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+uma := 3rd-Poss-Pronoun-noun-lex &
+  [ STEM < "uma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+atsima := 1de-poss-pronoun-noun-lex &
+  [ STEM < "atsima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+akima := 1pe-poss-pronoun-noun-lex &
+  [ STEM < "akima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+itsima_1 := 1di-poss-pronoun-noun-lex &
+  [ STEM < "itsima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+ikima_2 := 1pi-poss-pronoun-noun-lex &
+  [ STEM < "ikima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+itsima_2 := 2du-poss-pronoun-noun-lex &
+  [ STEM < "itsima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+inima := 2pl-or-2polite-poss-pronoun-noun-lex &
+  [ STEM < "inima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+utsima := 3du-poss-pronoun-noun-lex &
+  [ STEM < "utsima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+
+unima_2 := 3pl-or-3polite-poss-pronoun-noun-lex &
+  [ STEM < "unima" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
 
 ;;; Adjectives
 
