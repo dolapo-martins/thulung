@@ -81,9 +81,9 @@ noun-pc2_lrt1-suffix3 :=
 %suffix (* -ʦi)
 noun-pc2_lrt1-lex-rule.
 
-make_plural_2nd-3rd-pronouns-suffix :=
+make_nominal_plurals-suffix :=
 %suffix (* -mim)
-make_plural_2nd-3rd-pronouns-lex-rule.
+make_nominal_plurals-lex-rule.
 
 noun-pc12_lrt1-suffix1 :=
 %suffix (* -ɖʌla)
@@ -149,10 +149,6 @@ noun-pc38_lrt1-prefix :=
 %prefix (* mi-)
 noun-pc38_lrt1-lex-rule.
 
-noun-pc44_lrt1-suffix :=
-%suffix (* -ʔa)
-noun-pc44_lrt1-lex-rule.
-
 ERG+INSTR-case-marker-suffix :=
 %suffix (* -ka)
 ERG+INSTR-case-marker-lex-rule.
@@ -208,6 +204,10 @@ levLOC-case-marker-lex-rule.
 COM-case-marker-suffix :=
 %suffix (* -num)
 COM-case-marker-lex-rule.
+
+vocative_suffix-suffix :=
+%suffix (* -ʔa)
+vocative_suffix-lex-rule.
 
 polysyllabic-general-relativizer-prefix :=
 %prefix (* -m)
