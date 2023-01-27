@@ -1706,7 +1706,6 @@ section=lexicon
 
 section=morphology
   noun-pc1_name=POSSESSIVE-POSITION-CLASS
-  noun-pc1_obligatory=on
   noun-pc1_order=prefix
   noun-pc1_inputs=noun-pc45
     noun-pc1_lrt1_name=1st-Person-Possessive
@@ -1865,7 +1864,6 @@ section=morphology
       noun-pc38_lrt1_lri1_inflecting=yes
       noun-pc38_lrt1_lri1_orth=mi-
   noun-pc45_name=CASE-POSITION-CLASS
-  noun-pc45_obligatory=on
   noun-pc45_order=suffix
   noun-pc45_inputs=noun19, noun130, noun-pc9
     noun-pc45_lrt1_name=ERG+INSTR-case-marker
