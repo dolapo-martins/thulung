@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Thulung
 ;;; created at:
-;;;     Fri Jan 27 09:55:07 UTC 2023
+;;;     Fri Jan 27 10:00:08 UTC 2023
 ;;; based on Matrix customization system version of:
 ;;;     Thu 28 Jul 2022 12:31:08 AM UTC
 ;;;
@@ -100,44 +100,44 @@ pernum := *top*.
 du := pernum.
 2nd := pernum.
 1du := 1st & du.
-1du_incl := 1du & 2du+3du+1du_incl.
+1du_incl := 1du & 1du_incl+2du+3du.
 1du_excl := 1du.
 2du := 2nd & 2du+3du.
 1pl := 1st & pl.
 1pl_incl := 1pl.
 1pl_excl := 1pl.
-2pl := 2nd & pl & 2pl+2sg+3sg+2du+3du.
-3pl := 3rd & pl & 2pl+2sg+3sg+2du+3du+3pl.
+2pl := 2nd & pl & 3sg+2sg+2pl+2du+3du.
+3pl := 3rd & pl & 3sg+2sg+2pl+2du+3du+3pl.
 1sg := 1st & sg.
-2sg := 2nd & 2sg+plain & 2sg+polite & 2sg+3sg.
+2sg := 2nd & plain+2sg & polite+2sg & 3sg+2sg.
 1polite := 1st & polite.
 2polite := 2nd & polite & pl+2polite.
-3polite := 3rd & polite & pl+3polite.
+3polite := 3rd & polite & 3polite+pl.
 1plain := 1st & plain.
 2plain := 2nd & plain.
 3plain := 3rd & plain.
-2sg+plain := pernum.
-plain := 2sg+plain & plain+3sg.
-2sg+polite := pernum.
-polite := 2sg+polite & polite+3sg.
+plain+2sg := pernum.
+plain := plain+2sg & plain+3sg.
+polite+2sg := pernum.
+polite := polite+2sg & polite+3sg.
 plain+3sg := pernum.
-3sg := plain+3sg & polite+3sg & 2sg+3sg & 3sg+3du.
+3sg := plain+3sg & polite+3sg & 3sg+2sg & 3sg+3du.
 1st+sg := pernum.
 1st := 1st+sg.
 sg := 1st+sg.
 polite+3sg := pernum.
-pl+3rd := pernum.
-3rd := pl+3rd.
+3rd+pl := pernum.
+3rd := 3rd+pl.
 pl+2polite := pernum.
-pl := pl+2polite & pl+3polite.
-pl+3polite := pl+3rd.
-2sg+3sg := sg & 2pl+2sg+3sg+2du+3du.
+pl := pl+2polite & 3polite+pl.
+3polite+pl := 3rd+pl.
+3sg+2sg := sg & 3sg+2sg+2pl+2du+3du.
 3du := 2du+3du & 3sg+3du.
-2pl+2sg+3sg+2du+3du+3pl := pernum.
-2pl+2sg+3sg+2du+3du := 2pl+2sg+3sg+2du+3du+3pl.
-2du+3du := 2pl+2sg+3sg+2du+3du & 2du+3du+1du_incl.
-3sg+3du := 2pl+2sg+3sg+2du+3du & 3rd.
-2du+3du+1du_incl := du.
+3sg+2sg+2pl+2du+3du+3pl := pernum.
+3sg+2sg+2pl+2du+3du := 3sg+2sg+2pl+2du+3du+3pl.
+2du+3du := 3sg+2sg+2pl+2du+3du & 1du_incl+2du+3du.
+3sg+3du := 3rd & 3sg+2sg+2pl+2du+3du.
+1du_incl+2du+3du := du.
 
 ;;; Possession
 
@@ -224,11 +224,11 @@ COMMON-NOUNS-noun-lex := noun-lex & CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-PO
 
 2nd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 2sg+plain ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM plain+2sg ] ].
 
 2nd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 2sg+polite ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM polite+2sg ] ].
 
 3rd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -264,7 +264,7 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := noun-lex.
 
 3rd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM pl+3rd ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd+pl ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
@@ -313,7 +313,7 @@ POSSESSIVE-PRONOUNS-noun-lex := noun-lex.
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
 
 3pl-or-3polite-poss-pronoun-noun-lex := 3rd-Poss-Pronoun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl+3polite ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3polite+pl ].
 
 ;;; Verbs
 
@@ -495,22 +495,22 @@ case-marking-adp-lex := non-local-none-lex-item & raise-sem-lex-item &
 
 ;;; Intermediate rule types
 
-verb-pc18-rule-dtr := word-or-lexrule.
-INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-TENSE-MARKING-rule-dtr := word-or-lexrule.
 verb-pc13-rule-dtr := word-or-lexrule.
-Past-Patient-Role-Marker-rule-dtr := word-or-lexrule.
-HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
+POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+verb-pc18-rule-dtr := word-or-lexrule.
+verb-pc20-rule-dtr := word-or-lexrule.
 Past-Agent-Role-Marker-rule-dtr := word-or-lexrule.
 verb-pc6-dy-rule-dtr := word-or-lexrule.
-verb-pc14-rule-dtr := word-or-lexrule.
-verb-pc20-rule-dtr := word-or-lexrule.
-POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
-GENITIVIZATION-rule-dtr := word-or-lexrule.
+INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-TENSE-MARKING-rule-dtr := word-or-lexrule.
 CASE-POSITION-CLASS-rule-dtr := word-or-lexrule.
-TENSE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+GENITIVIZATION-rule-dtr := word-or-lexrule.
 verb-pc1-rule-dtr := word-or-lexrule.
-3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr := word-or-lexrule.
+verb-pc14-rule-dtr := word-or-lexrule.
+Past-Patient-Role-Marker-rule-dtr := word-or-lexrule.
+HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
+TENSE-POSITION-CLASS-rule-dtr := word-or-lexrule.
 verb-pc9-rule-dtr := word-or-lexrule.
+3sg_pst_a-or-AUXILIARIES-or-verb-pc11-or-verb-pc68-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -730,7 +730,7 @@ DU-noun-suffix-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 noun-pc2_lrt1-lex-rule := DU-noun-suffix-lex-rule-super.
 
-nominal-PLURALIZATION-lex-rule-super := CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule & infl-lex-rule &
+nominal-PLURALIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
     DTR COMMON-NOUNS-noun-lex &
         [ INFLECTED #infl ] ].
@@ -1080,7 +1080,7 @@ Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marki
 
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1SG-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg+3sg ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg+2sg ].
 
 2-or-3-du-Agent-1sg-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1SG-PATIENT-PAST-FLAG +,
@@ -1096,7 +1096,7 @@ Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marki
 
 2sg-2du-2pl-3sg-3pl-or-3du-Agent-1de-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1DE-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl+2sg+3sg+2du+3du+3pl ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg+2sg+2pl+2du+3du+3pl ].
 
 2pl-Agent-1de-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1DE-PATIENT-PAST-FLAG +,
@@ -1116,7 +1116,7 @@ Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-rule-dtr & HEARSAY-Marki
 
 2sg-2du-2pl-3sg-or-3du-Agent-1pe-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1PE-PATIENT-PAST-FLAG +,
-    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl+2sg+3sg+2du+3du ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg+2sg+2pl+2du+3du ].
 
 3pl-Agent-1pe-Patient-Past-Tense-lex-rule := Past-Agent-Role-Marker-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.1PE-PATIENT-PAST-FLAG +,
@@ -1308,7 +1308,7 @@ INTRANSITIVE-TENSE-ROLE-MARKING-lex-rule-super := GENITIVIZATION-rule-dtr & HEAR
                    CONT.HOOK.INDEX.E.TENSE nonpast ] ].
 
 1di-or-2du-or-3du-lex-rule := INTRANSITIVE-TENSE-ROLE-MARKING-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du+3du+1du_incl,
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl+2du+3du,
                    CONT.HOOK.INDEX.E.TENSE tense ] ].
 
 1de-Past-lex-rule := INTRANSITIVE-TENSE-ROLE-MARKING-lex-rule-super & infl-lex-rule &
