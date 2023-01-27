@@ -562,5 +562,5 @@ APX-marker-lex-rule.
 3pl-Past-lex-rule.
 
 add-hearsay-marker-suffix :=
-%suffix (* -?e)
+%suffix (* -ʔe)
 add-hearsay-marker-lex-rule.
