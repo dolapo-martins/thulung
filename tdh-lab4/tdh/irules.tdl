@@ -433,132 +433,132 @@ APX-marker-suffix2 :=
 %suffix (* -bhal)
 APX-marker-lex-rule.
 
-2-or-3-sg-Agent-1sg-Patient-Past-Tense-prefix1 :=
-%prefix (* -ŋiri)
+2-or-3-sg-Agent-1sg-Patient-Past-Tense-suffix1 :=
+%suffix (* -ŋiri)
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule.
 
-2-or-3-sg-Agent-1sg-Patient-Past-Tense-prefix2 :=
-%prefix (* -ŋri)
+2-or-3-sg-Agent-1sg-Patient-Past-Tense-suffix2 :=
+%suffix (* -ŋri)
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule.
 
-2-or-3-du-Agent-1sg-Patient-Past-Tense-prefix :=
-%prefix (* -ŋiriʦi)
+2-or-3-du-Agent-1sg-Patient-Past-Tense-suffix :=
+%suffix (* -ŋiriʦi)
 2-or-3-du-Agent-1sg-Patient-Past-Tense-lex-rule.
 
-2pl-Agent-1sg-Patient-Past-Tense-prefix :=
-%prefix (* -ŋirini)
+2pl-Agent-1sg-Patient-Past-Tense-suffix :=
+%suffix (* -ŋirini)
 2pl-Agent-1sg-Patient-Past-Tense-lex-rule.
 
-3pl-Agent-1sg-Patient-Past-Tense-prefix :=
-%prefix (* -ŋirimi)
+3pl-Agent-1sg-Patient-Past-Tense-suffix :=
+%suffix (* -ŋirimi)
 3pl-Agent-1sg-Patient-Past-Tense-lex-rule.
 
-2sg-2du-2pl-3sg-3pl-or-3du-Agent-1de-Patient-Past-Tense-prefix :=
-%prefix (* -ʦiki)
+2sg-2du-2pl-3sg-3pl-or-3du-Agent-1de-Patient-Past-Tense-suffix :=
+%suffix (* -ʦiki)
 2sg-2du-2pl-3sg-3pl-or-3du-Agent-1de-Patient-Past-Tense-lex-rule.
 
-2pl-Agent-1de-Patient-Past-Tense-prefix :=
-%prefix (* -tiki)
+2pl-Agent-1de-Patient-Past-Tense-suffix :=
+%suffix (* -tiki)
 2pl-Agent-1de-Patient-Past-Tense-lex-rule.
 
-3pl-Agent-1de-Patient-Past-Tense-prefix :=
-%prefix (* -ʦikimi)
+3pl-Agent-1de-Patient-Past-Tense-suffix :=
+%suffix (* -ʦikimi)
 3pl-Agent-1de-Patient-Past-Tense-lex-rule.
 
-3sg-Agent-1di-Patient-Past-Tense-prefix1 :=
-%prefix (* -ʦiki)
+3sg-Agent-1di-Patient-Past-Tense-suffix1 :=
+%suffix (* -ʦiki)
 3sg-Agent-1di-Patient-Past-Tense-lex-rule.
 
-3sg-Agent-1di-Patient-Past-Tense-prefix2 :=
-%prefix (* -saɖɖaʦi)
+3sg-Agent-1di-Patient-Past-Tense-suffix2 :=
+%suffix (* -saɖɖaʦi)
 3sg-Agent-1di-Patient-Past-Tense-lex-rule.
 
-3du-Agent-1di-Patient-Past-Tense-prefix :=
-%prefix (* -saɖɖaʦi)
+3du-Agent-1di-Patient-Past-Tense-suffix :=
+%suffix (* -saɖɖaʦi)
 3du-Agent-1di-Patient-Past-Tense-lex-rule.
 
-3pl-Agent-1di-Patient-Past-Tense-prefix :=
-%prefix (* -saɖɖami)
+3pl-Agent-1di-Patient-Past-Tense-suffix :=
+%suffix (* -saɖɖami)
 3pl-Agent-1di-Patient-Past-Tense-lex-rule.
 
-2sg-2du-2pl-3sg-or-3du-Agent-1pe-Patient-Past-Tense-prefix :=
-%prefix (* -tiki)
+2sg-2du-2pl-3sg-or-3du-Agent-1pe-Patient-Past-Tense-suffix :=
+%suffix (* -tiki)
 2sg-2du-2pl-3sg-or-3du-Agent-1pe-Patient-Past-Tense-lex-rule.
 
-3pl-Agent-1pe-Patient-Past-Tense-prefix :=
-%prefix (* -tikimi)
+3pl-Agent-1pe-Patient-Past-Tense-suffix :=
+%suffix (* -tikimi)
 3pl-Agent-1pe-Patient-Past-Tense-lex-rule.
 
-3sg-or-3du-Agent-1pi-Patient-Past-Tense-prefix :=
-%prefix (* -saɖɖa)
+3sg-or-3du-Agent-1pi-Patient-Past-Tense-suffix :=
+%suffix (* -saɖɖa)
 3sg-or-3du-Agent-1pi-Patient-Past-Tense-lex-rule.
 
-1sg-Non-Past-prefix :=
-%prefix (* -ŋu)
+1sg-Non-Past-suffix :=
+%suffix (* -ŋu)
 1sg-Non-Past-lex-rule.
 
-1sg-Past-prefix1 :=
-%prefix (* -ŋoro)
+1sg-Past-suffix1 :=
+%suffix (* -ŋoro)
 1sg-Past-lex-rule.
 
-1sg-Past-prefix2 :=
-%prefix (* -ŋro)
+1sg-Past-suffix2 :=
+%suffix (* -ŋro)
 1sg-Past-lex-rule.
 
-1de-Non-Past-prefix :=
-%prefix (* -tsuku)
+1de-Non-Past-suffix :=
+%suffix (* -tsuku)
 1de-Non-Past-lex-rule.
 
-1di-or-2du-or-3du-prefix :=
-%prefix (* -tsi)
+1di-or-2du-or-3du-suffix :=
+%suffix (* -tsi)
 1di-or-2du-or-3du-lex-rule.
 
-1de-Past-prefix1 :=
-%prefix (* -tsoko)
+1de-Past-suffix1 :=
+%suffix (* -tsoko)
 1de-Past-lex-rule.
 
-1de-Past-prefix2 :=
-%prefix (* -ʦoko)
+1de-Past-suffix2 :=
+%suffix (* -ʦoko)
 1de-Past-lex-rule.
 
-1pi-prefix :=
-%prefix (* -ɖi)
+1pi-suffix :=
+%suffix (* -ɖi)
 1pi-lex-rule.
 
-2sg-prefix1 :=
-%prefix (* -na)
+2sg-suffix1 :=
+%suffix (* -na)
 2sg-lex-rule.
 
-2sg-prefix2 :=
-%prefix (* -nna)
+2sg-suffix2 :=
+%suffix (* -nna)
 2sg-lex-rule.
 
-2pl-prefix1 :=
-%prefix (* -ni)
+2pl-suffix1 :=
+%suffix (* -ni)
 2pl-lex-rule.
 
-2pl-prefix2 :=
-%prefix (* -nni)
+2pl-suffix2 :=
+%suffix (* -nni)
 2pl-lex-rule.
 
-1pe-Non-Past-prefix :=
-%prefix (* -ku)
+1pe-Non-Past-suffix :=
+%suffix (* -ku)
 1pe-Non-Past-lex-rule.
 
-1pe-Past-prefix :=
-%prefix (* -toko)
+1pe-Past-suffix :=
+%suffix (* -toko)
 1pe-Past-lex-rule.
 
-3sg-Past-prefix :=
-%prefix (* -ɖa)
+3sg-Past-suffix :=
+%suffix (* -ɖa)
 3sg-Past-lex-rule.
 
-3pl-Non-Past-prefix :=
-%prefix (* -mi)
+3pl-Non-Past-suffix :=
+%suffix (* -mi)
 3pl-Non-Past-lex-rule.
 
-3pl-Past-prefix :=
-%prefix (* -miri)
+3pl-Past-suffix :=
+%suffix (* -miri)
 3pl-Past-lex-rule.
 
 add-hearsay-marker-suffix :=
