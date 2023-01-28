@@ -552,6 +552,9 @@ they do mark number and we currently only have sg on all the common nouns.
 Some of them may be dual, or even plural. We need to refine the lexicon and make
 that distinction so that our morphological rules aren't overgenerating.
 
+3. clauses
+We added some examples of clausal modifiers but we have not implement them yet.
+
 --------------------------------------------------------------------------------
 Issues with choices file
 --------------------------------------------------------------------------------
