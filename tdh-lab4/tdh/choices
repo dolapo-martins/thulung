@@ -118,6 +118,8 @@ section=clausalmods
 
 section=lexicon
   noun19_name=COMMON-NOUNS
+    noun19_feat1_name=pernum
+    noun19_feat1_value=3rd
   noun19_det=imp
     noun19_stem1_orth=lʌkʦa
     noun19_stem1_pred=_neck_n_rel
