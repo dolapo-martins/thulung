@@ -565,6 +565,6 @@ add-hearsay-marker-suffix :=
 %suffix (* -ʔe)
 add-hearsay-marker-lex-rule.
 
-overt-tense-past-prefix :=
-%prefix (* -t)
+overt-tense-past-suffix :=
+%suffix (* -t)
 overt-tense-past-lex-rule.
