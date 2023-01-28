@@ -425,10 +425,6 @@ APX-marker-suffix2 :=
 %suffix (* -bhal)
 APX-marker-lex-rule.
 
-Past-Tense-overt-suffix :=
-%suffix (* -t)
-Past-Tense-overt-lex-rule.
-
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-suffix1 :=
 %suffix (* -ŋiri)
 2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule.
@@ -568,3 +564,7 @@ Past-Tense-overt-lex-rule.
 add-hearsay-marker-suffix :=
 %suffix (* -ʔe)
 add-hearsay-marker-lex-rule.
+
+overt-tense-past-prefix :=
+%prefix (* -t)
+overt-tense-past-lex-rule.

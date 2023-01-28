@@ -1,4 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+decl-head-opt-subj := decl-head-opt-subj-phrase.
+
 comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.

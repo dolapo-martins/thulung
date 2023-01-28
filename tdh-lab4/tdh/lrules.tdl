@@ -37,4 +37,4 @@ Underspecified-Patient-Past-lex := Underspecified-Patient-Past-lex-rule.
 
 Underspecified-Tense-Intransitive-lex := Underspecified-Tense-Intransitive-lex-rule.
 
-TENSE-POSITION-CLASS-lex := TENSE-POSITION-CLASS-lex-rule.
+ROLE-POSITION-CLASS-lex := ROLE-POSITION-CLASS-lex-rule.
