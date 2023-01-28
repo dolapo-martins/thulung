@@ -354,7 +354,7 @@ be-pst-3pl
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {tense, pn}
+Phenomena: {tense}
 gana ba-t-miri
 2sg be-pst-3pl
 'You were.'
@@ -372,56 +372,56 @@ be-3sg
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {tense, case, pn}
-go khlea khlo-to1sg dog trap-1sg.3sg.pst'I trapped the dog.'
+Phenomena: {tense, case}
+ʦysy khlea khlo-tochild dog trap-1sg.3sg.pst'The child trapped the dog.'
 
 #48
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {tense, case, pn}
+Phenomena: {tense, case}
 go gana khlo-ni1sg 2sg trap-1sg.2sg'I trap you.'
 
 #49
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {tense, case, pn}
-gu-ka go-lai khlo-ŋiri3sg-erg 1sg-dat trap-3sg.1sg.pst'He trapped me.'
+Phenomena: {tense, case}
+ʦysy-ka go-lai khlo-ŋirichild-erg 1sg-dat trap-3sg.1sg.pst'The child trapped me.'
 
 #50
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {tense, case, pn}
-gu-ka go-lai khlo-na3sg-erg 1sg-dat trap-3sg.2sg.pst'He trapped me.'
+Phenomena: {tense, case}
+ʦysy-ka khlo-nachild-erg trap-3sg.2sg.pst'The child trapped you.'
 
 #51
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {tense, case, pn}
-gu-ka go-lai khlo-saɖɖa3sg-erg 1sg-dat trap-3sg.1di.pst'He trapped me.'
+Phenomena: {tense, case}
+ʦysy-ka go-lai khlo-saɖɖachild-erg 1sg-dat trap-3sg.1di.pst'The child trapped me.'
 
 #52
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {tense, case, pn}
-gu-ka go-lai khlo-ŋi3sg-erg 1sg-dat trap-3sg.1sg'He traps me.'
+Phenomena: {tense, case}
+ʦysy-ka go-lai khlo-ŋichild-erg 1sg-dat trap-3sg.1sg'The child traps me.'
 
 #53
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {tense, case, pn}
-gu-ka go-lai khlo-sa3sg-erg 1sg-dat trap-3sg.1pi'He traps me.'
+Phenomena: {tense}
+khlo-satrap-3sg.1pi'He traps me.'
 
 #54
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {tense, case, pn}
+Phenomena: {tense, case}
 gu-ka go-lai khlo-na3sg-erg 1sg-dat trap-2sg.3sg'He traps me.'
 
 #55

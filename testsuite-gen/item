@@ -42,16 +42,16 @@
 42@author@@@1@tense@ba-ttsi@@@@1@1@be-3du.pst'There were two people.'@dolapo martins, zoe fang@january 27, 2023
 43@author@@@1@tense,pn@go ba-ttsi@@@@0@2@1sg be-3du.pst'I were.'@dolapo martins, zoe fang@january 27, 2023
 44@author@@@1@tense@ba-t-miri@@@@1@1@be-pst-3pl'There were three people.'@dolapo martins, zoe fang@january 27, 2023
-45@author@@@1@tense,pn@gana ba-t-miri@@@@0@2@2sg be-pst-3pl'You were.'@dolapo martins, zoe fang@january 27, 2023
+45@author@@@1@tense@gana ba-t-miri@@@@0@2@2sg be-pst-3pl'You were.'@dolapo martins, zoe fang@january 27, 2023
 46@author@@@1@tense@ba-ŋu@@@@1@1@be-3sg'I am.'@dolapo martins, zoe fang@january 27, 2023
-47@author@@@1@tense,c,pn@go khlea khlo-to@@@@1@3@1sg dog trap-1sg.3sg.pst'I trapped the dog.'@dolapo martins, zoe fang@january 27, 2023
-48@author@@@1@tense,c,pn@go gana khlo-ni@@@@1@3@1sg 2sg trap-1sg.2sg'I trap you.'@dolapo martins, zoe fang@january 27, 2023
-49@author@@@1@tense,c,pn@gu-ka go-lai khlo-ŋiri@@@@1@3@3sg-erg 1sg-dat trap-3sg.1sg.pst'He trapped me.'@dolapo martins, zoe fang@january 27, 2023
-50@author@@@1@tense,c,pn@gu-ka go-lai khlo-na@@@@0@3@3sg-erg 1sg-dat trap-3sg.2sg.pst'He trapped me.'@dolapo martins, zoe fang@january 27, 2023
-51@author@@@1@tense,c,pn@gu-ka go-lai khlo-saɖɖa@@@@0@3@3sg-erg 1sg-dat trap-3sg.1di.pst'He trapped me.'@dolapo martins, zoe fang@january 27, 2023
-52@author@@@1@tense,c,pn@gu-ka go-lai khlo-ŋi@@@@1@3@3sg-erg 1sg-dat trap-3sg.1sg'He traps me.'@dolapo martins, zoe fang@january 27, 2023
-53@author@@@1@tense,c,pn@gu-ka go-lai khlo-sa@@@@0@3@3sg-erg 1sg-dat trap-3sg.1pi'He traps me.'@dolapo martins, zoe fang@january 27, 2023
-54@author@@@1@tense,c,pn@gu-ka go-lai khlo-na@@@@0@3@3sg-erg 1sg-dat trap-2sg.3sg'He traps me.'@dolapo martins, zoe fang@january 27, 2023
+47@author@@@1@tense,c@ʦysy khlea khlo-to@@@@1@3@child dog trap-1sg.3sg.pst'The child trapped the dog.'@dolapo martins, zoe fang@january 27, 2023
+48@author@@@1@tense,c@go gana khlo-ni@@@@1@3@1sg 2sg trap-1sg.2sg'I trap you.'@dolapo martins, zoe fang@january 27, 2023
+49@author@@@1@tense,c@ʦysy-ka go-lai khlo-ŋiri@@@@1@3@child-erg 1sg-dat trap-3sg.1sg.pst'The child trapped me.'@dolapo martins, zoe fang@january 27, 2023
+50@author@@@1@tense,c@ʦysy-ka khlo-na@@@@0@2@child-erg trap-3sg.2sg.pst'The child trapped you.'@dolapo martins, zoe fang@january 27, 2023
+51@author@@@1@tense,c@ʦysy-ka go-lai khlo-saɖɖa@@@@0@3@child-erg 1sg-dat trap-3sg.1di.pst'The child trapped me.'@dolapo martins, zoe fang@january 27, 2023
+52@author@@@1@tense,c@ʦysy-ka go-lai khlo-ŋi@@@@1@3@child-erg 1sg-dat trap-3sg.1sg'The child traps me.'@dolapo martins, zoe fang@january 27, 2023
+53@author@@@1@tense@khlo-sa@@@@0@1@trap-3sg.1pi'He traps me.'@dolapo martins, zoe fang@january 27, 2023
+54@author@@@1@tense,c@gu-ka go-lai khlo-na@@@@0@3@3sg-erg 1sg-dat trap-2sg.3sg'He traps me.'@dolapo martins, zoe fang@january 27, 2023
 55@author@@@1@crd@ba-ŋu ma am-ŋu@@@@1@3@be-1sg conj sleep-1sg'I am and I sleep.'@dolapo martins, zoe fang@january 27, 2023
 56@author@@@1@crd@ba-ŋu ma am-ŋu ma am-ŋu@@@@1@5@be-1sg conj sleep-1sg conj sleep-1sg'I am and I sleep and I sleep.'@dolapo martins, zoe fang@january 27, 2023
 57@author@@@1@crd@ba-ŋu am-ŋu ma am-ŋu@@@@0@4@be-1sg sleep-1sg conj sleep-1sg'I am and I sleep and I sleep.'@dolapo martins, zoe fang@january 27, 2023
