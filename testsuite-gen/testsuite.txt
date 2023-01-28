@@ -559,16 +559,16 @@ darembu ma popnar ba-t-ʦi
 Darembu conj Popnar be-pst-du
 'There were two people called Darempu and Popnar.'
 
-#61
+#62
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {crd}
+Phenomena: {evid}
 darembu ma popnar ba-t-ʦi-ʔe
 Darembu conj Popnar be-pst-du-hs
 'There were two people called Darempu and Popnar.'
 
-#62
+#63
 Source: author
 Vetted: f
 Judgment: g
@@ -577,7 +577,7 @@ gu am mala go am-ŋu
 3sg sleep.3sg cond 1sg sleep.1sg
 'If he sleeps, I sleep.'
 
-#63
+#64
 Source: author
 Vetted: f
 Judgment: u
@@ -586,7 +586,7 @@ gu am mala
 3sg sleep.3sg
 'If he sleeps'
 
-#64
+#65
 Source: author
 Vetted: f
 Judgment: u

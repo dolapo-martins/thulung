@@ -3,12 +3,40 @@ Thulung | tdh
 Dolapo Martins
 Zoe Fang
 
+
 --------------------------------------------------------------------------------
-Lab 4 grammar on provided test corpus
+Lab 4 initial grammar on provided test corpus - using Lab 3 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         27           |
+What is the average number of parses per parsed item:   |        19.93         |
+How many parses did the most ambiguous item receive:    |         192          |
+
+What (new or different) sources of ambiguity can you identify, if any?
+>>> This initial grammar has lexical rules that attach the same affix, in the
+same environment, leading to duplicate trees and it does not properly account 
+for coordination. Coordination is causing most of the ambiguity in our most 
+ambiguous parse.
+
+N.B. We revised the corpus so the hearsay marker /-ʔe/ is an affix, not a word.
+
+--------------------------------------------------------------------------------
+Lab 4 final grammar on our custom test suite - using Lab 3 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          6           |
+What is the average number of parses per parsed item:   |        13.33         |
+How many parses did the most ambiguous item receive:    |          32          |
+
+What (new or different) sources of ambiguity can you identify, if any?
+>>> This initial grammar has lexical rules that attach the same affix, in the
+same environment, leading to duplicate trees.
+
+--------------------------------------------------------------------------------
+Lab 4 final grammar on provided test corpus
 --------------------------------------------------------------------------------
 How many items parsed:                                  |         48           |
 What is the average number of parses per parsed item:   |        12.58         |
 How many parses did the most ambiguous item receive:    |         224          |
+
 What (new or different) sources of ambiguity can you identify, if any?
 >>> Our main source of ambiguity is now due to unconstrained nouns. Right now, 
 we have only specified number=3 for our nouns. There are various combinations of
@@ -24,13 +52,15 @@ Additionally, our analsis of coordination is not quite complete and we are
 getting quite a bit of ambiguity due to TOP and BOTTOM coordination.
 
 --------------------------------------------------------------------------------
-Lab 4 grammar on our custom test suite
+Lab 4 final grammar on our custom test suite
 --------------------------------------------------------------------------------
-How many items parsed:                                  |                      |
-What is the average number of parses per parsed item:   |                      |
-How many parses did the most ambiguous item receive:    |                      |
-What (new or different) sources of ambiguity can you identify, if any?
+How many items parsed:                                  |         16           |
+What is the average number of parses per parsed item:   |        16.09         |
+How many parses did the most ambiguous item receive:    |         212          |
 
+What (new or different) sources of ambiguity can you identify, if any?
+>>> The sources of ambiguity are the same as are in our corpus: coordination and 
+several verb lex rules that can apply.
 
 --------------------------------------------------------------------------------
 Documentation: Test suite phenomena
