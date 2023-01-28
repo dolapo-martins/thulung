@@ -90,7 +90,14 @@ neg-exp=0
 
 section=coordination
   cs1_vp=on
-  cs1_pat=a
+  cs1_s=on
+  cs1_pat=poly
+  cs1_mark=word
+  cs1_orth=ma
+  cs1_order=before
+  cs2_n=on
+  cs2_np=on
+  cs2_pat=a
 
 section=matrix-yes-no
 

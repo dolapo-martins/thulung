@@ -2859,3 +2859,8 @@ bhane := aux3-aux-lex &
   [ STEM < "bhane" > ].
 
 ;;; Adverbs
+
+ma1 := conj-lex &
+  [ STEM < "ma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].
