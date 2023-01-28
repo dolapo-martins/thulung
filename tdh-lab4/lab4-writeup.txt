@@ -516,10 +516,20 @@ N.B. In Thulung, some of the possesive pronouns can be both words an affixes.
 There was a historical morphological rule nominalizing the prefixes via /-ma/.
 
 --------------------------------------------------------------------------------
-Documentation: Test suite vs choices file
+Documentation: Language properties
 --------------------------------------------------------------------------------
+1. Phononology
+In Thulung, there are allomorphs depending on the environment in which the 
+morpheme occurs. In most cases these allomorphs result from consonant 
+assimilation and vowel harmany. Currently, our implementation lists all possible
+allomorphs as separate lexiral rule instances under one lexical rule type. For 
+example, both '-si-' and '-siʈ-' can be suffixed by '-ɖy'. However, the language
+should only allow the combination of '-siʈ-' and '-ɖy', since the endings of 
+them are both retroflexive. 
 
-
+2. Agreement
+Both case systems and tense (and person number) marking verb endings need to 
+agree on NPs and VPs. We have not implemented agreement this week.
 --------------------------------------------------------------------------------
 Issues with choices file
 --------------------------------------------------------------------------------
