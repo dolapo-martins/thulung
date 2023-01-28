@@ -88,7 +88,8 @@ Vetted: f
 Judgment: g
 Phenomena: {case}
 go am-ŋu
-1sg sleep-1sg.NPST'I sleep.'
+1sg sleep-1sg.NPST
+'I sleep.'
 
 #10
 Source: author
@@ -96,119 +97,152 @@ Vetted: f
 Judgment: u
 Phenomena: {case}
 go-ka am-ŋu
-1sg-erg sleep-1sg'I sleep.'
+1sg-erg sleep-1sg
+'I sleep.'
 
 #11
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-khlea amdog sleep.3sg'The dog sleeps.'
+khlea am
+dog sleep.3sg
+'The dog sleeps.'
 
 #12
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-khlea-lai amdog-dat sleep.3sg'The dog sleeps.'
+khlea-lai am
+dog-dat sleep.3sg
+'The dog sleeps.'
 
 #13
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-go-lai kora ly-ra1sg-dat thirst feel-3sg.pst'I feel thirsty.'
+go-lai kora ly-ra
+1sg-dat thirst feel-3sg.pst
+'I feel thirsty.'
 
 #14
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-go-ka kora ly-ra1sg-erg thirst feel-3sg.pst'I feel thirsty.'
+go-ka kora ly-ra
+1sg-erg thirst feel-3sg.pst
+'I feel thirsty.'
 
 #15
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-go kora ly-ra1sg thirst feel-3sg.pst'I feel thirsty.'
+go kora ly-ra
+1sg thirst feel-3sg.pst
+'I feel thirsty.'
 
 #16
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-go-ra kora ly-ra1sg-loc thirst feel-3sg.pst'I feel thirsty.'
+go-ra kora ly-ra
+1sg-loc thirst feel-3sg.pst
+'I feel thirsty.'
 
 #17
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-go khlea khlo-u1sg dog trap-1sg.3sg'I trap the dog.'
+go khlea khlo-u
+1sg dog trap-1sg.3sg
+'I trap the dog.'
 
 #18
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-go-erg khlea-lai khlo-u1sg-ka dog-dat trap-1sg.3sg'I trap the dog.'
+go-erg khlea-lai khlo-u
+1sg-ka dog-dat trap-1sg.3sg
+'I trap the dog.'
 
 #19
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-gu-erg khlea khlo-u3sg-ka dog trap-1sg.3sg'He traps the dog.'
+gu-erg khlea khlo-u
+3sg-ka dog trap-1sg.3sg
+'He traps the dog.'
 
 #20
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-gu-erg khlea-lai khlo-ʉ3sg-ka dog-dat trap-3sg>3sg'He traps the dog.'
+gu-erg khlea-lai khlo-ʉ
+3sg-ka dog-dat trap-3sg>3sg
+'He traps the dog.'
 
 #21
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-go myʦy-lai khlo-ʉ1sg myʦy-dat trap-3sg.3sg'I trap the person.'
+go myʦy-lai khlo-ʉ
+1sg myʦy-dat trap-3sg.3sg
+'I trap the person.'
 
 #22
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-go myʦy-lai khlo-u1sg myʦy-dat trap-1sg.3sg'I trap the person.'
+go myʦy-lai khlo-u
+1sg myʦy-dat trap-1sg.3sg
+'I trap the person.'
 
 #23
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-go myʦy khlo-u1sg myʦy trap-1sg.3sg'I trap the person.'
+go myʦy khlo-u
+1sg myʦy trap-1sg.3sg
+'I trap the person.'
 
 #24
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-gu-ka go-lai khlo-ŋi3sg-erg 1sg-dat trap-3sg.1sg'He traps me.'
+gu-ka go-lai khlo-ŋi
+3sg-erg 1sg-dat trap-3sg.1sg
+'He traps me.'
 
 #25
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-gu-ka go khlo-ŋi3sg-erg 1sg trap-3sg.1sg'He traps me.'
+gu-ka go khlo-ŋi
+3sg-erg 1sg trap-3sg.1sg
+'He traps me.'
 
 #26
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-gu go-dat khlo-ŋi3sg 1sg-dat trap-3sg.1sg'He traps me.'
+gu go-dat khlo-ŋi
+3sg 1sg-dat trap-3sg.1sg
+'He traps me.'
 
 #27
 Source: author
@@ -242,77 +276,99 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {valchg}
-ʦysy-ka sʌŋ mam-lai kluk-saʈ-ɖʉchild-erg wood mother-dat fetch-ben-3sg.3sg.pst'The child took out wood for mother.'
+ʦysy-ka sʌŋ mam-lai kluk-saʈ-ɖʉ
+child-erg wood mother-dat fetch-ben-3sg.3sg.pst
+'The child took out wood for mother.'
 
 #31
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {valchg}
-ʦysy-ka sʌŋ mam-lai kluk-be-ɖʉchild-erg wood mother-dat fetch-cau-3sg.3sg.pst'The child took out wood for mother.'
+ʦysy-ka sʌŋ mam-lai kluk-be-ɖʉ
+child-erg wood mother-dat fetch-cau-3sg.3sg.pst
+'The child took out wood for mother.'
 
 #32
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {valchg}
-khel per-siʈ-ɖaleg pinch-detr-3sg.pst'Leg got pinched.'
+khel per-siʈ-ɖa
+leg pinch-detr-3sg.pst
+'Leg got pinched.'
 
 #33
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {valchg}
-khel per-saʈ-ɖaleg pinch-ben-3sg.pst'Leg got pinched.'
+khel per-saʈ-ɖa
+leg pinch-ben-3sg.pst
+'Leg got pinched.'
 
 #34
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {valchg}
-khel per-saʈ-ɖaleg pinch-ben-3sg.pst'Leg got pinched.'
+khel per-saʈ-ɖa
+leg pinch-ben-3sg.pst
+'Leg got pinched.'
 
 #35
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-u-khlea am3sg.poss-dog sleep.3sg'His dog sleeps.'
+u-khlea am
+3sg.poss-dog sleep.3sg
+'His dog sleeps.'
 
 #36
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-uma-khlea am3sg.poss-dog sleep.3sg'His dog sleeps.'
+uma-khlea am
+3sg.poss-dog sleep.3sg
+'His dog sleeps.'
 
 #37
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-uma am3sg.pron sleep.3sg'His (dog) sleeps.'
+uma am
+3sg.pron sleep.3sg
+'His (dog) sleeps.'
 
 #38
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {poss}
-u am3sg.poss sleep.3sg'His sleeps.'
+u am
+3sg.poss sleep.3sg
+'His sleeps.'
 
 #39
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {pn}
-gu am3sg sleep.3sg'He sleeps.'
+gu am
+3sg sleep.3sg
+'He sleeps.'
 
 #40
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {pn}
-gumi am3sg sleep.3sg'He sleeps.'
+gumi am
+3sg sleep.3sg
+'He sleeps.'
 
 #41
 Source: author
@@ -336,7 +392,7 @@ be-3du.pst
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {tense, pn}
+Phenomena: {tense}
 go ba-ttsi
 1sg be-3du.pst
 'I were.'
@@ -371,58 +427,74 @@ be-3sg
 #47
 Source: author
 Vetted: f
-Judgment: g
-Phenomena: {tense, case}
-ʦysy khlea khlo-tochild dog trap-1sg.3sg.pst'The child trapped the dog.'
+Judgment: u
+Phenomena: {tense}
+ʦysy khlea khlo-to
+child dog trap-1sg.3sg.pst
+'The child trapped the dog.'
 
 #48
 Source: author
 Vetted: f
-Judgment: g
-Phenomena: {tense, case}
-go gana khlo-ni1sg 2sg trap-1sg.2sg'I trap you.'
+Judgment: u
+Phenomena: {tense}
+ʦysy khlea khlo-ŋu
+child dog trap-1sg.npst
+'The child traps the dog.'
 
-#49
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {tense, case}
-ʦysy-ka go-lai khlo-ŋirichild-erg 1sg-dat trap-3sg.1sg.pst'The child trapped me.'
-
-#50
+#49 | This is ungrammatical because an intransitive-non-past tense is used
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {tense, case}
-ʦysy-ka khlo-nachild-erg trap-3sg.2sg.pst'The child trapped you.'
+Phenomena: {tense}
+ʦysy khlea khlo-ɖa
+child dog trap-3sg.npst
+'The child traps the dog.'
+
+#50 | This is ungrammatical because there is no object
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tense}
+ʦysy khlo-na
+child trap-3sg.2sg.pst
+'The child trapped you.'
 
 #51
 Source: author
 Vetted: f
-Judgment: u
-Phenomena: {tense, case}
-ʦysy-ka go-lai khlo-saɖɖachild-erg 1sg-dat trap-3sg.1di.pst'The child trapped me.'
+Judgment: g
+Phenomena: {tense}
+khremsiʈ-miri-ʔe
+be.covered-3pl.pst.hs
+'They were trapped.'
 
 #52
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {tense, case}
-ʦysy-ka go-lai khlo-ŋichild-erg 1sg-dat trap-3sg.1sg'The child traps me.'
+Phenomena: {tense}
+khremsiʈ-mi-ʔe
+be.covered-3pl.npst.hs
+'They are trapped.'
 
 #53
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {tense}
-khlo-satrap-3sg.1pi'He traps me.'
+khlo-sa
+trap-3sg.1pi
+'He traps me.'
 
 #54
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {tense, case}
-gu-ka go-lai khlo-na3sg-erg 1sg-dat trap-2sg.3sg'He traps me.'
+gu-ka go-lai khlo-na
+3sg-erg 1sg-dat trap-2sg.3sg
+'He traps me.'
 
 #55
 Source: author
@@ -456,14 +528,18 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {crd}
-gu am ma go am-ŋu3sg sleep.3sg conj 1sg sleep.1sg'He sleeps and I sleep.'
+gu am ma go am-ŋu
+3sg sleep.3sg conj 1sg sleep.1sg
+'He sleeps and I sleep.'
 
 #59
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {crd}
-gu ma go ba-ŋu3sg conj 1sg be.1sg'He and I exist.'
+gu ma go ba-ŋu
+3sg conj 1sg be.1sg
+'He and I exist.'
 
 #60
 Source: d
@@ -483,23 +559,38 @@ darembu ma popnar ba-t-ʦi
 Darembu conj Popnar be-pst-du
 'There were two people called Darempu and Popnar.'
 
+#61
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+darembu ma popnar ba-t-ʦi-ʔe
+Darembu conj Popnar be-pst-du-hs
+'There were two people called Darempu and Popnar.'
+
 #62
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {cl-mod}
-gu am mala go am-ŋu3sg sleep.3sg cond 1sg sleep.1sg'If he sleeps, I sleep.'
+gu am mala go am-ŋu
+3sg sleep.3sg cond 1sg sleep.1sg
+'If he sleeps, I sleep.'
 
 #63
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {cl-mod}
-gu am mala3sg sleep.3sg'If he sleeps'
+gu am mala
+3sg sleep.3sg
+'If he sleeps'
 
 #64
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {cl-mod}
-mala go am-ŋucond 1sg sleep.1sg'If I sleep.'
+mala go am-ŋu
+cond 1sg sleep.1sg
+'If I sleep.'

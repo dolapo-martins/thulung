@@ -6,11 +6,22 @@ Zoe Fang
 --------------------------------------------------------------------------------
 Lab 4 grammar on provided test corpus
 --------------------------------------------------------------------------------
-How many items parsed:                                  |                      |
-What is the average number of parses per parsed item:   |                      |
-How many parses did the most ambiguous item receive:    |                      |
+How many items parsed:                                  |         48           |
+What is the average number of parses per parsed item:   |        12.58         |
+How many parses did the most ambiguous item receive:    |         224          |
 What (new or different) sources of ambiguity can you identify, if any?
+>>> Our main source of ambiguity is now due to unconstrained nouns. Right now, 
+we have only specified number=3 for our nouns. There are various combinations of
+agent and patient roles, marked on the verb, where the agent might be 3sg but
+the patient can be anything and vice versa. The patient roles are all defined as
+zero-morphemes so you can have a rule ordering of (ex.).
+        3du patient (unmarked) -> 3sg agent
+        2du patient (unmarked) -> 3sg agent
+        1sg patient (unmarked) -> 3sg agent
+        2sg patient (unmarked) -> 3sg agent
 
+Additionally, our analsis of coordination is not quite complete and we are 
+getting quite a bit of ambiguity due to TOP and BOTTOM coordination.
 
 --------------------------------------------------------------------------------
 Lab 4 grammar on our custom test suite
@@ -158,6 +169,43 @@ use of the portmanteauxed tense+role slot, in which case the tense is
 morphologically combined with the role. There is no overt non-past marker for
 either transitive or intransitive verbs. Tense and role are morphologically one.
 
+Here are some examples:
+    #49 | This is ungrammatical because an intransitive-non-past tense is used
+    Source: author
+    Vetted: f
+    Judgment: u
+    Phenomena: {tense}
+    ʦysy khlea khlo-ɖa
+    child dog trap-3sg.npst
+    'The child traps the dog.'
+
+    #50 | This is ungrammatical because there is no object
+    Source: author
+    Vetted: f
+    Judgment: u
+    Phenomena: {tense}
+    ʦysy khlo-na
+    child trap-3sg.2sg.pst
+    'The child trapped you.'
+
+    #51
+    Source: author
+    Vetted: f
+    Judgment: g
+    Phenomena: {tense}
+    khremsiʈ-miri-ʔe
+    be.covered-3pl.pst.hs
+    'They were trapped.'
+
+    #52
+    Source: author
+    Vetted: f
+    Judgment: g
+    Phenomena: {tense}
+    khremsiʈ-mi-ʔe
+    be.covered-3pl.npst.hs
+    'They are trapped.'
+
 That is, (A) is the default behavior but (B) is also possible. 
 It is possible that the tense + role distinction was once (C) and changed. 
 
@@ -278,8 +326,20 @@ the agent. This position class is where the overt morphology is added.
 
 2. Hearsay evidential marker
 Building on the work in (1) above, we analyze the evidential hearsay marker as 
-an affix, not a separate word. This is motivated by our descriptive materials 
-which show that it as verb morphology that can also be nominalized. 
+an affix, not a separate word. 
+
+Hear is an example:
+        #62
+        Source: author
+        Vetted: f
+        Judgment: u
+        Phenomena: {evid}
+        darembu ma popnar ba-t-ʦi-ʔe
+        Darembu conj Popnar be-pst-du-hs
+        'There were two people called Darempu and Popnar.'
+
+This affix analysis is motivated by our descriptive materials which show that 
+a verb with the hearsay marker can also be nominalized. 
 
         tseuga-ra                   pi-mri-?e-m.
         N.farthest.field-LOC        break-3s.pol/3sPST-HS-NOM
@@ -319,7 +379,37 @@ This position class will take our tense-inflected verb as input.
 
 3. Coordination
 In Thulung, nouns are coodinated via asyndeton and VPs and Ss are coordinated
-polysyndetically using the conjunct /ma/. In our choices file we edited the 
+polysyndetically using the conjunct /ma/. 
+
+Here are some examples:
+        #55
+        Source: author
+        Vetted: f
+        Judgment: g
+        Phenomena: {crd}
+        ba-ŋu ma am-ŋu
+        be-1sg conj sleep-1sg
+        'I am and I sleep.'
+
+        #56
+        Source: author
+        Vetted: f
+        Judgment: g
+        Phenomena: {crd}
+        ba-ŋu ma am-ŋu ma am-ŋu
+        be-1sg conj sleep-1sg conj sleep-1sg
+        'I am and I sleep and I sleep.'
+
+        #57
+        Source: author
+        Vetted: f
+        Judgment: u
+        Phenomena: {crd}
+        ba-ŋu am-ŋu ma am-ŋu
+        be-1sg sleep-1sg conj sleep-1sg
+        'I am and I sleep and I sleep.'
+
+In our choices file we edited the 
 coordination section to mark them as such.
 
         section=coordination
@@ -345,6 +435,25 @@ Thulung adnominal possession occurs in one of three ways
     Our current analysis accounts for (C). Although we already have case 
     morphology added, we are working on added the proper features to mark 
     N+Gen as possessive.
+
+Here are some examples:
+        #39
+        Source: author
+        Vetted: f
+        Judgment: g
+        Phenomena: {pn}
+        gu am
+        3sg sleep.3sg
+        'He sleeps.'
+
+        #40
+        Source: author
+        Vetted: f
+        Judgment: g
+        Phenomena: {pn}
+        gumi am
+        3sg sleep.3sg
+        'He sleeps.'
 
 In our choices file we defined possessive pronouns as affixes.
         section=adnom-poss
