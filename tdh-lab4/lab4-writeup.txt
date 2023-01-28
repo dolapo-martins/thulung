@@ -299,10 +299,10 @@ a zero morpheme lexical rule that will add tense: [+past].
             verb-pc89_lrt3_feat1_value=past
             verb-pc89_lrt3_feat1_head=verb
 
-To add the role feature and morphology, we define a sub-class of verb-pc89, which
-only adds the (optional) zero-morpheme person-number features of the patient.
-This class has a lexical rule for every known person-number instance of the
-patient that has overt morphology in the Agent-Patient paradigm.
+To add the role feature and morphology, we define a sub-class of verb-pc89, 
+which only adds the (optional) zero-morpheme person-number features of the 
+patient. This class has a lexical rule for every known person-number instance of
+the patient that has overt morphology in the Agent-Patient paradigm.
 The role morphology takes into account the combination of the Agent-Patient 
 per-num features, where neither is optional.
 
@@ -534,18 +534,24 @@ There was a historical morphological rule nominalizing the prefixes via /-ma/.
 --------------------------------------------------------------------------------
 Documentation: Language properties
 --------------------------------------------------------------------------------
-1. Phononology
+1. Phononological alternation and allomorphy
 In Thulung, there are allomorphs depending on the environment in which the 
 morpheme occurs. In most cases these allomorphs result from consonant 
 assimilation and vowel harmony. Currently, our implementation lists all possible
-allomorphs as separate lexiral rule instances under one lexical rule type. For 
+allomorphs as separate lexical rule instances under one lexical rule type. For 
 example, both '-si-' and '-siʈ-' can be suffixed by '-ɖy'. However, the language
 should only allow the combination of '-siʈ-' and '-ɖy', since the endings of 
 them are both retroflexive. 
 
 2. Agreement
-Both case systems and tense (and person number) marking verb endings need to 
-agree on NPs and VPs. We have not implemented agreement this week.
+The verb inflection for tense and role on the VP requires agreement with the NPs
+based on pernum features. We need to refine our implementation to ensure that 
+zero-morpheme verb rules aren't applying needlessly. Currently, only the
+pronouns have been marked for person and number. Nouns don't mark person but
+they do mark number and we currently only have sg on all the common nouns.
+Some of them may be dual, or even plural. We need to refine the lexicon and make
+that distinction so that our morphological rules aren't overgenerating.
+
 --------------------------------------------------------------------------------
 Issues with choices file
 --------------------------------------------------------------------------------
