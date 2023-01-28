@@ -1,0 +1,98 @@
+2. Testsuite documentation
+======valence-changing lexical rules======
+We added causativizer, benefactive, and detransitivizer.
+
+#27
+gu-ka me-lai si-be-ɖy
+3sg-erg that-dat die-cau-3sg.pst
+'He ordered her to die.'
+#28
+gu-ka me-lai si-ɖy
+3sg-erg that-dat die-3sg.pst
+'He ordered her to die.'
+
+The causative marker 'be' is attached to an intransitive verb stem '-si' in #27, such that the VP can select
+a new patient role 'me'. In comparison, #28 is ungrammatical, since the intransitive verb takes a patient 
+role as comps argument.
+
+#30
+ʦysy-ka sʌŋ mam-lai kluk-saʈ-ɖʉchild-erg wood mother-dat fetch-ben-3sg.3sg.pst'The child took out wood for mother.'
+Ex1
+ʦysy-ka sʌŋ kluk-saʈ-ɖʉchild-erg wood fetch-3sg.3sg.pst'The child took out wood.'
+
+The benefactive (or applicative) marker '-saʈ' is attached to a mono-transitive verb stem 'kluk', such that 
+the VP can select one role 'mam' as benefactor of the action. Ex1 is not in the testsuite, since it does 
+not contain a valence changing morpheme, but it should also be grammatical and showcases the effect of a 
+benefactive marker. Without 'saʈ', the VP only selects one argument in comps.
+
+#32
+khel per-siʈ-ɖaleg pinch-detr-3sg.pst'Leg got pinched.'
+
+The detransitivizer marker '-siʈ' removes the object from a transitive verb. In #32, 'per', which is a 
+transitive verb, after taking the detr morpheme, selects no argument in the comps list.
+N.b. We received an updated version of descriptive grammar by Doctor Lahaussois, where '-siʈ' is defined as 
+an allomorph for reflexivization. The main function is to express co-reference between two NPs. One of the 
+other functions is called 'anticausative', which corresponds to the detransitivizer function that we use 
+here. Our grammar has not yet incorporated this marker into the new reflexivization category.
+
+======adnominal possession======
+#35
+u-khlea am3sg.poss-dog sleep.3sg'His dog sleeps.'
+#36
+uma-khlea am3sg.poss-dog sleep.3sg'His dog sleeps.'
+#37
+uma am3sg.pron sleep.3sg'His (dog) sleeps.'
+All three sentences above are grammatical. Both 'u' and 'uma' are 3sg possessive markers attached to the 
+noun. The difference between 'u' and 'uma' is that 'u' must be prefixed to a noun, while 'uma' can be a 
+stand-alone word without being attached to a noun. We believe this construction is based on specific 
+discourse features, where the possessum can be assumed through context.
+
+======adverbial clausal modifiers======
+#62
+gu am mala go am-ŋu3sg sleep.3sg cond 1sg sleep.1sg'If he sleeps, I sleep.'
+#63
+gu am mala3sg sleep.3sg'If he sleeps'
+
+The conditional 'mala' connects two cluases, the first being the condition and the second being the result.
+It has to be between two clauses for the sentence to be grammatical. #63 is ungrammatical for this reason.
+
+======coordination======
+We have also added coordination rule for NPs and VPs.
+#60
+darembu popnar ba-t-ʦi
+Darembu Popnar be-pst-du
+'There were two people called Darempu and Popnar.'
+NPs do not take any coordinator between them, so #60 is grammatical.
+
+#56
+ba-ŋu ma am-ŋu ma am-ŋu
+be-1sg conj sleep-1sg conj sleep-1sg
+'I am and I sleep and I sleep.'
+On the other hand, VPs and clauses takes coordinator 'ma' in polysyndeton.
+n.b. Thulung is a pro-drop language. Pronouns are optional for VPs to form sentences.
+
+======tense======
+The majority of this week's work is on constructing position classes for verb endings. More specifically,
+Thulung verb suffixes select tense, number, and person in one (sometimes two) morpheme.
+
+#49
+gu-ka go-lai khlo-ŋiri3sg-erg 1sg-dat trap-3sg.1sg.pst'He trapped me.'
+#50
+gu-ka go-lai khlo-na3sg-erg 1sg-dat trap-3sg.2sg.pst'He trapped me.'
+#49 is grammatical, because '-ŋiri' selects a 3sg agent and 1st pagent in past tense. On the other hand,
+#50 is ungrammatical, because the verb suffix selects a 2sg patient, but a 1sg is marked as its patient in 
+dative.
+
+#41
+ba-t-tsi
+be-pst-3du
+'There were two people.'
+#42
+ba-ttsi
+be-3du.pst
+'There were two people.'
+Both #41 and $42 are grammatical. According to our descriptive grammar, '-t' is historically a past tense 
+marker and has fused with some person/number markers. Our grammar marks both cases grammatical. In #42, 
+the verb takes a past tense marker first, then a 3dual marker. In #43, the verb takes one single suffix 
+that 
+encodes both past tense and 3du for the subject.
