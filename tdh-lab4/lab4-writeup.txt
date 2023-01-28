@@ -127,18 +127,6 @@ n.b. Thulung is a pro-drop language. Pronouns are optional for VPs to form sente
 The majority of this week's work is on constructing position classes for verb endings. More specifically,
 Thulung verb suffixes select tense, number, and person in one (sometimes two) morpheme.
 
-#49
-gu-ka go-lai khlo-ŋiri
-3sg-erg 1sg-dat trap-3sg.1sg.pst
-'He trapped me.'
-#50
-gu-ka go-lai khlo-na
-3sg-erg 1sg-dat trap-3sg.2sg.pst
-'He trapped me.'
-#49 is grammatical, because '-ŋiri' selects a 3sg agent and 1st pagent in past tense. On the other hand,
-#50 is ungrammatical, because the verb suffix selects a 2sg patient, but a 1sg is marked as its patient in 
-dative.
-
 #41
 ba-t-tsi
 be-pst-3du
@@ -150,9 +138,7 @@ be-3du.pst
 Both #41 and #42 are grammatical. According to our descriptive grammar, '-t' is historically a past tense 
 marker and has fused with some person/number markers. Our grammar marks both cases grammatical. In #42, 
 the verb takes a past tense marker first, then a 3dual marker. In #43, the verb takes one single suffix 
-that 
-encodes both past tense and 3du for the subject.
-
+that encodes both past tense and 3du for the subject.
 
 
 --------------------------------------------------------------------------------
@@ -521,7 +507,7 @@ Documentation: Language properties
 1. Phononology
 In Thulung, there are allomorphs depending on the environment in which the 
 morpheme occurs. In most cases these allomorphs result from consonant 
-assimilation and vowel harmany. Currently, our implementation lists all possible
+assimilation and vowel harmony. Currently, our implementation lists all possible
 allomorphs as separate lexiral rule instances under one lexical rule type. For 
 example, both '-si-' and '-siʈ-' can be suffixed by '-ɖy'. However, the language
 should only allow the combination of '-siʈ-' and '-ɖy', since the endings of 
