@@ -361,16 +361,40 @@ means-because-prefix :=
 %prefix (* -miŋka)
 means-because-lex-rule.
 
-CAU-marker-suffix :=
+CAU-marker-suffix1 :=
 %suffix (* -be)
 CAU-marker-lex-rule.
 
-DETR-marker-suffix :=
-%suffix (* -si)
-DETR-marker-lex-rule.
+CAU-marker-suffix2 :=
+%suffix (* -ber)
+CAU-marker-lex-rule.
 
-BEN-marker-suffix :=
+CAU-marker-suffix3 :=
+%suffix (* -beʈ)
+CAU-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix1 :=
+%suffix (* -si)
+DETR-AND-MORE-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix2 :=
+%suffix (* -sin)
+DETR-AND-MORE-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix3 :=
+%suffix (* -siʈ)
+DETR-AND-MORE-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix4 :=
+%suffix (* -sik)
+DETR-AND-MORE-marker-lex-rule.
+
+BEN-marker-suffix1 :=
 %suffix (* -sa)
+BEN-marker-lex-rule.
+
+BEN-marker-suffix2 :=
+%suffix (* -saʈ)
 BEN-marker-lex-rule.
 
 HAB-marker-suffix :=
@@ -389,6 +413,14 @@ DEF-marker-suffix2 :=
 %suffix (* -soʈ)
 DEF-marker-lex-rule.
 
+DEF-marker-suffix3 :=
+%suffix (* -son)
+DEF-marker-lex-rule.
+
+DEF-marker-suffix4 :=
+%suffix (* -sok)
+DEF-marker-lex-rule.
+
 PON-marker-suffix1 :=
 %suffix (* -jɯl)
 PON-marker-lex-rule.
@@ -397,8 +429,20 @@ PON-marker-suffix2 :=
 %suffix (* -dzɯl)
 PON-marker-lex-rule.
 
-RES-marker-suffix :=
+RES-marker-suffix1 :=
 %suffix (* -le)
+RES-marker-lex-rule.
+
+RES-marker-suffix2 :=
+%suffix (* -leʈ)
+RES-marker-lex-rule.
+
+RES-marker-suffix3 :=
+%suffix (* -len)
+RES-marker-lex-rule.
+
+RES-marker-suffix4 :=
+%suffix (* -lek)
 RES-marker-lex-rule.
 
 ITF-marker-suffix1 :=
@@ -565,6 +609,6 @@ add-hearsay-marker-suffix :=
 %suffix (* -ʔe)
 add-hearsay-marker-lex-rule.
 
-overt-tense-past-prefix :=
-%prefix (* -t)
+overt-tense-past-suffix :=
+%suffix (* -t)
 overt-tense-past-lex-rule.
