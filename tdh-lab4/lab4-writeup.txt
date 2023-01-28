@@ -1,0 +1,417 @@
+Ling 567 / Bender
+Thulung | tdh
+Dolapo Martins
+Zoe Fang
+
+--------------------------------------------------------------------------------
+Lab 4 grammar on provided test corpus
+--------------------------------------------------------------------------------
+How many items parsed:                                  |                      |
+What is the average number of parses per parsed item:   |                      |
+How many parses did the most ambiguous item receive:    |                      |
+What (new or different) sources of ambiguity can you identify, if any?
+
+
+--------------------------------------------------------------------------------
+Lab 4 grammar on our custom test suite
+--------------------------------------------------------------------------------
+How many items parsed:                                  |                      |
+What is the average number of parses per parsed item:   |                      |
+How many parses did the most ambiguous item receive:    |                      |
+What (new or different) sources of ambiguity can you identify, if any?
+
+
+--------------------------------------------------------------------------------
+Documentation: Test suite phenomena
+--------------------------------------------------------------------------------
+======valence-changing lexical rules======
+We added causativizer, benefactive, and detransitivizer.
+
+#27
+gu-ka me-lai si-be-ɖy
+3sg-erg that-dat die-cau-3sg.pst
+'He ordered her to die.'
+#28
+gu-ka me-lai si-ɖy
+3sg-erg that-dat die-3sg.pst
+'He ordered her to die.'
+
+The causative marker 'be' is attached to an intransitive verb stem '-si' in #27, such that the VP can select
+a new patient role 'me'. In comparison, #28 is ungrammatical, since the intransitive verb takes a patient 
+role as comps argument.
+
+#30
+ʦysy-ka sʌŋ mam-lai kluk-saʈ-ɖʉ
+child-erg wood mother-dat fetch-ben-3sg.3sg.pst
+'The child took out wood for mother.'
+Ex1
+ʦysy-ka sʌŋ kluk-saʈ-ɖʉ
+child-erg wood fetch-3sg.3sg.pst
+'The child took out wood.'
+
+The benefactive (or applicative) marker '-saʈ' is attached to a mono-transitive verb stem 'kluk', such that 
+the VP can select one role 'mam' as benefactor of the action. Ex1 is not in the testsuite, since it does 
+not contain a valence changing morpheme, but it should also be grammatical and showcases the effect of a 
+benefactive marker. Without 'saʈ', the VP only selects one argument in comps.
+
+#32
+khel per-siʈ-ɖa
+leg pinch-detr-3sg.pst
+'Leg got pinched.'
+
+The detransitivizer marker '-siʈ' removes the object from a transitive verb. In #32, 'per', which is a 
+transitive verb, after taking the detr morpheme, selects no argument in the comps list.
+N.b. We received an updated version of descriptive grammar by Doctor Lahaussois, where '-siʈ' is defined as 
+an allomorph for reflexivization. The main function is to express co-reference between two NPs. One of the 
+other functions is called 'anticausative', which corresponds to the detransitivizer function that we use 
+here. Our grammar has not yet incorporated this marker into the new reflexivization category.
+
+======adnominal possession======
+#35
+u-khlea am
+3sg.poss-dog sleep.3sg
+'His dog sleeps.'
+#36
+uma-khlea am
+3sg.poss-dog sleep.3sg
+'His dog sleeps.'
+#37
+uma am
+3sg.pron sleep.3sg
+'His (dog) sleeps.'
+All three sentences above are grammatical. Both 'u' and 'uma' are 3sg possessive markers attached to the 
+noun. The difference between 'u' and 'uma' is that 'u' must be prefixed to a noun, while 'uma' can be a 
+stand-alone word without being attached to a noun. We believe this construction is based on specific 
+discourse features, where the possessum can be assumed through context.
+
+======adverbial clausal modifiers======
+#62
+gu am mala go am-ŋu
+3sg sleep.3sg cond 1sg sleep.1sg
+'If he sleeps, I sleep.'
+#63
+gu am mala
+3sg sleep.3sg
+'If he sleeps'
+
+The conditional 'mala' connects two cluases, the first being the condition and the second being the result.
+It has to be between two clauses for the sentence to be grammatical. #63 is ungrammatical for this reason.
+
+======coordination======
+We have also added coordination rule for NPs and VPs.
+#60
+darembu popnar ba-t-ʦi
+Darembu Popnar be-pst-du
+'There were two people called Darempu and Popnar.'
+NPs do not take any coordinator between them, so #60 is grammatical.
+
+#56
+ba-ŋu ma am-ŋu ma am-ŋu
+be-1sg conj sleep-1sg conj sleep-1sg
+'I am and I sleep and I sleep.'
+On the other hand, VPs and clauses takes coordinator 'ma' in polysyndeton.
+n.b. Thulung is a pro-drop language. Pronouns are optional for VPs to form sentences.
+
+======tense======
+The majority of this week's work is on constructing position classes for verb endings. More specifically,
+Thulung verb suffixes select tense, number, and person in one (sometimes two) morpheme.
+
+#49
+gu-ka go-lai khlo-ŋiri
+3sg-erg 1sg-dat trap-3sg.1sg.pst
+'He trapped me.'
+#50
+gu-ka go-lai khlo-na
+3sg-erg 1sg-dat trap-3sg.2sg.pst
+'He trapped me.'
+#49 is grammatical, because '-ŋiri' selects a 3sg agent and 1st pagent in past tense. On the other hand,
+#50 is ungrammatical, because the verb suffix selects a 2sg patient, but a 1sg is marked as its patient in 
+dative.
+
+#41
+ba-t-tsi
+be-pst-3du
+'There were two people.'
+#42
+ba-ttsi
+be-3du.pst
+'There were two people.'
+Both #41 and #42 are grammatical. According to our descriptive grammar, '-t' is historically a past tense 
+marker and has fused with some person/number markers. Our grammar marks both cases grammatical. In #42, 
+the verb takes a past tense marker first, then a 3dual marker. In #43, the verb takes one single suffix 
+that 
+encodes both past tense and 3du for the subject.
+
+
+
+--------------------------------------------------------------------------------
+Documentation: Changes made to the choices file
+--------------------------------------------------------------------------------
+1. Tense
+In Thulung, the tense marker on the verb is portmanteauxed with the person and 
+number ("role") marker. The noun only inflects for number. The tense position 
+encodes the tense (non-past or past) and maximally both the agent and patient 
+roles. For transitive verbs in the past tense, there is an overt tense morpheme 
+(/-t/) that can stand alone; when used, it comes before the aspect morphology. 
+However, this is not obligatory and transitive verbs in both tenses often make 
+use of the portmanteauxed tense+role slot, in which case the tense is 
+morphologically combined with the role. There is no overt non-past marker for
+either transitive or intransitive verbs. Tense and role are morphologically one.
+
+That is, (A) is the default behavior but (B) is also possible. 
+It is possible that the tense + role distinction was once (C) and changed. 
+
+A. (in-)transitive-verb                      -> aspect -> tense+role marker 
+B. transitive-verb -> -t (optional, [+past]) -> aspect -> tense+role marker
+C. verb -> tense marker -> aspect marker -> role marker
+
+The aspect position class was previously defined in Lab 3 and took any verb as
+input. In order to model tense and account for the alternation in (A) and (B),
+we defined the following position classes 
+
+        verb-pc86_name=ASPECT-POSITION-CLASS
+        verb-pc86_obligatory=on
+        verb-pc86_order=suffix
+        verb-pc86_inputs=verb, verb-pc96
+
+This class takes any verb as input or a Past-Tense verb with the overt affix.
+
+        verb-pc96_name=Transitive-Past-Overt-Tense-Position-Class
+        verb-pc96_order=suffix
+        verb-pc96_inputs=tverb
+            verb-pc96_lrt1_name=overt-tense-past
+            verb-pc96_lrt1_lri1_inflecting=yes
+            verb-pc96_lrt1_lri1_orth=-t
+
+Then, we define the portmanteauxed tense and role position class whose input is 
+the aspect class. The aspect class is marked obligatory (unlike verb-pc96) with 
+a lexical rule for underspecification. We are still refining this class.
+
+        verb-pc95_name=ROLE-POSITION-CLASS
+        verb-pc95_obligatory=on
+        verb-pc95_order=suffix
+        verb-pc95_inputs=verb-pc86
+            verb-pc95_lrt1_lri1_inflecting=no
+
+This role position class has two subtypes, intransitive and transitive verbs.
+
+For the (simpler) intransitive paradigm, we have a position class with defined
+lexical rules corresponding to the known combination of agent and patient roles
+that are marked on the verb. One such lexical rule, is the 1sg-Non-Past which
+adds the Non-Past tense to the verb and marks the subject as 1sg, using the 
+morpheme /-ŋu/.
+
+        verb-pc93_name=INTRANSITIVE-TENSE-ROLE-MARKING
+        verb-pc93_order=suffix
+        verb-pc93_inputs=verb-pc95
+            verb-pc93_require1_others=iverb
+            verb-pc93_lrt1_name=1sg-Non-Past
+                verb-pc93_lrt1_feat1_name=pernum
+                verb-pc93_lrt1_feat1_value=1sg
+                verb-pc93_lrt1_feat1_head=subj
+                verb-pc93_lrt1_feat2_name=tense
+                verb-pc93_lrt1_feat2_value=nonpast
+                verb-pc93_lrt1_feat2_head=verb
+                verb-pc93_lrt1_lri1_inflecting=yes
+                verb-pc93_lrt1_lri1_orth=-ŋu
+
+The transitive paradigm is much more complex. verb-pc89 has two lexical rules,
+which add tense. We have not defined non-past endings but it will follow the 
+process we describe for past endings. For past-transitive constructions that do 
+not attach the overt past-tense morpheme before the aspect morphology, there is 
+a zero morpheme lexical rule that will add tense: [+past].
+
+        verb-pc89_name=TRANSITIVE-ROLE-MARKING
+        verb-pc89_order=suffix
+        verb-pc89_inputs=verb-pc95
+        verb-pc89_require1_others=tverb
+        verb-pc89_lrt1_name=Non-Past-Tense
+            verb-pc89_lrt1_feat1_name=tense
+            verb-pc89_lrt1_feat1_value=nonpast
+            verb-pc89_lrt1_feat1_head=verb
+            verb-pc89_lrt1_lri1_inflecting=no
+        verb-pc89_lrt3_name=Past-Tense-Zero-Morpheme
+            verb-pc89_lrt3_feat1_name=tense
+            verb-pc89_lrt3_feat1_value=past
+            verb-pc89_lrt3_feat1_head=verb
+
+To add the role feature and morphology, we define a sub-class of verb-pc89, which
+only adds the (optional) zero-morpheme person-number features of the patient.
+This class has a lexical rule for every known person-number instance of the
+patient that has overt morphology in the Agent-Patient paradigm.
+The role morphology takes into account the combination of the Agent-Patient 
+per-num features, where neither is optional.
+
+        verb-pc92_name=Past-Patient-Role-Marker
+        verb-pc92_order=suffix
+        verb-pc92_inputs=verb-pc89_lrt3
+        verb-pc92_lrt1_name=1sg-Patient-Past
+            verb-pc92_lrt1_feat1_name=pernum
+            verb-pc92_lrt1_feat1_value=1sg
+            verb-pc92_lrt1_feat1_head=obj
+            verb-pc92_lrt1_lri1_inflecting=no
+        verb-pc92_lrt2_name=Underspecified-Patient-Past
+            verb-pc92_lrt2_lri1_inflecting=no
+
+Next, a sub-class of verb-pc92 is derived which adds the (optional) features of
+the agent. This position class is where the overt morphology is added.
+
+        verb-pc91_name=Past-Agent-Role-Marker
+        verb-pc91_order=suffix
+        verb-pc91_inputs=verb-pc92
+            *verb-pc91_lrt1_name=2-or-3-sg-Agent-1sg-Patient-Past-Tense
+                verb-pc91_lrt1_feat1_name=pernum
+                verb-pc91_lrt1_feat1_value=2sg, 3sg
+                verb-pc91_lrt1_feat1_head=subj
+                verb-pc91_lrt1_require1_others=verb-pc92_lrt1
+                verb-pc91_lrt1_lri1_inflecting=yes
+                verb-pc91_lrt1_lri1_orth=-ŋiri
+                verb-pc91_lrt1_lri2_inflecting=yes
+                verb-pc91_lrt1_lri2_orth=-ŋri
+            *verb-pc91_lrt2_name=2-or-3-du-Agent-1sg-Patient-Past-Tense
+                verb-pc91_lrt2_feat1_name=pernum
+                verb-pc91_lrt2_feat1_value=2du, 3du
+                verb-pc91_lrt2_feat1_head=subj
+                verb-pc91_lrt2_require1_others=verb-pc92_lrt1
+                verb-pc91_lrt2_lri1_inflecting=yes
+                verb-pc91_lrt2_lri1_orth=-ŋiriʦi
+
+2. Hearsay evidential marker
+Building on the work in (1) above, we analyze the evidential hearsay marker as 
+an affix, not a separate word. This is motivated by our descriptive materials 
+which show that it as verb morphology that can also be nominalized. 
+
+        tseuga-ra                   pi-mri-?e-m.
+        N.farthest.field-LOC        break-3s.pol/3sPST-HS-NOM
+
+        tsahi   gui     thulug      dys-ti-?e-m.
+        CONTR   lpi     Thulung     become-lpi-HS-NOM
+
+The corpus previously had it as a word, so we made a change in our corpus to 
+attach it to the verb. There are still some questions here as gloss examples we 
+found online of our corpus show it as a standalone word.
+
+Previously in Lab 3, our choices file defined the hearsay marker as a noun-y 
+discourse marker.
+
+        noun131_name=hearsay-discourse-marker
+        noun131_det=imp
+            noun131_stem1_orth=ʔe
+            noun131_stem1_pred=_hearsay_n_rel
+
+N.B. We retained this due to some grammar-assembly errors we saw along the way but 
+we will strip this out as we know that it is incorrect. Not to mention, any 
+"correct" parses of this as a noun are incorrect. We have not seen any instances
+of it being parsed as a noun when we run our grammar on the modified corpus and 
+our test-suite. 
+
+        verb-pc94_name=HEARSAY-Marking-Position-Class
+        verb-pc94_order=suffix
+        verb-pc94_inputs=verb, verb-pc91, verb-pc92, verb-pc93, verb-pc95
+            verb-pc94_lrt1_name=add-hearsay-marker
+            verb-pc94_lrt1_feat1_name=evidential
+            verb-pc94_lrt1_feat1_value=hearsay
+            verb-pc94_lrt1_feat1_head=verb
+            verb-pc94_lrt1_lri1_inflecting=yes
+            verb-pc94_lrt1_lri1_orth=-ʔe
+
+This position class will take our tense-inflected verb as input.
+
+3. Coordination
+In Thulung, nouns are coodinated via asyndeton and VPs and Ss are coordinated
+polysyndetically using the conjunct /ma/. In our choices file we edited the 
+coordination section to mark them as such.
+
+        section=coordination
+            cs1_vp=on
+            cs1_s=on
+            cs1_pat=poly
+            cs1_mark=word
+            cs1_orth=ma
+            cs1_order=before
+            cs2_n=on
+            cs2_np=on
+            cs2_pat=a
+
+
+4. Adnominal possession
+Thulung adnominal possession occurs in one of three ways 
+    A. (Noun + genitive case marker) as one word using genitive case morphology
+    B. (Possessive pronoun) (Noun) as two separate words with possible 
+    additional morphology on the noun.
+    C. Possessive pronoun (prefix) + Noun, as one word with any additional
+    morphology on the noun.
+
+    Our current analysis accounts for (C). Although we already have case 
+    morphology added, we are working on added the proper features to mark 
+    N+Gen as possessive.
+
+In our choices file we defined possessive pronouns as affixes.
+        section=adnom-poss
+            poss-pron1_type=affix
+            poss-pron1_agr=agree
+            poss-pron1_mod-spec=spec
+
+Then, in our lexicon we defined a noun-type, noun132, that was a supertype for 
+our possessive pronouns that are words. This is for our future implementation of
+(B) above. The supertype defines the feature poss-pron1 as [plus].
+
+        noun132_name=POSSESSIVE-PRONOUNS
+            noun132_feat1_name=poss-pron1
+            noun132_feat1_value=plus
+        noun132_det=imp
+        noun133_name=1st-Poss-Pronoun
+        noun133_supertypes=noun132
+            noun133_feat1_name=pernum
+            noun133_feat1_value=1st
+        noun133_det=imp
+            noun133_stem1_orth=ama
+            noun133_stem1_pred=_poss_pron_n_rel
+        noun134_name=2nd-Poss-Pronoun
+        noun134_supertypes=noun132
+            noun134_feat1_name=pernum
+            noun134_feat1_value=2nd
+        noun134_det=imp
+            noun134_stem1_orth=ima
+            noun134_stem1_pred=_poss_pron_n_rel
+
+For our (working) analysis of the possessive pronoun prefixes, in our
+morphology we defined
+        noun-pc1_name=POSSESSIVE-POSITION-CLASS
+        noun-pc1_obligatory=on
+        noun-pc1_order=prefix
+        noun-pc1_inputs=noun-pc45
+        noun-pc1_lrt1_name=1st-Person-Possessive
+            noun-pc1_lrt1_feat1_name=pernum
+            noun-pc1_lrt1_feat1_value=1st
+            noun-pc1_lrt1_feat1_head=possessor
+            noun-pc1_lrt1_feat2_name=poss-pron1
+            noun-pc1_lrt1_feat2_value=plus
+            noun-pc1_lrt1_feat2_head=itself
+            noun-pc1_lrt1_lri1_inflecting=yes
+            noun-pc1_lrt1_lri1_orth=a-
+            noun-pc1_lrt1_lri2_inflecting=yes
+            noun-pc1_lrt1_lri2_orth=ama-
+            noun-pc1_lrt1_lri3_inflecting=yes
+            noun-pc1_lrt1_lri3_orth=aki-
+            noun-pc1_lrt1_lri4_inflecting=yes
+            noun-pc1_lrt1_lri4_orth=akima-
+            noun-pc1_lrt1_lri5_inflecting=yes
+            noun-pc1_lrt1_lri5_orth=aʦi-
+
+This then had lexical rule types corresponding to the 1st, 2nd, and 3rd person
+and each rule type had lexical instances of the possessive prefixes possible in
+Thulung. 
+
+N.B. In Thulung, some of the possesive pronouns can be both words an affixes.
+There was a historical morphological rule nominalizing the prefixes via /-ma/.
+
+--------------------------------------------------------------------------------
+Documentation: Test suite vs choices file
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Issues with choices file
+--------------------------------------------------------------------------------
+N/A.
