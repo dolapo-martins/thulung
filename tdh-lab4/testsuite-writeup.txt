@@ -76,12 +76,12 @@ The majority of this week's work is on constructing position classes for verb en
 Thulung verb suffixes select tense, number, and person in one (sometimes two) morpheme.
 
 #49
-gu-ka go-lai khlo-ŋiri3sg-erg 1sg-dat trap-3sg.1sg.pst'He trapped me.'
+ʦysy-ka go-lai khlo-ŋirichild-erg 1sg-dat trap-3sg.1sg.pst'The child trapped me.'
 #50
-gu-ka go-lai khlo-na3sg-erg 1sg-dat trap-3sg.2sg.pst'He trapped me.'
+ʦysy-ka khlo-nachild-erg trap-3sg.2sg.pst'The child trapped you.'
 #49 is grammatical, because '-ŋiri' selects a 3sg agent and 1st pagent in past tense. On the other hand,
-#50 is ungrammatical, because the verb suffix selects a 2sg patient, but a 1sg is marked as its patient in 
-dative.
+#50 is ungrammatical, because the verb suffix selects a 2sg patient, but there is no 2sg patient in the 
+sentnece.
 
 #41
 ba-t-tsi
