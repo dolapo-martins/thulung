@@ -7,6 +7,8 @@ Adnominal Possession
 Clausal Modifiers
 Nominalized Clauses
 Miscellaneous
+- changes to the lexicon for the translation
+- add person and number to common nouns
 
 --------------------------------------------------------------------------------
 Lab 5 initial grammar on provided test corpus -> use Lab 4 final grammar
@@ -57,7 +59,7 @@ Documentation: Changes made to the lexicon
 --------------------------------------------------------------------------------
 Documentation: MMT sentence translation
 --------------------------------------------------------------------------------
-@Dolapo
+The MMT sentence translation task was easy for the less complex sentences.
 
 
 
