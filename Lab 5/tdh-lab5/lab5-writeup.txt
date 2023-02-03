@@ -46,6 +46,13 @@ Documentation: Changes made to the choices file
 @Zoe
 
 
+--------------------------------------------------------------------------------
+Documentation: Changes made to the lexicon
+--------------------------------------------------------------------------------
+@Zoe
+
+
+
 
 --------------------------------------------------------------------------------
 Documentation: MMT sentence translation
