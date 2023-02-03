@@ -1,0 +1,622 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+1st-Person-Possessive-prefix1 :=
+%prefix (* a-)
+1st-Person-Possessive-lex-rule.
+
+1st-Person-Possessive-prefix2 :=
+%prefix (* ama-)
+1st-Person-Possessive-lex-rule.
+
+1st-Person-Possessive-prefix3 :=
+%prefix (* aki-)
+1st-Person-Possessive-lex-rule.
+
+1st-Person-Possessive-prefix4 :=
+%prefix (* akima-)
+1st-Person-Possessive-lex-rule.
+
+1st-Person-Possessive-prefix5 :=
+%prefix (* aʦi-)
+1st-Person-Possessive-lex-rule.
+
+2nd-Person-Possessive-prefix1 :=
+%prefix (* i-)
+2nd-Person-Possessive-lex-rule.
+
+2nd-Person-Possessive-prefix2 :=
+%prefix (* ini-)
+2nd-Person-Possessive-lex-rule.
+
+2nd-Person-Possessive-prefix3 :=
+%prefix (* ima-)
+2nd-Person-Possessive-lex-rule.
+
+2nd-Person-Possessive-prefix4 :=
+%prefix (* inima-)
+2nd-Person-Possessive-lex-rule.
+
+2nd-Person-Possessive-prefix5 :=
+%prefix (* iʦi-)
+2nd-Person-Possessive-lex-rule.
+
+3rd-Person-Possessive-prefix1 :=
+%prefix (* u-)
+3rd-Person-Possessive-lex-rule.
+
+3rd-Person-Possessive-prefix2 :=
+%prefix (* uni-)
+3rd-Person-Possessive-lex-rule.
+
+3rd-Person-Possessive-prefix3 :=
+%prefix (* uma-)
+3rd-Person-Possessive-lex-rule.
+
+3rd-Person-Possessive-prefix4 :=
+%prefix (* unima-)
+3rd-Person-Possessive-lex-rule.
+
+3rd-Person-Possessive-prefix5 :=
+%prefix (* uʦi-)
+3rd-Person-Possessive-lex-rule.
+
+1st-person-possessive-plural-inclusive-prefix1 :=
+%prefix (* iki-)
+1st-person-possessive-plural-inclusive-lex-rule.
+
+1st-person-possessive-plural-inclusive-prefix2 :=
+%prefix (* ikima-)
+1st-person-possessive-plural-inclusive-lex-rule.
+
+noun-pc2_lrt1-suffix1 :=
+%suffix (* -go)
+noun-pc2_lrt1-lex-rule.
+
+noun-pc2_lrt1-suffix2 :=
+%suffix (* -ʦip)
+noun-pc2_lrt1-lex-rule.
+
+noun-pc2_lrt1-suffix3 :=
+%suffix (* -ʦi)
+noun-pc2_lrt1-lex-rule.
+
+make_nominal_plurals-suffix :=
+%suffix (* -mim)
+make_nominal_plurals-lex-rule.
+
+noun-pc12_lrt1-suffix1 :=
+%suffix (* -ɖʌla)
+noun-pc12_lrt1-lex-rule.
+
+noun-pc12_lrt1-suffix2 :=
+%suffix (* -ɖʌːla)
+noun-pc12_lrt1-lex-rule.
+
+noun-pc12_lrt1-suffix3 :=
+%suffix (* -thjɵ)
+noun-pc12_lrt1-lex-rule.
+
+noun-pc13_lrt1-suffix :=
+%suffix (* -ŋa)
+noun-pc13_lrt1-lex-rule.
+
+noun-pc15_lrt1-suffix1 :=
+%suffix (* -ʈhal)
+noun-pc15_lrt1-lex-rule.
+
+noun-pc15_lrt1-suffix2 :=
+%suffix (* -bare)
+noun-pc15_lrt1-lex-rule.
+
+noun-pc15_lrt1-suffix3 :=
+%suffix (* -bʌri)
+noun-pc15_lrt1-lex-rule.
+
+noun-pc15_lrt2-suffix :=
+%suffix (* -nim)
+noun-pc15_lrt2-lex-rule.
+
+noun-pc22_lrt1-suffix :=
+%suffix (* -ram)
+noun-pc22_lrt1-lex-rule.
+
+locative-genitivation-suffix :=
+%suffix (* -ram)
+locative-genitivation-lex-rule.
+
+noun-pc23_lrt1-suffix :=
+%suffix (* -gunu)
+noun-pc23_lrt1-lex-rule.
+
+noun-pc36_lrt1-suffix :=
+%suffix (* -ɖy)
+noun-pc36_lrt1-lex-rule.
+
+noun-pc38_lrt1-prefix :=
+%prefix (* mi-)
+noun-pc38_lrt1-lex-rule.
+
+ERG+INSTR-case-marker-suffix :=
+%suffix (* -ka)
+ERG+INSTR-case-marker-lex-rule.
+
+DAT-case-marker-suffix :=
+%suffix (* -lai)
+DAT-case-marker-lex-rule.
+
+GEN-case-marker-suffix1 :=
+%suffix (* -ku)
+GEN-case-marker-lex-rule.
+
+GEN-case-marker-suffix2 :=
+%suffix (* -kam)
+GEN-case-marker-lex-rule.
+
+ABL-case-marker-suffix1 :=
+%suffix (* -lam)
+ABL-case-marker-lex-rule.
+
+ABL-case-marker-suffix2 :=
+%suffix (* -laŋka)
+ABL-case-marker-lex-rule.
+
+LOC-case-marker-suffix1 :=
+%suffix (* -ɖa)
+LOC-case-marker-lex-rule.
+
+LOC-case-marker-suffix2 :=
+%suffix (* -ra)
+LOC-case-marker-lex-rule.
+
+LOC-case-marker-suffix3 :=
+%suffix (* -nu)
+LOC-case-marker-lex-rule.
+
+hi-LOC-case-marker-suffix :=
+%suffix (* -la)
+hi-LOC-case-marker-lex-rule.
+
+loLOC-case-marker-suffix1 :=
+%suffix (* -ju)
+loLOC-case-marker-lex-rule.
+
+loLOC-case-marker-suffix2 :=
+%suffix (* -jy)
+loLOC-case-marker-lex-rule.
+
+levLOC-case-marker-suffix :=
+%suffix (* -nu)
+levLOC-case-marker-lex-rule.
+
+COM-case-marker-suffix :=
+%suffix (* -num)
+COM-case-marker-lex-rule.
+
+vocative_suffix-suffix :=
+%suffix (* -ʔa)
+vocative_suffix-lex-rule.
+
+polysyllabic-general-relativizer-prefix :=
+%prefix (* -m)
+polysyllabic-general-relativizer-lex-rule.
+
+non-past-monosyllabic-finite-relativizer-prefix :=
+%prefix (* -mim)
+non-past-monosyllabic-finite-relativizer-lex-rule.
+
+irrealis-noun-complementation-relativizer-prefix :=
+%prefix (* -mu)
+irrealis-noun-complementation-relativizer-lex-rule.
+
+alternative-non-finite-past-relativization-prefix :=
+%prefix (* -ma)
+alternative-non-finite-past-relativization-lex-rule.
+
+nominalize-suffix :=
+%suffix (* -m)
+nominalize-lex-rule.
+
+verb-pc1_lrt1-suffix1 :=
+%suffix (* -mu)
+verb-pc1_lrt1-lex-rule.
+
+verb-pc1_lrt1-suffix2 :=
+%suffix (* -pa)
+verb-pc1_lrt1-lex-rule.
+
+verb-pc1_lrt1-suffix3 :=
+%suffix (* -ɖa)
+verb-pc1_lrt1-lex-rule.
+
+verb-pc6_lrt1-suffix :=
+%suffix (* -ɖy)
+verb-pc6_lrt1-lex-rule.
+
+verb-pc9_lrt1-suffix :=
+%suffix (* -a)
+verb-pc9_lrt1-lex-rule.
+
+verb-pc11_lrt1-suffix :=
+%suffix (* -beʈ)
+verb-pc11_lrt1-lex-rule.
+
+verb-pc13_lrt1-suffix1 :=
+%suffix (* -khop)
+verb-pc13_lrt1-lex-rule.
+
+verb-pc13_lrt1-suffix2 :=
+%suffix (* -ljak)
+verb-pc13_lrt1-lex-rule.
+
+verb-pc14_lrt1-suffix1 :=
+%suffix (* -jy)
+verb-pc14_lrt1-lex-rule.
+
+verb-pc14_lrt1-suffix2 :=
+%suffix (* -ra)
+verb-pc14_lrt1-lex-rule.
+
+verb-pc18_lrt1-suffix :=
+%suffix (* -ma)
+verb-pc18_lrt1-lex-rule.
+
+verb-pc20_lrt1-suffix :=
+%suffix (* -lo)
+verb-pc20_lrt1-lex-rule.
+
+verb-pc46_lrt1-suffix1 :=
+%suffix (* -yɖy)
+verb-pc46_lrt1-lex-rule.
+
+verb-pc46_lrt1-suffix2 :=
+%suffix (* -ɖy)
+verb-pc46_lrt1-lex-rule.
+
+verb-pc46_lrt1-suffix3 :=
+%suffix (* -y)
+verb-pc46_lrt1-lex-rule.
+
+verb-pc63_lrt1-suffix1 :=
+%suffix (* -ram)
+verb-pc63_lrt1-lex-rule.
+
+verb-pc63_lrt1-suffix2 :=
+%suffix (* -p)
+verb-pc63_lrt1-lex-rule.
+
+verb-negation_lrt1-prefix :=
+%prefix (* mi-)
+verb-negation_lrt1-lex-rule.
+
+verb-pc72_lrt1-suffix :=
+%suffix (* -ŋ)
+verb-pc72_lrt1-lex-rule.
+
+verb-pc77_lrt1-suffix1 :=
+%suffix (* -ʣɵl)
+verb-pc77_lrt1-lex-rule.
+
+verb-pc77_lrt1-suffix2 :=
+%suffix (* -siʈ)
+verb-pc77_lrt1-lex-rule.
+
+verb-pc77_lrt1-suffix3 :=
+%suffix (* -tʌ)
+verb-pc77_lrt1-lex-rule.
+
+verb-pc77_lrt1-suffix4 :=
+%suffix (* -leʈ)
+verb-pc77_lrt1-lex-rule.
+
+verb-pc77_lrt1-suffix5 :=
+%suffix (* -sik)
+verb-pc77_lrt1-lex-rule.
+
+trans-only-aux-suffix1 :=
+%suffix (* -thʌ)
+trans-only-aux-lex-rule.
+
+trans-only-aux-suffix2 :=
+%suffix (* -sok)
+trans-only-aux-lex-rule.
+
+trans-only-aux-suffix3 :=
+%suffix (* -thap)
+trans-only-aux-lex-rule.
+
+intrans-only-aux-suffix :=
+%suffix (* -bhal)
+intrans-only-aux-lex-rule.
+
+verb-pc84_lrt1-suffix :=
+%suffix (* -n)
+verb-pc84_lrt1-lex-rule.
+
+means-suddenly-prefix1 :=
+%prefix (* ʣhoŋ-)
+means-suddenly-lex-rule.
+
+means-suddenly-prefix2 :=
+%prefix (* tyry-)
+means-suddenly-lex-rule.
+
+means-suddenly-prefix3 :=
+%prefix (* thoŋ-)
+means-suddenly-lex-rule.
+
+means-suddenly-prefix4 :=
+%prefix (* sep-)
+means-suddenly-lex-rule.
+
+means-suddenly-prefix5 :=
+%prefix (* phlɵ-)
+means-suddenly-lex-rule.
+
+means-suddenly-prefix6 :=
+%prefix (* hu-)
+means-suddenly-lex-rule.
+
+means-because-prefix :=
+%prefix (* -miŋka)
+means-because-lex-rule.
+
+CAU-marker-suffix1 :=
+%suffix (* -be)
+CAU-marker-lex-rule.
+
+CAU-marker-suffix2 :=
+%suffix (* -ber)
+CAU-marker-lex-rule.
+
+CAU-marker-suffix3 :=
+%suffix (* -beʈ)
+CAU-marker-lex-rule.
+
+CAU-marker-suffix4 :=
+%suffix (* -ben)
+CAU-marker-lex-rule.
+
+CAU-marker-suffix5 :=
+%suffix (* -bek)
+CAU-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix1 :=
+%suffix (* -si)
+DETR-AND-MORE-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix2 :=
+%suffix (* -sin)
+DETR-AND-MORE-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix3 :=
+%suffix (* -siʈ)
+DETR-AND-MORE-marker-lex-rule.
+
+DETR-AND-MORE-marker-suffix4 :=
+%suffix (* -sik)
+DETR-AND-MORE-marker-lex-rule.
+
+BEN-marker-suffix1 :=
+%suffix (* -sa)
+BEN-marker-lex-rule.
+
+BEN-marker-suffix2 :=
+%suffix (* -saʈ)
+BEN-marker-lex-rule.
+
+HAB-marker-suffix :=
+%suffix (* -thal)
+HAB-marker-lex-rule.
+
+STA-marker-suffix :=
+%suffix (* -ta)
+STA-marker-lex-rule.
+
+DEF-marker-suffix1 :=
+%suffix (* -so)
+DEF-marker-lex-rule.
+
+DEF-marker-suffix2 :=
+%suffix (* -soʈ)
+DEF-marker-lex-rule.
+
+DEF-marker-suffix3 :=
+%suffix (* -son)
+DEF-marker-lex-rule.
+
+DEF-marker-suffix4 :=
+%suffix (* -sok)
+DEF-marker-lex-rule.
+
+PON-marker-suffix1 :=
+%suffix (* -jɯl)
+PON-marker-lex-rule.
+
+PON-marker-suffix2 :=
+%suffix (* -dzɯl)
+PON-marker-lex-rule.
+
+RES-marker-suffix1 :=
+%suffix (* -le)
+RES-marker-lex-rule.
+
+RES-marker-suffix2 :=
+%suffix (* -leʈ)
+RES-marker-lex-rule.
+
+RES-marker-suffix3 :=
+%suffix (* -len)
+RES-marker-lex-rule.
+
+RES-marker-suffix4 :=
+%suffix (* -lek)
+RES-marker-lex-rule.
+
+ITF-marker-suffix1 :=
+%suffix (* -tha)
+ITF-marker-lex-rule.
+
+ITF-marker-suffix2 :=
+%suffix (* -thaʈ)
+ITF-marker-lex-rule.
+
+ITF-marker-suffix3 :=
+%suffix (* -that)
+ITF-marker-lex-rule.
+
+ITF-marker-suffix4 :=
+%suffix (* -thaɖ)
+ITF-marker-lex-rule.
+
+APX-marker-suffix1 :=
+%suffix (* -bal)
+APX-marker-lex-rule.
+
+APX-marker-suffix2 :=
+%suffix (* -bhal)
+APX-marker-lex-rule.
+
+2-or-3-sg-Agent-1sg-Patient-Past-Tense-suffix1 :=
+%suffix (* -ŋiri)
+2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule.
+
+2-or-3-sg-Agent-1sg-Patient-Past-Tense-suffix2 :=
+%suffix (* -ŋri)
+2-or-3-sg-Agent-1sg-Patient-Past-Tense-lex-rule.
+
+2-or-3-du-Agent-1sg-Patient-Past-Tense-suffix :=
+%suffix (* -ŋiriʦi)
+2-or-3-du-Agent-1sg-Patient-Past-Tense-lex-rule.
+
+2pl-Agent-1sg-Patient-Past-Tense-suffix :=
+%suffix (* -ŋirini)
+2pl-Agent-1sg-Patient-Past-Tense-lex-rule.
+
+3pl-Agent-1sg-Patient-Past-Tense-suffix :=
+%suffix (* -ŋirimi)
+3pl-Agent-1sg-Patient-Past-Tense-lex-rule.
+
+2sg-2du-2pl-3sg-3pl-or-3du-Agent-1de-Patient-Past-Tense-suffix :=
+%suffix (* -ʦiki)
+2sg-2du-2pl-3sg-3pl-or-3du-Agent-1de-Patient-Past-Tense-lex-rule.
+
+2pl-Agent-1de-Patient-Past-Tense-suffix :=
+%suffix (* -tiki)
+2pl-Agent-1de-Patient-Past-Tense-lex-rule.
+
+3pl-Agent-1de-Patient-Past-Tense-suffix :=
+%suffix (* -ʦikimi)
+3pl-Agent-1de-Patient-Past-Tense-lex-rule.
+
+3sg-Agent-1di-Patient-Past-Tense-suffix1 :=
+%suffix (* -ʦiki)
+3sg-Agent-1di-Patient-Past-Tense-lex-rule.
+
+3sg-Agent-1di-Patient-Past-Tense-suffix2 :=
+%suffix (* -saɖɖaʦi)
+3sg-Agent-1di-Patient-Past-Tense-lex-rule.
+
+3du-Agent-1di-Patient-Past-Tense-suffix :=
+%suffix (* -saɖɖaʦi)
+3du-Agent-1di-Patient-Past-Tense-lex-rule.
+
+3pl-Agent-1di-Patient-Past-Tense-suffix :=
+%suffix (* -saɖɖami)
+3pl-Agent-1di-Patient-Past-Tense-lex-rule.
+
+2sg-2du-2pl-3sg-or-3du-Agent-1pe-Patient-Past-Tense-suffix :=
+%suffix (* -tiki)
+2sg-2du-2pl-3sg-or-3du-Agent-1pe-Patient-Past-Tense-lex-rule.
+
+3pl-Agent-1pe-Patient-Past-Tense-suffix :=
+%suffix (* -tikimi)
+3pl-Agent-1pe-Patient-Past-Tense-lex-rule.
+
+3sg-or-3du-Agent-1pi-Patient-Past-Tense-suffix :=
+%suffix (* -saɖɖa)
+3sg-or-3du-Agent-1pi-Patient-Past-Tense-lex-rule.
+
+3du-Agent-Underspecified-Patient-Past-Tense-suffix :=
+%suffix (* -ʦi)
+3du-Agent-Underspecified-Patient-Past-Tense-lex-rule.
+
+3sg-Agent-3sg-Patient-Past-Tense-suffix :=
+%suffix (* -to)
+3sg-Agent-3sg-Patient-Past-Tense-lex-rule.
+
+1sg-Non-Past-suffix :=
+%suffix (* -ŋu)
+1sg-Non-Past-lex-rule.
+
+1sg-Past-suffix1 :=
+%suffix (* -ŋoro)
+1sg-Past-lex-rule.
+
+1sg-Past-suffix2 :=
+%suffix (* -ŋro)
+1sg-Past-lex-rule.
+
+1de-Non-Past-suffix :=
+%suffix (* -tsuku)
+1de-Non-Past-lex-rule.
+
+1di-or-2du-or-3du-suffix :=
+%suffix (* -tsi)
+1di-or-2du-or-3du-lex-rule.
+
+1de-Past-suffix1 :=
+%suffix (* -tsoko)
+1de-Past-lex-rule.
+
+1de-Past-suffix2 :=
+%suffix (* -ʦoko)
+1de-Past-lex-rule.
+
+1pi-suffix :=
+%suffix (* -ɖi)
+1pi-lex-rule.
+
+2sg-suffix1 :=
+%suffix (* -na)
+2sg-lex-rule.
+
+2sg-suffix2 :=
+%suffix (* -nna)
+2sg-lex-rule.
+
+2pl-suffix1 :=
+%suffix (* -ni)
+2pl-lex-rule.
+
+2pl-suffix2 :=
+%suffix (* -nni)
+2pl-lex-rule.
+
+1pe-Non-Past-suffix :=
+%suffix (* -ku)
+1pe-Non-Past-lex-rule.
+
+1pe-Past-suffix :=
+%suffix (* -toko)
+1pe-Past-lex-rule.
+
+3sg-Past-suffix :=
+%suffix (* -ɖa)
+3sg-Past-lex-rule.
+
+3pl-Non-Past-suffix :=
+%suffix (* -mi)
+3pl-Non-Past-lex-rule.
+
+3pl-Past-suffix :=
+%suffix (* -miri)
+3pl-Past-lex-rule.
+
+add-hearsay-marker-suffix :=
+%suffix (* -ʔe)
+add-hearsay-marker-lex-rule.
+
+overt-tense-past-suffix :=
+%suffix (* -t)
+overt-tense-past-lex-rule.
