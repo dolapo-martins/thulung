@@ -6,7 +6,7 @@
 ;;; based on Matrix customization system version of:
 ;;;     Fri 10 Jun 2022 12:58:58 AM UTC
 ;;;
-;;; 
+;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
@@ -1013,8 +1013,7 @@ DAT-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-cco
 
 possessor-lex-rule-1 := head-change-only-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD noun &
-                          [ CASE poss-case,
-                            POSSESSOR possessor-1 ] ].
+                          [ POSSESSOR possessor-1 ] ].
 
 GEN-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & infl-lex-rule & possessor-lex-rule-1 &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE GEN ].
