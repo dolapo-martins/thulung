@@ -115,7 +115,7 @@ sakham := COMMON-NOUNS-noun-lex &
 
 subupo := COMMON-NOUNS-noun-lex &
   [ STEM < "subupo" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cock_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
 
 swad := COMMON-NOUNS-noun-lex &
   [ STEM < "swad" >,
@@ -131,7 +131,7 @@ tamaʣu := COMMON-NOUNS-noun-lex &
 
 thuri := COMMON-NOUNS-noun-lex &
   [ STEM < "thuri" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_shuttle_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
 
 ɖylymʦa := COMMON-NOUNS-noun-lex &
   [ STEM < "ɖylymʦa" >,
@@ -2852,7 +2852,7 @@ bhane := aux3-aux-lex &
 
 mala_1 := condition-cl-mod-adverb-lex &
   [ STEM < "mala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cond_subord_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_cond_a_rel" ].
 
 ma1 := conj-lex &
   [ STEM < "ma" >,
