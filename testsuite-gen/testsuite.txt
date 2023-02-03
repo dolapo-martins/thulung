@@ -594,3 +594,33 @@ Phenomena: {cl-mod}
 mala go am-ŋu
 cond 1sg sleep.1sg
 'If I sleep.'
+
+
+#66
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tense}
+khlea-mim ʌms-mi
+dog.3pl sleep.3pl.npst
+'Dogs sleep'
+
+
+#67
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tense}
+khlea-mim thuri khaʈ-mi
+dog.3pl car.3pl chase.3pl.3pl.npst
+'Dogs chase cars'
+
+
+#68
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tense}
+go gana khaʈ-ni
+1sg 2sg chase.1sg.2sg.npst
+'I chase you'
