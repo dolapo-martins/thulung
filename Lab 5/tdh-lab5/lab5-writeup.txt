@@ -7,3 +7,54 @@ Adnominal Possession
 Clausal Modifiers
 Nominalized Clauses
 Miscellaneous
+
+--------------------------------------------------------------------------------
+Lab 5 initial grammar on provided test corpus -> use Lab 4 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XX.XX         |
+How many parses did the most ambiguous item receive:    |         XXX          |
+
+
+--------------------------------------------------------------------------------
+Lab 5 initial grammar on our custom test suite -> use Lab 4 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XX.XX         |
+How many parses did the most ambiguous item receive:    |         XXX          |
+
+
+--------------------------------------------------------------------------------
+Lab 5 final grammar on provided test corpus -> use Lab 4 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XX.XX         |
+How many parses did the most ambiguous item receive:    |         XXX          |
+
+
+--------------------------------------------------------------------------------
+Lab 5 final grammar on our custom test suite -> use Lab 4 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XX.XX         |
+How many parses did the most ambiguous item receive:    |         XXX          |
+
+
+--------------------------------------------------------------------------------
+Documentation: Changes made to the choices file
+--------------------------------------------------------------------------------
+@Zoe
+
+
+
+--------------------------------------------------------------------------------
+Documentation: MMT sentence translation
+--------------------------------------------------------------------------------
+@Dolapo
+
+
+
+--------------------------------------------------------------------------------
+Documentation: MT set-up
+--------------------------------------------------------------------------------
+@Dolapo
