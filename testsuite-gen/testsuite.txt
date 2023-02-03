@@ -611,7 +611,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tense}
-khlea-mim thuri khaʈ-mi
+khlea-mim thuri-mim khaʈ-mi
 dog.3pl car.3pl chase.3pl.3pl.npst
 'Dogs chase cars'
 
