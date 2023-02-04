@@ -3,58 +3,170 @@ Thulung | tdh
 Dolapo Martins
 Zoe Fang
 
-Adnominal Possession
-Clausal Modifiers
-Nominalized Clauses
-Miscellaneous
-- changes to the lexicon for the translation
-- add person and number to common nouns
-
 --------------------------------------------------------------------------------
 Lab 5 initial grammar on provided test corpus -> use Lab 4 final grammar
 --------------------------------------------------------------------------------
-How many items parsed:                                  |         XX           |
-What is the average number of parses per parsed item:   |        XX.XX         |
-How many parses did the most ambiguous item receive:    |         XXX          |
+How many items parsed:                                  |         48           |
+What is the average number of parses per parsed item:   |        12.58         |
+How many parses did the most ambiguous item receive:    |         224          |
+What (new or different) sources of ambiguity can you identify, if any?
+>>> Our main source of ambiguity is due to unconstrained nouns. Right now, 
+we have only specified person=3 for our nouns. There are various combinations of
+agent and patient roles, marked on the verb, where the agent might be 3sg but
+the patient can be anything and vice versa. The patient roles are all defined as
+zero-morphemes so you can have a rule ordering of (ex.).
+        3du patient (unmarked) -> 3sg agent
+        2du patient (unmarked) -> 3sg agent
+        1sg patient (unmarked) -> 3sg agent
+        2sg patient (unmarked) -> 3sg agent
 
+Additionally, our analysis of coordination is not quite complete and we are 
+getting quite a bit of ambiguity due to TOP and BOTTOM coordination.
 
 --------------------------------------------------------------------------------
 Lab 5 initial grammar on our custom test suite -> use Lab 4 final grammar
 --------------------------------------------------------------------------------
-How many items parsed:                                  |         XX           |
-What is the average number of parses per parsed item:   |        XX.XX         |
-How many parses did the most ambiguous item receive:    |         XXX          |
-
-
---------------------------------------------------------------------------------
-Lab 5 final grammar on provided test corpus -> use Lab 4 final grammar
---------------------------------------------------------------------------------
-How many items parsed:                                  |         XX           |
-What is the average number of parses per parsed item:   |        XX.XX         |
-How many parses did the most ambiguous item receive:    |         XXX          |
-
+How many items parsed:                                  |         19           |
+What is the average number of parses per parsed item:   |        13.14         |
+How many parses did the most ambiguous item receive:    |         212          |
+>>> The source of ambiguity is the same as above, since we are using the same 
+grammar.
 
 --------------------------------------------------------------------------------
-Lab 5 final grammar on our custom test suite -> use Lab 4 final grammar
+Lab 5 final grammar on provided test corpus
 --------------------------------------------------------------------------------
-How many items parsed:                                  |         XX           |
-What is the average number of parses per parsed item:   |        XX.XX         |
-How many parses did the most ambiguous item receive:    |         XXX          |
+How many items parsed:                                  |         43           |
+What is the average number of parses per parsed item:   |        8.65          |
+How many parses did the most ambiguous item receive:    |         224          |
+>>> Our main source of ambiguity of the final grammar is due to NP coordination. 
+Coordination of nouns forms in asyndeton. As a result, when there are three 
+nouns in a row, any adjacent two of them can form a NP and then form a new NP 
+subject with the third one, or one of the NPs can be the daughter of a VP. The 
+following example illustrates this ambiguity.
+memlo mɵ khakʦilip lwas-ʦi
+N     N    N          VP
+Some parses:
+((N N) N) VP
+(N (N N)) VP
+(N N) (N VP)
+N ((N N) VP)
 
+--------------------------------------------------------------------------------
+Lab 5 final grammar on our custom test suite
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         20           |
+What is the average number of parses per parsed item:   |        13.14         |
+How many parses did the most ambiguous item receive:    |         212          |
+>>> The source of ambiguity is the same as above, since we are using the same 
+grammar. The following sentence received the most parses.
+darembu ma popnar ba-t-ʦi-ʔe
+N       N  N      VP
 
 --------------------------------------------------------------------------------
 Documentation: Changes made to the choices file
 --------------------------------------------------------------------------------
-@Zoe
+1. Adnominal Possession
+In Thulung, there are two strategies for adnominal possession. 
+section=adnom-poss
+  poss-strat1_order=head-final
+  poss-strat1_mod-spec=mod
+  poss-strat1_mark-loc=possessor
+  poss-strat1_possessor-type=affix
+  poss-strat1_possessor-affix-agr=non-agree
+  
+
+The first one is through genitive case on common nouns. The possessor takes a 
+GEN case marker and does not need to agree with the possessum. The possessor 
+precedes the possessor. This strategy is as shown in the poss-strat1 above. The 
+following snippet of choices file and tdl file shows that gen-marker-lex-rule 
+allows poss-strat feature and inherits from possessor-lex-rule.
+noun-pc45_lrt3_name=GEN-case-marker
+      noun-pc45_lrt3_feat1_name=case
+      noun-pc45_lrt3_feat1_value=GEN
+      noun-pc45_lrt3_feat1_head=itself
+      noun-pc45_lrt3_feat2_name=poss-strat1
+      noun-pc45_lrt3_feat2_value=possessor
+      noun-pc45_lrt3_feat2_head=itself
+      noun-pc45_lrt3_lri1_inflecting=yes
+      noun-pc45_lrt3_lri1_orth=-ku
+      noun-pc45_lrt3_lri2_inflecting=yes
+      noun-pc45_lrt3_lri2_orth=-kam
+GEN-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
+ possessor-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE GEN ].
+
+The second strategy, which is the use of possessive pronouns, has been 
+implemented in the previous lab. We have added a noun pc for possessive pronouns  
+with the feature poss-pron1 as [plus]. In this strategy, the possessive pronouns 
+are prefixes to the possessum.
+poss-pron1_type=affix
+  poss-pron1_agr=non-agree
+  poss-pron1_mod-spec=spec
+
+2. Nominalized Clauses
+In Thulung, reasons and quotations form as nominalized clauses. The nominalized
+clause takes a '-m' suffix on the verb. This morpheme is implemented in clausal
+modifiers. The IGT below shows the use of a nominalized clause.
+bhansa go  khok-to-m             rwak-tafood   1sg cook-1sg.3sg.pst-NMLZ say-3sg.pst
+
+The following snippet shows the implementation of clausal nominalization 
+strategy.
+section=nominalclause
+  ns1_name=NOMN
+  ns1_level=high
+  ns1_nmzRel=yes
+
+3. Clausal Modifiers
+We have implemented two cl-mod strategies.
+section=clausalmods
+  cms1_position=before
+  cms1_modifier-attach=s
+  cms1_subordinator=free
+  cms1_subposition=before
+  cms1_subordinator-type=adverb
+  cms1_adverb-attach=s
+    cms1_freemorph1_orth=mala
+    cms1_freemorph1_pred=_cond_subord_rel
+adv1_name=condition-cl-mod
+    adv1_stem1_orth=mala
+    adv1_stem1_pred=_cond_subord_rel
+  adv1_type=manner
+The first one is a free morpheme 'mala' that succeeds the reason and precedes 
+the action clause. We define it as an adverb in this section as well as in the 
+lexicon.
+
+  cms2_position=before
+  cms2_modifier-attach=s
+  cms2_subordinator=none
+    cms2_freemorph1_orth=-m
+    cms2_freemorph1_pred=_-m_subord_rel
+  cms2_pred=_nomn_subord_rel
+    cms2_feat1_name=nominalization
+    cms2_feat1_value=NOMN
+The second modifier is the nominalizer marker -m. The suffix -m attaches to a VP 
+and has feature value NOMN. 
+
+noun-pc47_inputs=verb-pc94
+    noun-pc47_lrt1_name=nominalize
+      noun-pc47_lrt1_feat1_name=nominalization
+      noun-pc47_lrt1_feat1_value=NOMN
+      noun-pc47_lrt1_feat1_head=itself
+      noun-pc47_lrt1_lri1_inflecting=yes
+      noun-pc47_lrt1_lri1_orth=-m
+The snippet above shows the lrt that adds NOMN feature to verb-pc94, which is 
+the hearsay marker position marker on verb. The morpheme template on verb 
+endings in Thulung is:
+aspect => tense/role => hearsay. 
+Since a hearsay marker is optional, we make this position class obligatory verbs 
+but add a zero-morpheme lrt, such that nominalization can attach after all 
+possible verb endings. 
 
 
 --------------------------------------------------------------------------------
 Documentation: Changes made to the lexicon
 --------------------------------------------------------------------------------
-@Zoe
-
-
-
+1. We changed the predicate 'shuttle' to 'car' and 'cock' to 'cat' to facilitate the work on mmt.
+2. We changed the pernum value of common nouns from '3rd' to '3sg' to allow pluralization and agreement.
 
 --------------------------------------------------------------------------------
 Documentation: MMT sentence translation

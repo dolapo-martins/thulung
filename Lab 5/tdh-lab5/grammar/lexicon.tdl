@@ -2852,7 +2852,7 @@ bhane := aux3-aux-lex &
 
 mala_1 := condition-cl-mod-adverb-lex &
   [ STEM < "mala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cond_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_cond_subord_rel" ].
 
 ma1 := conj-lex &
   [ STEM < "ma" >,

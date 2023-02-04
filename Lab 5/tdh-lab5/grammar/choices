@@ -1733,7 +1733,7 @@ section=lexicon
     aux3_stem1_orth=bhane
   adv1_name=condition-cl-mod
     adv1_stem1_orth=mala
-    adv1_stem1_pred=_cond_a_rel
+    adv1_stem1_pred=_cond_subord_rel
   adv1_type=manner
 
 section=morphology
@@ -1970,7 +1970,7 @@ section=morphology
       noun-pc46_lrt4_lri1_orth=-ma
   noun-pc47_name=NOMINALIZATION
   noun-pc47_order=suffix
-  noun-pc47_inputs=verb-pc91, verb-pc92
+  noun-pc47_inputs=verb-pc94
     noun-pc47_lrt1_name=nominalize
       noun-pc47_lrt1_feat1_name=nominalization
       noun-pc47_lrt1_feat1_value=NOMN
