@@ -73,7 +73,7 @@ section=adnom-poss
   poss-strat1_mark-loc=possessor
   poss-strat1_possessor-type=affix
   poss-strat1_possessor-affix-agr=non-agree
-  
+
 
 The first one is through genitive case on common nouns. The possessor takes a 
 GEN case marker and does not need to agree with the possessum. The possessor 
@@ -94,19 +94,58 @@ noun-pc45_lrt3_name=GEN-case-marker
 GEN-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
  possessor-lex-rule-1 &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE GEN ].
+  
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Darempu-ku khlea am
+Darempu-gen dog sleep.3sg
+'Darempu's dog sleeps.'
+This sentence is grammatical under the genitive construction.
 
 The second strategy, which is the use of possessive pronouns, has been 
+<<<<<<< Updated upstream
 implemented in the previous lab. We have added a noun pc for possessive pronouns with the feature poss-pron1 as [plus]. In this strategy, the possessive pronouns are prefixes to the possessum.
     poss-pron1_type=affix
       poss-pron1_agr=non-agree
       poss-pron1_mod-spec=spec
+=======
+implemented in the previous lab. We have added a noun pc for possessive pronouns  
+with the feature poss-pron1 as [plus]. In this strategy, the possessive pronouns 
+are prefixes to the possessum.
+poss-pron1_type=affix
+  poss-pron1_agr=non-agree
+  poss-pron1_mod-spec=spec
+  
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+u-khlea am
+3sg.poss-dog sleep.3sg
+'His dog sleeps.'
+This sentence is grammatical under the possessive pronoun construction.
+>>>>>>> Stashed changes
 
 2. Nominalized Clauses
 In Thulung, reasons and quotations form as nominalized clauses. The nominalized
 clause takes a '-m' suffix on the verb. This morpheme is implemented in clausal
 modifiers. The IGT below shows the use of a nominalized clause.
+<<<<<<< Updated upstream
       bhansa go  khok-to-m             rwak-ta
       food   1sg cook-1sg.3sg.pst-NMLZ say-3sg.pst
+=======
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cl-mod}
+bhansa go  khok-to-m             rwak-ta
+food   1sg cook-1sg.3sg.pst-NMLZ say-3sg.pst
+'She said "I cooked the food.'
+The sentence above is grammatical. The nominalizer is attached to the quoted VP.
+>>>>>>> Stashed changes
 
 The following snippet shows the implementation of clausal nominalization 
 strategy.
@@ -114,6 +153,7 @@ section=nominalclause
   ns1_name=NOMN
   ns1_level=high
   ns1_nmzRel=yes
+
 
 3. Clausal Modifiers
 We have implemented two cl-mod strategies.
@@ -142,7 +182,24 @@ lexicon.
   cms2_pred=_nomn_subord_rel
     cms2_feat1_name=nominalization
     cms2_feat1_value=NOMN
+<<<<<<< Updated upstream
 The second modifier is the nominalizer marker -m. The suffix -m attaches to a VP and has feature value NOMN. 
+=======
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cl-mod}
+gu am mala go am-ŋu
+3sg sleep.3sg cond 1sg sleep.1sg
+'If he sleeps, I sleep.'
+The sentence above shows the conditional subordinator 'mala'. The free morpheme
+occurs after the condition clause and is followed by the main clause.
+
+The second modifier is the nominalizer marker -m. The suffix -m attaches to a VP 
+and has feature value NOMN. An example of such is illustrated in the previous 
+section.
+>>>>>>> Stashed changes
 
 noun-pc47_inputs=verb-pc94
     noun-pc47_lrt1_name=nominalize
