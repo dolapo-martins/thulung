@@ -166,16 +166,26 @@ possible verb endings.
 --------------------------------------------------------------------------------
 Documentation: Changes made to the lexicon
 --------------------------------------------------------------------------------
-1. We changed the predicate 'shuttle' to 'car' and 'cock' to 'cat' to facilitate the work on mmt.
-2. We changed the pernum value of common nouns from '3rd' to '3sg' to allow pluralization and agreement.
+1. We changed the predicate 'shuttle' to 'car' and 'cock' to 'cat' to facilitate 
+the work on mmt.
+2. We changed the pernum value of common nouns from '3rd' to '3sg' to allow 
+pluralization and agreement.
 
 --------------------------------------------------------------------------------
 Documentation: MMT sentence translation
 --------------------------------------------------------------------------------
-The MMT sentence translation task was easy for the less complex sentences. For simple settings, such as (1)-(3), a direct translation is possible. First, we translated from English to Thulung by keeping English word order and replacing the English words with Thulung words. Then, we changed the order of the arguments to match Thulung's SOV order. For conjunctive phrases, we then added 
+The MMT sentence translation task was easy for the less complex sentences. For 
+simple settings, such as (1)-(3), a direct translation is possible. First, we 
+translated from English to Thulung by keeping English word order and replacing 
+the English words with Thulung words. Then, we changed the order of the 
+arguments to match Thulung's SOV order. For conjunctive phrases, we then added 
 /ma/ in the proper position.
 
-There are sentences we could not translate because we don't have a current analysis of wh- questions or adjectives! Additionally, Thulung does not have determiners so we are unsure how to translate sentences with those. Thulung does have demonstratives and we are considering an analysis of demonstratives since that class can function as determiners or pronouns.
+There are sentences we could not translate because we don't have a current 
+analysis of wh- questions or adjectives! Additionally, Thulung does not have 
+determiners so we are unsure how to translate sentences with those. Thulung does 
+have demonstratives and we are considering an analysis of demonstratives since 
+that class can function as determiners or pronouns.
 
 --------------------------------------------------------------------------------
 Documentation: MT set-up
