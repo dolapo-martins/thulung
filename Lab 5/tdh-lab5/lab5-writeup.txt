@@ -73,8 +73,6 @@ section=adnom-poss
   poss-strat1_mark-loc=possessor
   poss-strat1_possessor-type=affix
   poss-strat1_possessor-affix-agr=non-agree
-
-
 The first one is through genitive case on common nouns. The possessor takes a 
 GEN case marker and does not need to agree with the possessum. The possessor 
 precedes the possessor. This strategy is as shown in the poss-strat1 above. The 
@@ -105,19 +103,12 @@ Darempu-gen dog sleep.3sg
 This sentence is grammatical under the genitive construction.
 
 The second strategy, which is the use of possessive pronouns, has been 
-<<<<<<< Updated upstream
-implemented in the previous lab. We have added a noun pc for possessive pronouns with the feature poss-pron1 as [plus]. In this strategy, the possessive pronouns are prefixes to the possessum.
+implemented in the previous lab. We have added a noun pc for possessive pronouns 
+with the feature poss-pron1 as [plus]. In this strategy, the possessive pronouns 
+are prefixes to the possessum.
     poss-pron1_type=affix
       poss-pron1_agr=non-agree
       poss-pron1_mod-spec=spec
-=======
-implemented in the previous lab. We have added a noun pc for possessive pronouns  
-with the feature poss-pron1 as [plus]. In this strategy, the possessive pronouns 
-are prefixes to the possessum.
-poss-pron1_type=affix
-  poss-pron1_agr=non-agree
-  poss-pron1_mod-spec=spec
-  
 Source: author
 Vetted: f
 Judgment: g
@@ -126,16 +117,11 @@ u-khlea am
 3sg.poss-dog sleep.3sg
 'His dog sleeps.'
 This sentence is grammatical under the possessive pronoun construction.
->>>>>>> Stashed changes
 
 2. Nominalized Clauses
 In Thulung, reasons and quotations form as nominalized clauses. The nominalized
 clause takes a '-m' suffix on the verb. This morpheme is implemented in clausal
 modifiers. The IGT below shows the use of a nominalized clause.
-<<<<<<< Updated upstream
-      bhansa go  khok-to-m             rwak-ta
-      food   1sg cook-1sg.3sg.pst-NMLZ say-3sg.pst
-=======
 
 Source: author
 Vetted: f
@@ -145,7 +131,6 @@ bhansa go  khok-to-m             rwak-ta
 food   1sg cook-1sg.3sg.pst-NMLZ say-3sg.pst
 'She said "I cooked the food.'
 The sentence above is grammatical. The nominalizer is attached to the quoted VP.
->>>>>>> Stashed changes
 
 The following snippet shows the implementation of clausal nominalization 
 strategy.
@@ -174,18 +159,6 @@ The first one is a free morpheme 'mala' that succeeds the reason and precedes
 the action clause. We define it as an adverb in this section as well as in the 
 lexicon.
 
-  cms2_position=before
-  cms2_modifier-attach=s
-  cms2_subordinator=none
-    cms2_freemorph1_orth=-m
-    cms2_freemorph1_pred=_-m_subord_rel
-  cms2_pred=_nomn_subord_rel
-    cms2_feat1_name=nominalization
-    cms2_feat1_value=NOMN
-<<<<<<< Updated upstream
-The second modifier is the nominalizer marker -m. The suffix -m attaches to a VP and has feature value NOMN. 
-=======
-
 Source: author
 Vetted: f
 Judgment: g
@@ -196,10 +169,17 @@ gu am mala go am-ŋu
 The sentence above shows the conditional subordinator 'mala'. The free morpheme
 occurs after the condition clause and is followed by the main clause.
 
+  cms2_position=before
+  cms2_modifier-attach=s
+  cms2_subordinator=none
+    cms2_freemorph1_orth=-m
+    cms2_freemorph1_pred=_-m_subord_rel
+  cms2_pred=_nomn_subord_rel
+    cms2_feat1_name=nominalization
+    cms2_feat1_value=NOMN
 The second modifier is the nominalizer marker -m. The suffix -m attaches to a VP 
 and has feature value NOMN. An example of such is illustrated in the previous 
 section.
->>>>>>> Stashed changes
 
 noun-pc47_inputs=verb-pc94
     noun-pc47_lrt1_name=nominalize
@@ -212,8 +192,9 @@ The snippet above shows the lrt that adds NOMN feature to verb-pc94, which is
 the hearsay marker position marker on verb. The morpheme template on verb 
 endings in Thulung is:
   aspect => tense/role => hearsay. 
-Since a hearsay marker is optional, we make this position class obligatory verbs but add a zero-morpheme lrt, such that nominalization can attach after all possible verb endings. 
-
+Since a hearsay marker is optional, we make this position class obligatory on 
+verbs but add a zero-morpheme lrt, such that nominalization can attach to all 
+possible verb endings that we know of. 
 
 --------------------------------------------------------------------------------
 Documentation: Changes made to the lexicon
@@ -235,14 +216,23 @@ arguments to match Thulung's SOV order. For conjunctive phrases, we then added
 
 There are sentences we could not translate because we don't have a current 
 analysis of wh- questions or adjectives! Additionally, Thulung does not have 
-determiners so we are unsure how to translate sentences with those. Thulung does have demonstratives and we are considering an analysis of demonstratives since that class can function as determiners or pronouns.
+determiners so we are unsure how to translate sentences with those. Thulung does 
+have demonstratives and we are considering an analysis of demonstratives since 
+that class can function as determiners or pronouns.
 
 --------------------------------------------------------------------------------
 Documentation: MT set-up
 --------------------------------------------------------------------------------
-Translating the first sentence of eng and sje to tdh was eventually successful, however we did encounter an issue with generating the .dat file. The instructions were a bit vague on which directory we should run which command in but we were able to figure it out. Our error was a "No such file or directory" in reference to the tdh.dat file when executing step (9). We were compiling the grammar under mmt/grammars/tdh but the discussion board helped us figure out that we should be compiling under mmt/tm/tdh.
+Translating the first sentence of eng and sje to tdh was eventually successful, 
+however we did encounter an issue with generating the .dat file. The instructions
+ were a bit vague on which directory we should run which command in but we were 
+able to figure it out. Our error was a "No such file or directory" in reference 
+to the tdh.dat file when executing step (9). We were compiling the grammar under
+ mmt/grammars/tdh but the discussion board helped us figure out that we should 
+be compiling under mmt/tm/tdh.
 
-Both eng and sje reported successful unifies! One interesting thing is that we had a lot of output along the way and exhausted our RAM.
+Both eng and sje reported successful unifies! One interesting thing is that we 
+had a lot of output along the way and exhausted our RAM.
     ```
       ...
       ...
@@ -261,5 +251,6 @@ Both eng and sje reported successful unifies! One interesting thing is that we h
       Khlea-la ʌms-bhal -mbhaɖa-bek
       Khlea-mim-lai -maʌms-sik-ʦikimi bhaɖa-bek-ʦikimi
       NOTE: hit RAM limit while unpacking
-      NOTE: 633 passive, 752 active edges in final generation chart; built 3496 passives total. [39134 results]
+      NOTE: 633 passive, 752 active edges in final generation chart; built 
+3496 passives total. [39134 results]
     ```
