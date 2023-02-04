@@ -190,4 +190,26 @@ that class can function as determiners or pronouns.
 --------------------------------------------------------------------------------
 Documentation: MT set-up
 --------------------------------------------------------------------------------
-@Dolapo
+Translating the first sentence of eng and sje to tdh was eventually successful, however we did encounter an issue with generating the .dat file. The instructions were a bit vague on which directory we should run which command in but we were able to figure it out. Our error was a "No such file or directory" in reference to the tdh.dat file when executing step (9). We were compiling the grammar under mmt/grammars/tdh but the discussion board helped us figure out that we should be compiling under mmt/tm/tdh.
+
+Both eng and sje reported successful unifies! One interesting thing is that we had a lot of output along the way and exhausted our RAM.
+    ```
+      ...
+      ...
+      ...
+      Khlea-mim -muʌms-sik-ʦikimi -mabhaɖa-bek
+      Khlea-jy ʌms-sin bhaɖa-bek
+      Khlea-mim-ʔa ʌms-bhal -mbhaɖa
+      Khlea -maʌms-sik
+      Khlea-ra -maʌms-sin
+      Khlea-nu ʌms-bhal-tsi bhaɖa-m
+      Khlea-mim-laŋka -maʌms-sik
+      Khlea-nu -mimʌms-sik -mimbhaɖa-bek-ʦikimi
+      Khlea-nu ʌms-bek-ɖa -mabhaɖa-bek-ʦi
+      Khlea-nu -muʌms-siʈ-ʦi
+      Khlea-ʔa -muʌms-ben-ɖa
+      Khlea-la ʌms-bhal -mbhaɖa-bek
+      Khlea-mim-lai -maʌms-sik-ʦikimi bhaɖa-bek-ʦikimi
+      NOTE: hit RAM limit while unpacking
+      NOTE: 633 passive, 752 active edges in final generation chart; built 3496 passives total. [39134 results]
+    ```
