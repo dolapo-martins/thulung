@@ -3,6 +3,8 @@ Non-Possessive-lex := Non-Possessive-lex-rule.
 
 NOM-case-marker-lex := NOM-case-marker-lex-rule.
 
+no-negation-lex := no-negation-lex-rule.
+
 No-Aspect-Aspect-Marker-lex := No-Aspect-Aspect-Marker-lex-rule.
 
 Non-Past-Tense-Zero-Morpheme-lex := Non-Past-Tense-Zero-Morpheme-lex-rule.
@@ -33,10 +35,12 @@ Underspecified-Patient-lex := Underspecified-Patient-lex-rule.
 
 3du-Patient-lex := 3du-Patient-lex-rule.
 
-3sg-Not-Past-lex := 3sg-Not-Past-lex-rule.
+3sg-Non-Past-lex := 3sg-Non-Past-lex-rule.
 
 Underspecified-Tense-Intransitive-lex := Underspecified-Tense-Intransitive-lex-rule.
 
 ROLE-POSITION-CLASS-lex := ROLE-POSITION-CLASS-lex-rule.
 
 Underspecified-Agent-Role-NonPast-Tense-Transitive-lex := Underspecified-Agent-Role-NonPast-Tense-Transitive-lex-rule.
+
+no-mood-marker-lex := no-mood-marker-lex-rule.
