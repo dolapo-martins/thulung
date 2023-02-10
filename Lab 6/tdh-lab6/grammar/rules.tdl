@@ -1,0 +1,42 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+decl-head-opt-subj := decl-head-opt-subj-phrase.
+
+high-nominalized-clause := high-nominalized-clause-phrase.
+
+comp-head := comp-head-phrase.
+
+subj-head := subj-head-phrase.
+
+adj-head-int := adj-head-int-phrase.
+
+head-spec := head-spec-phrase.
+
+bare-np := bare-np-phrase.
+
+adv1-bottom-coord := adv1-bottom-coord-rule.
+
+adv1-mid-coord := adv1-mid-coord-rule.
+
+adv1-top-coord := adv1-top-coord-rule.
+
+s1-top-coord := s1-top-coord-rule.
+
+s1-bottom-coord := s1-bottom-coord-rule.
+
+n2-top-coord := n2-top-coord-rule.
+
+n2-bottom-coord := n2-bottom-coord-rule.
+
+np2-top-coord := np2-top-coord-rule.
+
+np2-bottom-coord := np2-bottom-coord-rule.
+
+adj-head-scop := adj-head-scop-phrase.
+
+cond-modifying-clause := cond-modifying-clause-phrase.
+
+nmz-prehead-s-attach-modifying-clause-phrase := nmz-prehead-s-attach-modifying-clause-phrase.
+
+head-adj := my-head-adj-phrase.
+
+adj-head := my-adj-head-phrase.
