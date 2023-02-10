@@ -38,39 +38,36 @@ COG-ST : COG-ST
 
 
 PNG.PERNUM : PER NUM
-  3plain << third *
-  2plain << second *
-  1plain << first *
-  3polite <> third !
-  2polite <> second !
-  1polite <> first !
   3sg <> third sg
   2sg <> second sg
   1sg <> first sg
   3pl <> third pl
   2pl <> second pl
+  1pl <> first pl
   1pl_excl >> first pl
   1pl_incl >> first pl
-  1pl <> first pl
   3du >> third pl
   2du >> second pl
   1du_excl >> first pl
   1du_incl >> first pl
   1du >> first pl
+  3plain << third sg
+  2plain << second sg
+  1plain << first sg
+  3polite << third sg
+  2polite << second sg
+  1polite << first sg
   3rd <> third !
   3rd << third *
   2nd <> second !
   2nd << second *
   1st <> first !
   1st << first *
-  plain <> ! !
-  polite <> ! !
   sg <> ! sg
   sg << * sg
   pl <> ! pl
   pl << * pl
-  du << * pl
-  * <> * *
+  * <> ! !
 
 PNG.GEND : PNG.GEND
   * <> *
