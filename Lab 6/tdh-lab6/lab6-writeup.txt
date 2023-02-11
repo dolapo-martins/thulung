@@ -1,3 +1,63 @@
+1. semi.vpm
+Thulung has a pernum feature, so we revised this part in the semi to map to the separate per and num values.
+PNG.PERNUM : PER NUM
+  3sg <> third sg
+  2sg <> second sg
+  1sg <> first sg
+  3pl <> third pl
+  2pl <> second pl
+  1pl <> first pl
+  1pl_excl >> first pl
+  1pl_incl >> first pl
+  3du >> third pl
+  2du >> second pl
+  1du_excl >> first pl
+  1du_incl >> first pl
+  1du >> first pl
+  3plain << third sg
+  2plain << second sg
+  1plain << first sg
+  3polite << third sg
+  2polite << second sg
+  1polite << first sg
+  3rd <> third !
+  3rd << third *
+  2nd <> second !
+  2nd << second *
+  1st <> first !
+  1st << first *
+  sg <> ! sg
+  sg << * sg
+  pl <> ! pl
+  pl << * pl
+  * <> ! !
+
+English does not distinguish between dual and plural, so we mapped both plural (paucal) and dual from the internal side to the external side unidirectionally. Similarly, English also does not distinguish between inclusive and exclusive, so we also mapped 1du/pl_incl/excl to first pl unidirectionally. We also have a polite/plain distinction for number in Thulung that we mapped from English. 
+
+We also modified the tense and aspect section.
+E.TENSE : TENSE
+  nonpast << present
+  nonpast << future
+  past <> past
+  * <> *
+E.ASPECT : ASPECT
+  * >> no-aspect
+  no-aspect << [e]
+
+Since Thulung only has non-past and past tense, we mapped nonpast from the internal side to both present and future on the external side unidirectionally. We also defined no-aspect as the default aspect.
+
+The following shows a comparison before and after the change to semi.vpm and cutting down underspecified morphology. Our result if still ambiguous, possibly due to the verb ending system.  
+NOTE: hit RAM limit while unpacking
+NOTE: 1160 passive, 614 active edges in final generation chart; built 6852 passives total. [34573 results]
+NOTE: generated 1 / 1 sentences, avg 1536001k, time 26.59515s
+NOTE: transfer did 2 successful unifies and 0 failed ones
+
+NOTE: hit RAM limit while unpacking
+NOTE: 839 passive, 422 active edges in final generation chart; built 4015 passives total. [52604 results]
+NOTE: generated 1 / 1 sentences, avg 1536011k, time 131.18489s
+NOTE: transfer did 0 successful unifies and 0 failed ones
+
+
 A description of the phenomena you improved in the grammar (including both the morphology etc clean up and adnominal possession or clausal complements), including:
 Prose description of the phenomenon
 Prose description of your analysis
