@@ -1008,8 +1008,7 @@ DAT-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-cco
 possessor-lex-rule-1 := head-change-with-ccont-lex-rule &
   [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
                        HEAD noun &
-                            [ CASE poss-case,
-                              MOD.FIRST [ LOCAL [ CAT [ VAL.SPR < [ ] >,
+                            [ MOD.FIRST [ LOCAL [ CAT [ VAL.SPR < [ ] >,
                                                         HEAD +np &
                                                              [ PRON - ] ],
                                                   CONT.HOOK [ INDEX #possessum,
