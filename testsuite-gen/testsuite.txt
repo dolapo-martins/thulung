@@ -633,3 +633,23 @@ Phenomena: {tense}
 go gana khaʈ-ni
 1sg 2sg chase.1sg.2sg.npst
 'I chase you'
+
+
+#71
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+mɯ ʦysy am
+det child sleep.3sg
+'That child sleeps.'
+
+
+#72
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+mɯ am
+det sleep.3sg
+'That sleeps.'
