@@ -25,7 +25,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tense}
 be-t-thal-ʦi
-make-pst-hab-du
+make-pst-hab-3du
 'And the two sisters took care of their brother K and looked after him.'
 
 #2
