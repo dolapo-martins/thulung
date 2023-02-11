@@ -47,11 +47,14 @@ E.ASPECT : ASPECT
 Since Thulung only has non-past and past tense, we mapped nonpast from the internal side to both present and future on the external side unidirectionally. We also defined no-aspect as the default aspect.
 
 The following shows a comparison before and after the change to semi.vpm and cutting down underspecified morphology. Our result if still ambiguous, possibly due to the verb ending system.  
+
+Before:
 NOTE: hit RAM limit while unpacking
 NOTE: 1160 passive, 614 active edges in final generation chart; built 6852 passives total. [34573 results]
 NOTE: generated 1 / 1 sentences, avg 1536001k, time 26.59515s
 NOTE: transfer did 2 successful unifies and 0 failed ones
 
+After:
 NOTE: hit RAM limit while unpacking
 NOTE: 839 passive, 422 active edges in final generation chart; built 4015 passives total. [52604 results]
 NOTE: generated 1 / 1 sentences, avg 1536011k, time 131.18489s

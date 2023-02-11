@@ -1587,19 +1587,19 @@ bhansa := COMMON-NOUNS-noun-lex &
 
 gaʦi := 2nd-person-dual-pronoun-noun-lex &
   [ STEM < "gaʦi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gana := 2nd-person-singular-plain-pronoun-noun-lex &
   [ STEM < "gana" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gani := 2nd-person-singular-polite-pronoun-noun-lex &
   [ STEM < "gani" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gu := 3rd-person-singular-plain-pronoun-noun-lex &
   [ STEM < "gu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 khole := indefinite-pronoun-noun-lex &
   [ STEM < "khole" >,
@@ -1611,39 +1611,39 @@ reʦha := borrowed-from-Nepali-evidential-like-noun-noun-lex &
 
 go_2 := 1st-person-singular-pronoun-noun-lex &
   [ STEM < "go" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gutsuku := 1st-person-dual-exclusive-noun-lex &
   [ STEM < "gutsuku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gutsi_1 := 1st-person-dual-inclusive-noun-lex &
   [ STEM < "gutsi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 guku_2 := 1st-person-plural-exclusive-noun-lex &
   [ STEM < "guku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gui_2 := 1st-person-plural-inclusive-noun-lex &
   [ STEM < "gui" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gumi := 3rd-person-singular-polite-pronoun-noun-lex &
   [ STEM < "gumi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gumimim := 3rd-person-plural-pronoun-noun-lex &
   [ STEM < "gumimim" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 gutsi_2 := 3rd-person-dual-pronoun-noun-lex &
   [ STEM < "gutsi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 ganimim := 2nd-person-plural-pronoun-noun-lex &
   [ STEM < "ganimim" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 ʔe := hearsay-discourse-marker-noun-lex &
   [ STEM < "ʔe" >,
@@ -1651,47 +1651,47 @@ ganimim := 2nd-person-plural-pronoun-noun-lex &
 
 ama_2 := 1st-Poss-Pronoun-noun-lex &
   [ STEM < "ama" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 ima := 2nd-Poss-Pronoun-noun-lex &
   [ STEM < "ima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 uma := 3rd-Poss-Pronoun-noun-lex &
   [ STEM < "uma" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 atsima := 1de-poss-pronoun-noun-lex &
   [ STEM < "atsima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 akima := 1pe-poss-pronoun-noun-lex &
   [ STEM < "akima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 itsima_1 := 1di-poss-pronoun-noun-lex &
   [ STEM < "itsima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 ikima_2 := 1pi-poss-pronoun-noun-lex &
   [ STEM < "ikima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 itsima_2 := 2du-poss-pronoun-noun-lex &
   [ STEM < "itsima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 inima := 2pl-or-2polite-poss-pronoun-noun-lex &
   [ STEM < "inima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 utsima := 3du-poss-pronoun-noun-lex &
   [ STEM < "utsima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 unima_2 := 3pl-or-3polite-poss-pronoun-noun-lex &
   [ STEM < "unima" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poss_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_posspron_rel" ].
 
 bare := regarding-noun-noun-lex &
   [ STEM < "bare" >,
