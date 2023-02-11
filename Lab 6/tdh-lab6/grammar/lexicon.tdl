@@ -1025,10 +1025,6 @@ polym := COMMON-NOUNS-noun-lex &
   [ STEM < "polym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hole_n_rel" ].
 
-popnar := COMMON-NOUNS-noun-lex &
-  [ STEM < "popnar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_popnar_n_rel" ].
-
 porɵktam := COMMON-NOUNS-noun-lex &
   [ STEM < "porɵktam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bird.type_n_rel" ].
@@ -1579,11 +1575,11 @@ sukra := COMMON-NOUNS-noun-lex &
 
 darempu := COMMON-NOUNS-noun-lex &
   [ STEM < "darempu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_name_darempu_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_darempu.name_n_rel" ].
 
 popnar := COMMON-NOUNS-noun-lex &
   [ STEM < "popnar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_name_popnar_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_popnar.name_n_rel" ].
 
 bhansa := COMMON-NOUNS-noun-lex &
   [ STEM < "bhansa" >,
