@@ -1,4 +1,11 @@
-1. semi.vpm
+Ling 567 / Bender
+Thulung | tdh
+Dolapo Martins
+Zoe Fang
+
+--------------------------------------------------------------------------------
+Semi.vpm changes and generator output
+--------------------------------------------------------------------------------
 Thulung has a pernum feature, so we revised this part in the semi to map to the separate per and num values.
 PNG.PERNUM : PER NUM
   3sg <> third sg
@@ -47,26 +54,23 @@ E.ASPECT : ASPECT
 Since Thulung only has non-past and past tense, we mapped nonpast from the internal side to both present and future on the external side unidirectionally. We also defined no-aspect as the default aspect.
 
 The following shows a comparison before and after the change to semi.vpm and cutting down underspecified morphology. Our result if still ambiguous, possibly due to the verb ending system.  
+
+Before:
 NOTE: hit RAM limit while unpacking
 NOTE: 1160 passive, 614 active edges in final generation chart; built 6852 passives total. [34573 results]
 NOTE: generated 1 / 1 sentences, avg 1536001k, time 26.59515s
 NOTE: transfer did 2 successful unifies and 0 failed ones
 
+After:
 NOTE: hit RAM limit while unpacking
 NOTE: 839 passive, 422 active edges in final generation chart; built 4015 passives total. [52604 results]
 NOTE: generated 1 / 1 sentences, avg 1536011k, time 131.18489s
 NOTE: transfer did 0 successful unifies and 0 failed ones
 
-
-A description of the phenomena you improved in the grammar (including both the morphology etc clean up and adnominal possession or clausal complements), including:
-Prose description of the phenomenon
-Prose description of your analysis
-The specific changes you made to the tdl (paste in the actual tdl)
-Specific IGT I can use to test the analysis / investigate if something isn't working and you need help.
-
-
-We made a few changes to our grammar. 
-1. We added negation as a prefix, to the tense-inflected verb and updated our rules accordingly. In Thulung, verbs are negated by adding the prefixes /mi-/ or /me-/.
+--------------------------------------------------------------------------------
+New grammar phenomena and improvements
+--------------------------------------------------------------------------------
+We added negation as a prefix, to the tense-inflected verb and updated our rules accordingly. In Thulung, verbs are negated by adding the prefixes /mi-/ or /me-/.
           #69
           Source: author
           Vetted: f
@@ -96,9 +100,50 @@ We made a few changes to our grammar.
           dog-3pl neg-sleep-3pl.npst
           'Dogs do not sleep'
 
-2. We took an analysis of demonstratives as determiners. We did/do not understand how to create grammar rules such that two words are combined to create a phrase. That is, if we took an analysis of demonstratives as pronouns, how would we account for things like "Those cars" unless we analyzed demonstratives as determiners? 
+We used the customization system to add negation. In the choices file the change involved adding a negation PC which takes the tense+role postion class as input. This negation PC is input to the mood PC, which was also added for completeness. In Thulung, negation of past transitive verbs suffixes irrealis mood.
+
+    verb-pc68_name=NEGATION-position-class
+      verb-pc68_order=prefix
+      verb-pc68_inputs=verb-pc91, verb-pc93_lrt16, verb-pc97
+        verb-pc68_lrt1_name=add-negation-to-verb
+          verb-pc68_lrt1_feat1_name=negation
+          verb-pc68_lrt1_feat1_value=plus
+          verb-pc68_lrt1_feat1_head=verb
+          verb-pc68_lrt1_lri1_inflecting=yes
+          verb-pc68_lrt1_lri1_orth=mi-
+          verb-pc68_lrt1_lri2_inflecting=yes
+          verb-pc68_lrt1_lri2_orth=me-
+        verb-pc68_lrt2_name=no-negation
+          verb-pc68_lrt2_lri1_inflecting=no
+
+    verb-pc98_name=MOOD-Position-Class
+      verb-pc98_obligatory=on
+      verb-pc98_order=suffix
+      verb-pc98_inputs=verb-pc68
+        verb-pc98_lrt1_name=past-negation-IRR
+          verb-pc98_lrt1_feat1_name=mood
+          verb-pc98_lrt1_feat1_value=IRR
+          verb-pc98_lrt1_feat1_head=verb
+          verb-pc98_lrt1_require1_others=verb-pc68_lrt1
+          verb-pc98_lrt1_lri1_inflecting=yes
+          verb-pc98_lrt1_lri1_orth=-wa
+        verb-pc98_lrt2_name=IRR
+          verb-pc98_lrt2_feat1_name=mood
+          verb-pc98_lrt2_feat1_value=IRR
+          verb-pc98_lrt2_feat1_head=verb
+          verb-pc98_lrt2_lri1_inflecting=yes
+          verb-pc98_lrt2_lri1_orth=-wa
+          verb-pc98_lrt2_lri2_inflecting=yes
+          verb-pc98_lrt2_lri2_orth=-ja
+        verb-pc98_lrt3_name=no-mood-marker
+          verb-pc98_lrt3_lri1_inflecting=no
+
+This was too complex a change for us to make via TDL. We are working on using tdl to restrict the application of the irrealis suffix so that if its input is a past tense negated verb, it must attach. Right now, if the IRR is not suffixed, our grammar still parses the sentences (see #70 above).
+
+--------------------------------------------------------------------------------
+We took an analysis of demonstratives as determiners. We did/do not understand how to create grammar rules such that two words are combined to create a phrase. That is, if we took an analysis of demonstratives as pronouns, how would we account for things like "Those cars" unless we analyzed demonstratives as determiners? 
 - We need a grammar rule that says (DEM) NP => NP but since we don't know how to define that in the customization system, we chose to analyze demonstratives as determiners such that we can leverage (DP) NP => NP. This analysis isn't quite accurate however as our source materials do not reference any determiners in Thulung.
-Based on your Lab 5 comments, we should have posted this question to Canvas. 
+(We should have posted this question to Canvas.)
 
             #72
             Source: author
@@ -117,20 +162,138 @@ Based on your Lab 5 comments, we should have posted this question to Canvas.
             mɯ am
             det sleep-3sg
             'That sleeps.'
-3. We are working to reduce ambiguity caused by lexical rules to account for underspecification. We realized that we have been chaining rules instead of subclassing them. For example, our analysis of past transitives should have sublassed the TRANSITIVE-ROLE-MARKING position class instead of creating a new position class that takes it as input. 
+
+We also used the customization system for this change:
+    det1_name=proximal-demonstrative
+      det1_stem1_orth=o
+      det1_stem1_pred=_this_q_rel
+      det1_stem2_orth=oram
+      det1_stem2_pred=_this_q_rel
+    det2_name=distal-demonstrative
+      det2_stem1_orth=mɯ
+      det2_stem1_pred=_that_q_rel
+      det2_stem2_orth=mɯram
+      det2_stem2_pred=_that_q_rel
+
+--------------------------------------------------------------------------------
+The .tdl editing we did:
+(1) Remove auxiliaries which we haven't properly accounted for
+    in Thulung.tdl
+          ;;;verb-pc77_lrt1-lex-rule := AUXILIARIES-lex-rule-super.
+
+    in irules.tdl we commented out the other references, for ex.
+          ;verb-pc77_lrt1-suffix1 :=
+          ;%suffix (* -ʣɵl)
+          ;verb-pc77_lrt1-lex-rule.
+
+    in lexicon.tdl 
+          ;;; Auxiliaries
+
+          ;;;bhaɖa := aux1-aux-lex &
+          ;;;  [ STEM < "bhaɖa" > ].
+
+          ;;;bhara := aux2-aux-lex &
+          ;;;  [ STEM < "bhara" > ].
+
+          ;;;bhane := aux3-aux-lex &
+          ;;;  [ STEM < "bhane" > ].
+
+(2) Remove adverbs which we haven't properly account for
+    in Thulung.tdl
+          ;;;means-suddenly-lex-rule := Adverbs-lex-rule-super.
+          ;;;means-because-lex-rule := Adverbs-lex-rule-super.
+
+    in irules.tdl we commented out the other references, for ex.
+          ;means-suddenly-prefix1 :=
+          ;%prefix (* ʣhoŋ-)
+          ;means-suddenly-lex-rule. 
+
+(3) Remove semantically empty entries
+(4) Remove words without a predicate value
+
+--------------------------------------------------------------------------------
+1. We are working to reduce ambiguity caused by lexical rules to account for underspecification. We realized that we have been chaining rules instead of subclassing them. For example, our analysis of past transitives should have sublassed the TRANSITIVE-ROLE-MARKING position class instead of creating a new position class that takes it as input. 
+
     
-Take,
+2. Take
     be-t-thal-ʦi
     make-pst-hab
     'And the two sisters took care of their brother K and looked after him.'
 
 (As a reminder, our translations are not very accurate and combing through the ~20 PanGloss archives to find the correct translation takes a while.)
 
-The VP structure in Thulung, by order of attachment:
-verb -> (suffix: aspect) -> suffix: agent/patient portmanteauxed with tense -> (prefix: negation) -> (suffix: mood) -> (hearsay marker)
-Items in parens are optional.
+The VP structure in Thulung, by order of attachment (items in parens are optional):
+verb 
+|-> (suffix: aspect) 
+|-> suffix: agent/patient portmanteauxed with tense 
+|-> (prefix: negation) 
+|-> (suffix: mood) 
+|-> (hearsay marker)
 
-This sentence should be grammatical and we are able to get a unification result of verb6-transitive-verb-lex (be) -> overt-tense-past-lex -> HAB-MARKER-SUFFIX -> past-tense-zero-morpheme-lex -> underspecified-patient-lex ->3du-Agent-Underspecified-Patient-Past-Tense-lex -> no-negation-lex -> no-mood-marker-lex. LKB Top, however, is not able to do this and we don't know why.
+This sentence should be grammatical and we are able to get a unification result of 
+  verb5-transitive-verb-lex (be) 
+  |-> overt-tense-past-lex 
+  |-> HAB-MARKER-SUFFIX 
+  |-> past-tense-zero-morpheme-lex 
+  |-> underspecified-patient-lex 
+  |-> 3du-Agent-Underspecified-Patient-Past-Tense-lex 
+  |-> no-negation-lex 
+  |-> no-mood-marker-lex. 
+LKB Top, however, is not able to do this and we don't know why.
+
+3. We were working under the assumption that the grammaticality judgments in the testsuite were supposed to be our judgments of what should be working and not what is working. We run the test suite and then analyze if our grammar is producing the same judgments or not. We are working to audit the test suite and make sure that our grammatical sentences do parse and our ungrammatical do not.
+
+N.B. We didn't have time to implement the genitive construction like recommended in your Lab 5 comments (or the other comments). Since we've started using tdl editing, we are unsure what edits we need to make to get this working. We will send this for assistance in class sections.c
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Our input grammar for this week is the same as our Lab 5 final grammar. This has been a pattern for us for the previous assignments, is this okay? Or should we have a different input grammar?
+
+--------------------------------------------------------------------------------
+Lab 6 initial grammar on provided test corpus -> Lab 5 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         43           |
+What is the average number of parses per parsed item:   |        8.65          |
+How many parses did the most ambiguous item receive:    |         224          |
+>>> Our main source of ambiguity of the final grammar is due to NP coordination. 
+Coordination of nouns forms in asyndeton. As a result, when there are three 
+nouns in a row, any adjacent two of them can form a NP and then form a new NP 
+subject with the third one, or one of the NPs can be the daughter of a VP. The 
+following example illustrates this ambiguity.
+memlo mɵ khakʦilip lwas-ʦi
+N     N    N          VP
+Some parses:
+((N N) N) VP
+(N (N N)) VP
+(N N) (N VP)
+N ((N N) VP)
+
+--------------------------------------------------------------------------------
+Lab 6 initial grammar on our new custom test suite -> Lab 5 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XXXXX         |
+How many parses did the most ambiguous item receive:    |         XXX         |
+>>> The source of ambiguity is the same as above, since we are using the same 
+grammar. The following sentence received the most parses.
+darembu ma popnar ba-t-ʦi-ʔe
+N       N  N      VP
 
 
-N.B. We didn't have time  to implement the genitive construction like recommended in your Lab 5 comments. Since we've started using tdl editing, we are unsure what edits we need to make to get this working. We will send this for assistance in class sections.
+--------------------------------------------------------------------------------
+Lab 6 final grammar on our custom test suite -> use Lab 5 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XXXXX         |
+How many parses did the most ambiguous item receive:    |         XXX          |
+>>> The sources of ambiguity:
+
+
+--------------------------------------------------------------------------------
+Lab 6 final grammar on our custom test suite -> use Lab 5 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XXXXX         |
+How many parses did the most ambiguous item receive:    |         XX           |
+>>> The source of ambiguity:
