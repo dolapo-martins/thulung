@@ -2598,6 +2598,11 @@ bet := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "bet" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
+;;;above and below should prob be transitive
+be := verb58-INTRANSITIVE-verb-lex &
+  [ STEM < "be" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
+
 rep_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "rep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_look_v_rel" ].
