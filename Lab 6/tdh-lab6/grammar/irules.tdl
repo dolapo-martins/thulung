@@ -205,25 +205,25 @@ add-negation-to-verb-prefix2 :=
 %prefix (* me-)
 add-negation-to-verb-lex-rule.
 
-verb-pc77_lrt1-suffix1 :=
-%suffix (* -ʣɵl)
-verb-pc77_lrt1-lex-rule.
+;verb-pc77_lrt1-suffix1 :=
+;%suffix (* -ʣɵl)
+;verb-pc77_lrt1-lex-rule.
 
-verb-pc77_lrt1-suffix2 :=
-%suffix (* -siʈ)
-verb-pc77_lrt1-lex-rule.
+;verb-pc77_lrt1-suffix2 :=
+;%suffix (* -siʈ)
+;verb-pc77_lrt1-lex-rule.
 
-verb-pc77_lrt1-suffix3 :=
-%suffix (* -tʌ)
-verb-pc77_lrt1-lex-rule.
+;verb-pc77_lrt1-suffix3 :=
+;%suffix (* -tʌ)
+;verb-pc77_lrt1-lex-rule.
 
-verb-pc77_lrt1-suffix4 :=
-%suffix (* -leʈ)
-verb-pc77_lrt1-lex-rule.
+;verb-pc77_lrt1-suffix4 :=
+;%suffix (* -leʈ)
+;verb-pc77_lrt1-lex-rule.
 
-verb-pc77_lrt1-suffix5 :=
-%suffix (* -sik)
-verb-pc77_lrt1-lex-rule.
+;verb-pc77_lrt1-suffix5 :=
+;%suffix (* -sik)
+;verb-pc77_lrt1-lex-rule.
 
 trans-only-aux-suffix1 :=
 %suffix (* -thʌ)
@@ -241,33 +241,33 @@ intrans-only-aux-suffix :=
 %suffix (* -bhal)
 intrans-only-aux-lex-rule.
 
-means-suddenly-prefix1 :=
-%prefix (* ʣhoŋ-)
-means-suddenly-lex-rule.
+;means-suddenly-prefix1 :=
+;%prefix (* ʣhoŋ-)
+;means-suddenly-lex-rule.
 
-means-suddenly-prefix2 :=
-%prefix (* tyry-)
-means-suddenly-lex-rule.
+;means-suddenly-prefix2 :=
+;%prefix (* tyry-)
+;means-suddenly-lex-rule.
 
-means-suddenly-prefix3 :=
-%prefix (* thoŋ-)
-means-suddenly-lex-rule.
+;means-suddenly-prefix3 :=
+;%prefix (* thoŋ-)
+;means-suddenly-lex-rule.
 
-means-suddenly-prefix4 :=
-%prefix (* sep-)
-means-suddenly-lex-rule.
+;means-suddenly-prefix4 :=
+;%prefix (* sep-)
+;means-suddenly-lex-rule.
 
-means-suddenly-prefix5 :=
-%prefix (* phlɵ-)
-means-suddenly-lex-rule.
+;means-suddenly-prefix5 :=
+;%prefix (* phlɵ-)
+;means-suddenly-lex-rule.
 
-means-suddenly-prefix6 :=
-%prefix (* hu-)
-means-suddenly-lex-rule.
+;means-suddenly-prefix6 :=
+;%prefix (* hu-)
+;means-suddenly-lex-rule.
 
-means-because-prefix :=
-%prefix (* -miŋka)
-means-because-lex-rule.
+;means-because-prefix :=
+;%prefix (* -miŋka)
+;means-because-lex-rule.
 
 CAU-marker-suffix1 :=
 %suffix (* -be)
