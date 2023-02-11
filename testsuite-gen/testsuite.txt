@@ -10,13 +10,22 @@ Source d: provided item file
 Source e: descriptive grammar (2020)
 
 
-#1
+#0 - This is ungrammatical because it doesn't have agent/patient information
+Source: d
+Vetted: f
+Judgment: u
+Phenomena: {tense}
+be-t-thal
+make-pst-hab
+'And the two sisters took care of their brother K and looked after him.'
+
+#1 - This is grammatical because it has agent/patient information
 Source: d
 Vetted: f
 Judgment: g
-Phenomena: {aspect}
-bet-thal
-make-hab
+Phenomena: {tense}
+be-t-thal-ʦi
+make-pst-hab-du
 'And the two sisters took care of their brother K and looked after him.'
 
 #2
