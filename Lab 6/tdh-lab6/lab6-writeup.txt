@@ -67,6 +67,11 @@ NOTE: 839 passive, 422 active edges in final generation chart; built 4015 passiv
 NOTE: generated 1 / 1 sentences, avg 1536011k, time 131.18489s
 NOTE: transfer did 0 successful unifies and 0 failed ones
 
+For every sentence we tried to translate, we get the same note:
+NOTE: generated 1 / 1 sentences, avg {}k, time {}s
+NOTE: transfer did 0 successful unifies and 0 failed ones
+
+We aren't sure why the transfer isn't unifying and we don't have any errors.
 --------------------------------------------------------------------------------
 New grammar phenomena and improvements
 --------------------------------------------------------------------------------
