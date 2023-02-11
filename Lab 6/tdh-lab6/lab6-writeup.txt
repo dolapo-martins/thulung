@@ -243,7 +243,7 @@ LKB Top, however, is not able to do this and we don't know why.
 
 3. We were working under the assumption that the grammaticality judgments in the testsuite were supposed to be our judgments of what should be working and not what is working. We run the test suite and then analyze if our grammar is producing the same judgments or not. We are working to audit the test suite and make sure that our grammatical sentences do parse and our ungrammatical do not.
 
-N.B. We didn't have time to implement the genitive construction like recommended in your Lab 5 comments (or the other comments). Since we've started using tdl editing, we are unsure what edits we need to make to get this working. We will send this for assistance in class sections.c
+N.B. We didn't have time to implement the genitive construction like recommended in your Lab 5 comments (or the other comments). Since we've started using tdl editing, we are unsure what edits we need to make to get this working. We will send this for assistance in class sections.
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
