@@ -639,18 +639,19 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {neg}
-go gana mi-khaʈ-ni-ja
-1sg 2sg NEG-chase-1sg.2sg.npst-IRR
-'I did not chase you'
+gana go mi-khaʈ-ŋri-ja
+2sg 1sg NEG.chase-2sg.1sg.pst-IRR
+'You did not chased me'
 
 #70 ungrammatical: this is a transitive verb in the past tense so need IRR
+# however requiring mood after past negation isn't working so this parses
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {neg}
-go gana khaʈ-ni
-1sg 2sg NEG.chase-1sg.2sg.npst
-'I did not chase you'
+gana go khaʈ-ŋri
+2sg 1sg NEG.chase-2sg.1sg.pst
+'You did not chase me'
 
 #71 grammatical : /mi-/ and /me-/ can be used interchangeably.
 # non past does not make use of the irrealis IRR mood marker
@@ -668,7 +669,7 @@ Vetted: f
 Judgment: g
 Phenomena: {det}
 mɯ ʦysy am
-det child sleep.3sg
+det child sleep-3sg
 'That child sleeps.'
 
 #73
@@ -677,6 +678,6 @@ Vetted: f
 Judgment: u
 Phenomena: {det}
 mɯ am
-det sleep.3sg
+det sleep-3sg
 'That sleeps.'
 
