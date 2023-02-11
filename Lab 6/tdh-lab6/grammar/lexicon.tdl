@@ -1938,8 +1938,7 @@ bisi := verb5-TRANSITIVE-verb-lex &
   [ STEM < "bisi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_agree_v_rel" ].
 
-
-be := verb5-INTRANSITIVE-verb-lex &
+be := verb5-TRANSITIVE-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
