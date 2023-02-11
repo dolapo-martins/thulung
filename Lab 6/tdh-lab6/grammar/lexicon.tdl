@@ -1938,6 +1938,11 @@ bisi := verb5-TRANSITIVE-verb-lex &
   [ STEM < "bisi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_agree_v_rel" ].
 
+
+be := verb5-INTRANSITIVE-verb-lex &
+  [ STEM < "be" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
+
 lwasiʈ := verb5-TRANSITIVE-verb-lex &
   [ STEM < "lwasiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.visible_v_rel" ].
@@ -2589,15 +2594,6 @@ sʌ_2 := verb58-INTRANSITIVE-verb-lex &
 pe_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "pe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
-bet := verb58-INTRANSITIVE-verb-lex &
-  [ STEM < "bet" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
-
-;;;above and below should prob be transitive
-be := verb58-INTRANSITIVE-verb-lex &
-  [ STEM < "be" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
 rep_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "rep" >,
