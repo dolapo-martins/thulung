@@ -1577,6 +1577,18 @@ sukra := COMMON-NOUNS-noun-lex &
   [ STEM < "sukra" >,
     SYNSEM.LKEYS.KEYREL.PRED "_venus_n_rel" ].
 
+darempu := COMMON-NOUNS-noun-lex &
+  [ STEM < "darempu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_name_darempu_n_rel" ].
+
+popnar := COMMON-NOUNS-noun-lex &
+  [ STEM < "popnar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_name_popnar_n_rel" ].
+
+bhansa := COMMON-NOUNS-noun-lex &
+  [ STEM < "bhansa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
+
 gaʦi := 2nd-person-dual-pronoun-noun-lex &
   [ STEM < "gaʦi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
@@ -1692,6 +1704,7 @@ bare := regarding-noun-noun-lex &
 bʌri := regarding-noun-noun-lex &
   [ STEM < "bʌri" >,
     SYNSEM.LKEYS.KEYREL.PRED "_regarding_n_rel" ].
+
 
 ;;; Adjectives
 
@@ -2847,14 +2860,14 @@ pheʈ := verb58-INTRANSITIVE-verb-lex &
 
 ;;; Auxiliaries
 
-bhaɖa := aux1-aux-lex &
-  [ STEM < "bhaɖa" > ].
+;;;bhaɖa := aux1-aux-lex &
+;;;  [ STEM < "bhaɖa" > ].
 
-bhara := aux2-aux-lex &
-  [ STEM < "bhara" > ].
+;;;bhara := aux2-aux-lex &
+;;;  [ STEM < "bhara" > ].
 
-bhane := aux3-aux-lex &
-  [ STEM < "bhane" > ].
+;;;bhane := aux3-aux-lex &
+;;;  [ STEM < "bhane" > ].
 
 ;;; Determiners
 
@@ -2885,5 +2898,5 @@ ma1 := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-mala_2 := prehead-cond-clause-init-adv-subord-lex-item &
-  [ STEM < "mala" > ].
+;;;mala_2 := prehead-cond-clause-init-adv-subord-lex-item &
+;;;  [ STEM < "mala" > ].

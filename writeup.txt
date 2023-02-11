@@ -1,0 +1,19 @@
+A description of the phenomena you improved in the grammar (including both the morphology etc clean up and adnominal possession or clausal complements), including:
+Prose description of the phenomenon
+Prose description of your analysis
+The specific changes you made to the tdl (paste in the actual tdl)
+Specific IGT I can use to test the analysis / investigate if something isn't working and you need help.
+
+
+We made a few changes to our grammar. 
+1. We added negation as a prefix, to the tense-inflected verb and updated our rules accordingly. In Thulung, verbs are negated by adding the prefixes /mi-/ or /me-/.
+ [NEEDS IGT]
+
+2. We took an analysis of demonstratives as determiners. We did/do not understand how to create grammar rules such that two words are combined to create a phrase. That is, if we took an analysis of demonstratives as pronouns, how would we account for things like "Those cars" unless we analyzed demonstratives as determiners? 
+- We need a grammar rule that says (DEM) NP => NP but since we don't know how to define that in the customization system, we chose to analyze demonstratives as determiners such that we can leverage (DP) NP => NP. This analysis isn't quite accurate however as our source materials do not reference any determiners in Thulung.
+N.B. Based on your Lab 5 comments, we should have posted this question to Canvas. 
+
+  [NEEDS IGT]
+3. We are working to reduce ambiguity caused by lexical rules to account for underspecification. We realized that we have been chaining rules instead of subclassing them. For example, our analysis of past transitives should have sublassed the TRANSITIVE-ROLE-MARKING position class instead of creating a new position class that takes it as input. 
+
+N.B. We didn't have time  to implement the genitive construction like recommended in your Lab 5 comments. Since we've started using tdl editing, we are unsure what edits we need to make to get this working. We will send this for assistance in class sections.

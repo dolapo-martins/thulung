@@ -6,7 +6,7 @@
 ;;; based on Matrix customization system version of:
 ;;;     Thu 28 Jul 2022 12:31:08 AM UTC
 ;;;
-;;; 
+;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
@@ -288,7 +288,7 @@ no-spr-noun-lex := noun-lex &
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
 ; keeps such nouns out.
-; 
+;
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
@@ -1155,16 +1155,16 @@ trans-only-aux-lex-rule := AUXILIARIES-lex-rule-super &
 intrans-only-aux-lex-rule := AUXILIARIES-lex-rule-super &
   [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG na ].
 
-verb-pc77_lrt1-lex-rule := AUXILIARIES-lex-rule-super.
+;;;verb-pc77_lrt1-lex-rule := AUXILIARIES-lex-rule-super.
 
 Adverbs-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
     DTR verb5-TRANSITIVE-verb-lex &
         [ INFLECTED #infl ] ].
 
-means-suddenly-lex-rule := Adverbs-lex-rule-super.
+;;;means-suddenly-lex-rule := Adverbs-lex-rule-super.
 
-means-because-lex-rule := Adverbs-lex-rule-super.
+;;;means-because-lex-rule := Adverbs-lex-rule-super.
 
 ASPECT-POSITION-CLASS-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-ROLE-MARKING-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & ROLE-POSITION-CLASS-rule-dtr & Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr & Transitive-Patient-Role-Marker-rule-dtr & need-to-add-mood-rule-dtr & val-change-with-ccont-lex-rule &
   [ INFLECTED [ ASPECT-POSITION-CLASS-FLAG +,
