@@ -1938,10 +1938,6 @@ bisi := verb5-TRANSITIVE-verb-lex &
   [ STEM < "bisi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_agree_v_rel" ].
 
-be := verb5-TRANSITIVE-verb-lex &
-  [ STEM < "be" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
-
 lwasiʈ := verb5-TRANSITIVE-verb-lex &
   [ STEM < "lwasiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.visible_v_rel" ].
@@ -2298,6 +2294,10 @@ be_1 := verb5-TRANSITIVE-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
+be_3 := verb5-TRANSITIVE-verb-lex &
+  [ STEM < "be" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
+
 bhog := verb5-TRANSITIVE-verb-lex &
   [ STEM < "bhog" >,
     SYNSEM.LKEYS.KEYREL.PRED "_offering_v_rel" ].
@@ -2642,6 +2642,10 @@ basi := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "basi" >,
     SYNSEM.LKEYS.KEYREL.PRED "__obl_v_rel" ].
 
+ba_2 := verb58-INTRANSITIVE-verb-lex &
+  [ STEM < "ba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
 be_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
@@ -2809,10 +2813,6 @@ bik_2 := verb58-INTRANSITIVE-verb-lex &
 dym := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "dym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_become_v_rel" ].
-
-ba_2 := verb58-INTRANSITIVE-verb-lex &
-  [ STEM < "ba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
 mal_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "mal" >,
