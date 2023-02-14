@@ -1,0 +1,48 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+Non-Possessive-lex := Non-Possessive-lex-rule.
+
+NOM-case-marker-lex := NOM-case-marker-lex-rule.
+
+no-negation-lex := no-negation-lex-rule.
+
+No-Aspect-Aspect-Marker-lex := No-Aspect-Aspect-Marker-lex-rule.
+
+Non-Past-Tense-Zero-Morpheme-lex := Non-Past-Tense-Zero-Morpheme-lex-rule.
+
+Past-Tense-Zero-Morpheme-lex := Past-Tense-Zero-Morpheme-lex-rule.
+
+Underspecified-Agent-Role-Past-Tense-Transitive-lex := Underspecified-Agent-Role-Past-Tense-Transitive-lex-rule.
+
+1sg-Patient-lex := 1sg-Patient-lex-rule.
+
+Underspecified-Patient-lex := Underspecified-Patient-lex-rule.
+
+1de-Patient-lex := 1de-Patient-lex-rule.
+
+1di-Patient-lex := 1di-Patient-lex-rule.
+
+1pe-Patient-lex := 1pe-Patient-lex-rule.
+
+1pi-Patient-lex := 1pi-Patient-lex-rule.
+
+3pl-Patient-lex := 3pl-Patient-lex-rule.
+
+2du-Patient-Tr-lex := 2du-Patient-Tr-lex-rule.
+
+2pl-Patient-lex := 2pl-Patient-lex-rule.
+
+3sg-Patient-lex := 3sg-Patient-lex-rule.
+
+3du-Patient-lex := 3du-Patient-lex-rule.
+
+3sg-Non-Past-lex := 3sg-Non-Past-lex-rule.
+
+Underspecified-Tense-Intransitive-lex := Underspecified-Tense-Intransitive-lex-rule.
+
+ROLE-POSITION-CLASS-lex := ROLE-POSITION-CLASS-lex-rule.
+
+Underspecified-Agent-Role-NonPast-Tense-Transitive-lex := Underspecified-Agent-Role-NonPast-Tense-Transitive-lex-rule.
+
+no-mood-marker-lex := no-mood-marker-lex-rule.
+
+copula-npst-3sg-lex := copula-npst-3sg-lex-rule.
