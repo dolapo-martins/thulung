@@ -1025,10 +1025,6 @@ polym := COMMON-NOUNS-noun-lex &
   [ STEM < "polym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hole_n_rel" ].
 
-popnar := COMMON-NOUNS-noun-lex &
-  [ STEM < "popnar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_popnar_n_rel" ].
-
 porɵktam := COMMON-NOUNS-noun-lex &
   [ STEM < "porɵktam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bird.type_n_rel" ].
@@ -1576,6 +1572,18 @@ nemtha := COMMON-NOUNS-noun-lex &
 sukra := COMMON-NOUNS-noun-lex &
   [ STEM < "sukra" >,
     SYNSEM.LKEYS.KEYREL.PRED "_venus_n_rel" ].
+
+darempu := COMMON-NOUNS-noun-lex &
+  [ STEM < "darempu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_darempu.name_n_rel" ].
+
+popnar := COMMON-NOUNS-noun-lex &
+  [ STEM < "popnar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_popnar.name_n_rel" ].
+
+bhansa := COMMON-NOUNS-noun-lex &
+  [ STEM < "bhansa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
 
 gaʦi := 2nd-person-dual-pronoun-noun-lex &
   [ STEM < "gaʦi" >,
@@ -2301,6 +2309,10 @@ be_1 := verb5-TRANSITIVE-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
+be_3 := verb5-TRANSITIVE-verb-lex &
+  [ STEM < "be" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
+
 bhog := verb5-TRANSITIVE-verb-lex &
   [ STEM < "bhog" >,
     SYNSEM.LKEYS.KEYREL.PRED "_offering_v_rel" ].
@@ -2597,10 +2609,6 @@ pe_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "pe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-bet := verb58-INTRANSITIVE-verb-lex &
-  [ STEM < "bet" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
-
 rep_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "rep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_look_v_rel" ].
@@ -2648,6 +2656,10 @@ mimsi := verb58-INTRANSITIVE-verb-lex &
 basi := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "basi" >,
     SYNSEM.LKEYS.KEYREL.PRED "__obl_v_rel" ].
+
+ba_2 := verb58-INTRANSITIVE-verb-lex &
+  [ STEM < "ba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
 be_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "be" >,
@@ -2817,10 +2829,6 @@ dym := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "dym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_become_v_rel" ].
 
-ba_2 := verb58-INTRANSITIVE-verb-lex &
-  [ STEM < "ba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
-
 mal_2 := verb58-INTRANSITIVE-verb-lex &
   [ STEM < "mal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_search.for_v_rel" ].
@@ -2871,14 +2879,32 @@ ba_3 := copula-np-pred-pst-verb-lex &
 
 ;;; Auxiliaries
 
-bhaɖa := aux1-aux-lex &
-  [ STEM < "bhaɖa" > ].
+;;;bhaɖa := aux1-aux-lex &
+;;;  [ STEM < "bhaɖa" > ].
 
-bhara := aux2-aux-lex &
-  [ STEM < "bhara" > ].
+;;;bhara := aux2-aux-lex &
+;;;  [ STEM < "bhara" > ].
 
-bhane := aux3-aux-lex &
-  [ STEM < "bhane" > ].
+;;;bhane := aux3-aux-lex &
+;;;  [ STEM < "bhane" > ].
+
+;;; Determiners
+
+o := proximal-demonstrative-determiner-lex &
+  [ STEM < "o" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+
+oram := proximal-demonstrative-determiner-lex &
+  [ STEM < "oram" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+
+mɯ := distal-demonstrative-determiner-lex &
+  [ STEM < "mɯ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
+
+mɯram := distal-demonstrative-determiner-lex &
+  [ STEM < "mɯram" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
 
 ;;; Copulas
 
@@ -2917,5 +2943,5 @@ ma1 := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
-mala_2 := prehead-cond-clause-init-adv-subord-lex-item &
-  [ STEM < "mala" > ].
+;;;mala_2 := prehead-cond-clause-init-adv-subord-lex-item &
+;;;  [ STEM < "mala" > ].

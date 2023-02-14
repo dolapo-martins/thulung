@@ -168,7 +168,7 @@ du := pernum.
 1du := 1st & du.
 1du_incl := 1du & 2du+3du+1du_incl.
 1du_excl := 1du.
-2du := 2nd & 2du+3du.
+2du := 2nd & 3du+2du.
 1pl := 1st & pl.
 1pl_incl := 1pl.
 1pl_excl := 1pl.
@@ -188,12 +188,12 @@ polite+2sg := pernum.
 polite := polite+2sg & 3sg+polite.
 3sg+plain := pernum.
 3sg := 3sg+plain & 3sg+polite & 3sg+2sg & 3sg+3du.
-sg+1st := pernum.
-sg := sg+1st.
-1st := sg+1st.
+1st+sg := pernum.
+1st := 1st+sg.
+sg := 1st+sg.
 3sg+polite := pernum.
-3rd+pl := pernum.
-3rd := 3rd+pl.
+pl+3rd := pernum.
+3rd := pl+3rd.
 pl+2polite := pernum.
 pl := pl+2polite & pl+3polite.
 pl+3polite := 3rd+pl.
@@ -324,7 +324,7 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
 
 1st-person-singular-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM sg+1st ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 1st+sg ] ].
 
 1st-person-dual-exclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -347,7 +347,7 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
 
 3rd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 3rd+pl ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM pl+3rd ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
