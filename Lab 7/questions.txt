@@ -1,0 +1,2 @@
+1. How do define Adjectives, Adverbs, and other parts of speech which don't belong in noun/verb inflection PCs, but rather are stand alone words?
+2. How do define focus and other topic markers? Focus marker oft used with question words.
