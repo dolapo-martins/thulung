@@ -1,0 +1,82 @@
+1. How do define Adjectives, Adverbs, and other parts of speech which don't belong in noun/verb inflection PCs, but rather are stand alone words?
+2. How do define focus and other topic markers? Focus marker oft used with question words.
+3. How to fix our analysis of genitive possession? (re: Lab 5 comments)
+
+Focus marker (re) + questions
+
+bju     rokphaɖ-ɖa-m            patshi      bju-ka      "bante re   ane     
+eagle   arrive.here-3s.PST-NOM  N.after     eagle-ERG   "where FOC  today
+
+mini    re      mur     nem         bante   re      ham     re?"
+human   FOC     smell   smell.3s    where   FOC     what    FOC?"
+
+After the eagle arrived, the eagle [said] "Where is the human smell coming from today, where and what?"
+
+page 101
+ɔbɔ     gani    re      ŋado-m,     go  re      ŋado-m?
+Now     2p      FOC     first-NOM   1s  FOC     first-NOM
+So who then was here first, me or you?
+(NOM = nominalized)
+
+Embedded quotations with questions
+memma "mima,            a-lwak              ne  ba      re  lɔs-ta"     ra  ma then    grandmother     3-POSS-y.sibling    TOP where   FOC go-3s.PST   say AS
+
+hilaby-ʔe
+ask.3s/3s.-HS
+(AS = Anterior Sequencer)
+
+After that, "Grandmother, where did my little sister go?", he asks
+
+page 342
+"bante lɔs-ta       boro" ra-tsi        ma  khɔtle  thɯ     mal-tsi
+"where go-3s.PST    frog" say-3d/3s     AS  all     there   search-3d
+"Where did the frog go?" they say, and search everywhere
+(Question-word Verb Noun)
+
+page 369
+i-lwa           pi-ra       ta          haŋko       bɔllɯ   dym-na?
+2POSS-hand      bring-2IMP  N.indeed    how.much    N.fat   become-2s
+Give me your arm, how fat have you gotten
+(Question-word Noun Verb)
+
+
+
+Need to add 
+- Adjectives
+- Adverbs
+- Prepostions
+[then add non-verbal predicate constructions]
+
+
+Approach
+1. Add copula -> lexicon, morphology
+2. Add adjectives -> lexicon, morphology
+3. Test AdjP phrases via LKBTop
+
+Repeat 2-3 for adpositions, locative NP 
+
+
+(Equative predication, page 185)
+mɯ      mytsy   a-pap-ku            ŋopsɯ   bu
+mɯ      mytsy   a       -pap    -ku            ŋopsɯ   bu
+that    man     1POSS   -father -GEN           friend  be.3s
+That man is my father's friend
+
+go  dzɔŋgɔli        bu-ŋu
+1s  N.forest-man    be-1s
+I am a forest man
+
+(Locational predication, page 185)
+gumi    neb-ra-ŋa       bu-mi
+gumi    neb     -ra     -ŋa       bu-mi
+3p      house   -LOC    EMPH      be.3p
+She is at home.
+
+dzubu   bloku    hombu-nu           bu
+Jubu    river    across-levLoc      be.3s
+Jubu is across the river.
+
+(Adjective + copula, page 186)
+inima-del       dzɯpa       bu
+2POSS-village   beautiful   be.3s
+Your village is beautiful
