@@ -1214,8 +1214,10 @@ ITF-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
   [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT ITF ].
 
-APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-OR-INTRANSITIVE-VERB-FLAG + ].
+APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule 
+;&
+;  [ DTR.INFLECTED.TRANSITIVE-VERB-OR-INTRANSITIVE-VERB-FLAG + ]
+.
 
 CAU-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
 
