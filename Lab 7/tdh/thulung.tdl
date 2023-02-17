@@ -1819,12 +1819,14 @@ locative-pp-phrase := unary-phrase &
 		     LBL #ltop,
 		     ARG0 #index,
 		     ARG1 #xarg,
-		     ARG2 #dtr [ DTR.SYNSEM.LOCAL.COORD - ] ] >,
+		     ARG2 #dtr ] >,
 	     HCONS.LIST < >  ],
 	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
 		            LOCAL [ CAT [ HEAD noun & [CASE loc],
 		                          VAL.SPR < > ],
 			            CONT.HOOK [ INDEX #dtr ] ] ] ] >].
+
+locative-pp-phrase :+ [DTR.SYNSEM.LOCAL.COORD -].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
