@@ -396,7 +396,7 @@ regarding-noun-noun-lex := no-spr-noun-lex.
 
 ;;; Verbs
 verb-lex := non-mod-lex-item & 
-  
+  [
     SYNSEM [ L-QUE -,
              LOCAL.CAT.HEAD verb &
                             [ NMZ - ],
