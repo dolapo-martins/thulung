@@ -1139,7 +1139,11 @@ section=lexicon
     noun144_stem1_pred=_regarding_n_rel
     noun144_stem2_orth=bʌri
     noun144_stem2_pred=_regarding_n_rel
+<<<<<<< HEAD
   verb5_name=ERG-DAT-transitive
+=======
+  verb5_name=TRANSITIVE
+>>>>>>> 81ff0e0ec822ad95153e4f4462110e92d8a95993
   verb5_valence=a_case-o_case
     verb5_stem1_orth=am(s)
     verb5_stem1_pred=_make.sleep_v_rel
