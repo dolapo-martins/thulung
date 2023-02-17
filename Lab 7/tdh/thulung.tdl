@@ -757,6 +757,7 @@ ASPECT-POSITION-CLASS-rule-dtr := word-or-lexrule.
 Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr := word-or-lexrule.
 MOOD-Position-Class-rule-dtr := word-or-lexrule.
 ROLE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+locative-np-rule-dtr := word-or-lexrule
 
 ;;; Lexical rule types
 
@@ -1825,7 +1826,8 @@ locative-pp-phrase := unary-phrase &
 		            LOCAL [ CAT [ HEAD noun & [CASE loc],
 		                          VAL.SPR < > ],
 			            CONT.HOOK [ INDEX #dtr ] ] ] ] >
-    HEAD-DTR.SYNSEM.LOCAL.COORD -].
+    DTR locative-np-rule-dtr &
+    [SYNSTEM.LOCAL.COORD -]].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
