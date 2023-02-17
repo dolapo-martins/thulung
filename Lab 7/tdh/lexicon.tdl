@@ -1717,7 +1717,8 @@ bʌri := regarding-noun-noun-lex &
 
 dzɵpa := adjective-adj-lex &
   [ STEM < "dzɵpa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+    ; this really means _good_a_rel but changed for MT
 
 ʈhikai := adjective-adj-lex &
   [ STEM < "ʈhikai" >,
