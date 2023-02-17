@@ -431,7 +431,7 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & ASPECT-POSI
                 UNDERSPECIFIED-PATIENT-FLAG na-or--,
                 3SG-PATIENT-FLAG na-or--,
                 ADD-NEGATION-TO-VERB-FLAG na-or-- ],
-  [ SYNSEM [ L-QUE -,
+  SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
                                  SUBJ < #subj > ] ],
@@ -1203,7 +1203,7 @@ STA-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT STA ].
 
 DEF-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG,
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT DEF ].
 
 RES-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
