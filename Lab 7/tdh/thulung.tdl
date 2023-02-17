@@ -520,12 +520,12 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
   [ ARG-ST < [ ],
              [ LOCAL.CAT.HEAD.AUX - ] > ].
 
-aux1-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-    INFLECTED [ 
-                TRANSITIVE-VERB-FLAG na-or--,
-                INTRANSITIVE-VERB-FLAG na-or-- ] ].
+;aux1-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
+;    INFLECTED [ 
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -533,12 +533,12 @@ aux1-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-aux2-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-    INFLECTED [ 
-                TRANSITIVE-VERB-FLAG na-or--,
-                INTRANSITIVE-VERB-FLAG na-or-- ] ].
+;aux2-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
+;    INFLECTED [ 
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -546,11 +546,11 @@ aux2-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-aux3-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
-    INFLECTED [ 
-                TRANSITIVE-VERB-FLAG na-or--,
-                INTRANSITIVE-VERB-FLAG na-or-- ] ].
+;aux3-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
+;    INFLECTED [ 
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
 ;;; Copulas
 
