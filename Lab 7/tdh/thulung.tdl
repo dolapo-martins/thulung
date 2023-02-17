@@ -6,7 +6,7 @@
 ;;; based on Matrix customization system version of:
 ;;;     Thu 28 Jul 2022 12:31:08 AM UTC
 ;;;
-;;; 
+;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
@@ -281,7 +281,7 @@ no-spr-noun-lex := noun-lex &
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
 ; keeps such nouns out.
-; 
+;
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
@@ -395,7 +395,7 @@ POSSESSIVE-PRONOUNS-noun-lex := no-spr-noun-lex & CASE-POSITION-CLASS-rule-dtr &
 regarding-noun-noun-lex := no-spr-noun-lex.
 
 ;;; Verbs
-verb-lex := non-mod-lex-item & 
+verb-lex := non-mod-lex-item &
   [
     SYNSEM [ L-QUE -,
              LOCAL.CAT.HEAD verb &
@@ -403,7 +403,7 @@ verb-lex := non-mod-lex-item &
              SUBORDINATED none ] ].
 
 ;;; parent type of the NP-predicating copulas (transitive verb-esque)
-cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item & 
+cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
   [ SYNSEM [ LOCAL.CAT [ HEAD verb &
                             [ NMZ - ],
 			 VAL [ SUBJ < #subj >,
@@ -446,7 +446,7 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & ASPECT-POSI
 aux-lex := verb-lex & basic-icons-lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
              L-QUE - ],
-    INFLECTED [ 
+    INFLECTED [
                 TRANSITIVE-VERB-FLAG na-or--,
                 INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -524,7 +524,7 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 ;aux1-aux-lex := subj-raise-aux-no-pred &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-;    INFLECTED [ 
+;    INFLECTED [
 ;                TRANSITIVE-VERB-FLAG na-or--,
 ;                INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -537,7 +537,7 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 ;aux2-aux-lex := subj-raise-aux-no-pred &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-;    INFLECTED [ 
+;    INFLECTED [
 ;                TRANSITIVE-VERB-FLAG na-or--,
 ;                INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -549,7 +549,7 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 
 ;aux3-aux-lex := subj-raise-aux-no-pred &
 ;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
-;    INFLECTED [ 
+;    INFLECTED [
 ;                TRANSITIVE-VERB-FLAG na-or--,
 ;                INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -1216,7 +1216,7 @@ ITF-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
   [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT ITF ].
 
-APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule 
+APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule
 ;&
 ;  [ DTR.INFLECTED.TRANSITIVE-VERB-OR-INTRANSITIVE-VERB-FLAG + ]
 .
@@ -1313,7 +1313,7 @@ Transitive-Past-Agent-Role-Marker-lex-rule-super := GENITIVIZATION-or-NOMINALIZA
 Underspecified-Agent-Role-Past-Tense-Transitive-lex-rule := Transitive-Past-Agent-Role-Marker-lex-rule-super & const-lex-rule.
 
 Transitive-Patient-Role-Marker-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr & add-only-no-ccont-rule & const-lex-rule & need-to-add-mood-rule-dtr &
-  [ INFLECTED [ 
+  [ INFLECTED [
                 MOOD-POSITION-CLASS-FLAG #mood-position-class,
                 ROLE-POSITION-CLASS-FLAG #role-position-class,
                 ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
@@ -1323,7 +1323,7 @@ Transitive-Patient-Role-Marker-lex-rule-super := GENITIVIZATION-or-NOMINALIZATIO
                 CASE-POSITION-CLASS-FLAG #case-position-class,
                 ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb ],
     DTR Transitive-Patient-Role-Marker-rule-dtr &
-        [ INFLECTED [ 
+        [ INFLECTED [
                       MOOD-POSITION-CLASS-FLAG #mood-position-class,
                       ROLE-POSITION-CLASS-FLAG #role-position-class,
                       ASPECT-POSITION-CLASS-FLAG #aspect-position-class,
@@ -1805,12 +1805,13 @@ high-nominalized-clause-phrase := unary-phrase &
 
 locative-pp-phrase := unary-phrase &
 [ SYNSEM [ NON-LOCAL #nl,
-           LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+           LOCAL [ CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
                                                     [ CAT.HEAD verb,
                                                       CONT.HOOK.INDEX #xarg ] ] > ],
 		          VAL [ COMPS < >,
-			        SUBJ < >, 
-			        SPR < > ]]],
+			        SUBJ < >,
+			        SPR < > ]],
+              COORD -]],
     C-CONT [ HOOK [ LTOP #ltop,
 		    INDEX #index,
 		    XARG #xarg ],
