@@ -1824,8 +1824,8 @@ locative-pp-phrase := unary-phrase &
 	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
 		            LOCAL [ CAT [ HEAD noun & [CASE loc],
 		                          VAL.SPR < > ],
-			            CONT.HOOK [ INDEX #dtr ] ] ]
-             DTR [SYNSEM.LOCAL.COORD -]] >].
+			                  CONT.HOOK [ INDEX #dtr ]
+                        COORD -] ]] >].
 
 
 ;Constraint on MC used to be part of matrix.tdl
