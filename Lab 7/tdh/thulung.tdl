@@ -401,11 +401,22 @@ POSSESSIVE-PRONOUNS-noun-lex := no-spr-noun-lex & CASE-POSITION-CLASS-rule-dtr &
 regarding-noun-noun-lex := no-spr-noun-lex.
 
 ;;; Verbs
-cop-np-pred-lex := non-mod-lex-item & Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr &
-  [ SYNSEM [ L-QUE -,
-             LOCAL.CAT.HEAD verb &
+cop-np-pred-lex := norm-sem-lex-item & non-mod-lex-item & Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr & transitive-lex-item & copula-npst-dtr &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb &
                             [ NMZ - ],
-             SUBORDINATED none ] ].
+			 VAL [ SUBJ < #subj >,
+			       COMPS < #comps > ] ],
+	     L-QUE -,
+             SUBORDINATED none ],
+    ARG-ST < #subj & [ LOCAL.CAT cat-sat &
+				 [ VAL.SPR < >,
+				   HEAD noun &
+				      [ CASE nom ] ] ],
+             #comps &
+             [ LOCAL.CAT cat-sat &
+                         [ VAL.SPR < >,
+			   HEAD noun &
+                                [ CASE nom ] ] ] > ].
 
 verb-lex := non-mod-lex-item & 
   [ INFLECTED [ ASPECT-POSITION-CLASS-FLAG -,
@@ -485,9 +496,11 @@ verb58-INTRANSITIVE-verb-lex := intransitive-verb-lex &
   [ INFLECTED [ VERB58-INTRANSITIVE-VERB-FLAG +,
                 VERB5-TRANSITIVE-VERB-OR-VERB58-INTRANSITIVE-VERB-FLAG + ] ].
 
-copula-np-pred-npst-verb-lex := cop-np-pred-lex.
+copula-np-pred-npst-verb-lex := cop-np-pred-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
 
-copula-np-pred-pst-verb-lex := cop-np-pred-lex.
+copula-np-pred-pst-verb-lex := cop-np-pred-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
 
 ;;; Auxiliaries
 
@@ -751,6 +764,7 @@ high-or-mid-nominalization-lex-rule := cat-change-with-ccont-lex-rule & same-con
 
 ;;; Intermediate rule types
 
+copula-npst-dtr := word-or-lexrule.
 CASE-POSITION-CLASS-rule-dtr := word-or-lexrule.
 POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
 NEGATION-position-class-rule-dtr := word-or-lexrule.
@@ -1727,10 +1741,10 @@ IRR-lex-rule := MOOD-Position-Class-lex-rule-super & infl-lex-rule &
 
 no-mood-marker-lex-rule := MOOD-Position-Class-lex-rule-super & const-lex-rule.
 
-copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule.
-; [ INFLECTED #infl,
-;   DTR copula-be-npst-cop-lex &
-;      [ INFLECTED #infl ] ].
+copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
+ [ INFLECTED #infl,
+   DTR copula-npst-dtr &
+      [ INFLECTED #infl ] ].
 
 copula-npst-1di-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
@@ -1753,8 +1767,7 @@ copula-npst-1pe-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-
                    CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
 
 copula-npst-2sg-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
 copula-npst-2du-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2du,
