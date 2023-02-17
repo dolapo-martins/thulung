@@ -109,23 +109,23 @@ go-ka am-ŋu
 1sg-erg sleep-1sg
 'I sleep.'
 
-#11
+#11 intransitive
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-khlea am
+khlea ʌms
 dog sleep.3sg
 'The dog sleeps.'
 
-#12
+#12 (transitive, pro-drop)
 Source: author
 Vetted: f
-Judgment: u
+Judgment: g
 Phenomena: {case}
 khlea-lai am
 dog-dat sleep.3sg
-'The dog sleeps.'
+'(Someone) makes the dog sleep.'
 
 #13
 Source: author

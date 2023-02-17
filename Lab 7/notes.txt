@@ -72,6 +72,11 @@ gumi    neb     -ra     -ŋa       bu-mi
 3p      house   -LOC    EMPH      be.3p
 She is at home.
 
+gumi    neb-ra       bu-mi
+gumi    neb     -ra       bu-mi
+3p      house   -LOC      be.3p
+She is at home.
+
 dzubu   bloku    hombu-nu           bu
 Jubu    river    across-levLoc      be.3s
 Jubu is across the river.
@@ -84,7 +89,7 @@ Your village is beautiful
 
 ===============================================================================
 1. Follow-up on canvas questions
-2. Test copula
+2. Add items to test suite
 - Copula + NP
 go  dzɔŋgɔli        bu-ŋu
 1s  N.forest-man    be-1s
@@ -94,3 +99,6 @@ I am a forest man
 inima-del       dzɯpa       bu
 2POSS-village   beautiful   be.3s
 Your village is beautiful
+- locational predication
+3. Dolapo to decribe how non verbal predicates work including IGT
+4. Zoe to describe tdl changes

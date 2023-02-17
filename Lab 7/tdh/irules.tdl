@@ -225,21 +225,21 @@ add-negation-to-verb-lex-rule.
 ;%suffix (* -sik)
 ;verb-pc77_lrt1-lex-rule.
 
-trans-only-aux-suffix1 :=
-%suffix (* -thʌ)
-trans-only-aux-lex-rule.
+;trans-only-aux-suffix1 :=
+;%suffix (* -thʌ)
+;trans-only-aux-lex-rule.
 
-trans-only-aux-suffix2 :=
-%suffix (* -sok)
-trans-only-aux-lex-rule.
+;trans-only-aux-suffix2 :=
+;%suffix (* -sok)
+;trans-only-aux-lex-rule.
 
-trans-only-aux-suffix3 :=
-%suffix (* -thap)
-trans-only-aux-lex-rule.
+;trans-only-aux-suffix3 :=
+;%suffix (* -thap)
+;trans-only-aux-lex-rule.
 
-intrans-only-aux-suffix :=
-%suffix (* -bhal)
-intrans-only-aux-lex-rule.
+;intrans-only-aux-suffix :=
+;%suffix (* -bhal)
+;intrans-only-aux-lex-rule.
 
 ;means-suddenly-prefix1 :=
 ;%prefix (* ʣhoŋ-)
