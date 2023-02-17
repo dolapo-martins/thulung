@@ -1585,6 +1585,18 @@ bhansa := COMMON-NOUNS-noun-lex &
   [ STEM < "bhansa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
 
+dzɔŋgɔli := COMMON-NOUNS-noun-lex &
+  [ STEM < "dzɔŋgɔli" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_forest.man_n_rel" ].
+
+ŋopsɯ := COMMON-NOUNS-noun-lex &
+  [ STEM < "ŋopsɯ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_friend_n_rel" ].
+
+mytsy := COMMON-NOUNS-noun-lex &
+  [ STEM < "mytsy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
 gaʦi := 2nd-person-dual-pronoun-noun-lex &
   [ STEM < "gaʦi" >,
     SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
@@ -1718,6 +1730,10 @@ dzɵpa := adjective-adj-lex &
 jakke := adjective-adj-lex &
   [ STEM < "jakke" >,
     SYNSEM.LKEYS.KEYREL.PRED "_small_a_rel" ].
+
+dzɯpa := adjective-adj-lex &
+  [ STEM < "dzɯpa" >, 
+    SYNSEM.LKEYS.KEYREL.PRED "_beautiful_a_rel" ].
 
 ;;; Verbs
 
