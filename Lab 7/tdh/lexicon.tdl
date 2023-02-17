@@ -1721,7 +1721,7 @@ jakke := adjective-adj-lex &
 
 ;;; Verbs
 
-am_28s_29 := ERG-DAT-transitive-verb-lex &
+am_1 := ERG-DAT-transitive-verb-lex &
   [ STEM < "am(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make.sleep_v_rel" ].
 
@@ -2245,7 +2245,7 @@ khwakʦilikpo := ERG-DAT-transitive-verb-lex &
   [ STEM < "khwakʦilikpo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cock.crowing_v_rel" ].
 
-am := ERG-DAT-transitive-verb-lex &
+am_2 := ERG-DAT-transitive-verb-lex &
   [ STEM < "am" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make.sleep_v_rel" ].
 

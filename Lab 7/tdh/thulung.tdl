@@ -402,7 +402,8 @@ verb-lex := non-mod-lex-item &
                             [ NMZ - ],
              SUBORDINATED none ] ].
 
-cop-np-pred-lex := norm-sem-lex-item & verb-lex & Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr & transitive-lex-item & copula-npst-dtr &
+;;; parent type of the NP-predicating copulas (transitive verb-esque)
+cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item & 
   [ SYNSEM [ LOCAL.CAT [ HEAD verb &
                             [ NMZ - ],
 			 VAL [ SUBJ < #subj >,
@@ -480,7 +481,7 @@ ERG-DAT-transitive-verb-lex := transitive-verb-lex &
              [ LOCAL.CAT.HEAD noun &
                               [ CASE DAT ] ] > ].
 
-copula-np-pred-npst-verb-lex := cop-np-pred-lex &
+copula-np-pred-npst-verb-lex := cop-np-pred-lex & copula-npst-dtr
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
 
 copula-np-pred-pst-verb-lex := cop-np-pred-lex &
@@ -554,6 +555,7 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 
 ;;; Copulas
 
+;;; parent type of the traditional copula(s)
 cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
@@ -572,7 +574,7 @@ cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
 ; Copula type taking adjectival complements.
 ; Need to define more for additional complement types.
 
-copula-be-npst-cop-lex := cop-lex &
+copula-be-npst-cop-lex := cop-lex & copula-npst-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
 
 copula-be-pst-cop-lex := cop-lex &
