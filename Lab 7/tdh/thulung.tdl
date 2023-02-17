@@ -481,7 +481,7 @@ ERG-DAT-transitive-verb-lex := transitive-verb-lex &
              [ LOCAL.CAT.HEAD noun &
                               [ CASE DAT ] ] > ].
 
-copula-np-pred-npst-verb-lex := cop-np-pred-lex & copula-npst-dtr
+copula-np-pred-npst-verb-lex := cop-np-pred-lex & copula-npst-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
 
 copula-np-pred-pst-verb-lex := cop-np-pred-lex &
