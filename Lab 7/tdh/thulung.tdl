@@ -407,7 +407,7 @@ cop-np-pred-lex := non-mod-lex-item & Transitive-Non-Past-Agent-Role-Marker-or-T
                             [ NMZ - ],
              SUBORDINATED none ] ].
 
-verb-lex := non-mod-lex-item & ASPECT-POSITION-CLASS-rule-dtr & GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-ROLE-MARKING-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & ROLE-POSITION-CLASS-rule-dtr & Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr & Transitive-Patient-Role-Marker-rule-dtr & need-to-add-mood-rule-dtr &
+verb-lex := non-mod-lex-item & 
   [ INFLECTED [ ASPECT-POSITION-CLASS-FLAG -,
                 ROLE-POSITION-CLASS-FLAG -,
                 MOOD-POSITION-CLASS-FLAG -,
@@ -424,7 +424,7 @@ verb-lex := non-mod-lex-item & ASPECT-POSITION-CLASS-rule-dtr & GENITIVIZATION-o
                             [ NMZ - ],
              SUBORDINATED none ] ].
 
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & ASPECT-POSITION-CLASS-rule-dtr & GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-ROLE-MARKING-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & ROLE-POSITION-CLASS-rule-dtr & need-to-add-mood-rule-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
@@ -453,7 +453,7 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
                 TRANSITIVE-VERB-FLAG na-or--,
                 INTRANSITIVE-VERB-FLAG + ] ].
 
-transitive-verb-lex := main-verb-lex & transitive-lex-item &
+transitive-verb-lex := main-verb-lex & transitive-lex-item & Transitive-Non-Past-Agent-Role-Marker-or-Transitive-Past-Agent-Role-Marker-rule-dtr & Transitive-Patient-Role-Marker-rule-dtr & 
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE real-case ] ],
