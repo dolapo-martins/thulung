@@ -1805,13 +1805,12 @@ high-nominalized-clause-phrase := unary-phrase &
 
 locative-pp-phrase := unary-phrase &
 [ SYNSEM [ NON-LOCAL #nl,
-           LOCAL [ CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+           LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
                                                     [ CAT.HEAD verb,
                                                       CONT.HOOK.INDEX #xarg ] ] > ],
 		          VAL [ COMPS < >,
 			        SUBJ < >,
-			        SPR < > ]],
-              COORD -]],
+			        SPR < > ]]],
     C-CONT [ HOOK [ LTOP #ltop,
 		    INDEX #index,
 		    XARG #xarg ],
@@ -1825,7 +1824,8 @@ locative-pp-phrase := unary-phrase &
 	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
 		            LOCAL [ CAT [ HEAD noun & [CASE loc],
 		                          VAL.SPR < > ],
-			            CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
+			            CONT.HOOK [ INDEX #dtr ] ] ] ] >
+    DTR [SYNSEM.LOCAL.COORD -]].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
