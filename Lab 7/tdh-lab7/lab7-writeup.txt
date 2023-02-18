@@ -247,7 +247,30 @@ This string does not parse, since the two nouns have different cases, and bu sel
 --------------------------------------------------------------------------------
 Machine translation of items 15-17
 --------------------------------------------------------------------------------
+We are still unable to get transfer working, even with the changes you suggested in Lab 6 comments.
 
+Our steps are as follows 
+(1) verify that symlink in mmt/grammars/tdh is our latest Lab 7 grammar
+(2) recompile grammar at mmt/grammars/tdh
+(3) cd mmt/tm & mv gen tdh 
+(4) recompile grammar at mmt/tm/tdh
+(5) run ./translate-line.sh eng tdh LINE at mmt
+
+We are getting the below output for lines 15-17. 
+
+ubuntu@lkb:~/Documents/thulung/mmt$ ./translate-line.sh eng tdh 15
+NOTE: 1 readings, added 136 / 55 edges to chart (14 fully instantiated, 24 actives used, 11 passives used)	RAM: 544k
+NOTE: parsed 1 / 1 sentences, avg 544k, time 0.00335s
+NOTE: 1 transfer results	RAM: 14k
+NOTE: transfered 1 / 1 sentences, avg 14k, time 0.00081s
+NOTE: 19 passive, 157 active edges in final generation chart; built 47 passives total. [0 results]
+
+NOTE: generated 0 / 1 sentences, avg 459k, time 0.00551s
+NOTE: transfer did 0 successful unifies and 0 failed ones
+
+QUESTION: the output says parsesd 1/1 and transfered 1/1 but then it also says generated 0/1 and the last line says 0 successful unifies and 0 failed ones.
+(1) What is the difference between generate and transfer?
+(2) How can we have both 0 failures and 0 successes?
 
 --------------------------------------------------------------------------------
 Description of wh-questio non-verbal predicate behavior in Thulung
@@ -322,7 +345,8 @@ What is the average number of parses per parsed item:   |        11.64         |
 How many parses did the most ambiguous item receive:    |          90          |
 >>> The ambiguities from NP coordination and verb morphology persist.
 --------------------------------------------------------------------------------
-Our ambiguity is reducing, however, our # of items parses is also reducing. We need to make three additional changes:
+Our ambiguity is reducing, however, our # of items parses is also reducing. We need to make additional changes:
 (1) Verb-pc rules: don't chain. Instead, use LRTs to capture what is possible in the same position class. 
 (2) Analysis of genitive possession. Need to incorporate feedback from Lab 5
 (3) Test suite: need to audit our items. We marked things as (un)grammatical based on what we thought, not what we observed.
+(4) Negation + irrealis. In the past tense, negation requires IRR. In the non-past it does not. We are not properly accounting for this.

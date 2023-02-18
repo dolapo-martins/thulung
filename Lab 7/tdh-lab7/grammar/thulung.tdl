@@ -1815,7 +1815,7 @@ locative-pp-phrase := unary-phrase &
 		    INDEX #index,
 		    XARG #xarg ],
 	  RELS.LIST < arg12-ev-relation &
-		   [ PRED "_loc_p_rel",
+		   [ PRED "_in_p_rel",
 		     LBL #ltop,
 		     ARG0 #index,
 		     ARG1 #xarg,
