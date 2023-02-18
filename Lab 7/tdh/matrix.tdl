@@ -3928,8 +3928,10 @@ n-bottom-coord-phrase := bottom-coord-phrase &
 np-coord-phrase := coord-phrase &
   [ SYNSEM.LOCAL.CAT [ HEAD noun,
     		       VAL.SPR < > ],
-    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun,
-    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun ].
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun &
+                            [ CASE #case ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun &
+                            [ CASE #case ] ].
 
 basic-np-top-coord-rule := np-coord-phrase &
   [ C-CONT [ HOOK [ LTOP #ltop,
