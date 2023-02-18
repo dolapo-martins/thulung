@@ -36,10 +36,10 @@
 sign-min := avm &
   [ STEM list ]
 """ General type from which most types inherit.
-<features> 
-STEM: orthography 
-<notes> 
-The history of the term sign goes 
+<features>
+STEM: orthography
+<notes>
+The history of the term sign goes
 back to the concept of language as a system of signs (Saussure, 1916). """.
 
 basic-sign := sign-min &
@@ -54,16 +54,16 @@ sign := basic-sign &
   [ SYNSEM synsem,
     ARGS list,
     INFLECTED inflected ]
-""" 
+"""
 A general type introducing the basic morphosyntactic structure.
 <features>
 SYNSEM: main structure for SYNtax and SEMantics. (Pollard and Sag 1994)
-ARGS: The daughters, such as daughters of a phrase-structure rule or the 
+ARGS: The daughters, such as daughters of a phrase-structure rule or the
 daughter of a lexical rule.
-INFLECTED: a flag to determine whether or not the sign is already 
+INFLECTED: a flag to determine whether or not the sign is already
 inflected or still requires to go through a lexical rule.
 <history>
-SSH 2013-04-19 - removed PHON which was previously at the same level as SYNSEM. 
+SSH 2013-04-19 - removed PHON which was previously at the same level as SYNSEM.
 """ .
 
 ; C-CONT encodes the semantic contribution of the rule (phrasal
@@ -85,7 +85,7 @@ word-or-lexrule := word-or-lexrule-min & sign &
 """
 <features>
 ALTS: allow lexical entries to block lexical rule application.
-ARG-ST: the argument structure list.  It appears only on lexical items 
+ARG-ST: the argument structure list.  It appears only on lexical items
 (words or lexical rules), not on phrases.
 """.
 
@@ -1037,7 +1037,7 @@ ocnull := cnull & onull.
 
 non-wh-list := list.
 
-non-wh-cons := non-wh-list & cons & 
+non-wh-cons := non-wh-list & cons &
 [ FIRST synsem & [ NON-LOCAL.QUE.LIST < > ],
   REST non-wh-list ].
 
@@ -1732,7 +1732,7 @@ binary-nonloc-que-rel := basic-binary-phrase &
   ARGS < [ SYNSEM.NON-LOCAL [ QUE #que1,
                               REL #rel1 ] ],
   [ SYNSEM.NON-LOCAL [ QUE #que2,
-                       REL #rel2 ] ] > ].  
+                       REL #rel2 ] ] > ].
 
 ; ERB (2007-02-13) Adding these for handling constructions where a marker
 ; shows up simultaneously on both ends of the phrase, such as negation
@@ -2069,7 +2069,7 @@ imp-head-subj-phrase := basic-head-subj-phrase & imperative-clause.
 ; This type cannot be a root node by itself ([MC -]).
 ; This typed phrase is supposed to be combined with a filler-phrase.
 ; OZ 2020-09-22 This can no longer inherit from head-valence phrase,
-; because that is lexical threading which we are now taking out. 
+; because that is lexical threading which we are now taking out.
 
 basic-head-subj-nmc-phrase := declarative-clause & binary-nonloc-que-rel &
                               binary-headed-phrase &
@@ -2195,7 +2195,7 @@ basic-head-2nd-comp-phrase := basic-head-comp-phrase &
 ; This type cannot be a root node by itself ([MC -]).
 ; This typed phrase is supposed to be combined with a filler-phrase.
 ; OZ 2020-09-22 This can no longer inherit from head-valence phrase,
-; because that is for lexical threading, which we are now taking out. 
+; because that is for lexical threading, which we are now taking out.
 
 basic-head-comp-nmc-phrase := binary-nonloc-que-rel & head-compositional &
                               binary-headed-phrase &
@@ -2358,7 +2358,7 @@ marker-phrase := binary-phrase &
 basic-binary-marker-phrase := marker-phrase &
  [ NON-MARKER-DTR sign & [ SYNSEM.LOCAL.COORD - ] ].
 
-; OZ 2020-09-21 Now that the basic-head-comp phrase appends its 
+; OZ 2020-09-21 Now that the basic-head-comp phrase appends its
 ; nonlocal features, marker phrases should, too.
 
 basic-marker-comp-phrase := basic-binary-marker-phrase &
@@ -2382,7 +2382,7 @@ basic-marker-comp-phrase := basic-binary-marker-phrase &
                       NON-LOCAL [ SLASH #slash1,
                                   REL #rel1,
                                   QUE #que1 ] ],
-    NON-MARKER-DTR.SYNSEM canonical-synsem & #synsem & 
+    NON-MARKER-DTR.SYNSEM canonical-synsem & #synsem &
     [ NON-LOCAL [ SLASH #slash2, QUE #que2, REL #rel2 ] ],
     C-CONT [ RELS.LIST < >,
        HCONS.LIST < >,
@@ -2504,7 +2504,7 @@ basic-extracted-subj-phrase := basic-extracted-arg-phrase & head-compositional &
 ; non-empty comps lists.  The head-mod-phrase will pass up
 ; the COMPS requirement, whatever it was.
 
-head-mod-phrase := headed-phrase & 
+head-mod-phrase := headed-phrase &
   [ SYNSEM [ LOCAL.CAT.VAL [ SUBJ #subj,
                              SPR #spr,
                              COMPS #comps, SPEC #spec ],
@@ -2550,7 +2550,7 @@ basic-extracted-adj-phrase := head-mod-phrase & head-only & phrasal &
 	     MODIFIED notmod,
        LIGHT +,
 	     NON-LOCAL [ SLASH #slash,
-                   QUE #que, 
+                   QUE #que,
                    REL #rel ] ],
     C-CONT [ HOOK #hook,
          RELS.LIST < >,
@@ -2567,7 +2567,7 @@ basic-extracted-adj-phrase := head-mod-phrase & head-only & phrasal &
 ; adjectives out of optional subject constructions
 ; OZ 2020-01-25 Adding QUE append to support multiple questions.
 
-basic-head-mod-phrase-simple := head-mod-phrase & binary-nonloc-phrase & binary-headed-phrase & 
+basic-head-mod-phrase-simple := head-mod-phrase & binary-nonloc-phrase & binary-headed-phrase &
   [ SYNSEM [ LOCAL.CAT [ MKG #mkg, WH [ OR < #or1, #or2 > ] ] ],
     HEAD-DTR.SYNSEM
            [ LOCAL [ CAT [ WH #or1,
@@ -3427,22 +3427,22 @@ scopal-mod-lex := lex-item &
 				   LARG #larg ] > ],
 	     LKEYS.KEYREL.ARG1 #harg ]].
 
-; OZ 2019-05-23 The use of "intersective" below is incorrect; it should just be 
-; "nonscopal". 
-; We are leaving it as "intersective" for now because it needs to be changed in lots 
+; OZ 2019-05-23 The use of "intersective" below is incorrect; it should just be
+; "nonscopal".
+; We are leaving it as "intersective" for now because it needs to be changed in lots
 ; of places, inlucing Wikis.
 
 
-; OZ 2019-05-23 
+; OZ 2019-05-23
 ; All nonscopal modifiers take the modified expression as their semantic
 ; argument (such as ARG1), which does not require HCONS.
-; Some have empty HCONS lists (as opposed to 
-; scopal modifiers which all have at least one qeq on the HCONS relating their ARG1 to 
+; Some have empty HCONS lists (as opposed to
+; scopal modifiers which all have at least one qeq on the HCONS relating their ARG1 to
 ; their MOD’s LTOP).
-; Others (e.g. adverbs like "where", "which place") 
-; have decomposed lexical semantics, including quantifiers on their RELS list, 
-; which means they’ll have non-empty HCONS lists 
-; linking the handles of relations. 
+; Others (e.g. adverbs like "where", "which place")
+; have decomposed lexical semantics, including quantifiers on their RELS list,
+; which means they’ll have non-empty HCONS lists
+; linking the handles of relations.
 
 basic-intersective-mod-lex := lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.MOD < [ LOCAL intersective-mod &
@@ -3928,8 +3928,8 @@ n-bottom-coord-phrase := bottom-coord-phrase &
 np-coord-phrase := coord-phrase &
   [ SYNSEM.LOCAL.CAT [ HEAD noun,
     		       VAL.SPR < > ],
-    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun,
-    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun ].
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun & CASE #case,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun & CASE #case].
 
 basic-np-top-coord-rule := np-coord-phrase &
   [ C-CONT [ HOOK [ LTOP #ltop,
