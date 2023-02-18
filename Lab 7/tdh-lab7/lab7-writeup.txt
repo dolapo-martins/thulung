@@ -256,8 +256,9 @@ Our steps are as follows
 (4) recompile grammar at mmt/tm/tdh
 (5) run ./translate-line.sh eng tdh LINE at mmt
 
-We are getting the below output for lines 15-17. 
+We are getting the below output for lines 15-16. We get no other output. 
 
+(15)
 ubuntu@lkb:~/Documents/thulung/mmt$ ./translate-line.sh eng tdh 15
 NOTE: 1 readings, added 136 / 55 edges to chart (14 fully instantiated, 24 actives used, 11 passives used)	RAM: 544k
 NOTE: parsed 1 / 1 sentences, avg 544k, time 0.00335s
@@ -268,9 +269,63 @@ NOTE: 19 passive, 157 active edges in final generation chart; built 47 passives 
 NOTE: generated 0 / 1 sentences, avg 459k, time 0.00551s
 NOTE: transfer did 0 successful unifies and 0 failed ones
 
-QUESTION: the output says parsesd 1/1 and transfered 1/1 but then it also says generated 0/1 and the last line says 0 successful unifies and 0 failed ones.
+(16)
+ubuntu@lkb:~/Documents/thulung/mmt$ ./translate-line.sh eng tdh 16
+NOTE: 1 readings, added 206 / 75 edges to chart (26 fully instantiated, 34 actives used, 18 passives used)	RAM: 707k
+NOTE: parsed 1 / 1 sentences, avg 707k, time 0.00501s
+NOTE: 1 transfer results	RAM: 24k
+NOTE: transfered 1 / 1 sentences, avg 24k, time 0.00293s
+NOTE: 36 passive, 169 active edges in final generation chart; built 77 passives total. [0 results]
+
+NOTE: generated 0 / 1 sentences, avg 730k, time 0.00642s
+NOTE: transfer did 0 successful unifies and 0 failed ones
+
+For line (17), we do get output, however, it doesn't seem to work.
+ubuntu@lkb:~/Documents/thulung/mmt$ ./translate-line.sh eng tdh 17
+NOTE: 1 readings, added 168 / 63 edges to chart (17 fully instantiated, 30 actives used, 13 passives used)	RAM: 621k
+NOTE: 1 transfer results	RAM: 25k
+NOTE: parsed 1 / 1 sentences, avg 621k, time 0.00730s
+NOTE: transfered 1 / 1 sentences, avg 25k, time 0.00291s
+Khlea-ʔa subupo-ʔa bu
+Khlea-ʔa subupo-ʔa bu-mi
+.
+.
+.
+Khlea-mim-la subupo-mim bu-mi
+Khlea-mim-ju subupo-mim bu-mi
+NOTE: 40 passive, 184 active edges in final generation chart; built 98 passives total. [392 results]
+
+NOTE: generated 1 / 1 sentences, avg 16008k, time 0.42690s
+NOTE: transfer did 0 successful unifies and 0 failed ones
+
+QUESTION: the output says parsed 1/1 and transfered 1/1 but then it also says generated 0/1 and the last line says 0 successful unifies and 0 failed ones.
 (1) What is the difference between generate and transfer?
 (2) How can we have both 0 failures and 0 successes?
+(3) How do we debug this? 
+
+Interestingly, translating from tdh -> eng does seem to work. We are not sure how to proceed.
+
+(17)
+ubuntu@lkb:~/Documents/thulung/mmt$ ./translate-line.sh tdh eng  17
+NOTE: 2 readings, added 86 / 39 edges to chart (21 fully instantiated, 14 actives used, 9 passives used)	RAM: 788k
+NOTE: parsed 1 / 1 sentences, avg 788k, time 0.01121s
+NOTE: 1 transfer results	RAM: 39k
+NOTE: 1 transfer results	RAM: 25k
+NOTE: transfered 2 / 2 sentences, avg 32k, time 0.00525s
+NOTE: 53 passive, 235 active edges in final generation chart; built 61 passives total. [0 results]
+
+Dogs were cats
+The dogs were cats
+Dogs are cats
+Dogs were the cats
+Dogs are the cats
+The dogs are the cats
+The dogs were the cats
+The dogs are cats
+NOTE: 40 passive, 229 active edges in final generation chart; built 46 passives total. [8 results]
+
+NOTE: generated 1 / 2 sentences, avg 2399k, time 0.02363s
+NOTE: transfer did 4 successful unifies and 8 failed ones
 
 --------------------------------------------------------------------------------
 Description of wh-questio non-verbal predicate behavior in Thulung
