@@ -1945,4 +1945,7 @@ np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
 
 np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "2",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
+                   COORD-REL.PRED "_and_coord_rel" ,
+                   CAT [ HEAD.CASE #case ] ],
+    DTR.SYNSEM.LOCAL.CAT [ HEAD.CASE #case ] ].
+                   
