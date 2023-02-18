@@ -17,8 +17,177 @@ The behavior of the copula is not affected by the tense. However, Thulung does l
 --------------------------------------------------------------------------------
 Implementation of non-verbal predicate behavior in Thulung
 --------------------------------------------------------------------------------
+1. Copulas
+There are two stems for copula in Thulung: 'bu-' [TENSE nonpast], and 'ba-' [TENSE past]. So we have two entries in both np-pred-copula and copula.
+--------------------------
+1.1. NP predicating copula
+--------------------------
+For np-pred-copula, we first define a parent lexical type:
 
+cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb &
+                            [ NMZ - ],
+			 VAL [ SUBJ < #subj >,
+			       COMPS < #comps > ] ],
+	     L-QUE -,
+             SUBORDINATED none ],
+    ARG-ST < #subj & [ LOCAL.CAT cat-sat &
+				 [ VAL.SPR < >,
+				   HEAD noun &
+				      [ CASE nom ] ] ],
+             #comps &
+             [ LOCAL.CAT cat-sat &
+                         [ VAL.SPR < >,
+			   HEAD noun &
+                                [ CASE nom ] ] ] > ].
 
+The parent type inherits its verbiness from their parent types, and enforces the subject and predicated to have nominative case. There are two positions we attempted to place cop-np-pred-lex. The first one is under erg-dat-transitive-verb-lex, but the case constraints, as the name shows, conflict with the case constraints of cop-np-pred-lex. The second one is under the previous verb-lex, which has a set of obligatory rules including aspect, mood, etc., which do not apply to copula in Thulung. So we moved this set of rules from verb-lex to one level down to main-verb-lex (shown below). 
+
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & ASPECT-POSITION-CLASS-rule-dtr & GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & INTRANSITIVE-TENSE-ROLE-MARKING-or-TRANSITIVE-ROLE-MARKING-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & ROLE-POSITION-CLASS-rule-dtr & need-to-add-mood-rule-dtr &
+[ INFLECTED [ ASPECT-POSITION-CLASS-FLAG -,
+                ROLE-POSITION-CLASS-FLAG -,
+                MOOD-POSITION-CLASS-FLAG -,
+                1SG-PATIENT-FLAG na-or--,
+                1DE-PATIENT-FLAG na-or--,
+                1DI-PATIENT-FLAG na-or--,
+                1PE-PATIENT-FLAG na-or--,
+                1PI-PATIENT-FLAG na-or--,
+                UNDERSPECIFIED-PATIENT-FLAG na-or--,
+                3SG-PATIENT-FLAG na-or--,
+                ADD-NEGATION-TO-VERB-FLAG na-or-- ],
+
+To account for the pernum inflection, we defined a new set of rules:
+(We have not yet implemented past tense pernum rules.)
+copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
+ [ INFLECTED #infl,
+   DTR copula-npst-dtr &
+      [ INFLECTED #infl ] ].
+
+After we defined the parent type, we defined the two verb-lex under the parent type with their tense specified separately:
+
+copula-np-pred-npst-verb-lex := cop-np-pred-lex & copula-npst-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
+
+copula-np-pred-pst-verb-lex := cop-np-pred-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
+
+Example:
+Judgment: g
+Khlea subupo bu
+dog   cat    be
+The dog is the cat.
+Ambiguity: NP coordination lacks constraints in pernum; 3sg is zero-morphemic, and we have not changed copula-npst-dtr to be obligatory on the np-pred-copula.
+In the simple MRS, the copula links the dog to the cat.
+
+Example:
+Judgment: g
+Gana subupo bu-na
+2sg.pron cat be-2sg.npst
+You are a cat.
+We do not see ambiguity from zero-morpheme here, but NP-coord ambiguity persists.
+
+--------------------------------
+1.2. copula (semantically empty)
+--------------------------------
+Similarly, we defined a parent type first for copula:
+
+cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +jp ] ] > ].
+This copula can take AP or PP as complement. 
+
+We also have the two copula lexes with different tenses. The nonpast copula goes through the same set of inflection rules as the np-predicating-copula:
+
+copula-be-npst-cop-lex := cop-lex & copula-npst-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
+
+copula-be-pst-cop-lex := cop-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
+
+Example:
+Judgment: g
+Gana jakke bu-na
+2sg.pron small be-2sg.npst
+You are small.
+This sentence does parse.
+
+2. Locative NPs
+We implemented the locative NP construction in Thulung through locative-pp-phrase. Since we see ambiguity from NP coordination rules, we constrain the daughter of this rule to have COORD -:
+
+locative-pp-phrase := unary-phrase &
+[ SYNSEM [ NON-LOCAL #nl,
+           LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                    [ CAT.HEAD verb,
+                                                      CONT.HOOK.INDEX #xarg ] ] > ],
+		          VAL [ COMPS < >,
+			        SUBJ < >,
+			        SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #xarg ],
+	  RELS.LIST < arg12-ev-relation &
+		   [ PRED "_loc_p_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #xarg,
+		     ARG2 #dtr ] >,
+	     HCONS.LIST < >  ],
+	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
+		            LOCAL [ CAT [ HEAD noun & [CASE loc],
+		                          VAL.SPR < > ],
+			                  CONT.HOOK [ INDEX #dtr ],
+                        COORD - ] ] ] >].
+
+Example:
+Judgment: g
+Gumimim del-ra bu-mi
+3pl.pron village-LOC be-3pl.npst
+They are at the village.
+We see ambiguities in bu and the PP. Why are ADJ-HEAD-INT and ADJ-HEAD licensing the unification of del-ra and bu-mi? The copula here is the np-predicating-cop. We constrained the complement to be nominative case, why is it unifying with del-ra (locative), and is del-ra adjective or PP here?
+We also see the np-pred-cop selecting PP in the third tree, using HEAD-SPEC, should we constrain the SPR in cop-np-pred-lex?
+The fourth tree is the tree we want.
+
+3. NP coordination
+After implementing the locative-pp-phrase, we see ambiguity from NP-top, so we constrain the case in np2-top so that the daughters must have matching case, and in np2-bottom so that the daughter passes the case to the parent. 
+
+np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                   COORD-STRAT "2" ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "2",
+                   COORD-REL.PRED "_and_coord_rel" ,
+                   CAT.HEAD.CASE #case ],
+    ARGS < [SYNSEM.LOCAL.CAT.HEAD.CASE #case ] > ].
+
+Example:
+Judgment: g
+Gumumim gana bu-mi
+3pl.pron 2sg.pron be-3pl.npst
+They are you.
+This sentence has two trees.
+The first reading is "They are them and you.", since 1. Thulung is a pro-drop language 2. Subject and verb agrees in pernum 3. Coordinated nouns have the same case.
+The second reading is "They are you."
+
+Example:
+Judgment: u
+Gumumim-ka gana bu-mi
+3pl.pron-erg 2sg.pron be-3pl.npst
+They are you.
+This string does not parse, since the two nouns have different cases, and bu selects nominative subject.
 
 --------------------------------------------------------------------------------
 Machine translation of items 15-17
