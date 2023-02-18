@@ -43,12 +43,12 @@ The traditional copula is used in locational predications and with APs. We analy
     1POSS-husband outside go-3p
     My husband went outside.
 
-One of the locative affixes in Thulung is /-ra/. Based on (3) and (4), /pakha-/ appears to be a stem which can be inflected (3). This further adds to our reasoning that this should be analyzed as a noun, along with /patshi/ in (1).
+One of the locative affixes in Thulung is /-ra/. Based on (3) and (4), /pakha-/ might be to be a stem which can be inflected (3). This further adds to our reasoning that this should be analyzed as a noun, along with /patshi/ in (1).
 
 We use the following IGT to motivate our analysis of APs and locative NPs as standalone predicates. This traditional copula is semantically empty.
 
             #75
-            Source: author
+            Source: e
             Vetted: f
             Judgment: g
             Phenomena: {cop}
@@ -57,7 +57,7 @@ We use the following IGT to motivate our analysis of APs and locative NPs as sta
             'Your village is beautiful'
 
             #76
-            Source: author
+            Source: e
             Vetted: f
             Judgment: g
             Phenomena: {cop}
@@ -67,6 +67,7 @@ We use the following IGT to motivate our analysis of APs and locative NPs as sta
 
 Locative NPs take one of the three types of locatives in Thulung as an affix. Because Thulung has SOV order, these can be thought of as prepositions. They are then treated as PPs which modify the copula. 
     [PP V(P)] -> VP
+
 Also, we were unsure if locative verbs are only as described with the semantics in the Lab 7 instructions (be-located) or if other verbs like in (3) are considered locative-verbs. Nonetheless, we didn't get a chance to implement locative-verb-lex or ask questions about it, though we suspect it applies to our language.
 
 --------------------------------------------------------------------------------
@@ -192,7 +193,7 @@ locative-pp-phrase := unary-phrase &
 		    INDEX #index,
 		    XARG #xarg ],
 	  RELS.LIST < arg12-ev-relation &
-		   [ PRED "_loc_p_rel",
+		   [ PRED "_in_p_rel",
 		     LBL #ltop,
 		     ARG0 #index,
 		     ARG1 #xarg,
@@ -301,7 +302,7 @@ NOTE: transfer did 0 successful unifies and 0 failed ones
 QUESTION: the output says parsed 1/1 and transfered 1/1 but then it also says generated 0/1 and the last line says 0 successful unifies and 0 failed ones.
 (1) What is the difference between generate and transfer?
 (2) How can we have both 0 failures and 0 successes?
-(3) How do we debug this? 
+(3) How do we debug this? How do we check the MRS via ace?
 
 Interestingly, translating from tdh -> eng does seem to work. We are not sure how to proceed.
 
@@ -328,12 +329,12 @@ NOTE: generated 1 / 2 sentences, avg 2399k, time 0.02363s
 NOTE: transfer did 4 successful unifies and 8 failed ones
 
 --------------------------------------------------------------------------------
-Description of wh-questio non-verbal predicate behavior in Thulung
+Description of wh-question non-verbal predicate behavior in Thulung
 --------------------------------------------------------------------------------
 N/A. Our descriptive materials do not give a prose description of wh-questions in Thulung, nor adequate examples of wh-questions from which we can infer the behavior. We also do not have simple wh constructions. Consequently, we are not able to analyze wh-questions let alone wh-questions + non-verbal predicates. Based on our discussion board discussion, we do not think we will be able to analyze wh-questions in Thulung at all.
 
 --------------------------------------------------------------------------------
-                            Focus marker (re) + questions
+                        Focus marker (re) + questions
 --------------------------------------------------------------------------------
     bju     rokphaɖ-ɖa-m            patshi      bju-ka      "bante re   ane
     eagle   arrive.here-3s.PST-NOM  N.after     eagle-ERG   "where FOC  today
