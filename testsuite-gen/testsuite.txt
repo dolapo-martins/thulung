@@ -715,7 +715,9 @@ Judgment: g
 Phenomena: {cop}
 gana gana bu-na
 2sg  2sg  be.2sg.npst
-You are you.
+'You are you.'
 
 # we don't have ungrammatical examples (yet) of copula because this is a 
-# pro-drop language and we have not enforced subj-verb agreement
+# pro-drop language and we have not correclty enforced subj-verb agreement 
+# our "ungrammatical" examples parse and we have the correct tree but also 
+# trees that should not be licensed.
