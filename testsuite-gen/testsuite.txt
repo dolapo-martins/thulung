@@ -682,7 +682,7 @@ det sleep-3sg
 'That sleeps.'
 
 #74
-Source: author
+Source: e
 Vetted: f
 Judgment: g
 Phenomena: {cop}
@@ -691,7 +691,7 @@ go  dzɔŋgɔli        bu-ŋu
 'I am a forest man'
 
 #75
-Source: author
+Source: e
 Vetted: f
 Judgment: g
 Phenomena: {cop}
