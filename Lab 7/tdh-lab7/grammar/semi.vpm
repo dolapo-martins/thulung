@@ -37,55 +37,51 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.PERNUM : PNG.PERNUM
-  3plain <> 3plain
-  2plain <> 2plain
-  1plain <> 1plain
-  3polite <> 3polite
-  2polite <> 2polite
-  1polite <> 1polite
-  3sg <> 3sg
-  2sg <> 2sg
-  1sg <> 1sg
-  3pl <> 3pl
-  2pl <> 2pl
-  1pl_excl <> 1pl_excl
-  1pl_incl <> 1pl_incl
-  1pl <> 1pl
-  3du <> 3du
-  2du <> 2du
-  1du_excl <> 1du_excl
-  1du_incl <> 1du_incl
-  1du <> 1du
-  3rd <> 3rd
-  2nd <> 2nd
-  1st <> 1st
-  plain <> plain
-  polite <> polite
-  sg <> sg
-  pl <> pl
-  du <> du
-  * <> *
+PNG.PERNUM : PER NUM
+  3sg <> third sg
+  2sg <> second sg
+  1sg <> first sg
+  3pl <> third pl
+  2pl <> second pl
+  1pl <> first pl
+  1pl_excl >> first pl
+  1pl_incl >> first pl
+  3du >> third pl
+  2du >> second pl
+  1du_excl >> first pl
+  1du_incl >> first pl
+  1du >> first pl
+  3plain << third sg
+  2plain << second sg
+  1plain << first sg
+  3polite << third sg
+  2polite << second sg
+  1polite << first sg
+  3rd <> third !
+  3rd << third *
+  2nd <> second !
+  2nd << second *
+  1st <> first !
+  1st << first *
+  sg <> ! sg
+  sg << * sg
+  pl <> ! pl
+  pl << * pl
+  * <> ! !
 
 PNG.GEND : PNG.GEND
   * <> *
 
-E.TENSE : E.TENSE
+E.TENSE : TENSE
+  nonpast << present
+  nonpast << future
   nonpast <> nonpast
   past <> past
   * <> *
 
-E.ASPECT : E.ASPECT
-  POT <> POT
-  HAB <> HAB
-  DEF <> DEF
-  STA <> STA
-  PON <> PON
-  RES <> RES
-  ITF <> ITF
-  APX <> APX
-  no-aspect <> no-aspect
-  * <> *
+E.ASPECT : ASPECT
+  * >> no-aspect
+  no-aspect << [e]
 
 E.MOOD : E.MOOD
   IRR <> IRR
