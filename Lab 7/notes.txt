@@ -72,10 +72,10 @@ gumi    neb     -ra     -ŋa       bu-mi
 3p      house   -LOC    EMPH      be.3p
 She is at home.
 
-gumi    neb-ra       bu-mi
-gumi    neb     -ra       bu-mi
-3p      house   -LOC      be.3p
-She is at home.
+gumi    del-ra       bu-mi
+gumi    del     -ra       bu-mi
+3p      village   -LOC      be.3p
+She is at the village.
 
 dzubu   bloku    hombu-nu           bu
 Jubu    river    across-levLoc      be.3s

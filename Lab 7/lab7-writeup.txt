@@ -6,13 +6,68 @@ Zoe Fang
 --------------------------------------------------------------------------------
 Description of non-verbal predicate behavior in Thulung
 --------------------------------------------------------------------------------
-1. Copulas
-The behavior of the copula is not affected by the tense. However, Thulung does license the NP-predicating copula as well as the traditional copula, with APs and locative-PPs.
-1.1. NP predicating copula
-1.2. copula (semantically empty)
+Thulung licenses the NP-predicating copula as well as the traditional copula, with APs and locative-PPs.
 
-2. Locative NPs
+The behavior of the copula is not affected by the tense. However, its form changes based on whether it is non-past or past tense. The non-past copula is
+/bu/ and the past copula is /ba/. Unlike our analysis of verbs, tense is directly on the copula, instead of being introduced via an affix. Similar to our main verbs, the copula does inflect based on the characteristics of the subject.
 
+In our descriptive materials, the NP-predicating copula is called the equative predication (page 185). 
+
+            mɯ      mytsy   a-pap-ku            ŋopsɯ   bu
+            mɯ      mytsy   a       -pap    -ku            ŋopsɯ   bu
+            that    man     1POSS   -father -GEN           friend  be.3s
+            That man is my father's friend
+
+            go  dzɔŋgɔli        bu-ŋu
+            1s  N.forest-man    be-1s
+            I am a forest man
+
+Based on the provided IGT, we have a constraint on this copula that the two items on its argument structure list must both be case nominative. We added this constraint because in both examples, there is no case marker on the object.
+Both /ŋopsɯ/ and /dzɔŋgɔli/ are bare. In Thulung, only the nominative case does not have an overt case marker.
+
+The traditional copula is used in locational predications and with APs. We analyze our locative NPs as PPs, however, in our descriptive materials there is no mention of adpositions in Thulung. Common English prepositions like out, across, outside are glossed as a noun (1), part of a (noun+locative) construction (2), the semantics of the verb (3), or no clear explanation (4).
+
+(1) bju     rokphaɖ-ɖa-m            patshi      bju-ka      "..."
+    eagle   arrive.here-3s.PST-NOM  N.after     eagle-ERG   "..."
+    After the eagle arrived, the eagle [said] "..."
+
+(2) gumi    del-ra       bu-mi
+    3p      village-LOC      be.3p
+    She is at the village.
+
+(3) boro pakhara lu-mu              mal-saŋa           bu
+    frog outside go.out-NOM.inf     search-AC+EMPH     be.3s
+    The frog is trying to get outside.
+
+(4) a-wotsy pakha lɔ-mri
+    1POSS-husband outside go-3p
+    My husband went outside.
+
+One of the locative affixes in Thulung is /-ra/. Based on (3) and (4), /pakha-/ appears to be a stem which can be inflected (3). This further adds to our reasoning that this should be analyzed as a noun, along with /patshi/ in (1).
+
+We use the following IGT to motivate our analysis of APs and locative NPs as standalone predicates. This traditional copula is semantically empty.
+
+            #75
+            Source: author
+            Vetted: f
+            Judgment: g
+            Phenomena: {cop}
+            inima-del       dzɯpa       bu
+            2POSS-village   beautiful   be.3sg.npst
+            'Your village is beautiful'
+
+            #76
+            Source: author
+            Vetted: f
+            Judgment: g
+            Phenomena: {cop}
+            gumi    del-ra       bu
+            3sg     village-LOC  be.3sg.npst
+            She is at the village.
+
+Locative NPs take one of the three types of locatives in Thulung as an affix. Because Thulung has SOV order, these can be thought of as prepositions. They are then treated as PPs which modify the copula. 
+    [PP V(P)] -> VP
+Also, we were unsure if locative verbs are only as described with the semantics in the Lab 7 instructions (be-located) or if other verbs like in (3) are considered locative-verbs. Nonetheless, we didn't get a chance to implement locative-verb-lex or ask questions about it, though we suspect it applies to our language.
 
 --------------------------------------------------------------------------------
 Implementation of non-verbal predicate behavior in Thulung
@@ -28,9 +83,73 @@ Machine translation of items 15-17
 --------------------------------------------------------------------------------
 Description of wh-questio non-verbal predicate behavior in Thulung
 --------------------------------------------------------------------------------
-N/A. Our descriptive materials do not give a prose description of wh-questions in Thulung, nor adequate examples of wh-questions from which we can infer the behavior. Consequently, we are not able to analyze wh-questions let alone wh-questions + non-verbal predicates.
-
+N/A. Our descriptive materials do not give a prose description of wh-questions in Thulung, nor adequate examples of wh-questions from which we can infer the behavior. We also do not have simple wh constructions. Consequently, we are not able to analyze wh-questions let alone wh-questions + non-verbal predicates. Based on our discussion board discussion, we do not think we will be able to analyze wh-questions in Thulung at all.
 
 --------------------------------------------------------------------------------
-Grammar performance comparison
+                            Focus marker (re) + questions
+--------------------------------------------------------------------------------
+    bju     rokphaɖ-ɖa-m            patshi      bju-ka      "bante re   ane
+    eagle   arrive.here-3s.PST-NOM  N.after     eagle-ERG   "where FOC  today
+
+    mini    re      mur     nem         bante   re      ham     re?"
+    human   FOC     smell   smell.3s    where   FOC     what    FOC?"
+
+    After the eagle arrived, the eagle [said] "Where is the human smell coming from today, where and what?"
+--------------------------------------------------------------------------------
+    ɔbɔ     gani    re      ŋado-m,     go  re      ŋado-m?
+    Now     2p      FOC     first-NOM   1s  FOC     first-NOM
+    So who then was here first, me or you?
+    (NOM = nominalized)
+--------------------------------------------------------------------------------
+                        Embedded quotations with questions
+--------------------------------------------------------------------------------
+    memma "mima,        a-lwak              ne  ba      re  lɔs-ta"     ra  ma then    grandmother 3-POSS-y.sibling    TOP where   FOC go-3s.PST   say AS
+
+    hilaby-ʔe
+    ask.3s/3s.-HS
+    (AS = Anterior Sequencer)
+
+    After that, "Grandmother, where did my little sister go?", he asks
+--------------------------------------------------------------------------------
+    "bante lɔs-ta       boro" ra-tsi        ma  khɔtle  thɯ     mal-tsi
+    "where go-3s.PST    frog" say-3d/3s     AS  all     there   search-3d
+    "Where did the frog go?" they say, and search everywhere
+--------------------------------------------------------------------------------
+    page 369
+    i-lwa           pi-ra       ta          haŋko       bɔllɯ   dym-na?
+    2POSS-hand      bring-2IMP  N.indeed    how.much    N.fat   become-2s
+    Give me your arm, how fat have you gotten
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                        Grammar performance comparison
+--------------------------------------------------------------------------------
+Lab 7 initial grammar on provided test corpus -> use Lab 6 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         19           |
+What is the average number of parses per parsed item:   |        27.47         |
+How many parses did the most ambiguous item receive:    |         208          |
+>>> The ambiguities from NP coordination and verb morphology persist.
+--------------------------------------------------------------------------------
+Lab 7 initial grammar on our custom test suite -> use Lab 6 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         26           |
+What is the average number of parses per parsed item:   |        39.65         |
+How many parses did the most ambiguous item receive:    |         90           |
+>>> Other than underspecified morphology for verb, we also see ambiguities from
+Underspecified morphology for pronouns and NP coordination.
+--------------------------------------------------------------------------------
+Lab 7 final grammar on provided test corpus
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XXXXX         |
+How many parses did the most ambiguous item receive:    |         XXX          |
+>>> The ambiguities from NP coordination and verb morphology persist.
+--------------------------------------------------------------------------------
+Lab 7 final grammar on our custom test suite
+--------------------------------------------------------------------------------
+How many items parsed:                                  |         XX           |
+What is the average number of parses per parsed item:   |        XXXXXX        |
+How many parses did the most ambiguous item receive:    |         XXX          |
+>>> The ambiguities from NP coordination and verb morphology persist.
 --------------------------------------------------------------------------------
