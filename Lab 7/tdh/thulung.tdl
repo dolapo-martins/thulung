@@ -1937,7 +1937,11 @@ s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
 ;;; Coordination Strategy 2
 
 np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+;  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT [ HEAD.CASE #case ],
+                   COORD-STRAT "2" ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT [ HEAD.CASE #case ],
+    LCOORD-DTR.SYNSEM.LOCAL.CAT [ HEAD.CASE #case ] ].
 
 np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "2",
