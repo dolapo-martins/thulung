@@ -3928,8 +3928,8 @@ n-bottom-coord-phrase := bottom-coord-phrase &
 np-coord-phrase := coord-phrase &
   [ SYNSEM.LOCAL.CAT [ HEAD noun,
     		       VAL.SPR < > ],
-    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun & CASE #case,
-    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun & CASE #case].
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun ].
 
 basic-np-top-coord-rule := np-coord-phrase &
   [ C-CONT [ HOOK [ LTOP #ltop,
@@ -3945,9 +3945,11 @@ basic-np-mid-coord-rule := np-coord-phrase &
                                         C-ARG #carg ]].
 
 np-bottom-coord-phrase := bottom-coord-phrase &
-  [ SYNSEM.LOCAL.CAT [ HEAD noun,
+  [ SYNSEM.LOCAL.CAT [ HEAD noun &
+                          [ CASE #case ],
                        VAL.SPR < > ],
-    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD noun,
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD noun &
+                                        [ CASE #case ],
                                    VAL.SPR < > ]].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
