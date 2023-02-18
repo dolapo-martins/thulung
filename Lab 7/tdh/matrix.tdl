@@ -3712,7 +3712,8 @@ bottom-coord-phrase := phrase &
     NONCONJ-DTR sign & [ SYNSEM.NON-LOCAL [ SLASH #slash, REL #rel, QUE #que ] ] ].
 
 unary-bottom-coord-rule := bottom-coord-phrase & unary-phrase &
-  [ SYNSEM.LOCAL [ CAT [ HEAD.MOD #mod,
+  [ SYNSEM.LOCAL [ CAT [ HEAD [ MOD #mod,
+                                CASE #case]
                          VAL #val ],
                    COORD +,
                    COORD-REL #crel ],
@@ -3720,7 +3721,8 @@ unary-bottom-coord-rule := bottom-coord-phrase & unary-phrase &
 	     RELS.LIST < #crel >,
 	     HCONS.LIST < > ],
     NONCONJ-DTR #ncdtr,
-    ARGS < #ncdtr & [ SYNSEM.LOCAL [ CAT [ HEAD.MOD #mod,
+    ARGS < #ncdtr & [ SYNSEM.LOCAL [ CAT [ HEAD [ MOD #mod,
+                                                  CASE #case]
                                            VAL #val ],
                                      COORD -,
                                      CONT.HOOK [ INDEX #rind ]]] > ].
@@ -3928,10 +3930,8 @@ n-bottom-coord-phrase := bottom-coord-phrase &
 np-coord-phrase := coord-phrase &
   [ SYNSEM.LOCAL.CAT [ HEAD noun,
     		       VAL.SPR < > ],
-    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun &
-                            [ CASE #case ],
-    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun &
-                            [ CASE #case ] ].
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun ,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun ].
 
 basic-np-top-coord-rule := np-coord-phrase &
   [ C-CONT [ HOOK [ LTOP #ltop,
@@ -3947,11 +3947,9 @@ basic-np-mid-coord-rule := np-coord-phrase &
                                         C-ARG #carg ]].
 
 np-bottom-coord-phrase := bottom-coord-phrase &
-  [ SYNSEM.LOCAL.CAT [ HEAD noun &
-                          [ CASE #case ],
+  [ SYNSEM.LOCAL.CAT [ HEAD noun ,
                        VAL.SPR < > ],
-    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD noun &
-                                        [ CASE #case ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD noun ,
                                    VAL.SPR < > ]].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
