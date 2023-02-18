@@ -681,3 +681,41 @@ mɯ am
 det sleep-3sg
 'That sleeps.'
 
+#74
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+go  dzɔŋgɔli        bu-ŋu
+1s  N.forest-man    be-1s.npst
+'I am a forest man'
+
+#75
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+inima-del       dzɯpa       bu
+2POSS-village   beautiful   be.3sg.npst
+'Your village is beautiful'
+
+#76
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+gumi    del-ra       bu
+3sg     village-LOC  be.3sg.npst
+She is at the village.
+
+#77
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+gana gana bu-na
+2sg  2sg  be.2sg.npst
+You are you.
+
+# we don't have ungrammatical examples (yet) of copula because this is a 
+# pro-drop language and we have not enforced subj-verb agreement

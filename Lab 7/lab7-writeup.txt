@@ -4,11 +4,33 @@ Dolapo Martins
 Zoe Fang
 
 --------------------------------------------------------------------------------
-Implementation
+Description of non-verbal predicate behavior in Thulung
 --------------------------------------------------------------------------------
 1. Copulas
-Past and pst 
+The behavior of the copula is not affected by the tense. However, Thulung does license the NP-predicating copula as well as the traditional copula, with APs and locative-PPs.
 1.1. NP predicating copula
 1.2. copula (semantically empty)
 
 2. Locative NPs
+
+
+--------------------------------------------------------------------------------
+Implementation of non-verbal predicate behavior in Thulung
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Machine translation of items 15-17
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Description of wh-questio non-verbal predicate behavior in Thulung
+--------------------------------------------------------------------------------
+N/A. Our descriptive materials do not give a prose description of wh-questions in Thulung, nor adequate examples of wh-questions from which we can infer the behavior. Consequently, we are not able to analyze wh-questions let alone wh-questions + non-verbal predicates.
+
+
+--------------------------------------------------------------------------------
+Grammar performance comparison
+--------------------------------------------------------------------------------
