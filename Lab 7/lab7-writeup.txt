@@ -295,30 +295,34 @@ N/A. Our descriptive materials do not give a prose description of wh-questions i
 --------------------------------------------------------------------------------
 Lab 7 initial grammar on provided test corpus -> use Lab 6 final grammar
 --------------------------------------------------------------------------------
-How many items parsed:                                  |         19           |
+How many items parsed:                                  |          19          |
 What is the average number of parses per parsed item:   |        27.47         |
 How many parses did the most ambiguous item receive:    |         208          |
 >>> The ambiguities from NP coordination and verb morphology persist.
 --------------------------------------------------------------------------------
 Lab 7 initial grammar on our custom test suite -> use Lab 6 final grammar
 --------------------------------------------------------------------------------
-How many items parsed:                                  |         26           |
-What is the average number of parses per parsed item:   |        39.65         |
-How many parses did the most ambiguous item receive:    |         90           |
+How many items parsed:                                  |          18          |
+What is the average number of parses per parsed item:   |        43.22         |
+How many parses did the most ambiguous item receive:    |         104          |
 >>> Other than underspecified morphology for verb, we also see ambiguities from
 Underspecified morphology for pronouns and NP coordination.
 --------------------------------------------------------------------------------
 Lab 7 final grammar on provided test corpus
 --------------------------------------------------------------------------------
-How many items parsed:                                  |         XX           |
-What is the average number of parses per parsed item:   |        XXXXX         |
-How many parses did the most ambiguous item receive:    |         XXX          |
+How many items parsed:                                  |          12          |
+What is the average number of parses per parsed item:   |         7.67         |
+How many parses did the most ambiguous item receive:    |          30          |
 >>> The ambiguities from NP coordination and verb morphology persist.
 --------------------------------------------------------------------------------
 Lab 7 final grammar on our custom test suite
 --------------------------------------------------------------------------------
-How many items parsed:                                  |         XX           |
-What is the average number of parses per parsed item:   |        XXXXXX        |
-How many parses did the most ambiguous item receive:    |         XXX          |
+How many items parsed:                                  |          12          |
+What is the average number of parses per parsed item:   |        11.64         |
+How many parses did the most ambiguous item receive:    |          90          |
 >>> The ambiguities from NP coordination and verb morphology persist.
 --------------------------------------------------------------------------------
+Our ambiguity is reducing, however, our # of items parses is also reducing. We need to make three additional changes:
+(1) Verb-pc rules: don't chain. Instead, use LRTs to capture what is possible in the same position class. 
+(2) Analysis of genitive possession. Need to incorporate feedback from Lab 5
+(3) Test suite: need to audit our items. We marked things as (un)grammatical based on what we thought, not what we observed.
