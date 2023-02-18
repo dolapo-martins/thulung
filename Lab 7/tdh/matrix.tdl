@@ -3792,10 +3792,12 @@ monopoly-mid-coord-rule := mid-coord-rule &
 ; (and non-inflecting) bottom rule.
 
 apoly-top-coord-rule := top-coord-rule &
-  [ LCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
-                              COORD - ],
-    RCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
-                              COORD + ] ].
+[ LCOORD-DTR.SYNSEM.LOCAL.COORD - ,
+  RCOORD-DTR.SYNSEM.LOCAL.COORD + ].
+;  [ LCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
+;                              COORD - ],
+;    RCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
+;                              COORD + ] ].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; omni: This handles a variety of polysyndeton, called here for
