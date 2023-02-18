@@ -3792,12 +3792,8 @@ monopoly-mid-coord-rule := mid-coord-rule &
 ; (and non-inflecting) bottom rule.
 
 apoly-top-coord-rule := top-coord-rule &
-[ LCOORD-DTR.SYNSEM.LOCAL.COORD - ,
-  RCOORD-DTR.SYNSEM.LOCAL.COORD + ].
-;  [ LCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
-;                              COORD - ],
-;    RCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
-;                              COORD + ] ].
+  [ LCOORD-DTR.SYNSEM.LOCAL.COORD -,
+    RCOORD-DTR.SYNSEM.LOCAL.COORD + ].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; omni: This handles a variety of polysyndeton, called here for
@@ -3932,7 +3928,7 @@ n-bottom-coord-phrase := bottom-coord-phrase &
 np-coord-phrase := coord-phrase &
   [ SYNSEM.LOCAL.CAT [ HEAD noun,
     		       VAL.SPR < > ],
-    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun ,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun,
     RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD noun ].
 
 basic-np-top-coord-rule := np-coord-phrase &
@@ -3949,9 +3945,9 @@ basic-np-mid-coord-rule := np-coord-phrase &
                                         C-ARG #carg ]].
 
 np-bottom-coord-phrase := bottom-coord-phrase &
-  [ SYNSEM.LOCAL.CAT [ HEAD noun ,
+  [ SYNSEM.LOCAL.CAT [ HEAD noun,
                        VAL.SPR < > ],
-    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD noun ,
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD noun,
                                    VAL.SPR < > ]].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

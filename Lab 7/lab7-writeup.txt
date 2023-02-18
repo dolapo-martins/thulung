@@ -1,0 +1,14 @@
+Ling 567 / Bender
+Thulung | tdh
+Dolapo Martins
+Zoe Fang
+
+--------------------------------------------------------------------------------
+Implementation
+--------------------------------------------------------------------------------
+1. Copulas
+Past and pst 
+1.1. NP predicating copula
+1.2. copula (semantically empty)
+
+2. Locative NPs
