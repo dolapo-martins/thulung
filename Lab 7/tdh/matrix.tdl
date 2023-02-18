@@ -3712,8 +3712,7 @@ bottom-coord-phrase := phrase &
     NONCONJ-DTR sign & [ SYNSEM.NON-LOCAL [ SLASH #slash, REL #rel, QUE #que ] ] ].
 
 unary-bottom-coord-rule := bottom-coord-phrase & unary-phrase &
-  [ SYNSEM.LOCAL [ CAT [ HEAD [ MOD #mod,
-                                CASE #case]
+  [ SYNSEM.LOCAL [ CAT [ HEAD.MOD #mod,
                          VAL #val ],
                    COORD +,
                    COORD-REL #crel ],
@@ -3721,8 +3720,7 @@ unary-bottom-coord-rule := bottom-coord-phrase & unary-phrase &
 	     RELS.LIST < #crel >,
 	     HCONS.LIST < > ],
     NONCONJ-DTR #ncdtr,
-    ARGS < #ncdtr & [ SYNSEM.LOCAL [ CAT [ HEAD [ MOD #mod,
-                                                  CASE #case]
+    ARGS < #ncdtr & [ SYNSEM.LOCAL [ CAT [ HEAD.MOD #mod,
                                            VAL #val ],
                                      COORD -,
                                      CONT.HOOK [ INDEX #rind ]]] > ].
@@ -3794,8 +3792,10 @@ monopoly-mid-coord-rule := mid-coord-rule &
 ; (and non-inflecting) bottom rule.
 
 apoly-top-coord-rule := top-coord-rule &
-  [ LCOORD-DTR.SYNSEM.LOCAL.COORD -,
-    RCOORD-DTR.SYNSEM.LOCAL.COORD + ].
+  [ LCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
+                              COORD - ],
+    RCOORD-DTR.SYNSEM.LOCAL [ CAT.HEAD noun & [ CASE #case],
+                              COORD + ] ].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; omni: This handles a variety of polysyndeton, called here for
