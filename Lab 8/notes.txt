@@ -1,0 +1,7 @@
+Subject     |                    Agent                 | Patient/ Primary Object
+NOM         | 2nd plural/3rd person -> ERG, else NOM   | DAT
+
+
+1. define subtype of ERG+INSTR that is ERG only
+2.
+
