@@ -452,14 +452,10 @@ NOM-intrasitive-verb-lex := intransitive-verb-lex &
                 ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG + ] ].
 
 copula-np-pred-npst-verb-lex := NOM-intrasitive-verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast,
-   INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or-- ] ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast].
 
 copula-np-pred-pst-verb-lex := NOM-intrasitive-verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
-    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or-- ] ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past].
 
 ;;; Auxiliaries
 
