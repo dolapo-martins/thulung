@@ -460,6 +460,7 @@ dorʣe := COMMON-NOUNS-noun-lex &
 dʌksa := COMMON-NOUNS-noun-lex &
   [ STEM < "dʌksa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+; should actually be 'tree'
 
 gersi := COMMON-NOUNS-noun-lex &
   [ STEM < "gersi" >,
@@ -1024,10 +1025,6 @@ pokhari := COMMON-NOUNS-noun-lex &
 polym := COMMON-NOUNS-noun-lex &
   [ STEM < "polym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hole_n_rel" ].
-
-popnar := COMMON-NOUNS-noun-lex &
-  [ STEM < "popnar" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_popnar_n_rel" ].
 
 porɵktam := COMMON-NOUNS-noun-lex &
   [ STEM < "porɵktam" >,
@@ -1742,1159 +1739,1151 @@ dzɯpa := adjective-adj-lex &
 
 ;;; Verbs
 
-am_1 := ERG-DAT-transitive-verb-lex &
+am_1 := mono-transitive-verb-lex &
   [ STEM < "am(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make.sleep_v_rel" ].
 
-beʈ_1 := ERG-DAT-transitive-verb-lex &
+beʈ_1 := mono-transitive-verb-lex &
   [ STEM < "beʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-bok := ERG-DAT-transitive-verb-lex &
+bok := mono-transitive-verb-lex &
   [ STEM < "bok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break.open_v_rel" ].
 
-goʈ := ERG-DAT-transitive-verb-lex &
+goʈ := mono-transitive-verb-lex &
   [ STEM < "goʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dry_v_rel" ].
 
-hap := ERG-DAT-transitive-verb-lex &
+hap := mono-transitive-verb-lex &
   [ STEM < "hap" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hang_v_rel" ].
 
-haʈ := ERG-DAT-transitive-verb-lex &
+haʈ := mono-transitive-verb-lex &
   [ STEM < "haʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pour_v_rel" ].
 
-hik_1 := ERG-DAT-transitive-verb-lex &
+hik_1 := mono-transitive-verb-lex &
   [ STEM < "hik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_turn_v_rel" ].
 
-hwak := ERG-DAT-transitive-verb-lex &
+hwak := mono-transitive-verb-lex &
   [ STEM < "hwak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
 
-hʌlly := ERG-DAT-transitive-verb-lex &
+hʌlly := mono-transitive-verb-lex &
   [ STEM < "hʌlly" >,
     SYNSEM.LKEYS.KEYREL.PRED "_shake_v_rel" ].
 
-jup := ERG-DAT-transitive-verb-lex &
+jup := mono-transitive-verb-lex &
   [ STEM < "jup" >,
     SYNSEM.LKEYS.KEYREL.PRED "_twist_v_rel" ].
 
-khap := ERG-DAT-transitive-verb-lex &
+khap := mono-transitive-verb-lex &
   [ STEM < "khap" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.about.to-or-begin.to-or-prepare.to_v_rel" ].
 
-kheʈ := ERG-DAT-transitive-verb-lex &
+kheʈ := mono-transitive-verb-lex &
   [ STEM < "kheʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring.up_v_rel" ].
 
-khop := ERG-DAT-transitive-verb-lex &
+khop := mono-transitive-verb-lex &
   [ STEM < "khop" >,
     SYNSEM.LKEYS.KEYREL.PRED "_gather_v_rel" ].
 
-khu := ERG-DAT-transitive-verb-lex &
+khu := mono-transitive-verb-lex &
   [ STEM < "khu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_steal_v_rel" ].
 
-khur_28s_29 := ERG-DAT-transitive-verb-lex &
+khur_28s_29 := mono-transitive-verb-lex &
   [ STEM < "khur(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_shave.off_v_rel" ].
 
-khur := ERG-DAT-transitive-verb-lex &
+khur := mono-transitive-verb-lex &
   [ STEM < "khur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_shave.off_v_rel" ].
 
-klym := ERG-DAT-transitive-verb-lex &
+klym := mono-transitive-verb-lex &
   [ STEM < "klym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bury_v_rel" ].
 
-krok := ERG-DAT-transitive-verb-lex &
+krok := mono-transitive-verb-lex &
   [ STEM < "krok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_plant.upright_v_rel" ].
 
-lem := ERG-DAT-transitive-verb-lex &
+lem := mono-transitive-verb-lex &
   [ STEM < "lem" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lick_v_rel" ].
 
-lep := ERG-DAT-transitive-verb-lex &
+lep := mono-transitive-verb-lex &
   [ STEM < "lep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lick_v_rel" ].
 
-mim_2 := ERG-DAT-transitive-verb-lex &
+mim_2 := mono-transitive-verb-lex &
   [ STEM < "mim" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think.about_v_rel" ].
 
-mup := ERG-DAT-transitive-verb-lex &
+mup := mono-transitive-verb-lex &
   [ STEM < "mup" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cover.with.earth_v_rel" ].
 
-plys := ERG-DAT-transitive-verb-lex &
+plys := mono-transitive-verb-lex &
   [ STEM < "plys" >,
     SYNSEM.LKEYS.KEYREL.PRED "_remove_v_rel" ].
 
-sɵlehaʈ := ERG-DAT-transitive-verb-lex &
+sɵlehaʈ := mono-transitive-verb-lex &
   [ STEM < "sɵlehaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pour.out.suddenly_v_rel" ].
 
-sʌk := ERG-DAT-transitive-verb-lex &
+sʌk := mono-transitive-verb-lex &
   [ STEM < "sʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stick_v_rel" ].
 
-tam := ERG-DAT-transitive-verb-lex &
+tam := mono-transitive-verb-lex &
   [ STEM < "tam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_set.aside_v_rel" ].
 
-ter := ERG-DAT-transitive-verb-lex &
+ter := mono-transitive-verb-lex &
   [ STEM < "ter" >,
     SYNSEM.LKEYS.KEYREL.PRED "_turn_v_rel" ].
 
-thjɵ_28s_29 := ERG-DAT-transitive-verb-lex &
+thjɵ_28s_29 := mono-transitive-verb-lex &
   [ STEM < "thjɵ(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hear_v_rel" ].
 
-thyʈ := ERG-DAT-transitive-verb-lex &
+thyʈ := mono-transitive-verb-lex &
   [ STEM < "thyʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
 
-thɵ_28s_29_1 := ERG-DAT-transitive-verb-lex &
+thɵ_28s_29_1 := mono-transitive-verb-lex &
   [ STEM < "thɵ(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hear_v_rel" ].
 
-ŋjak := ERG-DAT-transitive-verb-lex &
+ŋjak := mono-transitive-verb-lex &
   [ STEM < "ŋjak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cover.with.earth_v_rel" ].
 
-ɖʌk_28s_29 := ERG-DAT-transitive-verb-lex &
+ɖʌk_28s_29 := mono-transitive-verb-lex &
   [ STEM < "ɖʌk(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drop_v_rel" ].
 
-ʈhak := ERG-DAT-transitive-verb-lex &
+ʈhak := mono-transitive-verb-lex &
   [ STEM < "ʈhak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
-ʣhet := ERG-DAT-transitive-verb-lex &
+ʣhet := mono-transitive-verb-lex &
   [ STEM < "ʣhet" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grip_v_rel" ].
 
-bʌʈ := ERG-DAT-transitive-verb-lex &
+bʌʈ := mono-transitive-verb-lex &
   [ STEM < "bʌʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tie_v_rel" ].
 
-koʈ := ERG-DAT-transitive-verb-lex &
+koʈ := mono-transitive-verb-lex &
   [ STEM < "koʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make.wet-or-pour_v_rel" ].
 
-phik := ERG-DAT-transitive-verb-lex &
+phik := mono-transitive-verb-lex &
   [ STEM < "phik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pour.into_v_rel" ].
 
-khe := ERG-DAT-transitive-verb-lex &
+khe := mono-transitive-verb-lex &
   [ STEM < "khe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.bitter_v_rel" ].
 
-ly := ERG-DAT-transitive-verb-lex &
+ly := mono-transitive-verb-lex &
   [ STEM < "ly" >,
     SYNSEM.LKEYS.KEYREL.PRED "_feel_v_rel" ].
 
-sɵ_2 := ERG-DAT-transitive-verb-lex &
+sɵ_2 := mono-transitive-verb-lex &
   [ STEM < "sɵ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-dwak := ERG-DAT-transitive-verb-lex &
+dwak := mono-transitive-verb-lex &
   [ STEM < "dwak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_like_v_rel" ].
 
-thʌsiʈ := ERG-DAT-transitive-verb-lex &
+thʌsiʈ := mono-transitive-verb-lex &
   [ STEM < "thʌsiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hide_v_rel" ].
 
-rak := ERG-DAT-transitive-verb-lex &
+rak := mono-transitive-verb-lex &
   [ STEM < "rak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
 
-ɔm := ERG-DAT-transitive-verb-lex &
+ɔm := mono-transitive-verb-lex &
   [ STEM < "ɔm" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
-siʈ := ERG-DAT-transitive-verb-lex &
+siʈ := mono-transitive-verb-lex &
   [ STEM < "siʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_teach_v_rel" ].
 
-kluk := ERG-DAT-transitive-verb-lex &
+kluk := mono-transitive-verb-lex &
   [ STEM < "kluk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_take.out_v_rel" ].
 
-nalemeɖaʈ := ERG-DAT-transitive-verb-lex &
+nalemeɖaʈ := mono-transitive-verb-lex &
   [ STEM < "nalemeɖaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "__neg.mock_v_rel" ].
 
-al_28s_29 := ERG-DAT-transitive-verb-lex &
+al_28s_29 := mono-transitive-verb-lex &
   [ STEM < "al(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall.down_v_rel" ].
 
-khlo := ERG-DAT-transitive-verb-lex &
+khlo := mono-transitive-verb-lex &
   [ STEM < "khlo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_trap_v_rel" ].
 
-gʌʈ := ERG-DAT-transitive-verb-lex &
+gʌʈ := mono-transitive-verb-lex &
   [ STEM < "gʌʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_set.down_v_rel" ].
 
-prʌŋ := ERG-DAT-transitive-verb-lex &
+prʌŋ := mono-transitive-verb-lex &
   [ STEM < "prʌŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_create_v_rel" ].
 
-saʈ := ERG-DAT-transitive-verb-lex &
+saʈ := mono-transitive-verb-lex &
   [ STEM < "saʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dry_v_rel" ].
 
-haʈ_7E := ERG-DAT-transitive-verb-lex &
+haʈ_7E := mono-transitive-verb-lex &
   [ STEM < "haʈ~" >,
     SYNSEM.LKEYS.KEYREL.PRED "_spill_v_rel" ].
 
-hik_2 := ERG-DAT-transitive-verb-lex &
+hik_2 := mono-transitive-verb-lex &
   [ STEM < "hik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grind_v_rel" ].
 
-phal := ERG-DAT-transitive-verb-lex &
+phal := mono-transitive-verb-lex &
   [ STEM < "phal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_destroy_v_rel" ].
 
-sam := ERG-DAT-transitive-verb-lex &
+sam := mono-transitive-verb-lex &
   [ STEM < "sam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_catch_v_rel" ].
 
-tham := ERG-DAT-transitive-verb-lex &
+tham := mono-transitive-verb-lex &
   [ STEM < "tham" >,
     SYNSEM.LKEYS.KEYREL.PRED "_get.lost_v_rel" ].
 
-bisi := ERG-DAT-transitive-verb-lex &
+bisi := mono-transitive-verb-lex &
   [ STEM < "bisi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_agree_v_rel" ].
 
-lwasiʈ := ERG-DAT-transitive-verb-lex &
+lwasiʈ := mono-transitive-verb-lex &
   [ STEM < "lwasiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.visible_v_rel" ].
 
-ny_1 := ERG-DAT-transitive-verb-lex &
+ny_1 := mono-transitive-verb-lex &
   [ STEM < "ny" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.auspicious_v_rel" ].
 
-ɖit := ERG-DAT-transitive-verb-lex &
+ɖit := mono-transitive-verb-lex &
   [ STEM < "ɖit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_leave_v_rel" ].
 
-ʦɔk := ERG-DAT-transitive-verb-lex &
+ʦɔk := mono-transitive-verb-lex &
   [ STEM < "ʦɔk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-ʦʌk_1 := ERG-DAT-transitive-verb-lex &
+ʦʌk_1 := mono-transitive-verb-lex &
   [ STEM < "ʦʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-nem_2 := ERG-DAT-transitive-verb-lex &
+nem_2 := mono-transitive-verb-lex &
   [ STEM < "nem" >,
     SYNSEM.LKEYS.KEYREL.PRED "_smell_v_rel" ].
 
-kruk := ERG-DAT-transitive-verb-lex &
+kruk := mono-transitive-verb-lex &
   [ STEM < "kruk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_roar_v_rel" ].
 
-phʌsi := ERG-DAT-transitive-verb-lex &
+phʌsi := mono-transitive-verb-lex &
   [ STEM < "phʌsi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dress_v_rel" ].
 
-mal_1 := ERG-DAT-transitive-verb-lex &
+mal_1 := mono-transitive-verb-lex &
   [ STEM < "mal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_search.for_v_rel" ].
 
-rʌk_1 := ERG-DAT-transitive-verb-lex &
+rʌk_1 := mono-transitive-verb-lex &
   [ STEM < "rʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bless_v_rel" ].
 
-sɵ_3 := ERG-DAT-transitive-verb-lex &
+sɵ_3 := mono-transitive-verb-lex &
   [ STEM < "sɵ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_tell_v_rel" ].
 
-hap_si := ERG-DAT-transitive-verb-lex &
+hap_si := mono-transitive-verb-lex &
   [ STEM < "hap_si" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.hanging_v_rel" ].
 
-hari := ERG-DAT-transitive-verb-lex &
+hari := mono-transitive-verb-lex &
   [ STEM < "hari" >,
     SYNSEM.LKEYS.KEYREL.PRED "_insist_v_rel" ].
 
-hela := ERG-DAT-transitive-verb-lex &
+hela := mono-transitive-verb-lex &
   [ STEM < "hela" >,
     SYNSEM.LKEYS.KEYREL.PRED "_call_v_rel" ].
 
-hʌre := ERG-DAT-transitive-verb-lex &
+hʌre := mono-transitive-verb-lex &
   [ STEM < "hʌre" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lose_v_rel" ].
 
-luk_1 := ERG-DAT-transitive-verb-lex &
+luk_1 := mono-transitive-verb-lex &
   [ STEM < "luk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come.out_v_rel" ].
 
-njɵ := ERG-DAT-transitive-verb-lex &
+njɵ := mono-transitive-verb-lex &
   [ STEM < "njɵ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.ill_v_rel" ].
 
-ny_2 := ERG-DAT-transitive-verb-lex &
+ny_2 := mono-transitive-verb-lex &
   [ STEM < "ny" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.auspicious_v_rel" ].
 
-rok_1 := ERG-DAT-transitive-verb-lex &
+rok_1 := mono-transitive-verb-lex &
   [ STEM < "rok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
 
-tha := ERG-DAT-transitive-verb-lex &
+tha := mono-transitive-verb-lex &
   [ STEM < "tha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-ʌlmʌle_1 := ERG-DAT-transitive-verb-lex &
+ʌlmʌle_1 := mono-transitive-verb-lex &
   [ STEM < "ʌlmʌle" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.stuck_v_rel" ].
 
-ʣam_2 := ERG-DAT-transitive-verb-lex &
+ʣam_2 := mono-transitive-verb-lex &
   [ STEM < "ʣam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cooked.rice_v_rel" ].
 
-ʣhʌtti := ERG-DAT-transitive-verb-lex &
+ʣhʌtti := mono-transitive-verb-lex &
   [ STEM < "ʣhʌtti" >,
     SYNSEM.LKEYS.KEYREL.PRED "_throwing_v_rel" ].
 
-ʌms_1 := ERG-DAT-transitive-verb-lex &
+ʌms_1 := mono-transitive-verb-lex &
   [ STEM < "ʌms" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
-op := ERG-DAT-transitive-verb-lex &
+op := mono-transitive-verb-lex &
   [ STEM < "op" >,
     SYNSEM.LKEYS.KEYREL.PRED "_shoot_v_rel" ].
 
-sɵʈ := ERG-DAT-transitive-verb-lex &
+sɵʈ := mono-transitive-verb-lex &
   [ STEM < "sɵʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring.down_v_rel" ].
 
-lʌks_1 := ERG-DAT-transitive-verb-lex &
+lʌks_1 := mono-transitive-verb-lex &
   [ STEM < "lʌks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-gwak := ERG-DAT-transitive-verb-lex &
+gwak := mono-transitive-verb-lex &
   [ STEM < "gwak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
 
-khrap_1 := ERG-DAT-transitive-verb-lex &
+khrap_1 := mono-transitive-verb-lex &
   [ STEM < "khrap" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cry_v_rel" ].
 
-khrep := ERG-DAT-transitive-verb-lex &
+khrep := mono-transitive-verb-lex &
   [ STEM < "khrep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cover_v_rel" ].
 
-lok := ERG-DAT-transitive-verb-lex &
+lok := mono-transitive-verb-lex &
   [ STEM < "lok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boil_v_rel" ].
 
-lyp := ERG-DAT-transitive-verb-lex &
+lyp := mono-transitive-verb-lex &
   [ STEM < "lyp" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dip.into.condiment_v_rel" ].
 
-sɵp := ERG-DAT-transitive-verb-lex &
+sɵp := mono-transitive-verb-lex &
   [ STEM < "sɵp" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wash_v_rel" ].
 
-thɵ := ERG-DAT-transitive-verb-lex &
+thɵ := mono-transitive-verb-lex &
   [ STEM < "thɵ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hear_v_rel" ].
 
-ʦeʈ_si := ERG-DAT-transitive-verb-lex &
+ʦeʈ_si := mono-transitive-verb-lex &
   [ STEM < "ʦeʈ_si" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hang_v_rel" ].
 
-gʌks_1 := ERG-DAT-transitive-verb-lex &
+gʌks_1 := mono-transitive-verb-lex &
   [ STEM < "gʌks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.born_v_rel" ].
 
-mop := ERG-DAT-transitive-verb-lex &
+mop := mono-transitive-verb-lex &
   [ STEM < "mop" >,
     SYNSEM.LKEYS.KEYREL.PRED "_touch_v_rel" ].
 
-dhos := ERG-DAT-transitive-verb-lex &
+dhos := mono-transitive-verb-lex &
   [ STEM < "dhos" >,
     SYNSEM.LKEYS.KEYREL.PRED "_move_v_rel" ].
 
-dyms_1 := ERG-DAT-transitive-verb-lex &
+dyms_1 := mono-transitive-verb-lex &
   [ STEM < "dyms" >,
     SYNSEM.LKEYS.KEYREL.PRED "_become_v_rel" ].
 
-khes_1 := ERG-DAT-transitive-verb-lex &
+khes_1 := mono-transitive-verb-lex &
   [ STEM < "khes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.bitter_v_rel" ].
 
-khremsiʈ_1 := ERG-DAT-transitive-verb-lex &
+khremsiʈ_1 := mono-transitive-verb-lex &
   [ STEM < "khremsiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.covered_v_rel" ].
 
-kumsi := ERG-DAT-transitive-verb-lex &
+kumsi := mono-transitive-verb-lex &
   [ STEM < "kumsi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bow_v_rel" ].
 
-lisiʈ := ERG-DAT-transitive-verb-lex &
+lisiʈ := mono-transitive-verb-lex &
   [ STEM < "lisiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pretend_v_rel" ].
 
-ok_1 := ERG-DAT-transitive-verb-lex &
+ok_1 := mono-transitive-verb-lex &
   [ STEM < "ok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_crow_v_rel" ].
 
-phos := ERG-DAT-transitive-verb-lex &
+phos := mono-transitive-verb-lex &
   [ STEM < "phos" >,
     SYNSEM.LKEYS.KEYREL.PRED "_vomit_v_rel" ].
 
-prok_1 := ERG-DAT-transitive-verb-lex &
+prok_1 := mono-transitive-verb-lex &
   [ STEM < "prok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jump_v_rel" ].
 
-ŋur := ERG-DAT-transitive-verb-lex &
+ŋur := mono-transitive-verb-lex &
   [ STEM < "ŋur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_roar_v_rel" ].
 
-ʣham_1 := ERG-DAT-transitive-verb-lex &
+ʣham_1 := mono-transitive-verb-lex &
   [ STEM < "ʣham" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.able_v_rel" ].
 
-thok := ERG-DAT-transitive-verb-lex &
+thok := mono-transitive-verb-lex &
   [ STEM < "thok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.ready.for.harvest_v_rel" ].
 
-ŋar := ERG-DAT-transitive-verb-lex &
+ŋar := mono-transitive-verb-lex &
   [ STEM < "ŋar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_count_v_rel" ].
 
-lamdi_2 := ERG-DAT-transitive-verb-lex &
+lamdi_2 := mono-transitive-verb-lex &
   [ STEM < "lamdi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_walk_v_rel" ].
 
-ʣe := ERG-DAT-transitive-verb-lex &
+ʣe := mono-transitive-verb-lex &
   [ STEM < "ʣe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
 
-si_2 := ERG-DAT-transitive-verb-lex &
+si_2 := mono-transitive-verb-lex &
   [ STEM < "si" >,
     SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
 
-huŋ := ERG-DAT-transitive-verb-lex &
+huŋ := mono-transitive-verb-lex &
   [ STEM < "huŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_enter_v_rel" ].
 
-theʈ_1 := ERG-DAT-transitive-verb-lex &
+theʈ_1 := mono-transitive-verb-lex &
   [ STEM < "theʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
 
-ɖiʈ := ERG-DAT-transitive-verb-lex &
+ɖiʈ := mono-transitive-verb-lex &
   [ STEM < "ɖiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_leave_v_rel" ].
 
-khreʈ := ERG-DAT-transitive-verb-lex &
+khreʈ := mono-transitive-verb-lex &
   [ STEM < "khreʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bite_v_rel" ].
 
-naleɖaʈ := ERG-DAT-transitive-verb-lex &
+naleɖaʈ := mono-transitive-verb-lex &
   [ STEM < "naleɖaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mock_v_rel" ].
 
-ʣyl := ERG-DAT-transitive-verb-lex &
+ʣyl := mono-transitive-verb-lex &
   [ STEM < "ʣyl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_place_v_rel" ].
 
-kholy_1 := ERG-DAT-transitive-verb-lex &
+kholy_1 := mono-transitive-verb-lex &
   [ STEM < "kholy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
 
-khri := ERG-DAT-transitive-verb-lex &
+khri := mono-transitive-verb-lex &
   [ STEM < "khri" >,
     SYNSEM.LKEYS.KEYREL.PRED "_decide_v_rel" ].
 
-pi := ERG-DAT-transitive-verb-lex &
+pi := mono-transitive-verb-lex &
   [ STEM < "pi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
-khli_2 := ERG-DAT-transitive-verb-lex &
+khli_2 := mono-transitive-verb-lex &
   [ STEM < "khli" >,
     SYNSEM.LKEYS.KEYREL.PRED "_plant_v_rel" ].
 
-leʈ := ERG-DAT-transitive-verb-lex &
+leʈ := mono-transitive-verb-lex &
   [ STEM < "leʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "__aux_v_rel" ].
 
-suk := ERG-DAT-transitive-verb-lex &
+suk := mono-transitive-verb-lex &
   [ STEM < "suk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pierce_v_rel" ].
 
-phot := ERG-DAT-transitive-verb-lex &
+phot := mono-transitive-verb-lex &
   [ STEM < "phot" >,
     SYNSEM.LKEYS.KEYREL.PRED "_scatter_v_rel" ].
 
-ʦa := ERG-DAT-transitive-verb-lex &
+ʦa := mono-transitive-verb-lex &
   [ STEM < "ʦa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_roast_v_rel" ].
 
-bʌne_1 := ERG-DAT-transitive-verb-lex &
+bʌne_1 := mono-transitive-verb-lex &
   [ STEM < "bʌne" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
-dos := ERG-DAT-transitive-verb-lex &
+dos := mono-transitive-verb-lex &
   [ STEM < "dos" >,
     SYNSEM.LKEYS.KEYREL.PRED "_move_v_rel" ].
 
-dykha := ERG-DAT-transitive-verb-lex &
+dykha := mono-transitive-verb-lex &
   [ STEM < "dykha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_suffering_v_rel" ].
 
-khakʦilipo := ERG-DAT-transitive-verb-lex &
+khakʦilipo := mono-transitive-verb-lex &
   [ STEM < "khakʦilipo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cocks.crowing_v_rel" ].
 
-khukurika := ERG-DAT-transitive-verb-lex &
+khukurika := mono-transitive-verb-lex &
   [ STEM < "khukurika" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cocks.crowing_v_rel" ].
 
-khwakʦilikpo := ERG-DAT-transitive-verb-lex &
+khwakʦilikpo := mono-transitive-verb-lex &
   [ STEM < "khwakʦilikpo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cock.crowing_v_rel" ].
 
-am_2 := ERG-DAT-transitive-verb-lex &
+am := mono-transitive-verb-lex &
   [ STEM < "am" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make.sleep_v_rel" ].
 
-khok_1 := ERG-DAT-transitive-verb-lex &
+khok_1 := mono-transitive-verb-lex &
   [ STEM < "khok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
 
-buk := ERG-DAT-transitive-verb-lex &
+buk := mono-transitive-verb-lex &
   [ STEM < "buk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pile.up_v_rel" ].
 
-kur_1 := ERG-DAT-transitive-verb-lex &
+kur_1 := mono-transitive-verb-lex &
   [ STEM < "kur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_carry_v_rel" ].
 
-jok_1 := ERG-DAT-transitive-verb-lex &
+jok_1 := mono-transitive-verb-lex &
   [ STEM < "jok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come.down_v_rel" ].
 
-phʌl := ERG-DAT-transitive-verb-lex &
+phʌl := mono-transitive-verb-lex &
   [ STEM < "phʌl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cut_v_rel" ].
 
-hʌm := ERG-DAT-transitive-verb-lex &
+hʌm := mono-transitive-verb-lex &
   [ STEM < "hʌm" >,
     SYNSEM.LKEYS.KEYREL.PRED "_spread.out_v_rel" ].
 
-rwak_1 := ERG-DAT-transitive-verb-lex &
+rwak_1 := mono-transitive-verb-lex &
   [ STEM < "rwak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say-or-speak_v_rel" ].
 
-rep_1 := ERG-DAT-transitive-verb-lex &
+rep_1 := mono-transitive-verb-lex &
   [ STEM < "rep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_look_v_rel" ].
 
-lʌk_1 := ERG-DAT-transitive-verb-lex &
+lʌk_1 := mono-transitive-verb-lex &
   [ STEM < "lʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_take.away_v_rel" ].
 
-lwas_1 := ERG-DAT-transitive-verb-lex &
+lwas_1 := mono-transitive-verb-lex &
   [ STEM < "lwas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
-reʈ := ERG-DAT-transitive-verb-lex &
+reʈ := mono-transitive-verb-lex &
   [ STEM < "reʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring_v_rel" ].
 
-pe_1 := ERG-DAT-transitive-verb-lex &
+pe_1 := mono-transitive-verb-lex &
   [ STEM < "pe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-al_1 := ERG-DAT-transitive-verb-lex &
+al_1 := mono-transitive-verb-lex &
   [ STEM < "al" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall.down_v_rel" ].
 
-;ba_1 := ERG-DAT-transitive-verb-lex &
+;ba_1 := mono-transitive-verb-lex &
 ;  [ STEM < "ba" >,
 ;    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
-be_1 := ERG-DAT-transitive-verb-lex &
+be_1 := mono-transitive-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-be_3 := ERG-DAT-transitive-verb-lex &
+be_3 := mono-transitive-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
-bhog := ERG-DAT-transitive-verb-lex &
+bhog := mono-transitive-verb-lex &
   [ STEM < "bhog" >,
     SYNSEM.LKEYS.KEYREL.PRED "_offering_v_rel" ].
 
-thʌk := ERG-DAT-transitive-verb-lex &
+thʌk := mono-transitive-verb-lex &
   [ STEM < "thʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hide_v_rel" ].
 
-ɖʌk := ERG-DAT-transitive-verb-lex &
+ɖʌk := mono-transitive-verb-lex &
   [ STEM < "ɖʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drop_v_rel" ].
 
-seʈ := ERG-DAT-transitive-verb-lex &
+seʈ := mono-transitive-verb-lex &
   [ STEM < "seʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
-ghrok := ERG-DAT-transitive-verb-lex &
+ghrok := mono-transitive-verb-lex &
   [ STEM < "ghrok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_throw_v_rel" ].
 
-kol := ERG-DAT-transitive-verb-lex &
+kol := mono-transitive-verb-lex &
   [ STEM < "kol" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drive.away_v_rel" ].
 
-ʦɤk := ERG-DAT-transitive-verb-lex &
+ʦɤk := mono-transitive-verb-lex &
   [ STEM < "ʦɤk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
 
-rokphaʈ_1 := ERG-DAT-transitive-verb-lex &
+rokphaʈ_1 := mono-transitive-verb-lex &
   [ STEM < "rokphaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
-khaʈ_1 := ERG-DAT-transitive-verb-lex &
+khaʈ_1 := mono-transitive-verb-lex &
   [ STEM < "khaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
-thyr := ERG-DAT-transitive-verb-lex &
+thyr := mono-transitive-verb-lex &
   [ STEM < "thyr" >,
     SYNSEM.LKEYS.KEYREL.PRED "_send_v_rel" ].
 
-thyr_28s_29 := ERG-DAT-transitive-verb-lex &
+thyr_28s_29 := mono-transitive-verb-lex &
   [ STEM < "thyr(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_send_v_rel" ].
 
-blaʈ := ERG-DAT-transitive-verb-lex &
+blaʈ := mono-transitive-verb-lex &
   [ STEM < "blaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dry_v_rel" ].
 
-khat := ERG-DAT-transitive-verb-lex &
+khat := mono-transitive-verb-lex &
   [ STEM < "khat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
-kʌks := ERG-DAT-transitive-verb-lex &
+kʌks := mono-transitive-verb-lex &
   [ STEM < "kʌks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_give.birth_v_rel" ].
 
-phʌk_1 := ERG-DAT-transitive-verb-lex &
+phʌk_1 := mono-transitive-verb-lex &
   [ STEM < "phʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rouse_v_rel" ].
 
-ɖep := ERG-DAT-transitive-verb-lex &
+ɖep := mono-transitive-verb-lex &
   [ STEM < "ɖep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beat_v_rel" ].
 
-dʌk := ERG-DAT-transitive-verb-lex &
+dʌk := mono-transitive-verb-lex &
   [ STEM < "dʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make.pond_v_rel" ].
 
-jeʈ := ERG-DAT-transitive-verb-lex &
+jeʈ := mono-transitive-verb-lex &
   [ STEM < "jeʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_call_v_rel" ].
 
-beʈ_2 := ERG-DAT-transitive-verb-lex &
+beʈ_2 := mono-transitive-verb-lex &
   [ STEM < "beʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
-thaʈ := ERG-DAT-transitive-verb-lex &
+thaʈ := mono-transitive-verb-lex &
   [ STEM < "thaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_remove_v_rel" ].
 
-ɖar := ERG-DAT-transitive-verb-lex &
+ɖar := mono-transitive-verb-lex &
   [ STEM < "ɖar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_find_v_rel" ].
 
-ʦym := ERG-DAT-transitive-verb-lex &
+ʦym := mono-transitive-verb-lex &
   [ STEM < "ʦym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_catch_v_rel" ].
 
-ʣheʈ := ERG-DAT-transitive-verb-lex &
+ʣheʈ := mono-transitive-verb-lex &
   [ STEM < "ʣheʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grip_v_rel" ].
 
-ɖuŋ := ERG-DAT-transitive-verb-lex &
+ɖuŋ := mono-transitive-verb-lex &
   [ STEM < "ɖuŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drink_v_rel" ].
 
-kok_28s_29_7E := ERG-DAT-transitive-verb-lex &
+kok_28s_29_7E := mono-transitive-verb-lex &
   [ STEM < "kok(s)~" >,
     SYNSEM.LKEYS.KEYREL.PRED "_lift_v_rel" ].
 
-wat := ERG-DAT-transitive-verb-lex &
+wat := mono-transitive-verb-lex &
   [ STEM < "wat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cut.off_v_rel" ].
 
-bʌk_7E := ERG-DAT-transitive-verb-lex &
+bʌk_7E := mono-transitive-verb-lex &
   [ STEM < "bʌk~" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wash.away_v_rel" ].
 
-saseʈ := ERG-DAT-transitive-verb-lex &
+saseʈ := mono-transitive-verb-lex &
   [ STEM < "saseʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sacrifice_v_rel" ].
 
-phoʈ := ERG-DAT-transitive-verb-lex &
+phoʈ := mono-transitive-verb-lex &
   [ STEM < "phoʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_scatter_v_rel" ].
 
-rʌk_2 := ERG-DAT-transitive-verb-lex &
+rʌk_2 := mono-transitive-verb-lex &
   [ STEM < "rʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sprinkle_v_rel" ].
 
-rokthi := ERG-DAT-transitive-verb-lex &
+rokthi := mono-transitive-verb-lex &
   [ STEM < "rokthi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
-phiʈ := ERG-DAT-transitive-verb-lex &
+phiʈ := mono-transitive-verb-lex &
   [ STEM < "phiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring.here_v_rel" ].
 
-sʌ_1 := ERG-DAT-transitive-verb-lex &
+sʌ_1 := mono-transitive-verb-lex &
   [ STEM < "sʌ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_get.well_v_rel" ].
 
-bik_1 := ERG-DAT-transitive-verb-lex &
+bik_1 := mono-transitive-verb-lex &
   [ STEM < "bik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
 
-per := ERG-DAT-transitive-verb-lex &
+per := mono-transitive-verb-lex &
   [ STEM < "per" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pinch_v_rel" ].
 
-ʣhuks_1 := ERG-DAT-transitive-verb-lex &
+ʣhuks_1 := mono-transitive-verb-lex &
   [ STEM < "ʣhuks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_land_v_rel" ].
 
-ɖjɵ := ERG-DAT-transitive-verb-lex &
+ɖjɵ := mono-transitive-verb-lex &
   [ STEM < "ɖjɵ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pick.up_v_rel" ].
 
-huk := NOM-intrasitive-verb-lex &
+huk := in-transitive-verb-lex &
   [ STEM < "huk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bark_v_rel" ].
 
-bal := NOM-intrasitive-verb-lex &
+bal := in-transitive-verb-lex &
   [ STEM < "bal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wind.around_v_rel" ].
 
-a := NOM-intrasitive-verb-lex &
+a := in-transitive-verb-lex &
   [ STEM < "a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sweep.out_v_rel" ].
 
-al_2 := NOM-intrasitive-verb-lex &
+al_2 := in-transitive-verb-lex &
   [ STEM < "al" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall.down_v_rel" ].
 
-bhrʌ := NOM-intrasitive-verb-lex &
+bhrʌ := in-transitive-verb-lex &
   [ STEM < "bhrʌ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.delicious_v_rel" ].
 
-ghleʈ := NOM-intrasitive-verb-lex &
+ghleʈ := in-transitive-verb-lex &
   [ STEM < "ghleʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.leftover_v_rel" ].
 
-ghlwas := NOM-intrasitive-verb-lex &
+ghlwas := in-transitive-verb-lex &
   [ STEM < "ghlwas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_win_v_rel" ].
 
-ghlɵts := NOM-intrasitive-verb-lex &
+ghlɵts := in-transitive-verb-lex &
   [ STEM < "ghlɵts" >,
     SYNSEM.LKEYS.KEYREL.PRED "_blister_v_rel" ].
 
-gʌks_2 := NOM-intrasitive-verb-lex &
+gʌks_2 := in-transitive-verb-lex &
   [ STEM < "gʌks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.born_v_rel" ].
 
-hasi := NOM-intrasitive-verb-lex &
+hasi := in-transitive-verb-lex &
   [ STEM < "hasi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_spill_v_rel" ].
 
-jes := NOM-intrasitive-verb-lex &
+jes := in-transitive-verb-lex &
   [ STEM < "jes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cry.out_v_rel" ].
 
-kemsi := NOM-intrasitive-verb-lex &
+kemsi := in-transitive-verb-lex &
   [ STEM < "kemsi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_stick.onto_v_rel" ].
 
-khes_2 := NOM-intrasitive-verb-lex &
+khes_2 := in-transitive-verb-lex &
   [ STEM < "khes" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.bitter_v_rel" ].
 
-khlosi := NOM-intrasitive-verb-lex &
+khlosi := in-transitive-verb-lex &
   [ STEM < "khlosi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_return_v_rel" ].
 
-kor := NOM-intrasitive-verb-lex &
+kor := in-transitive-verb-lex &
   [ STEM < "kor" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring.somewhere_v_rel" ].
 
-ljaks := NOM-intrasitive-verb-lex &
+ljaks := in-transitive-verb-lex &
   [ STEM < "ljaks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sprout_v_rel" ].
 
-ok_2 := NOM-intrasitive-verb-lex &
+ok_2 := in-transitive-verb-lex &
   [ STEM < "ok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_crow_v_rel" ].
 
-phop := NOM-intrasitive-verb-lex &
+phop := in-transitive-verb-lex &
   [ STEM < "phop" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hug_v_rel" ].
 
-phʌk_2 := NOM-intrasitive-verb-lex &
+phʌk_2 := in-transitive-verb-lex &
   [ STEM < "phʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_awaken_v_rel" ].
 
-prʌsiʈ := NOM-intrasitive-verb-lex &
+prʌsiʈ := in-transitive-verb-lex &
   [ STEM < "prʌsiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.established_v_rel" ].
 
-rokphaʈ_2 := NOM-intrasitive-verb-lex &
+rokphaʈ_2 := in-transitive-verb-lex &
   [ STEM < "rokphaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
-rwak_2 := NOM-intrasitive-verb-lex &
+rwak_2 := in-transitive-verb-lex &
   [ STEM < "rwak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-si_3 := NOM-intrasitive-verb-lex &
+si_3 := in-transitive-verb-lex &
   [ STEM < "si" >,
     SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
 
-swaŋ := NOM-intrasitive-verb-lex &
+swaŋ := in-transitive-verb-lex &
   [ STEM < "swaŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_flee_v_rel" ].
 
-sɵlsi := NOM-intrasitive-verb-lex &
+sɵlsi := in-transitive-verb-lex &
   [ STEM < "sɵlsi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wash_v_rel" ].
 
-sʌsiʈ := NOM-intrasitive-verb-lex &
+sʌsiʈ := in-transitive-verb-lex &
   [ STEM < "sʌsiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.skewered_v_rel" ].
 
-ta := NOM-intrasitive-verb-lex &
+ta := in-transitive-verb-lex &
   [ STEM < "ta" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall_v_rel" ].
 
-thep := NOM-intrasitive-verb-lex &
+thep := in-transitive-verb-lex &
   [ STEM < "thep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pinch_v_rel" ].
 
-ʣhips := NOM-intrasitive-verb-lex &
+ʣhips := in-transitive-verb-lex &
   [ STEM < "ʣhips" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rot_v_rel" ].
 
-ʣʌs := NOM-intrasitive-verb-lex &
+ʣʌs := in-transitive-verb-lex &
   [ STEM < "ʣʌs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.broken_v_rel" ].
 
-bʌk := NOM-intrasitive-verb-lex &
+bʌk := in-transitive-verb-lex &
   [ STEM < "bʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_arise_v_rel" ].
 
-gʌn := NOM-intrasitive-verb-lex &
+gʌn := in-transitive-verb-lex &
   [ STEM < "gʌn" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sit_v_rel" ].
 
-khlosiʈ := NOM-intrasitive-verb-lex &
+khlosiʈ := in-transitive-verb-lex &
   [ STEM < "khlosiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_return_v_rel" ].
 
-reʈhiʈ := NOM-intrasitive-verb-lex &
+reʈhiʈ := in-transitive-verb-lex &
   [ STEM < "reʈhiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bring.to_v_rel" ].
 
-sʌ_2 := NOM-intrasitive-verb-lex &
+sʌ_2 := in-transitive-verb-lex &
   [ STEM < "sʌ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_get.well_v_rel" ].
 
-ɖyl_2 := NOM-intrasitive-verb-lex &
+ɖyl_2 := in-transitive-verb-lex &
   [ STEM < "ɖyl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_care.for_v_rel" ].
 
-pe_2 := NOM-intrasitive-verb-lex &
+pe_2 := in-transitive-verb-lex &
   [ STEM < "pe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-bet := NOM-intrasitive-verb-lex &
-  [ STEM < "bet" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
-
-rep_2 := NOM-intrasitive-verb-lex &
+rep_2 := in-transitive-verb-lex &
   [ STEM < "rep" >,
     SYNSEM.LKEYS.KEYREL.PRED "_look_v_rel" ].
 
-khre := NOM-intrasitive-verb-lex &
+khre := in-transitive-verb-lex &
   [ STEM < "khre" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
 
-ʦʌk_2 := NOM-intrasitive-verb-lex &
+ʦʌk_2 := in-transitive-verb-lex &
   [ STEM < "ʦʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know-or-snap_v_rel" ].
 
-theʈ_2 := NOM-intrasitive-verb-lex &
+theʈ_2 := in-transitive-verb-lex &
   [ STEM < "theʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-ʦaps := NOM-intrasitive-verb-lex &
+ʦaps := in-transitive-verb-lex &
   [ STEM < "ʦaps" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.able_v_rel" ].
 
-ghrɵms := NOM-intrasitive-verb-lex &
+ghrɵms := in-transitive-verb-lex &
   [ STEM < "ghrɵms" >,
     SYNSEM.LKEYS.KEYREL.PRED "_meet_v_rel" ].
 
-khaʈ_2 := NOM-intrasitive-verb-lex &
+khaʈ_2 := in-transitive-verb-lex &
   [ STEM < "khaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase-or-pursue_v_rel" ].
 
-kur_2 := NOM-intrasitive-verb-lex &
+kur_2 := in-transitive-verb-lex &
   [ STEM < "kur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_carry_v_rel" ].
 
-mimsi := NOM-intrasitive-verb-lex &
+mimsi := in-transitive-verb-lex &
   [ STEM < "mimsi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
-ʣhuks_2 := NOM-intrasitive-verb-lex &
+ʣhuks_2 := in-transitive-verb-lex &
   [ STEM < "ʣhuks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jump.down_v_rel" ].
 
-ʦhjɵs := NOM-intrasitive-verb-lex &
+ʦhjɵs := in-transitive-verb-lex &
   [ STEM < "ʦhjɵs" >,
     SYNSEM.LKEYS.KEYREL.PRED "_get.things.done_v_rel" ].
 
-basi := NOM-intrasitive-verb-lex &
+basi := in-transitive-verb-lex &
   [ STEM < "basi" >,
     SYNSEM.LKEYS.KEYREL.PRED "__obl_v_rel" ].
 
-ba_2 := intransitive-verb-lex &
+ba_2 := in-transitive-verb-lex &
   [ STEM < "ba" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
-be_2 := intransitive-verb-lex &
+be_2 := in-transitive-verb-lex &
   [ STEM < "be" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
-dam := NOM-intrasitive-verb-lex &
+dam := in-transitive-verb-lex &
   [ STEM < "dam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_disappear_v_rel" ].
 
-hopmam := NOM-intrasitive-verb-lex &
+hopmam := in-transitive-verb-lex &
   [ STEM < "hopmam" >,
     SYNSEM.LKEYS.KEYREL.PRED "_like.this_v_rel" ].
 
-kholy_2 := NOM-intrasitive-verb-lex &
+kholy_2 := in-transitive-verb-lex &
   [ STEM < "kholy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
 
-lʌks_2 := NOM-intrasitive-verb-lex &
+lʌks_2 := in-transitive-verb-lex &
   [ STEM < "lʌks" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-phʌrke := NOM-intrasitive-verb-lex &
+phʌrke := in-transitive-verb-lex &
   [ STEM < "phʌrke" >,
     SYNSEM.LKEYS.KEYREL.PRED "_return_v_rel" ].
 
-ʌlmʌle_2 := NOM-intrasitive-verb-lex &
+ʌlmʌle_2 := in-transitive-verb-lex &
   [ STEM < "ʌlmʌle" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.stuck_v_rel" ].
 
-ʣham_2 := NOM-intrasitive-verb-lex &
+ʣham_2 := in-transitive-verb-lex &
   [ STEM < "ʣham" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.able_v_rel" ].
 
-khok_2 := NOM-intrasitive-verb-lex &
+khok_2 := in-transitive-verb-lex &
   [ STEM < "khok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
 
-mibu := NOM-intrasitive-verb-lex &
+mibu := in-transitive-verb-lex &
   [ STEM < "mibu" >,
     SYNSEM.LKEYS.KEYREL.PRED "__neg._cop_v_rel" ].
 
-miju := NOM-intrasitive-verb-lex &
+miju := in-transitive-verb-lex &
   [ STEM < "miju" >,
     SYNSEM.LKEYS.KEYREL.PRED "__neg._cop_v_rel" ].
 
-nem_3 := NOM-intrasitive-verb-lex &
+nem_3 := in-transitive-verb-lex &
   [ STEM < "nem" >,
     SYNSEM.LKEYS.KEYREL.PRED "_smell_v_rel" ].
 
-ny_3 := NOM-intrasitive-verb-lex &
+ny_3 := in-transitive-verb-lex &
   [ STEM < "ny" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.auspicious_v_rel" ].
 
-rok_2 := NOM-intrasitive-verb-lex &
+rok_2 := in-transitive-verb-lex &
   [ STEM < "rok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
 
-huʈ := NOM-intrasitive-verb-lex &
+huʈ := in-transitive-verb-lex &
   [ STEM < "huʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fly_v_rel" ].
 
-lwa_2 := NOM-intrasitive-verb-lex &
+lwa_2 := in-transitive-verb-lex &
   [ STEM < "lwa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_get-or-see_v_rel" ].
 
-khremsiʈ_2 := NOM-intrasitive-verb-lex &
+khremsiʈ_2 := in-transitive-verb-lex &
   [ STEM < "khremsiʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be.covered_v_rel" ].
 
-luk_2 := NOM-intrasitive-verb-lex &
+luk_2 := in-transitive-verb-lex &
   [ STEM < "luk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come.out_v_rel" ].
 
-dha := NOM-intrasitive-verb-lex &
+dha := in-transitive-verb-lex &
   [ STEM < "dha" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dig_v_rel" ].
 
-bʌne_2 := NOM-intrasitive-verb-lex &
+bʌne_2 := in-transitive-verb-lex &
   [ STEM < "bʌne" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
 
-lwas_2 := NOM-intrasitive-verb-lex &
+lwas_2 := in-transitive-verb-lex &
   [ STEM < "lwas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
-nʌbo := NOM-intrasitive-verb-lex &
+nʌbo := in-transitive-verb-lex &
   [ STEM < "nʌbo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_desire_v_rel" ].
 
-thɵ_28s_29_2 := NOM-intrasitive-verb-lex &
+thɵ_28s_29_2 := in-transitive-verb-lex &
   [ STEM < "thɵ(s)" >,
     SYNSEM.LKEYS.KEYREL.PRED "_hear_v_rel" ].
 
-bhur := NOM-intrasitive-verb-lex &
+bhur := in-transitive-verb-lex &
   [ STEM < "bhur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_get.angry_v_rel" ].
 
-bʌr := NOM-intrasitive-verb-lex &
+bʌr := in-transitive-verb-lex &
   [ STEM < "bʌr" >,
     SYNSEM.LKEYS.KEYREL.PRED "_increase_v_rel" ].
 
-dhot := NOM-intrasitive-verb-lex &
+dhot := in-transitive-verb-lex &
   [ STEM < "dhot" >,
     SYNSEM.LKEYS.KEYREL.PRED "_continue_v_rel" ].
 
-hur := NOM-intrasitive-verb-lex &
+hur := in-transitive-verb-lex &
   [ STEM < "hur" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wash.head_v_rel" ].
 
-khlʌk := NOM-intrasitive-verb-lex &
+khlʌk := in-transitive-verb-lex &
   [ STEM < "khlʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_follow_v_rel" ].
 
-khrap_2 := NOM-intrasitive-verb-lex &
+khrap_2 := in-transitive-verb-lex &
   [ STEM < "khrap" >,
     SYNSEM.LKEYS.KEYREL.PRED "_cry_v_rel" ].
 
-sɵl := NOM-intrasitive-verb-lex &
+sɵl := in-transitive-verb-lex &
   [ STEM < "sɵl" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wash_v_rel" ].
 
-dwabo := NOM-intrasitive-verb-lex &
+dwabo := in-transitive-verb-lex &
   [ STEM < "dwabo" >,
     SYNSEM.LKEYS.KEYREL.PRED "_weave_v_rel" ].
 
-dyms_2 := NOM-intrasitive-verb-lex &
+dyms_2 := in-transitive-verb-lex &
   [ STEM < "dyms" >,
     SYNSEM.LKEYS.KEYREL.PRED "_become-or-finish_v_rel" ].
 
-hoʈ := NOM-intrasitive-verb-lex &
+hoʈ := in-transitive-verb-lex &
   [ STEM < "hoʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_blow_v_rel" ].
 
-ʦɵm := NOM-intrasitive-verb-lex &
+ʦɵm := in-transitive-verb-lex &
   [ STEM < "ʦɵm" >,
     SYNSEM.LKEYS.KEYREL.PRED "_begin.to_v_rel" ].
 
-hor := NOM-intrasitive-verb-lex &
+hor := in-transitive-verb-lex &
   [ STEM < "hor" >,
     SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
 
-plwa := NOM-intrasitive-verb-lex &
+plwa := in-transitive-verb-lex &
   [ STEM < "plwa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_forget_v_rel" ].
 
-plym := NOM-intrasitive-verb-lex &
+plym := in-transitive-verb-lex &
   [ STEM < "plym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dip.into_v_rel" ].
 
-thet := NOM-intrasitive-verb-lex &
+thet := in-transitive-verb-lex &
   [ STEM < "thet" >,
     SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
 
-jok_2 := NOM-intrasitive-verb-lex &
+jok_2 := in-transitive-verb-lex &
   [ STEM < "jok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come.down_v_rel" ].
 
-geʈ := NOM-intrasitive-verb-lex &
+geʈ := in-transitive-verb-lex &
   [ STEM < "geʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come.up_v_rel" ].
 
-bik_2 := NOM-intrasitive-verb-lex &
+bik_2 := in-transitive-verb-lex &
   [ STEM < "bik" >,
     SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
 
-dym := NOM-intrasitive-verb-lex &
+dym := in-transitive-verb-lex &
   [ STEM < "dym" >,
     SYNSEM.LKEYS.KEYREL.PRED "_become_v_rel" ].
 
-ba_2 := NOM-intrasitive-verb-lex &
-  [ STEM < "ba" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
-
-mal_2 := NOM-intrasitive-verb-lex &
+mal_2 := in-transitive-verb-lex &
   [ STEM < "mal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_search.for_v_rel" ].
 
-sal := NOM-intrasitive-verb-lex &
+sal := in-transitive-verb-lex &
   [ STEM < "sal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pick.out_v_rel" ].
 
-set := NOM-intrasitive-verb-lex &
+set := in-transitive-verb-lex &
   [ STEM < "set" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
-ʌms_2 := NOM-intrasitive-verb-lex &
+ʌms_2 := in-transitive-verb-lex &
   [ STEM < "ʌms" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
-prok_2 := NOM-intrasitive-verb-lex &
+prok_2 := in-transitive-verb-lex &
   [ STEM < "prok" >,
     SYNSEM.LKEYS.KEYREL.PRED "_jump_v_rel" ].
 
-lʌk_2 := NOM-intrasitive-verb-lex &
+lʌk_2 := in-transitive-verb-lex &
   [ STEM < "lʌk" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
 
-ʦar := NOM-intrasitive-verb-lex &
+ʦar := in-transitive-verb-lex &
   [ STEM < "ʦar" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make.fall_v_rel" ].
 
-sars := NOM-intrasitive-verb-lex &
+sars := in-transitive-verb-lex &
   [ STEM < "sars" >,
     SYNSEM.LKEYS.KEYREL.PRED "_urinate_v_rel" ].
 
-sɵ_4 := NOM-intrasitive-verb-lex &
+sɵ_4 := in-transitive-verb-lex &
   [ STEM < "sɵ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-pheʈ := NOM-intrasitive-verb-lex &
+pheʈ := in-transitive-verb-lex &
   [ STEM < "pheʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_serve.out_v_rel" ].
 

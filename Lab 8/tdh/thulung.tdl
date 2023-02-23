@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Thulung
 ;;; created at:
-;;;     Thu Feb 23 00:22:42 UTC 2023
+;;;     Thu Feb 23 04:23:43 UTC 2023
 ;;; based on Matrix customization system version of:
 ;;;     Thu 28 Jul 2022 12:31:08 AM UTC
 ;;;
@@ -46,27 +46,31 @@ unary-bottom-coord-rule :+ [ SYNSEM [ LOCAL.CAT.HEAD.NMZ #nmz,
     ARGS < [ SYNSEM [ LOCAL.CAT.HEAD.NMZ #nmz,
                       SUBORDINATED #subord ] ] > ].
 
-inflected :+ [ POSSESSIVE-POSITION-CLASS-FLAG luk,
-    ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG luk,
-    TRANSITIVE-VERB-FLAG luk,
+inflected :+ [ TENSE+ROLE-POSITION-CLASS-FLAG luk,
     COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG luk,
-    ADD-NEGATION-TO-VERB-FLAG luk,
-    TENSE+ROLE-POSITION-CLASS-FLAG luk,
+    POSSESSIVE-POSITION-CLASS-FLAG luk,
+    COPULA-NPST-PERNUM-MARKER-FLAG luk,
+    TRANSITIVE-VERB-FLAG luk,
+    IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG luk,
     CASE-POSITION-CLASS-FLAG luk,
-    ERG-DAT-TRANSITIVE-VERB-FLAG luk,
-    NOM-INTRASITIVE-VERB-FLAG luk,
-    COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG luk ].
+    COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG luk,
+    ADD-NEGATION-TO-VERB-FLAG luk,
+    MONO-TRANSITIVE-VERB-FLAG luk,
+    COPULA-PST-PERNUM-MARKER-FLAG luk,
+    IN-TRANSITIVE-VERB-FLAG luk ].
 
-infl-satisfied :+ [ POSSESSIVE-POSITION-CLASS-FLAG na-or-+,
-    ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or-+,
-    TRANSITIVE-VERB-FLAG na-or-+,
+infl-satisfied :+ [ TENSE+ROLE-POSITION-CLASS-FLAG na-or-+,
     COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-+,
-    ADD-NEGATION-TO-VERB-FLAG na-or-+,
-    TENSE+ROLE-POSITION-CLASS-FLAG na-or-+,
+    POSSESSIVE-POSITION-CLASS-FLAG na-or-+,
+    COPULA-NPST-PERNUM-MARKER-FLAG na-or-+,
+    TRANSITIVE-VERB-FLAG na-or-+,
+    IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or-+,
     CASE-POSITION-CLASS-FLAG na-or-+,
-    ERG-DAT-TRANSITIVE-VERB-FLAG na-or-+,
-    NOM-INTRASITIVE-VERB-FLAG na-or-+,
-    COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-+ ].
+    COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-+,
+    ADD-NEGATION-TO-VERB-FLAG na-or-+,
+    MONO-TRANSITIVE-VERB-FLAG na-or-+,
+    COPULA-PST-PERNUM-MARKER-FLAG na-or-+,
+    IN-TRANSITIVE-VERB-FLAG na-or-+ ].
 
 png :+ [ PERNUM pernum ].
 
@@ -162,7 +166,7 @@ du := pernum.
 3sg := 3rd & sg & plain+3sg & polite+3sg.
 1polite := 1st & polite.
 2polite := 2nd & polite & pl+2polite.
-3polite := 3rd & polite & pl+3polite.
+3polite := 3rd & polite & 3polite+pl.
 1plain := 1st & plain.
 2plain := 2nd & plain.
 3plain := 3rd & plain.
@@ -175,11 +179,11 @@ plain+3sg := pernum.
 1st := 1st+sg.
 sg := 1st+sg.
 polite+3sg := pernum.
-pl+3rd := pernum.
-3rd := pl+3rd.
+3rd+pl := pernum.
+3rd := 3rd+pl.
 pl+2polite := pernum.
-pl := pl+2polite & pl+3polite.
-pl+3polite := pl+3rd.
+pl := pl+2polite & 3polite+pl.
+3polite+pl := 3rd+pl.
 
 ;;; Possession
 
@@ -199,7 +203,7 @@ possessor-pron-1 := possessor & possessive-pron-1.
 possessum-pron-1 := possessum & possessive-pron-1.
 
 ;;; Case
-;;; need edit
+
 case := *top*.
 real-case := case.  ; intermediate case type for all real cases
 NOM := real-case.  ; NOM
@@ -323,7 +327,7 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
 
 3rd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM pl+3rd ] ].
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd+pl ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
@@ -374,22 +378,42 @@ POSSESSIVE-PRONOUNS-noun-lex := no-spr-noun-lex & CASE-POSITION-CLASS-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
 
 3pl-or-3polite-poss-pronoun-noun-lex := 3rd-Poss-Pronoun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl+3polite ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3polite+pl ].
 
 regarding-noun-noun-lex := no-spr-noun-lex.
 
 ;;; Verbs
 
-verb-lex := non-mod-lex-item & GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & TENSE+ROLE-position-class-rule-dtr & need-to-add-mood-rule-dtr &
-  [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG -,
-                ADD-NEGATION-TO-VERB-FLAG na-or-- ],
-    SYNSEM [ L-QUE -,
+verb-lex := non-mod-lex-item &
+  [ SYNSEM [ L-QUE -,
              LOCAL.CAT.HEAD verb &
                             [ NMZ - ],
              SUBORDINATED none ] ].
 
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
-  [ SYNSEM [ L-QUE -,
+;;; parent type of the NP-predicating copulas (transitive verb-esque)
+cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb &
+                            [ NMZ - ],
+			 VAL [ SUBJ < #subj >,
+			       COMPS < #comps > ] ],
+	     L-QUE -,
+             SUBORDINATED none ],
+    ARG-ST < #subj & [ LOCAL.CAT cat-sat &
+				 [ VAL.SPR < >,
+				   HEAD noun &
+				      [ CASE nom ] ] ],
+             #comps &
+             [ LOCAL.CAT cat-sat &
+                         [ VAL.SPR < >,
+			   HEAD noun &
+                                [ CASE nom ] ] ] > ].
+
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & GENITIVIZATION-or-NOMINALIZATION-rule-dtr
+ & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr &
+  TENSE+ROLE-position-class-rule-dtr & need-to-add-mood-rule-dtr &
+  [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG -,
+                ADD-NEGATION-TO-VERB-FLAG na-or-- ],
+    SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
                                  SUBJ < #subj > ] ],
@@ -403,10 +427,10 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
 aux-lex := verb-lex & basic-icons-lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
              L-QUE - ],
-    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                MONO-TRANSITIVE-VERB-FLAG na-or--,
                 TRANSITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
                 COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
                 COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -414,7 +438,7 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
     ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE real-case ] ] >,
-    INFLECTED [ ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+    INFLECTED [ MONO-TRANSITIVE-VERB-FLAG na-or--,
                 TRANSITIVE-VERB-FLAG na-or--,
                 COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
                 COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG + ] ].
@@ -429,17 +453,12 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item &
                                  COMPS < > ],
                            HEAD noun &
                                 [ CASE real-case ] ] ] >,
-    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-FLAG +,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                MONO-TRANSITIVE-VERB-FLAG +,
                 TRANSITIVE-VERB-FLAG +,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG +,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG +,
                 COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
                 COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
-cop-np-verb-lex := transitive-verb-lex &
-  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
-                              [ CASE NOM ] ],
-             [ LOCAL.CAT.HEAD noun &
-                              [ CASE NOM ] ] > ].
 
 NOM-intransitive-verb-lex := intransitive-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
@@ -451,16 +470,24 @@ ERG-DAT-transitive-verb-lex := transitive-verb-lex &
              [ LOCAL.CAT.HEAD noun &
                               [ CASE DAT ] ] > ].
 
-NOM-intrasitive-verb-lex := intransitive-verb-lex &
+mono-transitive-verb-lex := ERG-DAT-transitive-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE ERG,
+                           COMPS.FIRST.LOCAL.CAT.HEAD.CASE DAT ] ].
+
+in-transitive-verb-lex := NOM-intransitive-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM,
-    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG +,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG + ] ].
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG +,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG + ] ].
 
-copula-np-pred-npst-verb-lex := cop-np-verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast].
+copula-np-pred-npst-verb-lex := cop-np-pred-lex & copula-npst-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or-- ] ].
 
-copula-np-pred-pst-verb-lex := cop-np-verb-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past].
+copula-np-pred-pst-verb-lex := cop-np-pred-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or-- ] ].
 
 ;;; Auxiliaries
 
@@ -499,10 +526,10 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 ;aux1-aux-lex := subj-raise-aux-no-pred &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-;    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-;                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+;    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+;                MONO-TRANSITIVE-VERB-FLAG na-or--,
 ;                TRANSITIVE-VERB-FLAG na-or--,
-;                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
 ;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
 ;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -515,10 +542,10 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 ;aux2-aux-lex := subj-raise-aux-no-pred &
 ;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
 ;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-;    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-;                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+;    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+;                MONO-TRANSITIVE-VERB-FLAG na-or--,
 ;                TRANSITIVE-VERB-FLAG na-or--,
-;                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
 ;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
 ;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -530,10 +557,10 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 
 ;aux3-aux-lex := subj-raise-aux-no-pred &
 ;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
-;    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-;                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+;    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+;                MONO-TRANSITIVE-VERB-FLAG na-or--,
 ;                TRANSITIVE-VERB-FLAG na-or--,
-;                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
 ;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
 ;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
@@ -729,38 +756,42 @@ high-or-mid-nominalization-lex-rule := cat-change-with-ccont-lex-rule & same-con
 ;;; Intermediate rule types
 
 copula-npst-dtr := word-or-lexrule.
-GENITIVIZATION-or-NOMINALIZATION-rule-dtr := word-or-lexrule.
-HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
-NEGATION-position-class-rule-dtr := word-or-lexrule.
-need-to-add-mood-rule-dtr := word-or-lexrule.
-POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
-CASE-POSITION-CLASS-rule-dtr := word-or-lexrule.
 TENSE+ROLE-position-class-rule-dtr := word-or-lexrule.
+need-to-add-mood-rule-dtr := word-or-lexrule.
+GENITIVIZATION-or-NOMINALIZATION-rule-dtr := word-or-lexrule.
+POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
 MOOD-Position-Class-rule-dtr := word-or-lexrule.
+CASE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+NEGATION-position-class-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
 POSSESSIVE-POSITION-CLASS-lex-rule-super := lex-rule &
   [ INFLECTED [ POSSESSIVE-POSITION-CLASS-FLAG +,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG #erg-dat-transitive-verb-or-nom-intrasitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
-                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
                 TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
                 CASE-POSITION-CLASS-FLAG #case-position-class,
-                ERG-DAT-TRANSITIVE-VERB-FLAG #erg-dat-transitive-verb,
-                NOM-INTRASITIVE-VERB-FLAG #nom-intrasitive-verb,
-                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb ],
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
     DTR POSSESSIVE-POSITION-CLASS-rule-dtr &
-        [ INFLECTED [ ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG #erg-dat-transitive-verb-or-nom-intrasitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
+        [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
                       COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
-                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
-                      TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
                       CASE-POSITION-CLASS-FLAG #case-position-class,
-                      ERG-DAT-TRANSITIVE-VERB-FLAG #erg-dat-transitive-verb,
-                      NOM-INTRASITIVE-VERB-FLAG #nom-intrasitive-verb,
-                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb ] ] ].
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
 
 1st-Person-Possessive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT [ HEAD #head,
@@ -970,25 +1001,29 @@ noun-pc23_lrt1-lex-rule := INSIDE-adposition-lex-rule-super.
 
 CASE-POSITION-CLASS-lex-rule-super := POSSESSIVE-POSITION-CLASS-rule-dtr & lex-rule &
   [ INFLECTED [ CASE-POSITION-CLASS-FLAG +,
-                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG #erg-dat-transitive-verb-or-nom-intrasitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
-                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
                 TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
-                ERG-DAT-TRANSITIVE-VERB-FLAG #erg-dat-transitive-verb,
-                NOM-INTRASITIVE-VERB-FLAG #nom-intrasitive-verb,
-                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb ],
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
     DTR CASE-POSITION-CLASS-rule-dtr &
-        [ INFLECTED [ POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
-                      ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG #erg-dat-transitive-verb-or-nom-intrasitive-verb,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
+        [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
                       COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
                       ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
-                      TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
-                      ERG-DAT-TRANSITIVE-VERB-FLAG #erg-dat-transitive-verb,
-                      NOM-INTRASITIVE-VERB-FLAG #nom-intrasitive-verb,
-                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb ] ] ].
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
 
 ERG+INSTR-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE ERG+INS ].
@@ -1104,11 +1139,11 @@ Aspect-POSITION-CLASS-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dt
         [ INFLECTED #infl ] ].
 
 STA-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
-  [ DTR.INFLECTED.NOM-INTRASITIVE-VERB-FLAG +,
+  [ DTR.INFLECTED.IN-TRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT STA ].
 
 DEF-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
-  [ DTR.INFLECTED.ERG-DAT-TRANSITIVE-VERB-FLAG +,
+  [ DTR.INFLECTED.MONO-TRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT DEF ].
 
 RES-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
@@ -1119,8 +1154,10 @@ ITF-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
   [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT ITF ].
 
-APX-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
-  [ DTR.INFLECTED.ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG + ].
+APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule
+;& infl-lex-rule &
+;  [ DTR.INFLECTED.TRANSITIVE-VERB-OR-INTRANSITIVE-VERB-FLAG + ]
+.
 
 CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule.
 
@@ -1173,25 +1210,29 @@ IRR-lex-rule := MOOD-Position-Class-lex-rule-super &
 
 TENSE+ROLE-position-class-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & add-only-no-ccont-rule & need-to-add-mood-rule-dtr &
   [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG +,
-                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG #erg-dat-transitive-verb-or-nom-intrasitive-verb,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
                 COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
-                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
                 CASE-POSITION-CLASS-FLAG #case-position-class,
-                ERG-DAT-TRANSITIVE-VERB-FLAG #erg-dat-transitive-verb,
-                NOM-INTRASITIVE-VERB-FLAG #nom-intrasitive-verb,
-                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb ],
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
     DTR TENSE+ROLE-position-class-rule-dtr &
-        [ INFLECTED [ POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
-                      ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG #erg-dat-transitive-verb-or-nom-intrasitive-verb,
+        [ INFLECTED [ COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
                       TRANSITIVE-VERB-FLAG #transitive-verb,
-                      COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
-                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
                       CASE-POSITION-CLASS-FLAG #case-position-class,
-                      ERG-DAT-TRANSITIVE-VERB-FLAG #erg-dat-transitive-verb,
-                      NOM-INTRASITIVE-VERB-FLAG #nom-intrasitive-verb,
-                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb ] ] ].
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
 
 Intransitive-Nonpast-1SG-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
@@ -1586,9 +1627,30 @@ Transitive-Past-1peAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-ru
                              COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
 
 copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
- [ INFLECTED #infl,
-   DTR copula-npst-dtr &
-      [ INFLECTED #infl ] ].
+  [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG +,
+                TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                CASE-POSITION-CLASS-FLAG #case-position-class,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
+    DTR copula-npst-dtr &
+        [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                      COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      CASE-POSITION-CLASS-FLAG #case-position-class,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
 
 copula-npst-1di-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ].
@@ -1624,9 +1686,30 @@ copula-npst-3pl-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-
   [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
 
 copula-pst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
-  [ INFLECTED #infl,
+  [ INFLECTED [ COPULA-PST-PERNUM-MARKER-FLAG +,
+                TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                CASE-POSITION-CLASS-FLAG #case-position-class,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
     DTR copula-be-pst-cop-lex &
-        [ INFLECTED #infl ] ].
+        [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                      COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      CASE-POSITION-CLASS-FLAG #case-position-class,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
 
 copula-pst-1sg-lex-rule := copula-pst-pernum-marker-lex-rule-super.
 
@@ -1650,16 +1733,16 @@ copula-pst-3du-lex-rule := copula-pst-pernum-marker-lex-rule-super.
 
 copula-pst-3pl-lex-rule := copula-pst-pernum-marker-lex-rule-super.
 
-obj-rem-op-lex-rule := comps-change-only-lex-rule & no-ccont-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
-    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < unexpressed . #comps > ].
-
 obj-prom-from-arg3of3-op-lex-rule := subj-and-comps-change-only-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #sidx ] >,
                            COMPS < #oarg,
                                    [ ] > ],
     DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < #oarg,
                                      [ LOCAL.CONT.HOOK.INDEX #sidx ] > ].
+
+obj-rem-op-lex-rule := comps-change-only-lex-rule & no-ccont-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
+    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < unexpressed . #comps > ].
 
 same-subordinated-lex-rule := lex-rule &
   [ SYNSEM.SUBORDINATED #subord,
