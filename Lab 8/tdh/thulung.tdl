@@ -435,6 +435,11 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item &
                 ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG +,
                 COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
                 COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+cop-np-verb-lex := transitive-verb-lex &
+  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE NOM ] ],
+             [ LOCAL.CAT.HEAD noun &
+                              [ CASE NOM ] ] > ].
 
 NOM-intransitive-verb-lex := intransitive-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
@@ -451,10 +456,10 @@ NOM-intrasitive-verb-lex := intransitive-verb-lex &
     INFLECTED [ NOM-INTRASITIVE-VERB-FLAG +,
                 ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG + ] ].
 
-copula-np-pred-npst-verb-lex := NOM-intrasitive-verb-lex &
+copula-np-pred-npst-verb-lex := cop-np-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast].
 
-copula-np-pred-pst-verb-lex := NOM-intrasitive-verb-lex &
+copula-np-pred-pst-verb-lex := cop-np-verb-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past].
 
 ;;; Auxiliaries
