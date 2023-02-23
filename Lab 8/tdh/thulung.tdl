@@ -306,7 +306,7 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
 1st-person-singular-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD [
                               PRON +, 
-                              CASE NOM]
+                              CASE NOM],
                    CONT.HOOK.INDEX.PNG.PERNUM 1st+sg ] ].
 
 1st-person-dual-exclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
