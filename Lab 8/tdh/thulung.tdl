@@ -440,7 +440,7 @@ NOM-intransitive-verb-lex := intransitive-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
                                 [ CASE NOM ] ].
 
-ERG-DAT-transitive-verb-lex := transitive-verb-lex & ERG-DAT-transitive-verb-lex &
+ERG-DAT-transitive-verb-lex := transitive-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE ERG ] ],
              [ LOCAL.CAT.HEAD noun &
