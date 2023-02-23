@@ -304,9 +304,7 @@ indefinite-pronoun-noun-lex := no-spr-noun-lex &
 borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
 
 1st-person-singular-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD [
-                              PRON +, 
-                              CASE NOM],
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG.PERNUM 1st+sg ] ].
 
 1st-person-dual-exclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
