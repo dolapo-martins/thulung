@@ -2,6 +2,13 @@ Subject     |                    Agent                 | Patient/ Primary Object
 NOM         | 2nd plural/3rd person -> ERG, else NOM   | DAT
 
 
-1. define subtype of ERG+INSTR that is ERG only
-2.
+1. We stopped chaining verb pcs and instead added lexical rules
+2. We redefined our case system to account for NOM-ERG split in agent roles
+
+Todo:
+1. Add the rest of the verb endings
+2. Audit our test suite's grammaticality judgments
+    - Zoe to start at 0
+    - Dolapo to start at 77
+3. Office hours thursday: ask how to evaluate MMT output and harmonize MRSes
 

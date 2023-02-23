@@ -22,7 +22,7 @@ make-pst-hab
 #1 - This is grammatical because it has agent/patient information
 Source: d
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {tense}
 be-t-thal-ʦi
 make-pst-hab-3du
