@@ -199,7 +199,7 @@ possessor-pron-1 := possessor & possessive-pron-1.
 possessum-pron-1 := possessum & possessive-pron-1.
 
 ;;; Case
-
+;;; need edit
 case := *top*.
 real-case := case.  ; intermediate case type for all real cases
 NOM := real-case.  ; NOM
@@ -451,12 +451,14 @@ NOM-intrasitive-verb-lex := intransitive-verb-lex &
     INFLECTED [ NOM-INTRASITIVE-VERB-FLAG +,
                 ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG + ] ].
 
-copula-np-pred-npst-verb-lex := ERG-DAT-transitive-verb-lex &
-  [ INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
+copula-np-pred-npst-verb-lex := NOM-intrasitive-verb-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast,
+   INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
                 ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or-- ] ].
 
-copula-np-pred-pst-verb-lex := ERG-DAT-transitive-verb-lex &
-  [ INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
+copula-np-pred-pst-verb-lex := NOM-intrasitive-verb-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
+    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
                 ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or-- ] ].
 
 ;;; Auxiliaries
@@ -493,15 +495,15 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
   [ ARG-ST < [ ],
              [ LOCAL.CAT.HEAD.AUX - ] > ].
 
-aux1-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
-                TRANSITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
-                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
-                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+;aux1-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
+;    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -509,15 +511,15 @@ aux1-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-aux2-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
-                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
-    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
-                TRANSITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
-                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
-                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+;aux2-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
+;    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
 ; To keep the semantically empty ones from spinning on
 ; generation, require complement to be [AUX -].  The
@@ -525,41 +527,40 @@ aux2-aux-lex := subj-raise-aux-no-pred &
 ; but I don't want to rely on this.  Then again, [ AUX - ]
 ; might not be true.
 
-aux3-aux-lex := subj-raise-aux-no-pred &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
-    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
-                TRANSITIVE-VERB-FLAG na-or--,
-                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
-                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
-                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+;aux3-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
+;    INFLECTED [ NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                ERG-DAT-TRANSITIVE-VERB-FLAG na-or--,
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                ERG-DAT-TRANSITIVE-VERB-OR-NOM-INTRASITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
 ;;; Copulas
 
-cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & non-mod-lex-item &
-  [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
-                   CAT.VAL [ COMPS < [ LOCAL.CAT cat-sat &
-                                                 [ HEAD.PRD +,
-                                                   VAL [ SUBJ < >,
-                                                         COMPS < > ] ] ] >,
-                             SPEC < >,
-                             SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
-                                              CAT cat-sat &
-                                                  [ VAL [ SPR < >,
-                                                          COMPS < > ],
-                                                    HEAD noun &
-                                                         [ CASE real-case ] ] ] ] > ] ] ].
+;;; parent type of the traditional copula(s)
+cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +jp ] ] > ].
 
 ; Copula type taking adjectival complements.
 ; Need to define more for additional complement types.
 
-adj-comp-copula-verb-lex := cop-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD adj ].
-
-copula-be-npst-cop-lex := adj-comp-copula-verb-lex &
+copula-be-npst-cop-lex := cop-lex & copula-npst-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
 
-copula-be-pst-cop-lex := adj-comp-copula-verb-lex &
+copula-be-pst-cop-lex := cop-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
 
 ;;; Adjectives
@@ -996,8 +997,7 @@ DAT-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-cco
 possessor-lex-rule-1 := head-change-with-ccont-lex-rule &
   [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
                        HEAD noun &
-                            [ CASE poss-case,
-                              MOD.FIRST [ LOCAL [ CAT [ VAL.SPR < [ ] >,
+                            [ MOD.FIRST [ LOCAL [ CAT [ VAL.SPR < [ ] >,
                                                         HEAD +np &
                                                              [ PRON - ] ],
                                                   CONT.HOOK [ INDEX #possessum,
@@ -1584,53 +1584,42 @@ Transitive-Past-1peAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-ru
                              COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
 
 copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
-  [ INFLECTED #infl,
-    DTR copula-be-npst-cop-lex &
-        [ INFLECTED #infl ] ].
+ [ INFLECTED #infl,
+   DTR copula-npst-dtr &
+      [ INFLECTED #infl ] ].
 
 copula-npst-1di-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ].
 
 copula-npst-1sg-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1sg,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
 
 copula-npst-1pi-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
 
 copula-npst-1de-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ].
 
 copula-npst-1pe-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
 
 copula-npst-2sg-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2sg,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
 
 copula-npst-2du-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2du,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ].
 
 copula-npst-2pl-lex-rule := copula-npst-pernum-marker-lex-rule-super &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 2pl,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
 
-copula-npst-3sg-lex-rule := const-lex-rule & copula-npst-pernum-marker-lex-rule-super &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3sg,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
+copula-npst-3sg-lex-rule := copula-npst-pernum-marker-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
 
 copula-npst-3du-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3du,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
 
 copula-npst-3pl-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
 
 copula-pst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED #infl,
@@ -1713,6 +1702,31 @@ high-nominalized-clause-phrase := unary-phrase &
                               CONT.HOOK [ XARG #xarg,
                                           LTOP #larg ],
                               COORD - ] ] ] > ].
+
+locative-pp-phrase := unary-phrase &
+[ SYNSEM [ NON-LOCAL #nl,
+           LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                    [ CAT.HEAD verb,
+                                                      CONT.HOOK.INDEX #xarg ] ] > ],
+		          VAL [ COMPS < >,
+			        SUBJ < >,
+			        SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #xarg ],
+	  RELS.LIST < arg12-ev-relation &
+		   [ PRED "_in_p_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #xarg,
+		     ARG2 #dtr ] >,
+	     HCONS.LIST < >  ],
+	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
+		            LOCAL [ CAT [ HEAD noun & [CASE loc],
+		                          VAL.SPR < > ],
+			                  CONT.HOOK [ INDEX #dtr ],
+                        COORD - ] ] ] >].
+
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
@@ -1819,20 +1833,17 @@ s1-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
 s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-;;; Coordination Strategy 2
-
-n2-top-coord-rule := basic-n-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
-
-n2-bottom-coord-rule := unary-bottom-coord-rule & n-bottom-coord-phrase &
-  [ SYNSEM.LOCAL [ COORD-STRAT "2",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
 
 ;;; Coordination Strategy 2
 
 np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                   COORD-STRAT "2" ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "2",
-                   COORD-REL.PRED "_and_coord_rel" ] ].
+                   COORD-REL.PRED "_and_coord_rel" ,
+                   CAT.HEAD.CASE #case ],
+    ARGS < [SYNSEM.LOCAL.CAT.HEAD.CASE #case ] > ].
