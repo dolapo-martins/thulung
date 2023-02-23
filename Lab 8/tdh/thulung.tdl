@@ -727,6 +727,7 @@ high-or-mid-nominalization-lex-rule := cat-change-with-ccont-lex-rule & same-con
 
 ;;; Intermediate rule types
 
+copula-npst-dtr := word-or-lexrule.
 GENITIVIZATION-or-NOMINALIZATION-rule-dtr := word-or-lexrule.
 HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
 NEGATION-position-class-rule-dtr := word-or-lexrule.
