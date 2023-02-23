@@ -397,149 +397,149 @@ Intransitive-Nonpast-3PL-suffix :=
 %suffix (* -mi)
 Intransitive-Nonpast-3PL-lex-rule.
 
-Transitive-Nonpast-1sgAgent-2sgPatient-suffix :=
+Transitive-Nonpast-2sgAgent-1sgPatient-suffix :=
 %suffix (* -ŋi)
-Transitive-Nonpast-1sgAgent-2sgPatient-lex-rule.
+Transitive-Nonpast-2sgAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1sgAgent-2duPatient-suffix1 :=
+Transitive-Nonpast-2duAgent-1sgPatient-suffix1 :=
 %suffix (* -ŋitsi)
-Transitive-Nonpast-1sgAgent-2duPatient-lex-rule.
+Transitive-Nonpast-2duAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1sgAgent-2duPatient-suffix2 :=
+Transitive-Nonpast-2duAgent-1sgPatient-suffix2 :=
 %suffix (* -ŋiʦi)
-Transitive-Nonpast-1sgAgent-2duPatient-lex-rule.
+Transitive-Nonpast-2duAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1sgAgent-2plPatient-suffix :=
+Transitive-Nonpast-2plAgent-1sgPatient-suffix :=
 %suffix (* -ŋini)
-Transitive-Nonpast-1sgAgent-2plPatient-lex-rule.
+Transitive-Nonpast-2plAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1sgAgent-3sgPatient-suffix :=
+Transitive-Nonpast-3sgAgent-1sgPatient-suffix :=
 %suffix (* -ŋi)
-Transitive-Nonpast-1sgAgent-3sgPatient-lex-rule.
+Transitive-Nonpast-3sgAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1sgAgent-3duPatient-suffix1 :=
+Transitive-Nonpast-3duAgent-1sgPatient-suffix1 :=
 %suffix (* -ŋitsi)
-Transitive-Nonpast-1sgAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1sgAgent-3duPatient-suffix2 :=
+Transitive-Nonpast-3duAgent-1sgPatient-suffix2 :=
 %suffix (* -ŋiʦi)
-Transitive-Nonpast-1sgAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1sgAgent-3plPatient-suffix :=
+Transitive-Nonpast-3plAgent-1sgPatient-suffix :=
 %suffix (* -ŋimi)
-Transitive-Nonpast-1sgAgent-3plPatient-lex-rule.
+Transitive-Nonpast-3plAgent-1sgPatient-lex-rule.
 
-Transitive-Nonpast-1diAgent-3sgPatient-suffix :=
+Transitive-Nonpast-3sgAgent-1diPatient-suffix :=
 %suffix (* -sa)
-Transitive-Nonpast-1diAgent-3sgPatient-lex-rule.
+Transitive-Nonpast-3sgAgent-1diPatient-lex-rule.
 
-Transitive-Nonpast-1diAgent-3duPatient-suffix1 :=
+Transitive-Nonpast-3duAgent-1diPatient-suffix1 :=
 %suffix (* -satsi)
-Transitive-Nonpast-1diAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1diPatient-lex-rule.
 
-Transitive-Nonpast-1diAgent-3duPatient-suffix2 :=
+Transitive-Nonpast-3duAgent-1diPatient-suffix2 :=
 %suffix (* -saʦi)
-Transitive-Nonpast-1diAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1diPatient-lex-rule.
 
-Transitive-Nonpast-1diAgent-3plPatient-suffix :=
+Transitive-Nonpast-3plAgent-1diPatient-suffix :=
 %suffix (* -sami)
-Transitive-Nonpast-1diAgent-3plPatient-lex-rule.
+Transitive-Nonpast-3plAgent-1diPatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-2sgPatient-suffix1 :=
+Transitive-Nonpast-2sgAgent-1dePatient-suffix1 :=
 %suffix (* -ʦiki)
-Transitive-Nonpast-1deAgent-2sgPatient-lex-rule.
+Transitive-Nonpast-2sgAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-2sgPatient-suffix2 :=
+Transitive-Nonpast-2sgAgent-1dePatient-suffix2 :=
 %suffix (* -tsiki)
-Transitive-Nonpast-1deAgent-2sgPatient-lex-rule.
+Transitive-Nonpast-2sgAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-2duPatient-suffix1 :=
+Transitive-Nonpast-2duAgent-1dePatient-suffix1 :=
 %suffix (* -tsiki)
-Transitive-Nonpast-1deAgent-2duPatient-lex-rule.
+Transitive-Nonpast-2duAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-2duPatient-suffix2 :=
+Transitive-Nonpast-2duAgent-1dePatient-suffix2 :=
 %suffix (* -ʦiki)
-Transitive-Nonpast-1deAgent-2duPatient-lex-rule.
+Transitive-Nonpast-2duAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-2plPatient-suffix1 :=
+Transitive-Nonpast-2plAgent-1dePatient-suffix1 :=
 %suffix (* -tsikini)
-Transitive-Nonpast-1deAgent-2plPatient-lex-rule.
+Transitive-Nonpast-2plAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-2plPatient-suffix2 :=
+Transitive-Nonpast-2plAgent-1dePatient-suffix2 :=
 %suffix (* -ʦikini)
-Transitive-Nonpast-1deAgent-2plPatient-lex-rule.
+Transitive-Nonpast-2plAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-3sgPatient-suffix1 :=
+Transitive-Nonpast-3sgAgent-1dePatient-suffix1 :=
 %suffix (* -ʦiki)
-Transitive-Nonpast-1deAgent-3sgPatient-lex-rule.
+Transitive-Nonpast-3sgAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-3sgPatient-suffix2 :=
+Transitive-Nonpast-3sgAgent-1dePatient-suffix2 :=
 %suffix (* -tsiki)
-Transitive-Nonpast-1deAgent-3sgPatient-lex-rule.
+Transitive-Nonpast-3sgAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-3duPatient-suffix1 :=
+Transitive-Nonpast-3duAgent-1dePatient-suffix1 :=
 %suffix (* -ʦiki)
-Transitive-Nonpast-1deAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-3duPatient-suffix2 :=
+Transitive-Nonpast-3duAgent-1dePatient-suffix2 :=
 %suffix (* -tsiki)
-Transitive-Nonpast-1deAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-3plPatient-suffix1 :=
+Transitive-Nonpast-3plAgent-1dePatient-suffix1 :=
 %suffix (* -tsikimi)
-Transitive-Nonpast-1deAgent-3plPatient-lex-rule.
+Transitive-Nonpast-3plAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1deAgent-3plPatient-suffix2 :=
+Transitive-Nonpast-3plAgent-1dePatient-suffix2 :=
 %suffix (* -ʦikimi)
-Transitive-Nonpast-1deAgent-3plPatient-lex-rule.
+Transitive-Nonpast-3plAgent-1dePatient-lex-rule.
 
-Transitive-Nonpast-1piAgent-3sgPatient-suffix :=
+Transitive-Nonpast-3sgAgent-1piPatient-suffix :=
 %suffix (* -sa)
-Transitive-Nonpast-1piAgent-3sgPatient-lex-rule.
+Transitive-Nonpast-3sgAgent-1piPatient-lex-rule.
 
-Transitive-Nonpast-1piAgent-3duPatient-suffix1 :=
+Transitive-Nonpast-3duAgent-1piPatient-suffix1 :=
 %suffix (* -satsi)
-Transitive-Nonpast-1piAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1piPatient-lex-rule.
 
-Transitive-Nonpast-1piAgent-3duPatient-suffix2 :=
+Transitive-Nonpast-3duAgent-1piPatient-suffix2 :=
 %suffix (* -saʦi)
-Transitive-Nonpast-1piAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1piPatient-lex-rule.
 
-Transitive-Nonpast-1piAgent-3plPatient-suffix :=
+Transitive-Nonpast-3plAgent-1piPatient-suffix :=
 %suffix (* -sami)
-Transitive-Nonpast-1piAgent-3plPatient-lex-rule.
+Transitive-Nonpast-3plAgent-1piPatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-2sgPatient-suffix :=
+Transitive-Nonpast-2sgAgent-1pePatient-suffix :=
 %suffix (* -ki)
-Transitive-Nonpast-1peAgent-2sgPatient-lex-rule.
+Transitive-Nonpast-2sgAgent-1pePatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-2duPatient-suffix1 :=
+Transitive-Nonpast-2duAgent-1pePatient-suffix1 :=
 %suffix (* -kitsi)
-Transitive-Nonpast-1peAgent-2duPatient-lex-rule.
+Transitive-Nonpast-2duAgent-1pePatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-2duPatient-suffix2 :=
+Transitive-Nonpast-2duAgent-1pePatient-suffix2 :=
 %suffix (* -kiʦi)
-Transitive-Nonpast-1peAgent-2duPatient-lex-rule.
+Transitive-Nonpast-2duAgent-1pePatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-2plPatient-suffix :=
+Transitive-Nonpast-2plAgent-1pePatient-suffix :=
 %suffix (* -ki)
-Transitive-Nonpast-1peAgent-2plPatient-lex-rule.
+Transitive-Nonpast-2plAgent-1pePatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-3sgPatient-suffix :=
+Transitive-Nonpast-3sgAgent-1pePatient-suffix :=
 %suffix (* -ki)
-Transitive-Nonpast-1peAgent-3sgPatient-lex-rule.
+Transitive-Nonpast-3sgAgent-1pePatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-3duPatient-suffix1 :=
+Transitive-Nonpast-3duAgent-1pePatient-suffix1 :=
 %suffix (* -kitsi)
-Transitive-Nonpast-1peAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1pePatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-3duPatient-suffix2 :=
+Transitive-Nonpast-3duAgent-1pePatient-suffix2 :=
 %suffix (* -kiʦi)
-Transitive-Nonpast-1peAgent-3duPatient-lex-rule.
+Transitive-Nonpast-3duAgent-1pePatient-lex-rule.
 
-Transitive-Nonpast-1peAgent-3plPatient-suffix :=
+Transitive-Nonpast-3plAgent-1pePatient-suffix :=
 %suffix (* -kimi)
-Transitive-Nonpast-1peAgent-3plPatient-lex-rule.
+Transitive-Nonpast-3plAgent-1pePatient-lex-rule.
 
 Intransitive-Past-1sg-suffix1 :=
 %suffix (* -ŋoro)
