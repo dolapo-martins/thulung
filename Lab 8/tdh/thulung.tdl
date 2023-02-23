@@ -206,18 +206,19 @@ possessum-pron-1 := possessum & possessive-pron-1.
 
 case := *top*.
 real-case := case.  ; intermediate case type for all real cases
-NOM := real-case.  ; NOM
-DAT := real-case.  ; DAT
-ABL := real-case.  ; ABL
-GEN := real-case.  ; GEN
-COM := real-case.  ; COM
-lev := real-case.  ; levLOC
-hiL := real-case.  ; hiLOC
-loL := real-case.  ; loLOC
-LOC := real-case.  ; LOC
+ABL := case.  ; Ablative
+COM := case.  ; Comitative
+GEN := case.  ; Genitive
+hiL := case.  ; high locative
+lev := case.  ; level locative
+LOC := case.  ; locative
+loL := case.  ; low locative
+DAT := real-case.  ; Dative
 ERG+INS := real-case.
-ERG := ERG+INS.
-INS := ERG+INS.
+NOM+ERG := real-case.
+ERG := ERG+INS & NOM+ERG. ; Ergative
+INS := ERG+INS. ; Instrumental
+NOM := NOM+ERG. ; Nominative
 
 ;;; Form
 
@@ -391,6 +392,7 @@ verb-lex := non-mod-lex-item &
              SUBORDINATED none ] ].
 
 ;;; parent type of the NP-predicating copulas (transitive verb-esque)
+;;; Should the case be NOM or NOM+ERG for both items on the ARG-ST?
 cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
   [ SYNSEM [ LOCAL.CAT [ HEAD verb &
                             [ NMZ - ],
@@ -460,22 +462,18 @@ transitive-verb-lex := main-verb-lex & transitive-lex-item &
                 COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
                 COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
 
-NOM-intransitive-verb-lex := intransitive-verb-lex &
-  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
-                                [ CASE NOM ] ].
-
-ERG-DAT-transitive-verb-lex := transitive-verb-lex &
+mono-transitive-verb-lex := transitive-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &
-                              [ CASE ERG ] ],
+                              [ CASE NOM+ERG ] ],
              [ LOCAL.CAT.HEAD noun &
-                              [ CASE DAT ] ] > ].
-
-mono-transitive-verb-lex := ERG-DAT-transitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE ERG,
+                              [ CASE DAT ] ] >,
+    SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM+ERG,
                            COMPS.FIRST.LOCAL.CAT.HEAD.CASE DAT ] ].
 
-in-transitive-verb-lex := NOM-intransitive-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM,
+in-transitive-verb-lex := intransitive-verb-lex &
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                [ CASE NOM ],
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM,
     INFLECTED [ IN-TRANSITIVE-VERB-FLAG +,
                 IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG + ] ].
 
