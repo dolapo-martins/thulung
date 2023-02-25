@@ -1,0 +1,65 @@
+Ling 567 / Bender
+Thulung | tdh
+Dolapo Martins
+Zoe Fang
+
+--------------------------------------------------------------------------------
+Description of simple transitive and intransitive clauses in Thulung
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Implementation of simple transitive and intransitive clauses in Thulung
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+MMT generation clean up
+--------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+MMT generation attempt and status of sentences (1) and (2)
+--------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------
+                        Grammar performance comparison
+--------------------------------------------------------------------------------
+Lab 8 initial grammar on provided test corpus -> use Lab 7 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          12          |
+What is the average number of parses per parsed item:   |         7.67         |
+How many parses did the most ambiguous item receive:    |          30          |
+>>> The ambiguities from NP coordination and verb morphology persist.
+--------------------------------------------------------------------------------
+Lab 8 initial grammar on our custom test suite -> use Lab 7 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          XX          |
+What is the average number of parses per parsed item:   |        XXXXXX        |
+How many parses did the most ambiguous item receive:    |         XXX          |
+>>> Other than underspecified morphology for verb, we also see ambiguities from
+Underspecified morphology for pronouns and NP coordination.
+--------------------------------------------------------------------------------
+Lab 8 final grammar on provided test corpus
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          XX          |
+What is the average number of parses per parsed item:   |         XXXX         |
+How many parses did the most ambiguous item receive:    |          XX          |
+>>> The ambiguities from NP coordination and verb morphology persist.
+--------------------------------------------------------------------------------
+Lab 8 final grammar on our custom test suite
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          XX          |
+What is the average number of parses per parsed item:   |        XXXXXX        |
+How many parses did the most ambiguous item receive:    |          XX          |
+>>> The ambiguities from NP coordination and verb morphology persist.
+--------------------------------------------------------------------------------
+
+
