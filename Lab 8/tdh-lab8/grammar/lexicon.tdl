@@ -343,7 +343,8 @@ bju := COMMON-NOUNS-noun-lex &
 
 bloku := COMMON-NOUNS-noun-lex &
   [ STEM < "bloku" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_river_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+; the above should be "river" but changed to park for MMT
 
 bobop := COMMON-NOUNS-noun-lex &
   [ STEM < "bobop" >,

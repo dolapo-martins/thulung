@@ -18,15 +18,75 @@ Implementation of simple transitive and intransitive clauses in Thulung
 --------------------------------------------------------------------------------
 MMT generation clean up
 --------------------------------------------------------------------------------
+To improve on our MMT, we focused on (1) simple transitive and intransitive clauses and (2) non-verbal predicates. We are able to get generation working from tdh -> eng but not the other way around. We know this requires transfer rules. To get the tdh -> eng generation, we didn't have to do much. However, we did run into a small but easily overlooked problem. We initially had sentence 16 working last week, but this week it stopped working! We realized this was because we changed the predicate value of /bloku/ from 'river' to 'park' in lexicon.tdl, but we did not change it in our choices file. 
 
+    bloku := COMMON-NOUNS-noun-lex &
+        [ STEM < "bloku" >,
+          SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+    ; the above should be "river" but changed to park for MMT
 
+When we changed our implementation of verb tenses this week, we used the matrix customization system. As such, generating a new grammar via the website overwrote the changes in our lexicon.tdl because the choices file had a different predicate. We learned our lesson! We are getting a significant amount of realized-string ambiguity. There are two reasons.
+
+The first source of ambiguity is the interaction of the locative-pp-phrase and pro-drop in Thulung. When generating, we see our locatives affixes (5 variations) attaching to an NP. This NP is then treated as a PP which attaches to the VP. Since Thulung is a pro-drop language, S -> PP VP is licensing these sentences. We could constrain this by adding a constraint to PP VP that they must be used with an overt subject by setting the OPT value to [-]. We were focused on fixing our tense implementation so we did not get to add this constraint yet but we will!
+
+The second source of ambiguity is that we have aspect and mood markers. While we have the aspect, mood, tense, and negation markers attaching in the correct order, we have not constrained what the interaction of [verb, aspect, tense, mood] looks like semantically. We are essentially, overgeneralizing. Right now, verb -> aspect -> tense -> mood is licensed for every type of verb, aspect, tense, mood. Some constructions are disallowed.
+
+For example, to make the perfect, a past-tense verb is nominalized then followed by the copula. We have no constraints to prevent this from happening with a non-past verb. 
+
+bante       lɔm-ri-m            bu-mi
+where       go-3p-NOM           be-3p
+Where did they go?
+
+This is a contrived example as we don't currently have the perfect working but it serves to illustrate how tense, aspect, mood have additional constraints we have not put in place. This allows the MMT to spawn every possible combination.
 
 
 --------------------------------------------------------------------------------
 MMT generation attempt and status of sentences (1) and (2)
 --------------------------------------------------------------------------------
+Sentence #1
+eng: Dogs sleep
+sje: Bednaga urri
+tdh: khlea-mim ʌms-mi
 
+First we loaded each language's grammar in LKB (mmt/grammars/iso) and confirmed each sentence parsed. Then we looked at the semantics via simple MRS.
 
+Across all 3 languages, the index [e] has SF value prop-or-ques. sje does not have mood or aspect, so there is no mood or aspect value. In sje and eng, #1 is present tense, but in tdh it is non-past. This meant that we had to work on our semi.vpm so that non-past in thulung was recognized as present in english. Additionally, english and thulung both have aspect, however in english the aspect value is "aspect" whereas it is "no-aspect".
+
+In our semi.vpm, we have non-past in tdh mapping to present or future. We are unsure how to fix this as we don't want non-past to map to only present, though it would simplify things for the sake of this exercise.
+
+                E.TENSE : TENSE
+                    nonpast << present
+                    nonpast << future
+                    nonpast <> nonpast
+                    past <> past
+                    * <> *
+
+Additionally, we want to have [e] go to [no-aspect] in Thulung because unless there is an overt expressed aspect, then it means there was no-aspect. It seems like a disagreement in the fundamentals of the languages and we are unsure how to proceed.
+                E.ASPECT : ASPECT
+                * >> no-aspect
+                no-aspect << [e]
+
+Lastly, the order of the items on the RELS list is the same in sje and eng, but differs for tdh. We don't know if this is having a material effect on our lack of generation but it seems plausible since we can translate from eng to sje but from neither to tdh. Though, we can translate from tdh to both languages so perhaps not?
+
+eng-RELS: <_dog_n_rel, exist_q_rel, _sleep_v_rel>
+sje-RELS: <_dog_n_rel, exist_q_rel, _sleep_v_rel>
+tdh-RELS: <exist_q_rel, _dog_n_rel, _sleep_v_rel>
+
+All three languages have qeq in the HCONS. The semantics are the same in all languages. ARGO of exist_q_rel is ARG1 of _sleep_v_rel which is the _dog_n_rel.
+ARG0 if _sleep_v_rel is [e], the index.
+
+Sentence #2
+eng: Dogs chase cars
+sje: Bednaga haoskaoli bijlajd
+tdh: khlea-mim thuri-mim-lai khaʈ-mi
+
+We follow the same process for sentence 2. The tense, aspect, and mood analysis is the same. Similarly, though the semantics are the same across all three languages, the order of items on the RELS list is consistent between eng and sje but differs with tdh. There are two qeq items on the HCONS for all three languages. 
+
+eng-RELS: <_dog_n_rel, exist_q_rel, _chase_v_rel, _car_n_rel, exist_q_rel>
+sje-RELS: <_dog_n_rel, exist_q_rel, _chase_v_rel, _car_n_rel, exist_q_rel>
+tdh-RELS: <exist_q_rel, _dog_n_rel, exist_q_rel, _car_n_rel, _chase_v_rel>
+
+The ARG0 of the first exist_q_rel is the ARG0 of _dog_n_rel [x4]. The ARG0 of the second exist_q_rel is the ARG0 of _car_n_rel [x9]. The ARG0 of _chase_v_rel is the index [e]. The ARG1 of _chase_v_rel is [x4]. The ARG1 is [x9]
 
 
 --------------------------------------------------------------------------------
