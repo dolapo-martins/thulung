@@ -1421,6 +1421,14 @@ Transitive-Past-3plAgent-3plPatient-suffix2 :=
 %suffix (* -mri)
 Transitive-Past-3plAgent-3plPatient-lex-rule.
 
+Transitive-Past-3sgAgent-3sgPatient-suffix1 :=
+%suffix (* -ɖʉ)
+Transitive-Past-3sgAgent-3sgPatient-lex-rule.
+
+Transitive-Past-3sgAgent-3sgPatient-suffix2 :=
+%suffix (* -ʉɖʉ)
+Transitive-Past-3sgAgent-3sgPatient-lex-rule.
+
 copula-npst-1di-suffix :=
 %suffix (* -tsi)
 copula-npst-1di-lex-rule.
