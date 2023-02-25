@@ -382,7 +382,7 @@ POSSESSIVE-PRONOUNS-noun-lex := no-spr-noun-lex & CASE-POSITION-CLASS-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
 
 3pl-or-3polite-poss-pronoun-noun-lex := 3rd-Poss-Pronoun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3polite+pl ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl+3polite ].
 
 regarding-noun-noun-lex := no-spr-noun-lex.
 
@@ -2110,77 +2110,6 @@ Transitive-Past-3sgAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-ru
     SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
                    CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
                              COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
-
-Transitive-Nonpast-3sgAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
-
-Transitive-Nonpast-3duAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
-
-Transitive-Nonpast-3plAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
-
-Transitive-Nonpast-3sgAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
-
-Transitive-Nonpast-3duAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
-
-Transitive-Nonpast-3plAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
-
-Transitive-Nonpast-2sgAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
-
-Transitive-Nonpast-2duAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
-
-Transitive-Nonpast-2plAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
-
-Transitive-Nonpast-3sgAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
-
-Transitive-Nonpast-3duAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
-
-Transitive-Nonpast-3plAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
-  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
-    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
-                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
-                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
 
 copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
   [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG +,
