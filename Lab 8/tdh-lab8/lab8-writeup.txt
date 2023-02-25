@@ -101,25 +101,25 @@ How many parses did the most ambiguous item receive:    |          30          |
 --------------------------------------------------------------------------------
 Lab 8 initial grammar on our custom test suite -> use Lab 7 final grammar
 --------------------------------------------------------------------------------
-How many items parsed:                                  |          XX          |
-What is the average number of parses per parsed item:   |        XXXXXX        |
-How many parses did the most ambiguous item receive:    |         XXX          |
+How many items parsed:                                  |          13          |
+What is the average number of parses per parsed item:   |         3.64         |
+How many parses did the most ambiguous item receive:    |          14          |
 >>> Other than underspecified morphology for verb, we also see ambiguities from
 Underspecified morphology for pronouns and NP coordination.
 --------------------------------------------------------------------------------
 Lab 8 final grammar on provided test corpus
 --------------------------------------------------------------------------------
-How many items parsed:                                  |          XX          |
-What is the average number of parses per parsed item:   |         XXXX         |
-How many parses did the most ambiguous item receive:    |          XX          |
+How many items parsed:                                  |          43          |
+What is the average number of parses per parsed item:   |         1.67         |
+How many parses did the most ambiguous item receive:    |           4          |
 >>> The ambiguities from NP coordination and verb morphology persist.
 --------------------------------------------------------------------------------
 Lab 8 final grammar on our custom test suite
 --------------------------------------------------------------------------------
-How many items parsed:                                  |          XX          |
-What is the average number of parses per parsed item:   |        XXXXXX        |
-How many parses did the most ambiguous item receive:    |          XX          |
+How many items parsed:                                  |          20          |
+What is the average number of parses per parsed item:   |         1.74         |
+How many parses did the most ambiguous item receive:    |           8          |
 >>> The ambiguities from NP coordination and verb morphology persist.
 --------------------------------------------------------------------------------
-
+We definitely saw marked improvement using our new implementation of tense! We are going back and auditing all of oru test sentences to make sure our judgments hold. Some judgments have changed, for example #2 is no longer grammatical because in our new implementation, we are not currently analyzing the overt past tense morpheme. Unlike the tense+role portmanteauxed morpheme, this morpheme appears before aspect. This week's results are exciting!
 
