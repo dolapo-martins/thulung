@@ -765,6 +765,10 @@ Transitive-Nonpast-3sgAgent-2plPatient-suffix :=
 %suffix (* -ni)
 Transitive-Nonpast-3sgAgent-2plPatient-lex-rule.
 
+Transitive-Nonpast-3plAgent-3plPatient-suffix :=
+%suffix (* -mi)
+Transitive-Nonpast-3plAgent-3plPatient-lex-rule.
+
 Intransitive-Past-1sg-suffix1 :=
 %suffix (* -ŋoro)
 Intransitive-Past-1sg-lex-rule.

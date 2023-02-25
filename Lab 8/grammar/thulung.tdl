@@ -1612,6 +1612,12 @@ Transitive-Nonpast-3sgAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex
                    CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
                              COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
 
+Transitive-Nonpast-3plAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
 Intransitive-Past-1sg-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
   [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
