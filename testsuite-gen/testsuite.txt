@@ -37,10 +37,10 @@ Phenomena: {aspect}
 throw-pon-3sg.pst
 'He slept (and finished sleeping).'
 
-#3 should be grammatical, does pro-drop not work? #DOLAPO
+#3 should be grammatical, does pro-drop not work?
 Source: author
 Vetted: f
-Judgment: u
+Judgment: g
 Phenomena: {aspect}
 khlosi-thaɖ-ɖa
 return-itf-3sg.pst

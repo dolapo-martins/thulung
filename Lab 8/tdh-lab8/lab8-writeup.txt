@@ -112,14 +112,22 @@ Lab 8 final grammar on provided test corpus
 How many items parsed:                                  |          43          |
 What is the average number of parses per parsed item:   |         1.67         |
 How many parses did the most ambiguous item receive:    |           4          |
->>> The ambiguities from NP coordination and verb morphology persist.
+>>> The ambiguities from NP coordination.
 --------------------------------------------------------------------------------
 Lab 8 final grammar on our custom test suite
 --------------------------------------------------------------------------------
 How many items parsed:                                  |          20          |
 What is the average number of parses per parsed item:   |         1.74         |
 How many parses did the most ambiguous item receive:    |           8          |
->>> The ambiguities from NP coordination and verb morphology persist.
+>>> The ambiguities from NP coordination.
 --------------------------------------------------------------------------------
 We definitely saw marked improvement using our new implementation of tense! We are going back and auditing all of oru test sentences to make sure our judgments hold. Some judgments have changed, for example #2 is no longer grammatical because in our new implementation, we are not currently analyzing the overt past tense morpheme. Unlike the tense+role portmanteauxed morpheme, this morpheme appears before aspect. This week's results are exciting!
+
+One sentence that is giving us a surprising bit of difficulty is 
+
+khlosi-thaɖ-ɖa
+return-itf-3sg.pst
+'He returned all of a sudden.'
+
+Thulung is pro-drop so this should be grammatical. However, we cannot figure out why this is not parsing!
 
