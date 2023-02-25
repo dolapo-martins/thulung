@@ -482,9 +482,9 @@ gidi := COMMON-NOUNS-noun-lex &
   [ STEM < "gidi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_brain_n_rel" ].
 
-go_1 := COMMON-NOUNS-noun-lex &
-  [ STEM < "go" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_1_sg-or-inside_n_rel" ].
+;go_1 := COMMON-NOUNS-noun-lex &
+;  [ STEM < "go" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_1_sg-or-inside_n_rel" ].
 
 gonu := COMMON-NOUNS-noun-lex &
   [ STEM < "gonu" >,
@@ -1739,10 +1739,6 @@ dzɯpa := adjective-adj-lex &
 
 ;;; Verbs
 
-am_1 := mono-transitive-verb-lex &
-  [ STEM < "am(s)" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_make.sleep_v_rel" ].
-
 beʈ_1 := mono-transitive-verb-lex &
   [ STEM < "beʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
@@ -1911,7 +1907,7 @@ rak := mono-transitive-verb-lex &
   [ STEM < "rak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
 
-ɔm := mono-transitive-verb-lex &
+ɔm := in-transitive-verb-lex &
   [ STEM < "ɔm" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
@@ -2062,10 +2058,6 @@ tha := mono-transitive-verb-lex &
 ʣhʌtti := mono-transitive-verb-lex &
   [ STEM < "ʣhʌtti" >,
     SYNSEM.LKEYS.KEYREL.PRED "_throwing_v_rel" ].
-
-ʌms_1 := mono-transitive-verb-lex &
-  [ STEM < "ʌms" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
 op := mono-transitive-verb-lex &
   [ STEM < "op" >,
@@ -2859,7 +2851,7 @@ set := in-transitive-verb-lex &
   [ STEM < "set" >,
     SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
 
-ʌms_2 := in-transitive-verb-lex &
+ʌms := in-transitive-verb-lex &
   [ STEM < "ʌms" >,
     SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
