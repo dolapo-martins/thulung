@@ -198,7 +198,7 @@ over-generation. We have a question on how to insert the subtype 2pl+3rd (second
         2du+2sg+3sg+2pl := 3du+3sg+2du+2sg+2pl.
 
 As for nom-dat marking on patient, our current implementation does not allow
-zero-marking on agent, since our lexicon does not yet have animacy as a feature.
+zero-marking on patient, since our lexicon does not yet have animacy as a feature.
 
 Some examples of our current implementation are as follows:
 1. intransitive verbs
