@@ -33,38 +33,38 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {aspect}
-am-dzɯl-ɖa
+ʌms-dzɯl-ɖa
 throw-pon-3sg.pst
 'He slept (and finished sleeping).'
 
-#3
+#3 should be grammatical, does pro-drop not work?
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {aspect}
-thʌk-thaɖ-ɖy
-hide-itf-3sg.pst
-'He hid all of a sudden.'
+khlosi-thaɖ-ɖa
+return-itf-3sg.pst
+'He returned all of a sudden.'
 
-#4
+#4 ditransitive is not implemented
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {aspect}
-gu-ka sekre ghrok-so-ɖy
+gu-ka sekre ghrok-so-ɖa
 3sg-erg sand throw-def-3sg.pst
 'He threw away sand permanently.'
 
-#5
+#5 expected dat on sekre
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {aspect}
-gu-ka sekre ghrok-ɖy
-3sg-erg sand throw-3sg.pst
+gu-ka sekre ghrok-ɖʉmi
+3sg-erg sand throw-3sg.3pl.pst
 'He threw away sand.'
 
-#6
+#6 
 Source: author
 Vetted: f
 Judgment: u
@@ -82,10 +82,10 @@ ri-ka ser thyr-ɖy
 sibling-erg louse send-3sg.pst
 'He sent a louse to sister.'
 
-#8
+#8 ditransitive
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {case}
 ri-lai ser thyr-ɖy
 sibling-dat louse send-3sg.pst
@@ -96,7 +96,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-go am-ŋu
+go ʌms-ŋu
 1sg sleep-1sg.NPST
 'I sleep.'
 
@@ -127,10 +127,10 @@ khlea-lai am
 dog-dat sleep.3sg
 '(Someone) makes the dog sleep.'
 
-#13
+#13 We have not implemented experiencer verb
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {case}
 go-lai kora ly-ra
 1sg-dat thirst feel-3sg.pst
@@ -163,19 +163,19 @@ go-ra kora ly-ra
 1sg-loc thirst feel-3sg.pst
 'I feel thirsty.'
 
-#17
+#17 expected dative marker on khlea
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {case}
 go khlea khlo-u
 1sg dog trap-1sg.3sg
 'I trap the dog.'
 
-#18
+#18 should actually be ungrammatical
 Source: author
 Vetted: f
-Judgment: u
+Judgment: g
 Phenomena: {case}
 go-erg khlea-lai khlo-u
 1sg-ka dog-dat trap-1sg.3sg
@@ -184,7 +184,7 @@ go-erg khlea-lai khlo-u
 #19
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {case}
 gu-erg khlea khlo-u
 3sg-ka dog trap-1sg.3sg
@@ -195,9 +195,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-gu-erg khlea-lai khlo-ʉ
-3sg-ka dog-dat trap-3sg>3sg
-'He traps the dog.'
+gu-ka khlea-mim-lai khlo-ɖʉmi
+3sg-erg dog-pl-dat trap-3sg>3pl.pst
+'He traps the dogs.'
 
 #21
 Source: author
@@ -258,9 +258,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {valchg}
-gu-ka me-lai si-be-ɖy
-3sg-erg that-dat die-cau-3sg.pst
-'He ordered her to die.'
+gu-ka ganimim-lai si-be-ɖy
+3sg-erg 2pron.pl.-dat die-cau-3sg.pst
+'He ordered you to die.'
 
 #28
 Source: author
