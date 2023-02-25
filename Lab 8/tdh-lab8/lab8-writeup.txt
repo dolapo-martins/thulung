@@ -6,15 +6,260 @@ Zoe Fang
 --------------------------------------------------------------------------------
 Description of simple transitive and intransitive clauses in Thulung
 --------------------------------------------------------------------------------
+Thulung has intransitive, mono-transitive, and di-transitive verbs. For this
+week, we focus on intransitive and mono-transitive verbs, since the lexicon does
+ not yet cover di-transitive verbs.
+The intransitive verbs have nominative zero-marking on the subject, and the
+verb ending encodes both pernum feature of the subject and tense:
+go ʌms-ŋu
+1SG.pron sleep-1SG.npst
+'I sleep'
 
+khlea-mim ʌms-mi
+dog-pl sleep-3pl.npst
+'Dogs sleep'
 
+The mono-transitive-verbs have four alignment patterns found with
+mono-transitive scenarios, based on the nature of the agent and patient:
+-A: nominative-marked (unmarked) for 1st person and 2nd person singular and
+dual; ergative-marked for 2nd plural, 3rd person and other NP's;
+-P: nominative-marked (unmarked) for in-animates; dative-marked for
+high-status humans. Non-human animates and low-status animates are optionally
+marked.
+The verb ending encodes pernum features of agent and patient, as well as the
+tense:
+go khlea(-lai) khlo-u
+1sg dog(-dat) trap-1sg.3sg.npst
+'I trap the dog.'
+
+gu-ka khlea(-lai) khlo-ʉ
+3sg-erg dog(-dat) trap-3sg.3sg.npst
+'He traps the dog.'
+
+go mytsy-lai khlo-u
+1sg person trap-1sg.3sg.npst
+'I trap the person.'
+
+gu-ka mytsy-lai khlo-ʉ
+3sg-erg mytsy-dat trap-3sg.3sg.npst
+'He traps the person.'
 
 --------------------------------------------------------------------------------
 Implementation of simple transitive and intransitive clauses in Thulung
 --------------------------------------------------------------------------------
+Before this lab, our verb ending rules are chained, and each of the position
+classes has a zero-marker lrt so that the pc is obligatory. However, this has
+resulted in huge ambiguity - we can see around 1000 rules leading to a VP.
+This week, we completely restructure our verb ending system. We got rid of the
+chained rules and replaced them with one single tense-role-position class. This
+position class has around 180 lrts, each assigning lexical rule instance(s) to a
+ configuration of tense, subject, and object if the verb is transitive.
 
+The following snippet fron irules.tdl shows part of the implementation.
+        Intransitive-Nonpast-2DU-suffix1 :=
+        %suffix (* -tsi)
+        Intransitive-Nonpast-2DU-lex-rule.
 
+        Intransitive-Nonpast-2DU-suffix2 :=
+        %suffix (* -ʦi)
+        Intransitive-Nonpast-2DU-lex-rule.
+        ...
+        Transitive-Nonpast-2duAgent-1sgPatient-suffix1 :=
+        %suffix (* -ŋitsi)
+        Transitive-Nonpast-2duAgent-1sgPatient-lex-rule.
 
+        Transitive-Nonpast-2duAgent-1sgPatient-suffix2 :=
+        %suffix (* -ŋiʦi)
+        Transitive-Nonpast-2duAgent-1sgPatient-lex-rule.
+        ...
+        Intransitive-Past-1pe-suffix1 :=
+        %suffix (* -toko)
+        Intransitive-Past-1pe-lex-rule.
+
+        Intransitive-Past-1pe-suffix2 :=
+        %suffix (* -ttoko)
+        Intransitive-Past-1pe-lex-rule.
+        ...
+        Transitive-Past-1sgAgent-3plPatient-suffix1 :=
+        %suffix (* -tomi)
+        Transitive-Past-1sgAgent-3plPatient-lex-rule.
+
+        Transitive-Past-1sgAgent-3plPatient-suffix2 :=
+        %suffix (* -utomi)
+        Transitive-Past-1sgAgent-3plPatient-lex-rule.
+
+The following snippet from thulung.tdl shows part of the implementation:
+        Transitive-Nonpast-3plAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex
+        -rule-super & infl-lex-rule &
+          [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+            SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                           CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                                     COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+        Intransitive-Past-1sg-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+          [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+            SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                           CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
+In thulung.tdl, we removed NOM-intransitive-verb-lex and
+ERG-DAT-transitive-verb-lex and copied over their constraints to their sole
+daughters: in-transitive-verb-lex and mono-transitive-verb-lex. We are not sure
+ if the case constraints in ARG-ST and in SYNSEM are redundant, so we decided
+ it is safer to keep them both:
+        mono-transitive-verb-lex := transitive-verb-lex &
+          [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                                      [ CASE NOM+ERG ] ],
+                     [ LOCAL.CAT.HEAD noun &
+                                      [ CASE DAT ] ] >,
+            SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM+ERG,
+                                   COMPS.FIRST.LOCAL.CAT.HEAD.CASE DAT ] ].
+
+        in-transitive-verb-lex := intransitive-verb-lex &
+          [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                        [ CASE NOM ],
+            SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM,
+            INFLECTED [ IN-TRANSITIVE-VERB-FLAG +,
+                        IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG + ] ].
+
+We also redefined our case system to account for the nom/erg marking for agent
+in mono-transitive verb construction. We defined NOM and ERG as subtypes under
+the same parent type NOM+ERG:
+        case := *top*.
+        real-case := case.  ; intermediate case type for tripartite cases
+        ABL := case.  ; Ablative
+        COM := case.  ; Comitative
+        GEN := case.  ; Genitive
+        hiL := case.  ; high locative
+        lev := case.  ; level locative
+        LOC := case.  ; locative
+        loL := case.  ; low locative
+        DAT := real-case.  ; Dative
+        ERG+INS := real-case.
+        NOM+ERG := real-case.
+        ERG := ERG+INS & NOM+ERG. ; Ergative
+        INS := ERG+INS. ; Instrumental
+        NOM := NOM+ERG. ; Nominative
+
+The mono-transitive-verb-lex reflects this change in the case constraints on the
+ agent:
+         mono-transitive-verb-lex := transitive-verb-lex &
+          [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                                      [ CASE NOM+ERG ] ],
+                     [ LOCAL.CAT.HEAD noun &
+                                      [ CASE DAT ] ] >,
+            SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM+ERG,
+                                   COMPS.FIRST.LOCAL.CAT.HEAD.CASE DAT ] ].
+
+With this implementation, both nominative and ergative cases can be the case of
+an agent in transitive sentence. We realize that this can result in the grammar
+licensing ungrammatical sentences where third person agents are unmarked. If
+we have more time, we want to work on the pernum system to trim down this
+over-generation. We have a question on how to insert the subtype 2pl+3rd (second
+ person plural and all thirs person) within the following pernum structure. The
+ dilemma we face is the 3rd is defined under 3rd+pl:
+        pernum := *top*.
+        du := pernum.
+        2nd := pernum.
+        1du := 1st & du.
+        1du_incl := 1du.
+        1du_excl := 1du.
+        2du := 2nd & du & 2du+2sg+3sg+2pl.
+        3du := du & 3du+3sg.
+        1pl := 1st & pl.
+        1pl_incl := 1pl.
+        1pl_excl := 1pl.
+        2pl := 2nd & pl & 2du+2sg+3sg+2pl.
+        3pl := 3rd & pl.
+        1sg := 1st & sg.
+        2sg := 2nd & sg & plain+2sg & polite+2sg & 2du+2sg+3sg+2pl.
+        3sg := sg & plain+3sg & polite+3sg & 3du+3sg & 2du+2sg+3sg+2pl.
+        1polite := 1st & polite.
+        2polite := 2nd & polite & pl+2polite.
+        3polite := 3rd & polite & pl+3polite.
+        1plain := 1st & plain.
+        2plain := 2nd & plain.
+        3plain := 3rd & plain.
+        plain+2sg := pernum.
+        plain := plain+2sg & plain+3sg.
+        polite+2sg := pernum.
+        polite := polite+2sg & polite+3sg.
+        plain+3sg := pernum.
+        1st+sg := pernum.
+        1st := 1st+sg.
+        sg := 1st+sg.
+        polite+3sg := pernum.
+        3rd+pl := pernum.
+        3rd := 3rd+pl.
+        pl+2polite := pernum.
+        pl := pl+2polite & pl+3polite.
+        pl+3polite := 3rd+pl.
+        3du+3sg := 3rd & 3du+3sg+2du+2sg+2pl.
+        3du+3sg+2du+2sg+2pl := pernum.
+        2du+2sg+3sg+2pl := 3du+3sg+2du+2sg+2pl.
+
+As for nom-dat marking on patient, our current implementation does not allow
+zero-marking on agent, since our lexicon does not yet have animacy as a feature.
+
+Some examples of our current implementation are as follows:
+1. intransitive verbs
+        Judgment: g
+        go ʌms-ŋu
+        1SG.pron sleep-1SG.npst
+        'I sleep'
+
+        Judgment: g
+        khlea-mim ʌms-mi
+        dog-pl sleep-3pl.npst
+        'Dogs sleep'
+These two sentences parse, because the pernum feature on verb agrees with that
+on the subject.
+
+2. mono-transitive verbs
+        Judgment: g
+        go khlea-lai khlo-u
+        1sg dog-dat trap-1sg.3sg.npst
+        'I trap the dog.'
+
+        Judgment: g
+        gu-ka khlea-lai khlo-ʉ
+        3sg-erg dog-dat trap-3sg.3sg.npst
+        'He traps the dog.'
+
+        Judgment: g
+        go mytsy-lai khlo-to
+        1sg person trap-1sg.3sg.pst
+        'I trapped the person.'
+
+        Judgment: g
+        gu-ka mytsy-lai khlo-ɖʉ
+        3sg-erg mytsy-dat trap-3sg.3sg.pst
+        'He trapped the person.'
+These four sentences parse, because they have PERNUM agreement between
+agent/patient and verb ending. We are not sure why there are two parses for the
+last sentence. The trees show that the verb ending has two corresponding lexical
+ rule, but this is what we see from the irules.tdl:
+         Transitive-Past-3sgAgent-3sgPatient-suffix1 :=
+        %suffix (* -ɖʉ)
+        Transitive-Past-3sgAgent-3sgPatient-lex-rule.
+
+        Transitive-Past-3sgAgent-3sgPatient-suffix2 :=
+        %suffix (* -ʉɖʉ)
+        Transitive-Past-3sgAgent-3sgPatient-lex-rule.
+
+Overgeneration:
+        Judgment: g
+        go-ka mytsy-lai khlo-to
+        1sg-erg person trap-1sg.3sg.pst
+        'I trapped the person.'
+This sentence does parse, even though 1sg should be underspecified for ergative.
+We think we need to work on refining ther pernum system to tackle this.
+
+        Judgment: g
+        gu-ka ganimim-lai si-be-ni
+        3sg-erg 2pron.pl.-dat die-cau-3sg.pst
+        'He ordered you to die.'
+This is example of an intransitive lexicon goes through valence changes with the
+ causative marker and uses transitive verb ending.
 --------------------------------------------------------------------------------
 MMT generation clean up
 --------------------------------------------------------------------------------

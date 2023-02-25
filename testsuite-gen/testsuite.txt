@@ -204,9 +204,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-go myʦy-lai khlo-ʉ
-1sg myʦy-dat trap-3sg.3sg.npst
-'I trap the person.'
+gu-ka myʦy-lai khlo-ʉ
+3sg-erg myʦy-dat trap-3sg.3sg.npst
+'He traps the person.'
 
 #22
 Source: author
@@ -258,7 +258,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {valchg}
-gu-ka ganimim-lai si-be-ɖy
+gu-ka ganimim-lai si-be-ni
 3sg-erg 2pron.pl.-dat die-cau-3sg.pst
 'He ordered you to die.'
 
