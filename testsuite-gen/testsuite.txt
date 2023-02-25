@@ -10,7 +10,7 @@ Source d: provided item file
 Source e: descriptive grammar (2020)
 
 
-#0 - This is ungrammatical because it doesn't have agent/patient information
+#0 - This is ungrammatical because it doesn't have agent/patient information and the overt past tense only morpheme -t is not supported currently
 Source: d
 Vetted: f
 Judgment: u
@@ -22,7 +22,7 @@ make-pst-hab
 #1 - This is grammatical because it has agent/patient information
 Source: d
 Vetted: f
-Judgment: u
+Judgment: g
 Phenomena: {tense}
 be-t-thal-ʦi
 make-pst-hab-3du
@@ -37,7 +37,7 @@ Phenomena: {aspect}
 throw-pon-3sg.pst
 'He slept (and finished sleeping).'
 
-#3 should be grammatical, does pro-drop not work?
+#3 should be grammatical, does pro-drop not work? #DOLAPO
 Source: author
 Vetted: f
 Judgment: u
@@ -60,11 +60,11 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {aspect}
-gu-ka sekre ghrok-ɖʉmi
-3sg-erg sand throw-3sg.3pl.pst
+gu-ka sekre ghrok-ɖʉ
+3sg-erg sand throw-3sg.3sg.pst
 'He threw away sand.'
 
-#6 
+#6 di-transitive and no marking on verb
 Source: author
 Vetted: f
 Judgment: u
@@ -100,12 +100,12 @@ go ʌms-ŋu
 1sg sleep-1sg.NPST
 'I sleep.'
 
-#10
+#10 intransitive takes NOM case not erg
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-go-ka am-ŋu
+go-ka ʌms-ŋu
 1sg-erg sleep-1sg
 'I sleep.'
 
@@ -115,7 +115,7 @@ Vetted: f
 Judgment: g
 Phenomena: {case}
 khlea ʌms
-dog sleep.3sg
+dog sleep.3sg.npst
 'The dog sleeps.'
 
 #12 (transitive, pro-drop)
@@ -123,8 +123,8 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-khlea-lai am
-dog-dat sleep.3sg
+khlea-lai am-ʉ
+dog-dat sleep-3sg.3sg.npst
 '(Someone) makes the dog sleep.'
 
 #13 We have not implemented experiencer verb
@@ -169,25 +169,25 @@ Vetted: f
 Judgment: u
 Phenomena: {case}
 go khlea khlo-u
-1sg dog trap-1sg.3sg
+1sg dog trap-1sg.3sg.npst
 'I trap the dog.'
 
-#18 should actually be ungrammatical
+#18 should actually be ungrammatical because go should be NOM
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {case}
-go-erg khlea-lai khlo-u
-1sg-ka dog-dat trap-1sg.3sg
+go-ka khlea-lai khlo-u
+1sg-erg dog-dat trap-1sg.3sg.npst
 'I trap the dog.'
 
-#19
+#19 the object should be DAT case
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {case}
-gu-erg khlea khlo-u
-3sg-ka dog trap-1sg.3sg
+gu-ka khlea khlo-u
+3sg-erg dog trap-1sg.3sg.npst
 'He traps the dog.'
 
 #20
@@ -205,7 +205,7 @@ Vetted: f
 Judgment: g
 Phenomena: {case}
 go myʦy-lai khlo-ʉ
-1sg myʦy-dat trap-3sg.3sg
+1sg myʦy-dat trap-3sg.3sg.npst
 'I trap the person.'
 
 #22

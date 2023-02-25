@@ -12,3 +12,9 @@ Todo:
     - Dolapo to start at 77
 3. Office hours thursday: ask how to evaluate MMT output and harmonize MRSes
 
+
+MMT translation explosion is because of locative affixes licensed by the locative-pp-phrase combined with a prodrop language -> they are S -> PP VP 
+
+dogs chase cars
+eng -> tdh does not generate but gives no error
+thd -> eng gives error because of predicate..but this is unexpected because the monotransitive has the expected predicate "_chase_v_rel" and the intransitive has "chase_or_pursue". If it used the monotransitive (as expected) it would work.
