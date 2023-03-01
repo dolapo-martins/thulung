@@ -431,7 +431,7 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & GENITIVIZAT
                                [ VAL [ SPR < >,
                                        COMPS < > ] ],
                            CONT.HOOK.INDEX #xarg &
-                                            [PNG.PERNUM #pernum] ] ].
+                                            [PNG.PERNUM #pernum] ] ] ].
 
 aux-lex := verb-lex & basic-icons-lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
