@@ -1066,15 +1066,15 @@ LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-cco
 
 hi-LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
 add-only-no-ccont-rule & infl-lex-rule &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE hiLOC ].
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE hiL ].
 
 loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
 add-only-no-ccont-rule & infl-lex-rule &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE loLOC ].
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE loL ].
 
 levLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
 add-only-no-ccont-rule & infl-lex-rule &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE levLOC ].
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE lev ].
 
 COM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
 add-only-no-ccont-rule & infl-lex-rule &
