@@ -422,13 +422,16 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & GENITIVIZAT
     SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
-                                 SUBJ < #subj > ] ],
+                                 SUBJ < #subj &
+                                        [FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM
+                                        #pernum]> ] ],
                      CONT.HOOK.XARG #xarg ] ],
     ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT cat-sat &
                                [ VAL [ SPR < >,
                                        COMPS < > ] ],
-                           CONT.HOOK.INDEX #xarg ] ] ].
+                           CONT.HOOK.INDEX #xarg &
+                                            [PNG.PERNUM #pernum] ] ].
 
 aux-lex := verb-lex & basic-icons-lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
