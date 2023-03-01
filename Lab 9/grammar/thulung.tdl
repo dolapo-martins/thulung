@@ -1103,15 +1103,15 @@ NOMINALIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 nominalize-lex-rule := NOMINALIZATION-lex-rule-super.
 
-locative-nominalization-lex-rule := nominalize-lex-rule &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
+;;;locative-nominalization-lex-rule := nominalize-lex-rule &
+;;;  [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
 
-need-to-add-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
-    DTR need-to-add-mood-rule-dtr &
-        [ INFLECTED #infl ] ].
+;;;need-to-add-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+;;;  [ INFLECTED #infl,
+;;;    DTR need-to-add-mood-rule-dtr &
+;;;        [ INFLECTED #infl ] ].
 
-verb-pc1_lrt1-lex-rule := need-to-add-mood-lex-rule-super.
+;;;verb-pc1_lrt1-lex-rule := need-to-add-mood-lex-rule-super.
 
 NEGATION-position-class-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & cont-change-only-lex-rule & infl-lex-rule & need-to-add-mood-rule-dtr &
   [ INFLECTED #infl,

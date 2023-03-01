@@ -1908,9 +1908,9 @@ rak := mono-transitive-verb-lex &
   [ STEM < "rak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
 
-ɔm := in-transitive-verb-lex &
-  [ STEM < "ɔm" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+;ɔm := in-transitive-verb-lex &
+;  [ STEM < "ɔm" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
 
 siʈ := mono-transitive-verb-lex &
   [ STEM < "siʈ" >,

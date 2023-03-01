@@ -306,7 +306,9 @@ In our semi.vpm, we have non-past in tdh mapping to present or future. We are un
                     past <> past
                     * <> *
 
-Additionally, we want to have [e] go to [no-aspect] in Thulung because unless there is an overt expressed aspect, then it means there was no-aspect. It seems like a disagreement in the fundamentals of the languages and we are unsure how to proceed.
+Additionally, we want to have [e] go to [no-aspect] in Thulung because unless there
+is an overt expressed aspect, then it means there was no-aspect. It seems like a disagreement
+in the fundamentals of the languages and we are unsure how to proceed.
                 E.ASPECT : ASPECT
                 * >> no-aspect
                 no-aspect << [e]

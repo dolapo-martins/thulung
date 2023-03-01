@@ -177,21 +177,21 @@ nominalize-lex-rule.
 ;;;%suffix (* -khom)
 ;;;locative-nominalization-lex-rule.
 
-verb-pc1_lrt1-suffix1 :=
-%suffix (* -mu)
-verb-pc1_lrt1-lex-rule.
+;;;verb-pc1_lrt1-suffix1 :=
+;;;%suffix (* -mu)
+;;;verb-pc1_lrt1-lex-rule.
 
-verb-pc1_lrt1-suffix2 :=
-%suffix (* -pa)
-verb-pc1_lrt1-lex-rule.
+;;;verb-pc1_lrt1-suffix2 :=
+;;;%suffix (* -pa)
+;;;verb-pc1_lrt1-lex-rule.
 
-verb-pc1_lrt1-suffix3 :=
-%suffix (* -ɖa)
-verb-pc1_lrt1-lex-rule.
+;;;verb-pc1_lrt1-suffix3 :=
+;;;%suffix (* -ɖa)
+;;;verb-pc1_lrt1-lex-rule.
 
-verb-pc1_lrt1-suffix4 :=
-%suffix (* -a)
-verb-pc1_lrt1-lex-rule.
+;;;verb-pc1_lrt1-suffix4 :=
+;;;%suffix (* -a)
+;;;verb-pc1_lrt1-lex-rule.
 
 add-negation-to-verb-prefix1 :=
 %prefix (* mi-)
