@@ -281,6 +281,7 @@ head-spec-phrase := basic-head-spec-phrase & head-final &
   [ NON-HEAD-DTR.SYNSEM.OPT - ].
 
 COMMON-NOUNS-noun-lex := noun-lex & CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr &
+  ;;; should it be 3sg?
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd,
     INFLECTED [ CASE-POSITION-CLASS-FLAG -,
                 POSSESSIVE-POSITION-CLASS-FLAG - ] ].
@@ -423,13 +424,16 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & GENITIVIZAT
     SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
-                                 SUBJ < #subj > ] ],
+                                 SUBJ < #subj &
+                                        [LOCAL.CONT.HOOK.INDEX.PNG.PERNUM
+                                        #pernum]> ] ],
                      CONT.HOOK.XARG #xarg ] ],
     ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT cat-sat &
                                [ VAL [ SPR < >,
                                        COMPS < > ] ],
-                           CONT.HOOK.INDEX #xarg ] ] ].
+                           CONT.HOOK.INDEX #xarg &
+                                            [PNG.PERNUM #pernum] ] ] ].
 
 aux-lex := verb-lex & basic-icons-lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
@@ -1067,31 +1071,37 @@ ABL-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-cco
 LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
 
-hi-LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+hi-LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE hiL ].
 
-loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE loL ].
 
-levLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+levLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE lev ].
 
-COM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
-
-vocative_suffix-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+COM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE COM ].
 
 NOM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & const-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE NOM ].
 
-GENITIVIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
-    DTR GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
-        [ INFLECTED #infl ] ].
+;;;GENITIVIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+;;;  [ INFLECTED #infl,
+;;;    DTR GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
+;;;        [ INFLECTED #infl ] ].
 
-polysyllabic-general-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;polysyllabic-general-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
 
-non-past-monosyllabic-finite-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;non-past-monosyllabic-finite-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
 
-irrealis-noun-complementation-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;irrealis-noun-complementation-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
 
-alternative-non-finite-past-relativization-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;alternative-non-finite-past-relativization-lex-rule := GENITIVIZATION-lex-rule-super.
 
 NOMINALIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
@@ -1100,15 +1110,15 @@ NOMINALIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 nominalize-lex-rule := NOMINALIZATION-lex-rule-super.
 
-locative-nominalization-lex-rule := nominalize-lex-rule &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
+;;;locative-nominalization-lex-rule := nominalize-lex-rule &
+;;;  [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
 
-need-to-add-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
-    DTR need-to-add-mood-rule-dtr &
-        [ INFLECTED #infl ] ].
+;;;need-to-add-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+;;;  [ INFLECTED #infl,
+;;;    DTR need-to-add-mood-rule-dtr &
+;;;        [ INFLECTED #infl ] ].
 
-verb-pc1_lrt1-lex-rule := need-to-add-mood-lex-rule-super.
+;;;verb-pc1_lrt1-lex-rule := need-to-add-mood-lex-rule-super.
 
 NEGATION-position-class-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & cont-change-only-lex-rule & infl-lex-rule & need-to-add-mood-rule-dtr &
   [ INFLECTED #infl,

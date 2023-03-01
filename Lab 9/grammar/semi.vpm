@@ -83,8 +83,8 @@ E.ASPECT : ASPECT
   * >> no-aspect
   no-aspect << [e]
 
-E.MOOD : E.MOOD
-  IRR <> IRR
-  IMP <> IMP
-  OBL <> OBL
+E.MOOD : MOOD
+;  IRR >> *
+;  IMP >> *
+;  OBL >> *
   * <> *
