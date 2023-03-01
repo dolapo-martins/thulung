@@ -2899,24 +2899,6 @@ ba_3 := copula-np-pred-pst-verb-lex &
 ;;;bhane := aux3-aux-lex &
 ;;;  [ STEM < "bhane" > ].
 
-;;; Determiners
-
-o := proximal-demonstrative-determiner-lex &
-  [ STEM < "o" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
-
-oram := proximal-demonstrative-determiner-lex &
-  [ STEM < "oram" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
-
-mɯ := distal-demonstrative-determiner-lex &
-  [ STEM < "mɯ" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
-
-mɯram := distal-demonstrative-determiner-lex &
-  [ STEM < "mɯram" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
-
 ;;; Copulas
 
 bu_2 := copula-be-npst-cop-lex &
