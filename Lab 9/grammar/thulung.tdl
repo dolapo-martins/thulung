@@ -281,7 +281,7 @@ head-spec-phrase := basic-head-spec-phrase & head-final &
   [ NON-HEAD-DTR.SYNSEM.OPT - ].
 
 COMMON-NOUNS-noun-lex := noun-lex & CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
     INFLECTED [ CASE-POSITION-CLASS-FLAG -,
                 POSSESSIVE-POSITION-CLASS-FLAG - ] ].
 
