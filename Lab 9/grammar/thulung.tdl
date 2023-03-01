@@ -423,7 +423,7 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & GENITIVIZAT
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
                                  SUBJ < #subj &
-                                        [FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM
+                                        [LOCAL.CONT.HOOK.INDEX.PNG.PERNUM
                                         #pernum]> ] ],
                      CONT.HOOK.XARG #xarg ] ],
     ARG-ST.FIRST #subj &
