@@ -1064,31 +1064,37 @@ ABL-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-cco
 LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
 
-hi-LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+hi-LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE hiLOC ].
 
-loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE loLOC ].
 
-levLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+levLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE levLOC ].
 
-COM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
-
-vocative_suffix-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+COM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE COM ].
 
 NOM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & const-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE NOM ].
 
-GENITIVIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
-    DTR GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
-        [ INFLECTED #infl ] ].
+;;;GENITIVIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+;;;  [ INFLECTED #infl,
+;;;    DTR GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
+;;;        [ INFLECTED #infl ] ].
 
-polysyllabic-general-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;polysyllabic-general-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
 
-non-past-monosyllabic-finite-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;non-past-monosyllabic-finite-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
 
-irrealis-noun-complementation-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;irrealis-noun-complementation-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
 
-alternative-non-finite-past-relativization-lex-rule := GENITIVIZATION-lex-rule-super.
+;;;alternative-non-finite-past-relativization-lex-rule := GENITIVIZATION-lex-rule-super.
 
 NOMINALIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
