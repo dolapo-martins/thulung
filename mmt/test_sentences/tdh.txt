@@ -5,9 +5,9 @@ khlea-mim pe-mi
 SKIPPED
 SKIPPED
 SKIPPED
-subupo-mim ma khlea-mim thuri-mim khaʈ-mi
-khlea-mim thuri-mim khaʈ-mi ma subupo-mim khlea-mim khaʈ-mi 
-subupo-mim khlea-mim khaʈ-mi ma ʌms-mi
+subupo-mim-ka khlea-mim-ka thuri-mim-lai khaʈ-mi
+khlea-mim-ka thuri-mim-lai khaʈ-mi ma subupo-mim-ka khlea-mim-lai khaʈ-mi
+subupo-mim-ka khlea-mim-lai khaʈ-mi ma ʌms-mi
 SKIPPED
 SKIPPED
 SKIPPED
@@ -16,7 +16,7 @@ khlea-mim dzɵpa bu-mi
 khlea-mim bloku-ra bu-mi
 khlea-mim subupo-mim bu-mi
 SKIPPED
-go-ku khlea-mim ʌms-mi
+ama khlea-mim ʌms-mi
 SKIPPED
 SKIPPED
 SKIPPED
