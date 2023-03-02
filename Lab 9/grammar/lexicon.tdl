@@ -2357,7 +2357,7 @@ rokphaʈ_1 := mono-transitive-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
 
 khaʈ_1 := mono-transitive-verb-lex &
-  [ STEM < "khaʈ" >,
+  [ STEM < "khaʈ", "khat" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
 thyr := mono-transitive-verb-lex &
@@ -2372,9 +2372,9 @@ blaʈ := mono-transitive-verb-lex &
   [ STEM < "blaʈ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dry_v_rel" ].
 
-khat := mono-transitive-verb-lex &
-  [ STEM < "khat" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+;khat := mono-transitive-verb-lex &
+;  [ STEM < "khat" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
 kʌks := mono-transitive-verb-lex &
   [ STEM < "kʌks" >,
