@@ -2524,13 +2524,17 @@ s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
 
 3pl-3pl-3pl-pernum-coord-rule := coord-phrase &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+    LCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             CAT.HEAD.CASE #case ],
+    RCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             CAT.HEAD.CASE #case ] ].
 
 3sg-3sg-3pl-pernum-coord-rule := coord-phrase &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
-    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
+    LCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             CAT.HEAD.CASE #case ],
+    RCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             CAT.HEAD.CASE #case ] ].
 
 pass-up-png-coord-rule := bottom-coord-phrase &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG #png,
