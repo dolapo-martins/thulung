@@ -1204,9 +1204,9 @@ APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
 .
 
 CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super &
-causative-to-arg2-itr-op-lex-rule & causative-to-arg2-tr-op-lex-rule
-& same-non-local-lex-rule &
+causative-to-arg2-itr-op-lex-rule & same-non-local-lex-rule &
   [ C-CONT.RELS.LIST < [ PRED "_CAU_v_rel" ] > ].
+#& causative-to-arg2-tr-op-lex-rule
 
 DETR-AND-MORE-marker-lex-rule := obj-rem-op-lex-rule & Aspect-POSITION-CLASS-lex-rule-super & local-change-only-lex-rule & same-cont-lex-rule.
 
@@ -2304,21 +2304,22 @@ scopal-rel-lex-rule := lex-rule &
     DTR.SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX #arg2 ] >,
                        CONT.HOOK.LTOP #scoped ] ].
 
-causative-to-arg2-tr-op-lex-rule := scopal-rel-lex-rule & same-spr-lex-rule & same-spec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.VAL [ SPR < >,
-                                                    COMPS < > ] ] >,
-                           COMPS < [ LOCAL [ CONT.HOOK.INDEX #arg2,
-                                             CAT [ HEAD [ MOD #mod,
-                                                          KEYS #keys ],
-                                                   VAL #val ] ],
-                                     NON-LOCAL #nl ],
-                                   #comp > ],
-    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg2,
-                                                CAT [ HEAD [ MOD #mod,
-                                                             KEYS #keys ],
-                                                      VAL #val ] ],
-                                        NON-LOCAL #nl ] >,
-                               COMPS < #comp > ] ].
+;causative-to-arg2-tr-op-lex-rule := scopal-rel-lex-rule & same-spr-lex-rule &
+;same-spec-lex-rule &
+;  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.VAL [ SPR < >,
+;                                                    COMPS < > ] ] >,
+;                           COMPS < [ LOCAL [ CONT.HOOK.INDEX #arg2,
+;                                             CAT [ HEAD [ MOD #mod,
+;                                                          KEYS #keys ],
+;                                                   VAL #val ] ],
+;                                     NON-LOCAL #nl ],
+;                                   #comp > ],
+;    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg2,
+;                                                CAT [ HEAD [ MOD #mod,
+;                                                             KEYS #keys ],
+;                                                      VAL #val ] ],
+;                                        NON-LOCAL #nl ] >,
+;                               COMPS < #comp > ] ].
 
 obj-prom-from-arg3of3-op-lex-rule := subj-and-comps-change-only-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #sidx ] >,
