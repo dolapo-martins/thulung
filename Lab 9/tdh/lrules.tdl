@@ -1,0 +1,10 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+Non-Possessive-lex := Non-Possessive-lex-rule.
+
+make_sg-lex := make_sg-lex-rule.
+
+NOM-case-marker-lex := NOM-case-marker-lex-rule.
+
+Intransitive-Nonpast-3SG-lex := Intransitive-Nonpast-3SG-lex-rule.
+
+copula-npst-3sg-lex := copula-npst-3sg-lex-rule.

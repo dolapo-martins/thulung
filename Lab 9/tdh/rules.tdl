@@ -42,5 +42,3 @@ cond-modifying-clause := cond-modifying-clause-phrase.
 nmz-prehead-s-attach-modifying-clause-phrase := nmz-prehead-s-attach-modifying-clause-phrase.
 
 head-adj := my-head-adj-phrase.
-
-locative-np-predicate := locative-pp-phrase.
