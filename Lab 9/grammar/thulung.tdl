@@ -2522,3 +2522,12 @@ np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
                    COORD-REL.PRED "_and_coord_rel" ,
                    CAT.HEAD.CASE #case ],
     ARGS < [SYNSEM.LOCAL.CAT.HEAD.CASE #case ] > ].
+
+;;; Coordination Strategy 3
+
+vp1-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+
+vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+
