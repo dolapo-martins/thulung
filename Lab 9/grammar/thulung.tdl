@@ -2523,20 +2523,14 @@ s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
 ;;; Feature Resolution Rules
 
 3pl-3pl-3pl-pernum-coord-rule := coord-phrase &
-  [ SYNSEM.LOCAL.CONT [CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-                       CAT.HEAD.CASE #case ],
-    LCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-                             CAT.HEAD.CASE #case ],
-    RCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-                             CAT.HEAD.CASE #case ] ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
 
 3sg-3sg-3pl-pernum-coord-rule := coord-phrase &
-  [ SYNSEM.LOCAL.CONT [CONT.HOOK.INDEX.PNG.PERNUM 3pl,
-                       CAT.HEAD.CASE #case ],
-    LCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3sg,
-                             CAT.HEAD.CASE #case ],
-    RCOORD-DTR.SYNSEM.LOCAL [CONT.HOOK.INDEX.PNG.PERNUM 3sg,
-                             CAT.HEAD.CASE #case ] ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+    LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+    RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ].
 
 pass-up-png-coord-rule := bottom-coord-phrase &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG #png,
@@ -2545,10 +2539,16 @@ pass-up-png-coord-rule := bottom-coord-phrase &
 ;;; Coordination Strategy 2
 
 np2-3pl-3pl-3pl-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule & 3pl-3pl-3pl-pernum-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                   COORD-STRAT "2" ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 np2-3sg-3sg-3pl-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule & 3sg-3sg-3pl-pernum-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                   COORD-STRAT "2" ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
 
 np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase & pass-up-png-coord-rule &
   [ SYNSEM.LOCAL [ COORD-STRAT "2",
