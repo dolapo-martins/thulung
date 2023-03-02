@@ -85,9 +85,9 @@ noun-pc22_lrt1-suffix :=
 %suffix (* -ram)
 noun-pc22_lrt1-lex-rule.
 
-;;;locative-genitivation-suffix :=
-;;;%suffix (* -ram)
-;;;locative-genitivation-lex-rule.
+locative-genitivation-suffix :=
+%suffix (* -ram)
+locative-genitivation-lex-rule.
 
 noun-pc23_lrt1-suffix :=
 %suffix (* -gunu)
@@ -137,49 +137,53 @@ COM-case-marker-suffix :=
 %suffix (* -num)
 COM-case-marker-lex-rule.
 
-;;;polysyllabic-general-relativizer-prefix :=
-;;;%prefix (* -m)
-;;;polysyllabic-general-relativizer-lex-rule.
+vocative_suffix-suffix :=
+%suffix (* -ʔa)
+vocative_suffix-lex-rule.
 
-;;;non-past-monosyllabic-finite-relativizer-prefix :=
-;;;%prefix (* mim-)
-;;;non-past-monosyllabic-finite-relativizer-lex-rule.
+polysyllabic-general-relativizer-prefix :=
+%prefix (* -m)
+polysyllabic-general-relativizer-lex-rule.
 
-;;;irrealis-noun-complementation-relativizer-prefix :=
-;;;%prefix (* -mu)
-;;;irrealis-noun-complementation-relativizer-lex-rule.
+non-past-monosyllabic-finite-relativizer-prefix :=
+%prefix (* -mim)
+non-past-monosyllabic-finite-relativizer-lex-rule.
 
-;;;alternative-non-finite-past-relativization-prefix :=
-;;;%prefix (* -ma)
-;;;alternative-non-finite-past-relativization-lex-rule.
+irrealis-noun-complementation-relativizer-prefix :=
+%prefix (* -mu)
+irrealis-noun-complementation-relativizer-lex-rule.
+
+alternative-non-finite-past-relativization-prefix :=
+%prefix (* -ma)
+alternative-non-finite-past-relativization-lex-rule.
 
 nominalize-suffix :=
 %suffix (* -m)
 nominalize-lex-rule.
 
-;;;locative-nominalization-suffix1 :=
-;;;%suffix (* -khop)
-;;;locative-nominalization-lex-rule.
+locative-nominalization-suffix1 :=
+%suffix (* -khop)
+locative-nominalization-lex-rule.
 
-;;;locative-nominalization-suffix2 :=
-;;;%suffix (* -khom)
-;;;locative-nominalization-lex-rule.
+locative-nominalization-suffix2 :=
+%suffix (* -khom)
+locative-nominalization-lex-rule.
 
-;;;verb-pc1_lrt1-suffix1 :=
-;;;%suffix (* -mu)
-;;;verb-pc1_lrt1-lex-rule.
+verb-pc1_lrt1-suffix1 :=
+%suffix (* -mu)
+verb-pc1_lrt1-lex-rule.
 
-;;;verb-pc1_lrt1-suffix2 :=
-;;;%suffix (* -pa)
-;;;verb-pc1_lrt1-lex-rule.
+verb-pc1_lrt1-suffix2 :=
+%suffix (* -pa)
+verb-pc1_lrt1-lex-rule.
 
-;;;verb-pc1_lrt1-suffix3 :=
-;;;%suffix (* -ɖa)
-;;;verb-pc1_lrt1-lex-rule.
+verb-pc1_lrt1-suffix3 :=
+%suffix (* -ɖa)
+verb-pc1_lrt1-lex-rule.
 
-;;;verb-pc1_lrt1-suffix4 :=
-;;;%suffix (* -a)
-;;;verb-pc1_lrt1-lex-rule.
+verb-pc1_lrt1-suffix4 :=
+%suffix (* -a)
+verb-pc1_lrt1-lex-rule.
 
 add-negation-to-verb-prefix1 :=
 %prefix (* mi-)
