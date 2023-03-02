@@ -1198,10 +1198,10 @@ ITF-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
   [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT ITF ].
 
-APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule
+;APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super &
+;add-only-no-ccont-rule
 ;& infl-lex-rule &
-;  [ DTR.INFLECTED.IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG + ]
-.
+;  [ DTR.INFLECTED.IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG + ].
 
 CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super &
 causative-to-arg2-itr-op-lex-rule & same-non-local-lex-rule &
