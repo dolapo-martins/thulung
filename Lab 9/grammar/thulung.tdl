@@ -328,7 +328,8 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
                    CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
 
 1st-person-plural-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
 
 3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -339,7 +340,8 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
                    CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
 
 2nd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
