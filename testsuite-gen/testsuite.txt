@@ -639,9 +639,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {neg}
-gana go mi-khaʈ-ŋri-ja
+gana go mi-khat-ŋri-ja
 2sg 1sg NEG.chase-2sg.1sg.pst-IRR
-'You did not chased me'
+'You did not chase me'
 
 #70 ungrammatical: this is a transitive verb in the past tense so need IRR
 # however requiring mood after past negation isn't working so this parses

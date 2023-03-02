@@ -181,12 +181,8 @@ COM-case-marker-lex-rule.
 ;;;%suffix (* -a)
 ;;;verb-pc1_lrt1-lex-rule.
 
-add-negation-to-verb-prefix1 :=
-%prefix (* mi-)
-add-negation-to-verb-lex-rule.
-
-add-negation-to-verb-prefix2 :=
-%prefix (* me-)
+add-negation-to-verb-prefix :=
+%prefix (* mi-) (* me-)
 add-negation-to-verb-lex-rule.
 
 CAU-marker-suffix :=
