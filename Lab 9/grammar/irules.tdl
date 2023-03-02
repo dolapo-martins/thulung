@@ -257,9 +257,9 @@ ITF-marker-suffix4 :=
 %suffix (* -thaɖ)
 ITF-marker-lex-rule.
 
-APX-marker-suffix :=
-%suffix (* -bal) (* -bhal)
-APX-marker-lex-rule.
+;APX-marker-suffix :=
+;%suffix (* -bal) (* -bhal)
+;APX-marker-lex-rule.
 
 add-hearsay-marker-suffix :=
 %suffix (* -ʔe)
