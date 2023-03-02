@@ -253,6 +253,7 @@ no-aspect := aspect.
 IRR := mood.
 IMP := mood.
 OBL := mood.
+no-mood := mood.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
