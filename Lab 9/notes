@@ -9,8 +9,8 @@ see sentences 9 and 10 -> 10 is supposed to use VP coordination
 is 3pl and 3pl -> 3pl? Or is it something else?
 
 
-
-eng -> tdh (1) (2) (3) (4) (5) (8*) (9) (--)
-sje -> tdh (1) (2) (3) (4) (5) (8)  (9) (10)
-tdh -> eng (1) (2) (3) (4) (5) (8)  (-) (--)
-tdh -> sje (1) (2) (3) (4) (5) (8)  (9) (10)
+           (1) (2) (3) (4) (5) (8) (9) (10) (15) (16) (17) (19)
+eng -> tdh (y) (y) (y) (y) (y) (*) (y) (--) (--)
+sje -> tdh (y) (y) (y) (y) (y) (y) (y) (y)
+tdh -> eng (y) (y) (y) (y) (y) (y) (n) (--)
+tdh -> sje (y) (y) (y) (y) (y) (y) (y) (y)
