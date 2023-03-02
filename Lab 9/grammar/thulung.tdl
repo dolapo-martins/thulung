@@ -1138,7 +1138,7 @@ NOMINALIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
     DTR GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
         [ INFLECTED #infl ] ].
 
-nominalize-lex-rule := NOMINALIZATION-lex-rule-super.
+;;;nominalize-lex-rule := NOMINALIZATION-lex-rule-super.
 
 ;;;locative-nominalization-lex-rule := nominalize-lex-rule &
 ;;;  [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].

@@ -153,9 +153,9 @@ COM-case-marker-lex-rule.
 ;;;%prefix (* -ma)
 ;;;alternative-non-finite-past-relativization-lex-rule.
 
-nominalize-suffix :=
-%suffix (* -m)
-nominalize-lex-rule.
+;;;nominalize-suffix :=
+;;;%suffix (* -m)
+;;;nominalize-lex-rule.
 
 ;;;locative-nominalization-suffix1 :=
 ;;;%suffix (* -khop)
