@@ -1,13 +1,13 @@
 khlea-mim ʌms-mi
-khlea-mim-ka thuri-mim-lai khaʈ-mi
-go gana-lai khaʈ-ni
+khlea-mim-ka thuri-mim-lai khat-mi
+go gana-lai khat-ni
 khlea-mim pe-mi
+khlea-mim-ka thuri-mim-lai mi-khat-mi
 SKIPPED
 SKIPPED
-SKIPPED
-subupo-mim-ka khlea-mim-ka thuri-mim-lai khaʈ-mi
-khlea-mim-ka thuri-mim-lai khaʈ-mi ma subupo-mim-ka khlea-mim-lai khaʈ-mi
-subupo-mim-ka khlea-mim-lai khaʈ-mi ma ʌms-mi
+subupo-mim-ka khlea-mim-ka thuri-mim-lai khat-mi
+khlea-mim-ka thuri-mim-lai khat-mi ma subupo-mim-ka khlea-mim-lai khat-mi
+subupo-mim-ka khlea-mim-lai khat-mi ma ʌms-mi
 SKIPPED
 SKIPPED
 SKIPPED

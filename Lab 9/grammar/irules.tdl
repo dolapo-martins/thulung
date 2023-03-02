@@ -478,11 +478,7 @@ Transitive-Nonpast-1sgAgent-2sgPatient-suffix :=
 Transitive-Nonpast-1sgAgent-2sgPatient-lex-rule.
 
 Transitive-Nonpast-1sgAgent-2duPatient-suffix1 :=
-%suffix (* -nitsi)
-Transitive-Nonpast-1sgAgent-2duPatient-lex-rule.
-
-Transitive-Nonpast-1sgAgent-2duPatient-suffix2 :=
-%suffix (* -niʦi)
+%suffix (* -nitsi) (* -niʦi)
 Transitive-Nonpast-1sgAgent-2duPatient-lex-rule.
 
 Transitive-Nonpast-1sgAgent-2plPatient-suffix :=

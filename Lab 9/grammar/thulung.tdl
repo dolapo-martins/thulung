@@ -328,7 +328,8 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
                    CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
 
 1st-person-plural-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
 
 3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -339,7 +340,8 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
                    CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
 
 2nd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -421,8 +423,9 @@ cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
 main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & GENITIVIZATION-or-NOMINALIZATION-rule-dtr
  & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr &
   TENSE+ROLE-position-class-rule-dtr & need-to-add-mood-rule-dtr &
-  [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG -,
-                ADD-NEGATION-TO-VERB-FLAG na-or-- ],
+  [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG -
+                ;ADD-NEGATION-TO-VERB-FLAG na-or--
+                ],
     SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
@@ -2521,3 +2524,12 @@ np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
                    COORD-REL.PRED "_and_coord_rel" ,
                    CAT.HEAD.CASE #case ],
     ARGS < [SYNSEM.LOCAL.CAT.HEAD.CASE #case ] > ].
+
+;;; Coordination Strategy 3
+
+vp1-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+
+vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+
