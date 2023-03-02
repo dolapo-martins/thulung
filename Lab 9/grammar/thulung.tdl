@@ -2527,9 +2527,9 @@ np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
 
 ;;; Coordination Strategy 3
 
-vp1-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "3" ].
 
-vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
+vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "3" ].
 
