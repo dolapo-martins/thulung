@@ -1200,10 +1200,13 @@ ITF-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
 
 APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule
 ;& infl-lex-rule &
-;  [ DTR.INFLECTED.TRANSITIVE-VERB-OR-INTRANSITIVE-VERB-FLAG + ]
+;  [ DTR.INFLECTED.IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG + ]
 .
 
-CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule.
+CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super &
+causative-to-arg2-itr-op-lex-rule & causative-to-arg2-tr-op-lex-rule
+& same-non-local-lex-rule &
+  [ C-CONT.RELS.LIST < [ PRED "_CAU_v_rel" ] > ].
 
 DETR-AND-MORE-marker-lex-rule := obj-rem-op-lex-rule & Aspect-POSITION-CLASS-lex-rule-super & local-change-only-lex-rule & same-cont-lex-rule.
 
@@ -2268,6 +2271,54 @@ copula-pst-3sg-lex-rule := copula-pst-pernum-marker-lex-rule-super.
 copula-pst-3du-lex-rule := copula-pst-pernum-marker-lex-rule-super.
 
 copula-pst-3pl-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+causative-to-arg2-itr-op-lex-rule := scopal-rel-lex-rule & same-spr-lex-rule & same-spec-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.VAL [ SPR < >,
+                                                    COMPS < > ] ] >,
+                           COMPS < [ LOCAL [ CONT.HOOK.INDEX #arg2,
+                                             CAT [ HEAD [ MOD #mod,
+                                                          KEYS #keys ],
+                                                   VAL #val ] ],
+                                     NON-LOCAL #nl ] > ],
+    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg2,
+                                                CAT [ HEAD [ MOD #mod,
+                                                             KEYS #keys ],
+                                                      VAL #val ] ],
+                                        NON-LOCAL #nl ] >,
+                               COMPS < > ] ].
+
+scopal-rel-lex-rule := lex-rule &
+  [ C-CONT [ RELS.LIST < event-relation &
+                         [ LBL #ltop,
+                           ARG0 #hidx,
+                           ARG1 #arg1,
+                           ARG2 #arg2,
+                           ARG3 #harg ] >,
+             HOOK [ LTOP #ltop,
+                    INDEX #hidx,
+                    XARG #arg1 ],
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #scoped ] > ],
+    SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX #arg1 ] >,
+    DTR.SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL.CONT.HOOK.INDEX #arg2 ] >,
+                       CONT.HOOK.LTOP #scoped ] ].
+
+causative-to-arg2-tr-op-lex-rule := scopal-rel-lex-rule & same-spr-lex-rule & same-spec-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CAT.VAL [ SPR < >,
+                                                    COMPS < > ] ] >,
+                           COMPS < [ LOCAL [ CONT.HOOK.INDEX #arg2,
+                                             CAT [ HEAD [ MOD #mod,
+                                                          KEYS #keys ],
+                                                   VAL #val ] ],
+                                     NON-LOCAL #nl ],
+                                   #comp > ],
+    DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg2,
+                                                CAT [ HEAD [ MOD #mod,
+                                                             KEYS #keys ],
+                                                      VAL #val ] ],
+                                        NON-LOCAL #nl ] >,
+                               COMPS < #comp > ] ].
 
 obj-prom-from-arg3of3-op-lex-rule := subj-and-comps-change-only-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #sidx ] >,
