@@ -1206,7 +1206,7 @@ APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
 CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super &
 causative-to-arg2-itr-op-lex-rule & same-non-local-lex-rule &
   [ C-CONT.RELS.LIST < [ PRED "_CAU_v_rel" ] > ].
-#& causative-to-arg2-tr-op-lex-rule
+;& causative-to-arg2-tr-op-lex-rule
 
 DETR-AND-MORE-marker-lex-rule := obj-rem-op-lex-rule & Aspect-POSITION-CLASS-lex-rule-super & local-change-only-lex-rule & same-cont-lex-rule.
 
