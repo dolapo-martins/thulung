@@ -324,8 +324,7 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
                    CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
 
 1st-person-plural-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
 3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -336,8 +335,7 @@ borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
                    CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
 
 3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
-  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
 2nd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
@@ -978,8 +976,7 @@ Non-Possessive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & const-lex-
                              VAL [ SPEC #spec,
                                    SUBJ #subj,
                                    COMPS #comps ] ] ] ].
- 
-;; make this oblig in customization system
+
 nominal-PLURALIZATION-lex-rule-super := CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
     DTR COMMON-NOUNS-noun-lex &
@@ -1173,7 +1170,6 @@ APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-
 ;  [ DTR.INFLECTED.TRANSITIVE-VERB-OR-INTRANSITIVE-VERB-FLAG + ]
 .
 
-;; this needs to add an aspect constraint
 CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule.
 
 DETR-AND-MORE-marker-lex-rule := obj-rem-op-lex-rule & Aspect-POSITION-CLASS-lex-rule-super & local-change-only-lex-rule & same-cont-lex-rule.
