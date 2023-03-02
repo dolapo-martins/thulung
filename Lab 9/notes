@@ -1,0 +1,16 @@
+Lab 9 to-do
+
+1. 10 sentences where eng -> tdh generates
+2. 7 sentences where sje -> tdh generates
+3. Investigate if we need transfer rules
+4. Need to ask emily what to do about S vs VP Coordination
+see sentences 9 and 10 -> 10 is supposed to use VP coordination
+5. eng -> tdh #8 our coordination strategy does not pass up pernum features because we don't know what the pernum of conjunctions looks like in Thulung
+is 3pl and 3pl -> 3pl? Or is it something else?
+
+
+
+eng -> tdh (1) (2) (3) (4) (5) (8*) (9) (--)
+sje -> tdh (1) (2) (3) (4) (5) (8)  (9) (10)
+tdh -> eng (1) (2) (3) (4) (5) (8)  (-) (--)
+tdh -> sje (1) (2) (3) (4) (5) (8)  (9) (10)
