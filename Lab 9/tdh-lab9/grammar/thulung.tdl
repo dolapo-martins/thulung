@@ -2507,11 +2507,12 @@ adv1-bottom-coord-rule := conj-first-bottom-coord-rule & adv-bottom-coord-phrase
 
 ;;; Coordination Strategy 1
 
-vp1-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+;vp1-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+;  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+;vp1-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase
+;&
+;  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 s1-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
