@@ -18,9 +18,9 @@ mala_gr := arg0e_gtr &
     FLAGS.TRIGGER "mala" ].
 
 bu_gr := arg0e_gtr & 
-  [ CONTEXT.RELS.LIST < >,
+  [ CONTEXT.RELS.LIST < [ PRED "_be_v_id_rel" ] >,
     FLAGS.TRIGGER "bu_1" ].
 
 ba_gr := arg0e_gtr & 
-  [ CONTEXT.RELS.LIST < >,
+  [ CONTEXT.RELS.LIST < [ PRED "_be_v_id_rel" ] >,
     FLAGS.TRIGGER "ba_3" ].
