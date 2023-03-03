@@ -460,8 +460,7 @@ dorʣe := COMMON-NOUNS-noun-lex &
 
 dʌksa := COMMON-NOUNS-noun-lex &
   [ STEM < "dʌksa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
-; should actually be 'tree'
+    SYNSEM.LKEYS.KEYREL.PRED "_tree_n_rel" ].
 
 gersi := COMMON-NOUNS-noun-lex &
   [ STEM < "gersi" >,
