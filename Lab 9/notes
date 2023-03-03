@@ -14,3 +14,10 @@ eng -> tdh (y) (y) (y) (y) (y) (*) (y) (--) (--)
 sje -> tdh (y) (y) (y) (y) (y) (y) (y) (y)
 tdh -> eng (y) (y) (y) (y) (y) (y) (n) (--)
 tdh -> sje (y) (y) (y) (y) (y) (y) (y) (y)
+
+
+TO-DO
+1. Trigger rules for semantically empty copulas
+2. Transfer rules
+ -- locative _in_p_rel transfer rules
+ -- *TRY* VP coordination transfer rule for intransitive and monotransitive coordination using prodrop

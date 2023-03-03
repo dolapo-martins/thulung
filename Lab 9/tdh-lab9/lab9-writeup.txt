@@ -1,0 +1,62 @@
+Ling 567 / Bender
+Thulung | tdh
+Dolapo Martins
+Zoe Fang
+
+--------------------------------------------------------------------------------
+Description of MRS refinement
+--------------------------------------------------------------------------------
+#Dolapo Todo
+
+--------------------------------------------------------------------------------
+Description of changes made to constrain overgeneration
+--------------------------------------------------------------------------------
+#Zoey Todo
+
+
+--------------------------------------------------------------------------------
+Sources of residual ambiguity
+--------------------------------------------------------------------------------
+#Zoey todo
+
+
+
+--------------------------------------------------------------------------------
+MMT coverage for sje and eng
+--------------------------------------------------------------------------------
+           (1) (2) (3) (4) (5) (8) (9) (10) (15) (16) (17) (19)
+eng -> tdh (y) (y) (y) (y) (y) (y) (y) (--) (--)
+sje -> tdh (y) (y) (y) (y) (y) (y) (y) (y)
+
+--------------------------------------------------------------------------------
+                        Grammar performance comparison
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Lab 9 initial grammar on provided test corpus -> use Lab 8 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          12          |
+What is the average number of parses per parsed item:   |         7.67         |
+How many parses did the most ambiguous item receive:    |          30          |
+>>> The ambiguities from NP coordination and verb morphology persisted.
+--------------------------------------------------------------------------------
+Lab 9 initial grammar on our custom test suite -> use Lab 8 final grammar
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          XX          |
+What is the average number of parses per parsed item:   |         XXXXX        |
+How many parses did the most ambiguous item receive:    |          XX          |
+>>> XXXXXXXXXXXXXXX
+--------------------------------------------------------------------------------
+Lab 9 final grammar on provided test corpus
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          XX          |
+What is the average number of parses per parsed item:   |         XXXX        |
+How many parses did the most ambiguous item receive:    |           X          |
+>>> XXXXXXXXXXXXXXX
+--------------------------------------------------------------------------------
+Lab 9 final grammar on our custom test suite
+--------------------------------------------------------------------------------
+How many items parsed:                                  |          XX          |
+What is the average number of parses per parsed item:   |         XXXXX        |
+How many parses did the most ambiguous item receive:    |           X          |
+>>> XXXXXXXXXXXXXXX
+--------------------------------------------------------------------------------
