@@ -16,3 +16,11 @@ bhane_gr := arg0e_gtr &
 mala_gr := arg0e_gtr &
   [ CONTEXT.RELS.LIST < [ PRED "_cond_subord_rel" ] >,
     FLAGS.TRIGGER "mala" ].
+
+bu_gr := arg0e_gtr & 
+  [ CONTEXT.RELS.LIST < >,
+    FLAGS.TRIGGER "bu_1" ].
+
+ba_gr := arg0e_gtr & 
+  [ CONTEXT.RELS.LIST < >,
+    FLAGS.TRIGGER "ba_3" ].
