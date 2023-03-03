@@ -19,7 +19,7 @@ mala_gr := arg0e_gtr &
 
 ;;; non past
 bu_2_gr := arg0e_gtr &
-  [ CONTEXT.RELS.LIST < [ PRED "~._a_" ] >,
+  [ CONTEXT.RELS.LIST < [ PRED "~.*_[a|p]_rel"] >,
     FLAGS.TRIGGER "bu_2" ].
 
 ;;; past
