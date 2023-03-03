@@ -620,7 +620,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tense}
-khlea-mim thuri-mim khaʈ-mi
+khlea-mim thuri-mim khat-mi
 dog.3pl car-3pl chase-3pl.3pl.npst
 'Dogs chase cars'
 
@@ -630,7 +630,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tense}
-go gana khaʈ-ni
+go gana khat-ni
 1sg 2sg chase-1sg.2sg.npst
 'I chase you'
 
@@ -649,7 +649,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {neg}
-gana go khaʈ-ŋri
+gana go khat-ŋri
 2sg 1sg NEG.chase-2sg.1sg.pst
 'You did not chase me'
 
