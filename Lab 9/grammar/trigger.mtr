@@ -18,11 +18,11 @@ mala_gr := arg0e_gtr &
     FLAGS.TRIGGER "mala" ].
 
 ;;; non past
-bu_2_gr := generator_rule & 
+bu_2_gr := arg0e_gtr & 
 [ CONTEXT.RELS <! [ PRED "~._a_" ] !>,
     FLAGS.TRIGGER "bu_2" ].
 
 ;;; past
-ba_4_gr := generator_rule & 
+ba_4_gr := arg0e_gtr & 
 [ CONTEXT.RELS <! [ PRED "~._a_" ] !>,
     FLAGS.TRIGGER "ba_4" ].
