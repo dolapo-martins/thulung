@@ -17,10 +17,12 @@ mala_gr := arg0e_gtr &
   [ CONTEXT.RELS.LIST < [ PRED "_cond_subord_rel" ] >,
     FLAGS.TRIGGER "mala" ].
 
-bu_gr := arg0e_gtr & 
-  [ CONTEXT.RELS.LIST < [ PRED "_be_v_id_rel" ] >,
+;;; non past
+bu_1_gr := arg0e_gtr & 
+[ CONTEXT.RELS <! [ PRED "~._a_" ] !>,
     FLAGS.TRIGGER "bu_1" ].
 
-ba_gr := arg0e_gtr & 
-  [ CONTEXT.RELS.LIST < [ PRED "_be_v_id_rel" ] >,
+;;; past
+ba_3_gr := arg0e_gtr & 
+[ CONTEXT.RELS <! [ PRED "~._a_" ] !>,
     FLAGS.TRIGGER "ba_3" ].
