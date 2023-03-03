@@ -21,9 +21,9 @@ adv1-mid-coord := adv1-mid-coord-rule.
 
 adv1-top-coord := adv1-top-coord-rule.
 
-;vp1-top-coord := vp1-top-coord-rule.
+vp1-top-coord := vp1-top-coord-rule.
 
-;vp1-bottom-coord := vp1-bottom-coord-rule.
+vp1-bottom-coord := vp1-bottom-coord-rule.
 
 s1-top-coord := s1-top-coord-rule.
 
