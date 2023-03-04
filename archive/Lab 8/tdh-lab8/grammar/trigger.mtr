@@ -1,0 +1,18 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+;;;bhaɖa_gr := arg0e_gtr &
+;;;  [ CONTEXT.RELS.LIST < [ ARG0.E.ASPECT POT ] >,
+;;;    FLAGS.TRIGGER "bhaɖa" ].
+
+;;;bhara_gr := arg0e_gtr &
+;;;  [ CONTEXT.RELS.LIST < [ ARG0.E.ASPECT POT ] >,
+;;;    FLAGS.TRIGGER "bhara" ].
+
+bhane_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "non_existing_rel" ] >,
+    FLAGS.TRIGGER "bhane" ].
+
+mala_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "_cond_subord_rel" ] >,
+    FLAGS.TRIGGER "mala" ].
