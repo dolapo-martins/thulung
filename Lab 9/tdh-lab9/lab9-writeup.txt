@@ -252,6 +252,14 @@ FLAG to both copulas:
       [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG -],
         SYNSEM [ ... ],
         ARG-ST < ... > ].
+When the tense affixes attach via subtypes of the copula-npst-pernum-marker-lex-rule-super, the inflection is satisfied.
+
+
+    copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
+        [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG +,
+            ...
+        ].
+
 Before this change, we see two generations for sentence 15-17, one of them
 having no ending on the verb:
     khlea-mim dzɵpa  bu
@@ -265,15 +273,16 @@ After this change, we gladly see only one generation:
 --------------------------------------------------------------------------------
 Sources of residual ambiguity
 --------------------------------------------------------------------------------
-Except for sje -> tdh (4), our sources of ambiguity are 
+Our sources of ambiguity are:
+
 (1) split ergative/nominative case for transitive agents. We have our case specified as NOM+ERG, which means that we generate examples where the agent may be marked with either nominative or ergative case marking.
+
 (2) Polite/plain forms of the 2nd and 3rd singular personal pronouns. This is a feature of tdh, so we cannot remove it.
 
-Regarding sje -> tdh sentence 4:
+(3) Regarding sje -> tdh sentence 4:
 We get two outputs, with different MRSes but we cannot figure out why this should work
  (a) Khlea-mim-lai pe-mi -> UNEXPECTED (transitive form of verb pe, to eat X)
  (b) Khlea-mim pe-mi -> EXPECTED (intransitive form of verb pe, to eat). 
-
 The MRS of (a) roughly translates to 'X eats the dogs'. (b) is the 'the dogs eat'. How then is this possible? We could have avoided this by simply removing the transitive form of eat from our lexicon but (a) and (b) signal something is awry somewhere.
 
 --------------------------------------------------------------------------------
@@ -282,9 +291,7 @@ MMT coverage for sje and eng
 The following sentences successfully produce output generation from 
 (source) -> (target)
 eng -> tdh (1) (2*) (3*) (4) (5*) (8*) (9*) (15) (16) (17) (19)
-
 sje -> tdh (1) (2*) (3*) (4*) (5*) (8*) (9*) (19)
-
 * represents sentences that have residual ambiguity/multiple generation outputs.
 
 Regarding sentence 10 (coordination over VPs): we are working on the transfer rule for this complex construction but haven't completed it yet.
@@ -303,22 +310,22 @@ How many parses did the most ambiguous item receive:    |          30          |
 --------------------------------------------------------------------------------
 Lab 9 initial grammar on our custom test suite -> use Lab 8 final grammar
 --------------------------------------------------------------------------------
-How many items parsed:                                  |          XX          |
-What is the average number of parses per parsed item:   |         XXXXX        |
-How many parses did the most ambiguous item receive:    |          XX          |
->>> XXXXXXXXXXXXXXX
+How many items parsed:                                  |          37          |
+What is the average number of parses per parsed item:   |          1.58        |
+How many parses did the most ambiguous item receive:    |          8           |
+>>> Our ambiguity arises from several verb tense affixes which have the same surface form. We also did not add PERNUM constraints to our copula affixes. This has since been fixed in Lab 9.
 --------------------------------------------------------------------------------
 Lab 9 final grammar on provided test corpus
 --------------------------------------------------------------------------------
-How many items parsed:                                  |          XX          |
-What is the average number of parses per parsed item:   |         XXXX        |
-How many parses did the most ambiguous item receive:    |           X          |
->>> XXXXXXXXXXXXXXX
+How many items parsed:                                  |          35          |
+What is the average number of parses per parsed item:   |          1.23        |
+How many parses did the most ambiguous item receive:    |           3          |
+>>> Our ambiguity arises from several verb tense affixes which have the same surface form. e.g. Intransitive-NonPast-2du, Intransitive-NonPast-1DI, Intransitive-NonPast-3du are all zero morphemes. When used in pro-drop, all three are valid.
 --------------------------------------------------------------------------------
 Lab 9 final grammar on our custom test suite
 --------------------------------------------------------------------------------
-How many items parsed:                                  |          XX          |
-What is the average number of parses per parsed item:   |         XXXXX        |
-How many parses did the most ambiguous item receive:    |           X          |
->>> XXXXXXXXXXXXXXX
+How many items parsed:                                  |          38          |
+What is the average number of parses per parsed item:   |          1.24        |
+How many parses did the most ambiguous item receive:    |           3          |
+>>> We have ambiguity with our copula being used in a pro drop construction. This then licenses use of the NP predicating copula. We also have a bug in our analysis of /mala/. This is our 'if...then' clause and we expect both the protasis and apodosis to be S. However, we seem to be licensing VPs used in this construction as well.
 --------------------------------------------------------------------------------
