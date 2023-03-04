@@ -404,7 +404,8 @@ verb-lex := non-mod-lex-item &
 ;;; parent type of the NP-predicating copulas (transitive verb-esque)
 ;;; Should the case be NOM or NOM+ERG for both items on the ARG-ST?
 cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
-  [ SYNSEM [ LOCAL.CAT [ HEAD verb &
+  [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG -],
+    SYNSEM [ LOCAL.CAT [ HEAD verb &
                             [ NMZ - ],
 			 VAL [ SUBJ < #subj >,
 			       COMPS < #comps > ] ],
