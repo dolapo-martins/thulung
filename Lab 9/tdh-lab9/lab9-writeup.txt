@@ -12,7 +12,11 @@ We added
 no-mood: mood in our thulung.tdl file
 Then we changed our mood section in semi.vpm, keeping only irrealis mood, which is the mood we worked on for the past tense negation.
 This resulted in our semi.vpm section going from 
-
+    E.MOOD : E.MOOD
+    IRR <> IRR
+    IMP <> IMP
+    OBL <> OBL
+    * <> *
 to,
     E.MOOD : MOOD
     IRR <> IRR
@@ -29,17 +33,21 @@ Description of changes made to constrain overgeneration
 --------------------------------------------------------------------------------
 Sources of residual ambiguity
 --------------------------------------------------------------------------------
-#Zoey todo
+#team todo
 
 
 
 --------------------------------------------------------------------------------
 MMT coverage for sje and eng
 --------------------------------------------------------------------------------
-           (1) (2) (3) (4) (5) (8) (9) (10) (15) (16) (17) (19)
-eng -> tdh (y) (y) (y) (y) (y) (y) (y) (--) (--)
-sje -> tdh (y) (y) (y) (y) (y) (y) (y) (y)
+The following sentences successfully produce output generation from 
+(source) -> (target)
+eng -> tdh (1) (2*) (3*) (4) (5*) (8*) (9*) (15) (16) (17) (19)
 
+sje -> tdh (1) (2*) (3*) (4*) (5*) (8*) (9*) (19)
+
+Regarding sentence 10 (coordination over VPs): we are working on the transfer rule for this complex construction but haven't completed it yet.
+Our descriptive materials do not provide prose of coordination over VPs and this sentence involves coordinating intransitive and transitive verbs. In Thulung, case constraints differ for the agent/subject of these two verb classes. As discussed in class, this requires us to write a transfer rule such that one of the verbs is treated as having a pro-dropped subject. The semantics would would be something like [cats chase dogs and (something) sleeps] where the "something" pragmatically refers to cat.
 --------------------------------------------------------------------------------
                         Grammar performance comparison
 --------------------------------------------------------------------------------
