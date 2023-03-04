@@ -265,8 +265,16 @@ After this change, we gladly see only one generation:
 --------------------------------------------------------------------------------
 Sources of residual ambiguity
 --------------------------------------------------------------------------------
+Except for sje -> tdh (4), our sources of ambiguity are 
+(1) split ergative/nominative case for transitive agents. We have our case specified as NOM+ERG, which means that we generate examples where the agent may be marked with either nominative or ergative case marking.
+(2) Polite/plain forms of the 2nd and 3rd singular personal pronouns. This is a feature of tdh, so we cannot remove it.
 
+Regarding sje -> tdh sentence 4:
+We get two outputs, with different MRSes but we cannot figure out why this should work
+ (a) Khlea-mim-lai pe-mi -> UNEXPECTED (transitive form of verb pe, to eat X)
+ (b) Khlea-mim pe-mi -> EXPECTED (intransitive form of verb pe, to eat). 
 
+The MRS of (a) roughly translates to 'X eats the dogs'. (b) is the 'the dogs eat'. How then is this possible? We could have avoided this by simply removing the transitive form of eat from our lexicon but (a) and (b) signal something is awry somewhere.
 
 --------------------------------------------------------------------------------
 MMT coverage for sje and eng
@@ -277,8 +285,11 @@ eng -> tdh (1) (2*) (3*) (4) (5*) (8*) (9*) (15) (16) (17) (19)
 
 sje -> tdh (1) (2*) (3*) (4*) (5*) (8*) (9*) (19)
 
+* represents sentences that have residual ambiguity/multiple generation outputs.
+
 Regarding sentence 10 (coordination over VPs): we are working on the transfer rule for this complex construction but haven't completed it yet.
 Our descriptive materials do not provide prose of coordination over VPs and this sentence involves coordinating intransitive and transitive verbs. In Thulung, case constraints differ for the agent/subject of these two verb classes. As discussed in class, this requires us to write a transfer rule such that one of the verbs is treated as having a pro-dropped subject. The semantics would would be something like [cats chase dogs and (something) sleeps] where the "something" pragmatically refers to cat.
+
 --------------------------------------------------------------------------------
                         Grammar performance comparison
 --------------------------------------------------------------------------------
