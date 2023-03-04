@@ -27,32 +27,76 @@ to,
     ;  OBL >> *
     * >> no-mood
     no-mood << [e]
+
 --------------------------------------------------------------------------------
 Description of changes made to constrain overgeneration
 --------------------------------------------------------------------------------
-Miscellaneous Cleanup:
+1. Miscellaneous Cleanup:
     ;;;locative-genitivation-suffix :=
     ;;;%suffix (* -ram)
     ;;;locative-genitivation-lex-rule.
-and polysyllabic-general-relativizer-prefix, etc.
+    and polysyllabic-general-relativizer-prefix, etc..
+We noticed some unconstrained suffixes that we previously implemented in the
+noun position classes. Since we do not fully understand the construction of
+genitization and relitivization processes, we commented them out so that they
+will not freely attach to nouns.
+Before we made the change, we see overflowing generations like this:
+    khlea-mim-ka-ram ʌms-mi
+    dog-pl-erg-?     sleep-3pl.npst
+    Dogs sleep
+After this change, we strictly allow the correct case marker to attach to nouns.
+Correct generation:
+    khlea-mim-ka   ʌms-mi
+    dog-pl-erg     sleep-3pl.npst
+    Dogs sleep
 
-Add case value to locatives:
+2. Missing constraints:
+For some reason, maybe we forgot to check a box in customization page, we see
+some missing constraints, so we added case/pernum value to the lex-rule.
+2.1. Add case value to locatives:
     loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
     add-only-no-ccont-rule & infl-lex-rule &
       [ SYNSEM.LOCAL.CAT.HEAD.CASE loL ].
+    and hiLoc, levLOC, etc..
+Before we made the change, we see some generations with the following wrong
+construction.
+    khlea-mim-ka-ju    ʌms-mi
+    dog-pl-erg-loL     sleep-3pl.npst
+    Dogs sleep
+After this change, we strictly allow the correct case marker to attach to nouns.
+Correct generation:
+    khlea-mim-ka    ʌms-mi
+    dog-pl-erg      sleep-3pl.npst
+    Dogs sleep
 
-Number agreement:
-some were missing before:
+2.2. Add PERNUM value:
     1st-person-plural-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
       [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                        CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+Before we made the change, we see generations where the verb ending has
+disagreeing role markers with the agent:
+    gui gana-lai khat-ni
+    1pl.incl 2sg-dat chase-1sg.2sg.npst
+    I(We) chase you.
+After this change, we strictly allow the right pernum for agent that agrees with
+ the verb ending.
+Correct generation:
+    go  gana-lai khat-ni
+    1sg 2sg-dat  chase-1sg.2sg.npst
+    I chase you.
 
-Squash realizations in irules:
+3. Squash realizations in irules:
+We squashed the allophones to one line. Some of the rules we squashed:
     LOC-case-marker-suffix :=
     %suffix (* -ɖa) (* -ra) (* -nu)
+    1st-Person-Possessive-prefix :=
+    %prefix (* a-) (* ama-) (* aki-) (* akima-) (* aʦi-)
+Thanks to your suggestion, our generation is so much cleaner now.
 
-Make pluralization obligatory:
-
+4. Make pluralization obligatory:
+We realized that our pluralization PCs were not obligatory before, and since
+singular form has zero morpheme, we see overgeneration with unspecified PERNUM,
+so we added the pluralization FLAG. Some changes are shown below:
     inflected :+ [ ...,
         NOMINAL-PLURALIZATION-FLAG luk ].
 
@@ -82,17 +126,37 @@ Make pluralization obligatory:
     make_sg-lex-rule := const-lex-rule & nominal-PLURALIZATION-lex-rule-super &
       [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM sg ].
 
-    make_sg-lex := make_sg-lex-rule. in lrules
+    make_sg-lex := make_sg-lex-rule. (in lrules)
+Before we made the change, we see wrong generation like the following:
+    khlea pe-mi
+    dog sleep-3pl
+    Dog(s) sleep.
+After this change, we do not have unspecified pernum on nouns anymore.
+Correct generation:
+    khlea-mim pe-mi
+    dog-pl    sleep-3pl
+    Dogs sleep.
 
-Add causative valence changing strategy to prevent it from freely attaching to
-verbs:
+5. Add causative valence changing strategy:
+Due to our previous work, causative marker is under aspect marker, which is not
+an obligatory position class, yet the lex-rule does not have any case/aspect
+constraint, so the marker was freely attaching to verbs. So we added the val-chg
+ strategy and added the pred value.
     CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super &
     causative-to-arg2-itr-op-lex-rule & same-non-local-lex-rule &
       [ C-CONT.RELS.LIST < [ PRED "_CAU_v_rel" ] > ].
 
-    defined: causative-to-arg2-itr-op-lex-rule and scopal-rel-lex-rule.
+    We also defined: causative-to-arg2-itr-op-lex-rule and scopal-rel-lex-rule.
+Before this change, we would see:
+    khlea-mim-be  pe-mi
+    dog-pl-cau    sleep-3pl
+    Dogs(?) sleep.
+After the change, causative marker cannot attach anymore.
 
-Negation:
+6. Negation:
+We found that negation marker could not attach to verbs. We suspect this is a
+residue of the chained rule system we had before for verb endings. We then
+commented out the line that disallows negation:
     main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
     GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
     HEARSAY-Marking-Position-Class-rule-dtr &
@@ -104,8 +168,16 @@ Negation:
         SYNSEM [ ... ],
         ARG-ST.FIRST #subj &
                      [ ... ] ].
+Now we can generate this sentence:
+    khlea-mim-ka thuri-mim-lai mi-khat-mi
+    dog-pl-erg   cat-pl-dat    neg-chase-3pl.3pl.npst
+    Dogs do not chase cats.
 
-feature resolution in NP coordination:
+7. Feature resolution in NP coordination:
+We found that the verb ending in a transitive sentence where the agent is a
+coordinated NP selects any PERNUM for agent, because NP coordination strategy
+always had unspecified PERNUM for the parent. So we added feature resolution
+like the following: (we also forced case to agree)
     3pl-3pl-3pl-pernum-coord-rule := coord-phrase &
       [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
         LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
@@ -116,16 +188,73 @@ feature resolution in NP coordination:
                        COORD-STRAT "2" ],
         RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
         LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+Before this change, we see wrong verb endings in generation:
+    subupo-mim-ka khlea-mim-ka thuri-mim-lai khat-umi
+    cat-pl-erg    dog-pl-erg   car-pl-dat    chase-3sg.3pl.npst
+    Cats and dogs chases cars.
+After this change, we see the correct generation:
+    subupo-mim-ka khlea-mim-ka thuri-mim-lai khat-mi
+    cat-pl-erg    dog-pl-erg   car-pl-dat    chase-3pl.3pl.npst
+    Cats and dogs chase cars.
 
-vp-coord?
+8. Disallow specifier on locative-pp:
+This change is motivated by the previous lab. We want to disallow PP to be the
+specifier of the copula, so we made the list empty:
+    locative-pp-phrase := unary-phrase &
+    [ SYNSEM [ NON-LOCAL #nl,
+               LOCAL.CAT [ ...
+                      VAL [ ...,
+                            SPEC < >  ]]],
+        C-CONT [ ... ],
+          ARGS < ... >].
+
+9. Case constraint to cop-lex
+We found that our cop-lex does not select any specific case for its subject,
+so we added this constraint:
+    cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
+      [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG -],
+        SYNSEM.LOCAL [ ... ],
+        ARG-ST < #subj &
+                 [ LOCAL [ ...,
+                           CAT [ ...,
+                                 HEAD noun &
+                                      [ CASE NOM ] ] ] ],
+                 ... > ].
+Before this change, we saw generations where subject can be any case value:
+    khlea-mim-lai bloku-ra bu-mi
+    dog-pl-dat    park-loc be-3pl
+    Dogs are in the park.
+After this change, we strictly allow nominative to be the case of the subject:
+    khlea-mim bloku-ra bu-mi
+    dog-pl    park-loc be-3pl
+    Dogs are in the park.
+
+10. Force inflections on cop-lex and cop-np-pred-lex:
+We realized inflections are not obligatory on both types of copula, which
+resulted in VPs with underspecified PERNUM value. So we added the inflection
+FLAG to both copulas:
+    cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
+      [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG -],
+        SYNSEM.LOCAL [ ... ],
+        ARG-ST < ... > ].
+    cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
+      [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG -],
+        SYNSEM [ ... ],
+        ARG-ST < ... > ].
+Before this change, we see two generations for sentence 15-17, one of them
+having no ending on the verb:
+    khlea-mim dzɵpa  bu
+    dog-pl    hungry be
+    Dogs be hungry.
+After this change, we gladly see only one generation:
+    khlea-mim dzɵpa  bu-mi
+    dog-pl    hungry be-3pl
+    Dogs are hungry.
+
 --------------------------------------------------------------------------------
 Sources of residual ambiguity
 --------------------------------------------------------------------------------
-<<<<<<< Updated upstream
-#team todo
 
-=======
->>>>>>> Stashed changes
 
 
 --------------------------------------------------------------------------------
