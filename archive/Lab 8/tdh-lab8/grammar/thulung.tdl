@@ -1,0 +1,2423 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Grammar of Thulung
+;;; created at:
+;;;     Thu Feb 23 04:23:43 UTC 2023
+;;; based on Matrix customization system version of:
+;;;     Thu 28 Jul 2022 12:31:08 AM UTC
+;;;
+;;; 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
+
+non-mod-lex-item := lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < > ].
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Matrix Type Addenda
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+basic-head-comp-phrase :+ [ SYNSEM [ LIGHT -,
+             LOCAL.CAT.MC #mc,
+             SUBORDINATED #subord ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.MC #mc,
+                      SUBORDINATED #subord ] ].
+
+head :+ [ PRON bool,
+    AUX bool,
+    PRD bool,
+    NMZ bool,
+    POSSESSOR poss,
+    FORM form,
+    INIT bool ].
+
+noun :+ [ CASE case ].
+
+coord-phrase :+ [ SYNSEM [ LOCAL.CAT.HEAD.NMZ #nmz,
+             SUBORDINATED #subord ],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT.HEAD.NMZ #nmz,
+                        SUBORDINATED #subord ],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT.HEAD.NMZ #nmz,
+                        SUBORDINATED #subord ] ].
+
+unary-bottom-coord-rule :+ [ SYNSEM [ LOCAL.CAT.HEAD.NMZ #nmz,
+             SUBORDINATED #subord ],
+    ARGS < [ SYNSEM [ LOCAL.CAT.HEAD.NMZ #nmz,
+                      SUBORDINATED #subord ] ] > ].
+
+inflected :+ [ TENSE+ROLE-POSITION-CLASS-FLAG luk,
+    COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG luk,
+    POSSESSIVE-POSITION-CLASS-FLAG luk,
+    COPULA-NPST-PERNUM-MARKER-FLAG luk,
+    TRANSITIVE-VERB-FLAG luk,
+    IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG luk,
+    CASE-POSITION-CLASS-FLAG luk,
+    COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG luk,
+    ADD-NEGATION-TO-VERB-FLAG luk,
+    MONO-TRANSITIVE-VERB-FLAG luk,
+    COPULA-PST-PERNUM-MARKER-FLAG luk,
+    IN-TRANSITIVE-VERB-FLAG luk ].
+
+infl-satisfied :+ [ TENSE+ROLE-POSITION-CLASS-FLAG na-or-+,
+    COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-+,
+    POSSESSIVE-POSITION-CLASS-FLAG na-or-+,
+    COPULA-NPST-PERNUM-MARKER-FLAG na-or-+,
+    TRANSITIVE-VERB-FLAG na-or-+,
+    IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or-+,
+    CASE-POSITION-CLASS-FLAG na-or-+,
+    COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-+,
+    ADD-NEGATION-TO-VERB-FLAG na-or-+,
+    MONO-TRANSITIVE-VERB-FLAG na-or-+,
+    COPULA-PST-PERNUM-MARKER-FLAG na-or-+,
+    IN-TRANSITIVE-VERB-FLAG na-or-+ ].
+
+png :+ [ PERNUM pernum ].
+
+cat :+ [ POSSESSUM poss ].
+
+poss := *top* &
+  [ POSS-AGR png ].
+
+basic-bare-np-phrase :+ [ SYNSEM.LOCAL.CAT [ VAL.SPEC < >,
+                       HEAD #head,
+                       POSSESSUM #possessum ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD #head,
+                                POSSESSUM #possessum & nonpossessive ] ].
+
+basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
+
+basic-head-opt-subj-phrase :+ [ SYNSEM.SUBORDINATED #subord,
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.COMPS < >,
+                      SUBORDINATED #subord ] ].
+
+adj-head-scop-phrase :+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR nonpossessive,
+                                    POSSESSUM nonpossessive ] ].
+
+top-coord-rule :+ [ SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
+                       POSSESSUM #possessum ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
+                                  POSSESSUM #possessum ],
+    LCOORD-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
+                                  POSSESSUM #possessum ] ].
+
+bottom-coord-phrase :+ [ SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
+                       POSSESSUM #possessum ],
+    NONCONJ-DTR.SYNSEM.LOCAL.CAT [ HEAD.POSSESSOR #possessor,
+                                   POSSESSUM #possessum ] ].
+
+basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+canonical-synsem :+ [ SUBORDINATED xsubord ].
+
+xsubord := *top*.
+
+none := xsubord.
+
+cond := xsubord.
+
+basic-head-subj-phrase :+ [ SYNSEM.SUBORDINATED #subord,
+    HEAD-DTR.SYNSEM.SUBORDINATED #subord ].
+
+basic-head-opt-comp-phrase :+ [ SYNSEM.SUBORDINATED #subord,
+    HEAD-DTR.SYNSEM.SUBORDINATED #subord ].
+
+adj-head-phrase :+ [ SYNSEM.SUBORDINATED #subord,
+    NON-HEAD-DTR.SYNSEM.SUBORDINATED #subord ].
+
+head-adj-phrase :+ [ SYNSEM.SUBORDINATED #subord,
+    NON-HEAD-DTR.SYNSEM.SUBORDINATED #subord ].
+
+non-local-change-only-lex-rule :+ same-subordinated-lex-rule.
+
+local-change-only-lex-rule :+ same-subordinated-lex-rule.
+
+cont-change-only-lex-rule :+ same-subordinated-lex-rule.
+
+cat-change-with-ccont-lex-rule :+ same-subordinated-lex-rule.
+
+add-only-rule :+ same-subordinated-lex-rule.
+
+head-adj-int-phrase :+ [ NON-HEAD-DTR.SYNSEM.NON-LOCAL.QUE.LIST < > ].
+
+;;;;;;;;;;;;;;
+;;; Features
+;;;;;;;;;;;;;;
+
+;;; Pernum
+
+pernum := *top*.
+du := pernum.
+2nd := pernum.
+1du := 1st & du.
+1du_incl := 1du.
+1du_excl := 1du.
+2du := 2nd & du & 2du+2sg+3sg+2pl.
+3du := du & 3du+3sg.
+1pl := 1st & pl.
+1pl_incl := 1pl.
+1pl_excl := 1pl.
+2pl := 2nd & pl & 2du+2sg+3sg+2pl.
+3pl := 3rd & pl.
+1sg := 1st & sg.
+2sg := 2nd & sg & plain+2sg & polite+2sg & 2du+2sg+3sg+2pl.
+3sg := sg & plain+3sg & polite+3sg & 3du+3sg & 2du+2sg+3sg+2pl.
+1polite := 1st & polite.
+2polite := 2nd & polite & pl+2polite.
+3polite := 3rd & polite & pl+3polite.
+1plain := 1st & plain.
+2plain := 2nd & plain.
+3plain := 3rd & plain.
+plain+2sg := pernum.
+plain := plain+2sg & plain+3sg.
+polite+2sg := pernum.
+polite := polite+2sg & polite+3sg.
+plain+3sg := pernum.
+1st+sg := pernum.
+1st := 1st+sg.
+sg := 1st+sg.
+polite+3sg := pernum.
+3rd+pl := pernum.
+3rd := 3rd+pl.
+pl+2polite := pernum.
+pl := pl+2polite & pl+3polite.
+pl+3polite := 3rd+pl.
+3du+3sg := 3rd & 3du+3sg+2du+2sg+2pl.
+3du+3sg+2du+2sg+2pl := pernum.
+2du+2sg+3sg+2pl := 3du+3sg+2du+2sg+2pl.
+
+;;; Possession
+
+possession := *top*.
+possessive := poss.  ; supertype for possessive features
+nonpossessive := poss.  ; type for nonpossessive
+possessor := possessive.
+possessum := possessive.
+possessive-1 := possessive.  ; supertype for strategy 1
+possessor-1 := possessor & possessive-1.
+possessum-1 := possessum & possessive-1.
+
+;;; Possession
+
+possessive-pron-1 := possessive.  ; supertype for strategy pron-1
+possessor-pron-1 := possessor & possessive-pron-1.
+possessum-pron-1 := possessum & possessive-pron-1.
+
+;;; Case
+
+case := *top*.
+real-case := case.  ; intermediate case type for all real cases
+ABL := case.  ; Ablative
+COM := case.  ; Comitative
+GEN := case.  ; Genitive
+hiL := case.  ; high locative
+lev := case.  ; level locative
+LOC := case.  ; locative
+loL := case.  ; low locative
+DAT := real-case.  ; Dative
+ERG+INS := real-case.
+NOM+ERG := real-case.
+ERG := ERG+INS & NOM+ERG. ; Ergative
+INS := ERG+INS. ; Instrumental
+NOM := NOM+ERG. ; Nominative
+
+;;; Form
+
+form := *top*.
+nonfinite := form.
+finite := form.
+
+;;; Tense
+
+nonpast := tense.
+past := tense.
+
+;;; Aspect
+
+POT := aspect.
+HAB := aspect.
+DEF := aspect.
+STA := aspect.
+PON := aspect.
+RES := aspect.
+ITF := aspect.
+APX := aspect.
+no-aspect := aspect.
+
+;;; Mood
+
+IRR := mood.
+IMP := mood.
+OBL := mood.
+
+;;;;;;;;;;;;;;;;;;;
+;;; Lexical Types
+;;;;;;;;;;;;;;;;;;;
+
+;;; Nouns
+
+noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & no-hcons-lex-item & non-mod-lex-item &
+  [ ARG-ST < #spr >,
+    SYNSEM.LOCAL.CAT [ VAL [ SPR < #spr &
+                                   [ LOCAL.CAT.HEAD det ] >,
+                             COMPS < >,
+                             SUBJ < >,
+                             SPEC < > ],
+                       HEAD.NMZ - ] ].
+
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+
+; Nouns which cannot take specifiers mark their SPR requirement
+; as OPT +.  Making the non-head daughter OPT - in this rule
+; keeps such nouns out.
+; 
+; Rules for building NPs.  Note that the Matrix uses SPR for
+; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
+
+head-spec-phrase := basic-head-spec-phrase & head-final &
+  [ NON-HEAD-DTR.SYNSEM.OPT - ].
+
+COMMON-NOUNS-noun-lex := noun-lex & CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd,
+    INFLECTED [ CASE-POSITION-CLASS-FLAG -,
+                POSSESSIVE-POSITION-CLASS-FLAG - ] ].
+
+2nd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2du ] ].
+
+2nd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM plain+2sg ] ].
+
+2nd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM polite+2sg ] ].
+
+3rd-person-singular-plain-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM plain+3sg ] ].
+
+indefinite-pronoun-noun-lex := no-spr-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
+borrowed-from-Nepali-evidential-like-noun-noun-lex := no-spr-noun-lex.
+
+1st-person-singular-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
+1st-person-dual-exclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ].
+
+1st-person-dual-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ].
+
+1st-person-plural-exclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
+
+1st-person-plural-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
+3rd-person-singular-polite-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM polite+3sg ] ].
+
+3rd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
+
+3rd-person-dual-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
+2nd-person-plural-pronoun-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                   CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
+
+PERSONAL-PRONOUNS-noun-lex := no-spr-noun-lex & CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON +,
+    INFLECTED [ CASE-POSITION-CLASS-FLAG -,
+                POSSESSIVE-POSITION-CLASS-FLAG - ] ].
+
+hearsay-discourse-marker-noun-lex := no-spr-noun-lex.
+
+POSSESSIVE-PRONOUNS-noun-lex := no-spr-noun-lex & CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr &
+  [ INFLECTED [ CASE-POSITION-CLASS-FLAG -,
+                POSSESSIVE-POSITION-CLASS-FLAG - ] ].
+
+1st-Poss-Pronoun-noun-lex := POSSESSIVE-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1st ].
+
+2nd-Poss-Pronoun-noun-lex := POSSESSIVE-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2nd ].
+
+3rd-Poss-Pronoun-noun-lex := POSSESSIVE-PRONOUNS-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+
+1de-poss-pronoun-noun-lex := 1st-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ].
+
+1pe-poss-pronoun-noun-lex := 1st-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
+
+1di-poss-pronoun-noun-lex := 1st-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ].
+
+1pi-poss-pronoun-noun-lex := 1st-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
+
+2du-poss-pronoun-noun-lex := 2nd-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
+
+2pl-or-2polite-poss-pronoun-noun-lex := 2nd-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl+2polite ].
+
+3du-poss-pronoun-noun-lex := 3rd-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
+
+3pl-or-3polite-poss-pronoun-noun-lex := 3rd-Poss-Pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl+3polite ].
+
+regarding-noun-noun-lex := no-spr-noun-lex.
+
+;;; Verbs
+
+verb-lex := non-mod-lex-item &
+  [ SYNSEM [ L-QUE -,
+             LOCAL.CAT.HEAD verb &
+                            [ NMZ - ],
+             SUBORDINATED none ] ].
+
+;;; parent type of the NP-predicating copulas (transitive verb-esque)
+;;; Should the case be NOM or NOM+ERG for both items on the ARG-ST?
+cop-np-pred-lex := norm-sem-lex-item & verb-lex & transitive-lex-item &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb &
+                            [ NMZ - ],
+			 VAL [ SUBJ < #subj >,
+			       COMPS < #comps > ] ],
+	     L-QUE -,
+             SUBORDINATED none ],
+    ARG-ST < #subj & [ LOCAL.CAT cat-sat &
+				 [ VAL.SPR < >,
+				   HEAD noun &
+				      [ CASE nom ] ] ],
+             #comps &
+             [ LOCAL.CAT cat-sat &
+                         [ VAL.SPR < >,
+			   HEAD noun &
+                                [ CASE nom ] ] ] > ].
+
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & GENITIVIZATION-or-NOMINALIZATION-rule-dtr
+ & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr &
+  TENSE+ROLE-position-class-rule-dtr & need-to-add-mood-rule-dtr &
+  [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG -,
+                ADD-NEGATION-TO-VERB-FLAG na-or-- ],
+    SYNSEM [ L-QUE -,
+             LOCAL [ CAT [ HEAD.AUX -,
+                           VAL [ SPEC < >,
+                                 SUBJ < #subj > ] ],
+                     CONT.HOOK.XARG #xarg ] ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT cat-sat &
+                               [ VAL [ SPR < >,
+                                       COMPS < > ] ],
+                           CONT.HOOK.INDEX #xarg ] ] ].
+
+aux-lex := verb-lex & basic-icons-lex-item &
+  [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
+             L-QUE - ],
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                MONO-TRANSITIVE-VERB-FLAG na-or--,
+                TRANSITIVE-VERB-FLAG na-or--,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+
+intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE real-case ] ] >,
+    INFLECTED [ MONO-TRANSITIVE-VERB-FLAG na-or--,
+                TRANSITIVE-VERB-FLAG na-or--,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG + ] ].
+
+transitive-verb-lex := main-verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE real-case ] ],
+             #comps &
+             [ LOCAL.CAT cat-sat &
+                         [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun &
+                                [ CASE real-case ] ] ] >,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                MONO-TRANSITIVE-VERB-FLAG +,
+                TRANSITIVE-VERB-FLAG +,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG +,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+
+mono-transitive-verb-lex := transitive-verb-lex &
+  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE NOM+ERG ] ],
+             [ LOCAL.CAT.HEAD noun &
+                              [ CASE DAT ] ] >,
+    SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM+ERG,
+                           COMPS.FIRST.LOCAL.CAT.HEAD.CASE DAT ] ].
+
+in-transitive-verb-lex := intransitive-verb-lex &
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                [ CASE NOM ],
+    SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CAT.HEAD.CASE NOM,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG +,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG + ] ].
+
+copula-np-pred-npst-verb-lex := cop-np-pred-lex & copula-npst-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or-- ] ].
+
+copula-np-pred-pst-verb-lex := cop-np-pred-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past,
+    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or-- ] ].
+
+;;; Auxiliaries
+
+subj-raise-aux := aux-lex & trans-first-arg-raising-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPEC < >,
+                             COMPS < #comps >,
+                             SUBJ < #subj &
+                                    [ LOCAL.CAT.HEAD.CASE real-case ] > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CAT [ HEAD noun &
+                                  [ CASE #case ],
+                             VAL [ SUBJ < >,
+                                   SPR < >,
+                                   SPEC < >,
+                                   COMPS < > ] ],
+                       CONT.HOOK.INDEX #xarg ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SUBJ < unexpressed &
+                                        [ LOCAL.CAT.HEAD.CASE #case ] >,
+                                 COMPS < >,
+                                 SPR < >,
+                                 SPEC < > ],
+                           HEAD verb ] ] > ].
+
+; To keep the semantically empty ones from spinning on
+; generation, require complement to be [AUX -].  The
+; FORM feature might be enough in the starter grammars,
+; but I don't want to rely on this.  Then again, [ AUX - ]
+; might not be true.
+
+subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
+  [ ARG-ST < [ ],
+             [ LOCAL.CAT.HEAD.AUX - ] > ].
+
+;aux1-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
+;    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+;                MONO-TRANSITIVE-VERB-FLAG na-or--,
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+
+; To keep the semantically empty ones from spinning on
+; generation, require complement to be [AUX -].  The
+; FORM feature might be enough in the starter grammars,
+; but I don't want to rely on this.  Then again, [ AUX - ]
+; might not be true.
+
+;aux2-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT POT,
+;                   CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ],
+;    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+;                MONO-TRANSITIVE-VERB-FLAG na-or--,
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+
+; To keep the semantically empty ones from spinning on
+; generation, require complement to be [AUX -].  The
+; FORM feature might be enough in the starter grammars,
+; but I don't want to rely on this.  Then again, [ AUX - ]
+; might not be true.
+
+;aux3-aux-lex := subj-raise-aux-no-pred &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite,
+;    INFLECTED [ IN-TRANSITIVE-VERB-FLAG na-or--,
+;                MONO-TRANSITIVE-VERB-FLAG na-or--,
+;                TRANSITIVE-VERB-FLAG na-or--,
+;                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or--,
+;                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG na-or-- ] ].
+
+;;; Copulas
+
+;;; parent type of the traditional copula(s)
+cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+                             COMPS < #comps >,
+                             SPR < >,
+                             SPEC < > ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST < #subj &
+             [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                       CAT [ VAL [ SPR < >,
+                                   COMPS < > ],
+                             HEAD noun ] ] ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ COMPS < > ],
+                           HEAD +jp ] ] > ].
+
+; Copula type taking adjectival complements.
+; Need to define more for additional complement types.
+
+copula-be-npst-cop-lex := cop-lex & copula-npst-dtr &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
+
+copula-be-pst-cop-lex := cop-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
+
+;;; Adjectives
+
+adj-lex := basic-intersective-adjective-lex.
+
+adjective-adj-lex := attr-adj-lex &
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
+                       VAL.SUBJ < >,
+                       HEAD.PRD + ] ].
+
+; Basic attributive adjective definition
+
+attr-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                              VAL.SPR cons ] ] > ].
+
+;;;;;;;;;;;;;;;;;;;
+;;; Subordinators
+;;;;;;;;;;;;;;;;;;;
+
+adverb-subord-lex-item := no-rels-hcons-lex-item & basic-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SUBJ < >,
+                             SPR < >,
+                             SPEC < >,
+                             COMPS < > ],
+                       HEAD adv &
+                            [ MOD < [ SUBORDINATED none,
+                                      LOCAL intersective-mod &
+                                            [ CAT [ MC -,
+                                                    HEAD verb ] ] ] > ] ] ].
+
+prehead-cond-clause-init-adv-subord-lex-item := adverb-subord-lex-item &
+  [ SYNSEM [ SUBORDINATED cond,
+             LOCAL.CAT [ HEAD.MOD < [ LOCAL.CAT.VAL [ SUBJ < >,
+                                                      COMPS < > ] ] >,
+                         POSTHEAD - ] ] ].
+
+adv-marked-subord-clause-phrase := unary-phrase &
+  [ SYNSEM.LOCAL [ CAT [ MC -,
+                         VAL [ SPR < >,
+                               COMPS < >,
+                               SPEC < >,
+                               SUBJ #subj ],
+                         HEAD adp &
+                              [ MOD < [ LOCAL scopal-mod &
+                                              [ CAT [ HEAD verb,
+                                                      VAL [ SPR < >,
+                                                            COMPS < > ] ],
+                                                CONT.HOOK [ LTOP #mcl,
+                                                            INDEX #index ] ] ] > ] ],
+                   COORD - ],
+    C-CONT [ RELS.LIST < arg12-ev-relation &
+                         [ ARG1 #mch,
+                           ARG2 #sch ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #mch,
+                            LARG #mcl ],
+                          qeq &
+                          [ HARG #sch,
+                            LARG #scl ] >,
+             ICONS.LIST < >,
+             HOOK.INDEX #index ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD verb &
+                                       [ MOD < > ],
+                                  VAL [ SUBJ #subj,
+                                        SPR < >,
+                                        COMPS < >,
+                                        SPEC < > ] ],
+                            CONT.HOOK.LTOP #scl,
+                            COORD - ] ] > ].
+
+cond-modifying-clause-phrase := adv-marked-subord-clause-phrase &
+  [ C-CONT.RELS.LIST < [ PRED "_cond_subord_rel" ] >,
+    ARGS < [ SYNSEM [ SUBORDINATED cond,
+                      LOCAL.CAT.VAL.SUBJ < > ] ] >,
+    SYNSEM.LOCAL.CAT [ POSTHEAD -,
+                       HEAD.MOD < [ LOCAL.CAT.VAL.SUBJ < > ] > ] ].
+
+;;; Complementizers
+
+;;; Others
+
+;;; Determiners
+;;; SPEC is non-empty, and already specified by basic-determiner-lex.
+
+determiner-lex := basic-determiner-lex & basic-non-wh-word-lex & norm-zero-arg & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
+                           COMPS < >,
+                           SUBJ < > ] ].
+
+proximal-demonstrative-determiner-lex := determiner-lex & no-icons-lex-item &
+  [ SYNSEM.L-QUE - ].
+
+distal-demonstrative-determiner-lex := determiner-lex & no-icons-lex-item &
+  [ SYNSEM.L-QUE - ].
+
+;;; Adverbs
+
+adverb-lex-item := nonscop-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ < >,
+                                 SPEC < >,
+                                 SPR < >,
+                                 COMPS < > ],
+                           HEAD adv &
+                                [ MOD < [ LOCAL [ CAT.HEAD verb,
+                                                  CONT.HOOK [ CLAUSE-KEY #clause,
+                                                              LTOP #ltop ] ] ] > ] ],
+                     CONT [ RELS.LIST < [ LBL #ltop,
+                                          ARG0 event,
+                                          ARG1 #clause,
+                                          ARG2 #ind ],
+                                        [ PRED #pred,
+                                          ARG0 #ind,
+                                          LBL #larg ],
+                                        [ ARG0 #ind,
+                                          RSTR #harg ] >,
+                            HOOK.LTOP #ltop,
+                            HCONS.LIST < qeq &
+                                         [ HARG #harg,
+                                           LARG #larg ] > ] ],
+             LKEYS.KEYREL [ PRED #pred,
+                            ARG0 ref-ind & #ind,
+                            LBL #ltop ] ] ].
+
+manner-adverb-lex-item := adverb-lex-item &
+  [ SYNSEM.LOCAL.CONT.RELS.LIST.FIRST.PRED "manner_nonsp_rel" ].
+
+adverb-lex := basic-non-wh-word-lex & adverb-lex-item & norm-zero-arg &
+  [ SYNSEM.LOCAL.CONT.RELS.LIST < [ ],
+                                  [ ],
+                                  [ PRED "exist_q_rel" ] > ].
+
+condition-cl-mod-adverb-lex := manner-adverb-lex-item & adverb-lex.
+
+;;;;;;;;;;;;;;;;;;;
+;;; Lexical Rules
+;;;;;;;;;;;;;;;;;;;
+
+high-or-mid-nominalization-lex-rule := cat-change-with-ccont-lex-rule & same-cont-lex-rule &
+  [ SYNSEM.LOCAL [ CONT.HOOK.INDEX event,
+                   CAT [ HEAD verb &
+                              [ NMZ +,
+                                MOD #mod ],
+                         VAL [ SUBJ #subj,
+                               COMPS #comps,
+                               SPR #spr,
+                               SPEC #spec ],
+                         MC #mc,
+                         MKG #mkg,
+                         HC-LIGHT #hc-light,
+                         POSTHEAD #posthead ] ],
+    DTR.SYNSEM.LOCAL.CAT [ HEAD.MOD #mod,
+                           VAL [ SUBJ #subj,
+                                 COMPS #comps,
+                                 SPR #spr,
+                                 SPEC #spec ],
+                           MC #mc,
+                           MKG #mkg,
+                           HC-LIGHT #hc-light,
+                           POSTHEAD #posthead ],
+    C-CONT [ RELS.LIST < >,
+             HCONS.LIST < > ] ].
+
+;;; Intermediate rule types
+
+copula-npst-dtr := word-or-lexrule.
+TENSE+ROLE-position-class-rule-dtr := word-or-lexrule.
+need-to-add-mood-rule-dtr := word-or-lexrule.
+GENITIVIZATION-or-NOMINALIZATION-rule-dtr := word-or-lexrule.
+POSSESSIVE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+HEARSAY-Marking-Position-Class-rule-dtr := word-or-lexrule.
+MOOD-Position-Class-rule-dtr := word-or-lexrule.
+CASE-POSITION-CLASS-rule-dtr := word-or-lexrule.
+NEGATION-position-class-rule-dtr := word-or-lexrule.
+
+;;; Lexical rule types
+
+POSSESSIVE-POSITION-CLASS-lex-rule-super := lex-rule &
+  [ INFLECTED [ POSSESSIVE-POSITION-CLASS-FLAG +,
+                TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                CASE-POSITION-CLASS-FLAG #case-position-class,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
+    DTR POSSESSIVE-POSITION-CLASS-rule-dtr &
+        [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                      COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      CASE-POSITION-CLASS-FLAG #case-position-class,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
+
+1st-Person-Possessive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head,
+                       VAL [ SPR < >,
+                             SPEC #spec,
+                             SUBJ #subj,
+                             COMPS #comps ] ],
+    C-CONT [ HOOK #hook,
+             RELS.LIST < noun-relation &
+                         [ PRED "pron_rel",
+                           LBL #lbl2,
+                           ARG0 #possessor &
+                                [ PNG.PERNUM 1st,
+                                  COG-ST activ-or-more,
+                                  SPECI + ] ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessum,
+                           RSTR #harg ],
+                         arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessor,
+                           RSTR #harg2 ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #lbl ],
+                          qeq &
+                          [ HARG #harg2,
+                            LARG #lbl2 ] > ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessum &
+                                         [ COG-ST activ-or-more ],
+                                   LTOP #lbl ],
+                       CAT [ HEAD #head &
+                                  [ PRON - ],
+                             VAL [ SPEC #spec,
+                                   SUBJ #subj,
+                                   COMPS #comps ] ] ] ].
+
+2nd-Person-Possessive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head,
+                       VAL [ SPR < >,
+                             SPEC #spec,
+                             SUBJ #subj,
+                             COMPS #comps ] ],
+    C-CONT [ HOOK #hook,
+             RELS.LIST < noun-relation &
+                         [ PRED "pron_rel",
+                           LBL #lbl2,
+                           ARG0 #possessor &
+                                [ PNG.PERNUM 2nd,
+                                  COG-ST activ-or-more,
+                                  SPECI + ] ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessum,
+                           RSTR #harg ],
+                         arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessor,
+                           RSTR #harg2 ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #lbl ],
+                          qeq &
+                          [ HARG #harg2,
+                            LARG #lbl2 ] > ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessum &
+                                         [ COG-ST activ-or-more ],
+                                   LTOP #lbl ],
+                       CAT [ HEAD #head &
+                                  [ PRON - ],
+                             VAL [ SPEC #spec,
+                                   SUBJ #subj,
+                                   COMPS #comps ] ] ] ].
+
+3rd-Person-Possessive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head,
+                       VAL [ SPR < >,
+                             SPEC #spec,
+                             SUBJ #subj,
+                             COMPS #comps ] ],
+    C-CONT [ HOOK #hook,
+             RELS.LIST < noun-relation &
+                         [ PRED "pron_rel",
+                           LBL #lbl2,
+                           ARG0 #possessor &
+                                [ PNG.PERNUM 3sg,
+                                  COG-ST activ-or-more,
+                                  SPECI + ] ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessum,
+                           RSTR #harg ],
+                         arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessor,
+                           RSTR #harg2 ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #lbl ],
+                          qeq &
+                          [ HARG #harg2,
+                            LARG #lbl2 ] > ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessum &
+                                         [ COG-ST activ-or-more ],
+                                   LTOP #lbl ],
+                       CAT [ HEAD #head &
+                                  [ PRON - ],
+                             VAL [ SPEC #spec,
+                                   SUBJ #subj,
+                                   COMPS #comps ] ] ] ].
+
+nonpossessive-lex-rule-1 := add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD noun &
+                            [ POSSESSOR nonpossessive ],
+                       POSSESSUM nonpossessive ] ].
+
+Non-Possessive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & const-lex-rule & nonpossessive-lex-rule-1.
+
+1st-person-possessive-plural-inclusive-lex-rule := POSSESSIVE-POSITION-CLASS-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ HEAD #head,
+                       VAL [ SPR < >,
+                             SPEC #spec,
+                             SUBJ #subj,
+                             COMPS #comps ] ],
+    C-CONT [ HOOK #hook,
+             RELS.LIST < noun-relation &
+                         [ PRED "pron_rel",
+                           LBL #lbl2,
+                           ARG0 #possessor &
+                                [ PNG.PERNUM 1pl_incl,
+                                  COG-ST activ-or-more,
+                                  SPECI + ] ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessum,
+                           RSTR #harg ],
+                         arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessor,
+                           RSTR #harg2 ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #lbl ],
+                          qeq &
+                          [ HARG #harg2,
+                            LARG #lbl2 ] > ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessum &
+                                         [ COG-ST activ-or-more ],
+                                   LTOP #lbl ],
+                       CAT [ HEAD #head &
+                                  [ PRON - ],
+                             VAL [ SPEC #spec,
+                                   SUBJ #subj,
+                                   COMPS #comps ] ] ] ].
+
+nominal-PLURALIZATION-lex-rule-super := CASE-POSITION-CLASS-rule-dtr & POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR COMMON-NOUNS-noun-lex &
+        [ INFLECTED #infl ] ].
+
+make_nominal_plurals-lex-rule := nominal-PLURALIZATION-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
+
+make_duals-lex-rule := nominal-PLURALIZATION-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
+
+COMPARATIVE-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR noun-lex &
+        [ INFLECTED #infl ] ].
+
+noun-pc22_lrt1-lex-rule := COMPARATIVE-lex-rule-super.
+
+locative-genitivation-lex-rule := COMPARATIVE-lex-rule-super.
+
+INSIDE-adposition-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR noun-lex &
+        [ INFLECTED #infl ] ].
+
+noun-pc23_lrt1-lex-rule := INSIDE-adposition-lex-rule-super.
+
+CASE-POSITION-CLASS-lex-rule-super := POSSESSIVE-POSITION-CLASS-rule-dtr & lex-rule &
+  [ INFLECTED [ CASE-POSITION-CLASS-FLAG +,
+                TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
+    DTR CASE-POSITION-CLASS-rule-dtr &
+        [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                      COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
+
+ERG+INSTR-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE ERG+INS ].
+
+DAT-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE DAT ].
+
+possessor-lex-rule-1 := head-change-with-ccont-lex-rule &
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
+                       HEAD noun &
+                            [ MOD.FIRST [ LOCAL [ CAT [ VAL.SPR < [ ] >,
+                                                        HEAD +np &
+                                                             [ PRON - ] ],
+                                                  CONT.HOOK [ INDEX #possessum,
+                                                              LTOP #lbl ] ],
+                                          OPT - ],
+                              POSSESSOR possessor-1 ],
+                       VAL #val ],
+    C-CONT [ HOOK #hook,
+             RELS.LIST < arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ] >,
+             HCONS.LIST < >,
+             ICONS.LIST < > ],
+    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
+                                 [ INDEX #possessor ],
+                       CAT.VAL #val ] ].
+
+GEN-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & infl-lex-rule & possessor-lex-rule-1 &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE GEN ].
+
+ABL-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE ABL ].
+
+LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
+
+hi-LOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+
+loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+
+levLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+
+COM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+
+vocative_suffix-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & infl-lex-rule.
+
+NOM-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule & const-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE NOM ].
+
+GENITIVIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+polysyllabic-general-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+
+non-past-monosyllabic-finite-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+
+irrealis-noun-complementation-relativizer-lex-rule := GENITIVIZATION-lex-rule-super.
+
+alternative-non-finite-past-relativization-lex-rule := GENITIVIZATION-lex-rule-super.
+
+NOMINALIZATION-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+nominalize-lex-rule := NOMINALIZATION-lex-rule-super.
+
+locative-nominalization-lex-rule := nominalize-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE LOC ].
+
+need-to-add-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR need-to-add-mood-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+verb-pc1_lrt1-lex-rule := need-to-add-mood-lex-rule-super.
+
+NEGATION-position-class-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & cont-change-only-lex-rule & infl-lex-rule & need-to-add-mood-rule-dtr &
+  [ INFLECTED #infl,
+    DTR NEGATION-position-class-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+; This adds negative semantics to the verb's
+; RELS list.
+
+add-negation-to-verb-lex-rule := NEGATION-position-class-lex-rule-super &
+  [ INFLECTED.ADD-NEGATION-TO-VERB-FLAG +,
+    C-CONT [ HOOK [ XARG #xarg,
+                    LTOP #ltop,
+                    INDEX #ind ],
+             RELS.LIST < event-relation &
+                         [ PRED "neg_rel",
+                           LBL #ltop,
+                           ARG1 #harg ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #larg ] > ],
+    SYNSEM.LKEYS #lkeys,
+    DTR.SYNSEM [ LKEYS #lkeys,
+                 LOCAL [ CONT.HOOK [ XARG #xarg,
+                                     INDEX #ind,
+                                     LTOP #larg ],
+                         CAT.HEAD verb ] ] ].
+
+Aspect-POSITION-CLASS-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & TENSE+ROLE-position-class-rule-dtr & infl-lex-rule & need-to-add-mood-rule-dtr & val-change-with-ccont-lex-rule &
+  [ INFLECTED #infl,
+    DTR verb-lex &
+        [ INFLECTED #infl ] ].
+
+STA-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
+  [ DTR.INFLECTED.IN-TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT STA ].
+
+DEF-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
+  [ DTR.INFLECTED.MONO-TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT DEF ].
+
+RES-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT RES ].
+
+ITF-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT ITF ].
+
+APX-marker-lex-rule := ASPECT-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule
+;& infl-lex-rule &
+;  [ DTR.INFLECTED.TRANSITIVE-VERB-OR-INTRANSITIVE-VERB-FLAG + ]
+.
+
+CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule.
+
+DETR-AND-MORE-marker-lex-rule := obj-rem-op-lex-rule & Aspect-POSITION-CLASS-lex-rule-super & local-change-only-lex-rule & same-cont-lex-rule.
+
+BEN-marker-lex-rule := obj-prom-from-arg3of3-op-lex-rule & Aspect-POSITION-CLASS-lex-rule-super & local-change-only-lex-rule & xarg-change-only-ccont-lex-rule.
+
+HAB-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT HAB ].
+
+PON-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super & add-only-no-ccont-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT PON ].
+
+HEARSAY-Marking-Position-Class-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & cont-change-only-lex-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR HEARSAY-Marking-Position-Class-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+evidential-lex-rule := cont-change-only-lex-rule & same-spr-lex-rule & same-spec-lex-rule &
+  [ C-CONT [ RELS.LIST < event-relation &
+                         [ LBL #ltop,
+                           ARG0 event,
+                           ARG1 #harg ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #larg ] >,
+             HOOK [ LTOP #ltop,
+                    INDEX #mainev,
+                    XARG #mainagent ] ],
+    DTR.SYNSEM.LOCAL.CONT.HOOK [ LTOP #larg,
+                                 XARG #mainagent,
+                                 INDEX #mainev ] ].
+
+hearsay-evidential-lex-rule := evidential-lex-rule &
+  [ C-CONT.RELS.LIST < [ PRED "ev_hearsay_rel" ] > ].
+
+add-hearsay-marker-lex-rule := HEARSAY-Marking-Position-Class-lex-rule-super & hearsay-evidential-lex-rule.
+
+MOOD-Position-Class-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR MOOD-Position-Class-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+past-negation-IRR-lex-rule := MOOD-Position-Class-lex-rule-super &
+  [ DTR.INFLECTED.ADD-NEGATION-TO-VERB-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD IRR ].
+
+IRR-lex-rule := MOOD-Position-Class-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD IRR ].
+
+TENSE+ROLE-position-class-lex-rule-super := GENITIVIZATION-or-NOMINALIZATION-rule-dtr & HEARSAY-Marking-Position-Class-rule-dtr & MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr & add-only-no-ccont-rule & need-to-add-mood-rule-dtr &
+  [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG +,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                CASE-POSITION-CLASS-FLAG #case-position-class,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker ],
+    DTR TENSE+ROLE-position-class-rule-dtr &
+        [ INFLECTED [ MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      CASE-POSITION-CLASS-FLAG #case-position-class,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker ] ] ].
+
+Intransitive-Nonpast-1SG-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
+Intransitive-Nonpast-1DI-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ].
+
+Intransitive-Nonpast-1DE-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ].
+
+Intransitive-Nonpast-1PI-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+
+Intransitive-Nonpast-1PE-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
+
+Intransitive-Nonpast-2SG-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
+
+Intransitive-Nonpast-2DU-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ].
+
+Intransitive-Nonpast-2PL-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
+
+Intransitive-Nonpast-3SG-lex-rule := TENSE+ROLE-position-class-lex-rule-super & const-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
+
+Intransitive-Nonpast-3DU-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
+
+Intransitive-Nonpast-3PL-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
+
+Transitive-Nonpast-2sgAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Nonpast-2duAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Nonpast-2plAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Nonpast-3sgAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-3duAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-3plAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-3sgAgent-1diPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-3duAgent-1diPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-3plAgent-1diPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-2sgAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Nonpast-2duAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Nonpast-2plAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Nonpast-3sgAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-3duAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-3plAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-3sgAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-3duAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-3plAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-2sgAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Nonpast-2duAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Nonpast-2plAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Nonpast-3sgAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-3duAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-3plAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-1sgAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Nonpast-1sgAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Nonpast-1sgAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Nonpast-1sgAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-1sgAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-1sgAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-1diAgent-3sg-or-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du+3sg ] ] ].
+
+Transitive-Nonpast-1diAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-1deAgent-not3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du+3sg+2du+2sg+2pl ] ] ].
+
+Transitive-Nonpast-1deAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-1piAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-1piAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-1piAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-1peAgent-any-2nd-or-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du+2sg+3sg+2pl ] ] ].
+
+Transitive-Nonpast-1peAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-1peAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-2sgAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-2sgAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-2sgAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-2duAgent-3sg-or-3du-Patient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du+3sg ] ] ].
+
+Transitive-Nonpast-2duAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-2plAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-2plAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-2plAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-3sgAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Nonpast-3sgAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Nonpast-3sgAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Nonpast-3sgAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Nonpast-3sgAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Nonpast-3sgAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Nonpast-3plAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE nonpast,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Intransitive-Past-1sg-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
+Intransitive-Past-1di-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ].
+
+Intransitive-Past-1de-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ].
+
+Intransitive-Past-1pi-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+
+Intransitive-Past-1pe-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
+
+Intransitive-Past-2sg-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
+
+Intransitive-Past-2du-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ].
+
+Intransitive-Past-2pl-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
+
+Intransitive-Past-3sg-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
+
+Intransitive-Past-3du-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
+
+Intransitive-Past-3pl-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
+
+Transitive-Past-1sgAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Past-1sgAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Past-1sgAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Past-1sgAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-1sgAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-1sgAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-1diAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-1diAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-1diAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-1deAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Past-1deAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Past-1deAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Past-1deAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-1deAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-1piAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-1piAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-1piAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-1peAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Past-1peAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Past-1peAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Past-1peAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-1peAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-1peAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-2sgAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ] ].
+
+Transitive-Past-2sgAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ] ].
+
+Transitive-Past-2sgAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ] ].
+
+Transitive-Past-2sgAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-2sgAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-2sgAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-2duAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ] ].
+
+Transitive-Past-2duAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ] ].
+
+Transitive-Past-2duAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ] ].
+
+Transitive-Past-2duAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-2duAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-2duAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-2plAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ] ].
+
+Transitive-Past-2plAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ] ].
+
+Transitive-Past-2plAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ] ].
+
+Transitive-Past-2plAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-2plAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-2plAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-3sgAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ] ].
+
+Transitive-Past-3sgAgent-1diPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ] ].
+
+Transitive-Past-3sgAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ] ].
+
+Transitive-Past-3sgAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ] ].
+
+Transitive-Past-3sgAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ] ].
+
+Transitive-Past-3sgAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Past-3sgAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Past-3sgAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Past-3sgAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-3sgAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-3duAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ] ].
+
+Transitive-Past-3duAgent-1diPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ] ].
+
+Transitive-Past-3duAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ] ].
+
+Transitive-Past-3duAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ] ].
+
+Transitive-Past-3duAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ] ].
+
+Transitive-Past-3duAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Past-3duAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Past-3duAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Past-3duAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-3duAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-3duAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-3plAgent-1sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ] ].
+
+Transitive-Past-3plAgent-1diPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ] ].
+
+Transitive-Past-3plAgent-1piPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ] ].
+
+Transitive-Past-3plAgent-1dePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ] ].
+
+Transitive-Past-3plAgent-1pePatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ] ].
+
+Transitive-Past-3plAgent-2sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ] ].
+
+Transitive-Past-3plAgent-2duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ] ].
+
+Transitive-Past-3plAgent-2plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ] ].
+
+Transitive-Past-3plAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+Transitive-Past-3plAgent-3duPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ] ].
+
+Transitive-Past-3plAgent-3plPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ] ].
+
+Transitive-Past-3sgAgent-3sgPatient-lex-rule := TENSE+ROLE-position-class-lex-rule-super & infl-lex-rule &
+  [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG +,
+    SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.TENSE past,
+                   CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg,
+                             COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ] ].
+
+copula-npst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG +,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                CASE-POSITION-CLASS-FLAG #case-position-class,
+                TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker ],
+    DTR copula-npst-dtr &
+        [ INFLECTED [ MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      CASE-POSITION-CLASS-FLAG #case-position-class,
+                      TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                      COPULA-PST-PERNUM-MARKER-FLAG #copula-pst-pernum-marker ] ] ].
+
+copula-npst-1di-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_incl ] ].
+
+copula-npst-1sg-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ] ].
+
+copula-npst-1pi-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+
+copula-npst-1de-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1du_excl ] ].
+
+copula-npst-1pe-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ] ].
+
+copula-npst-2sg-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ] ].
+
+copula-npst-2du-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2du ] ].
+
+copula-npst-2pl-lex-rule := copula-npst-pernum-marker-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ] ].
+
+copula-npst-3sg-lex-rule := copula-npst-pernum-marker-lex-rule-super &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3sg ] ].
+
+copula-npst-3du-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3du ] ].
+
+copula-npst-3pl-lex-rule := copula-npst-pernum-marker-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ] ].
+
+copula-pst-pernum-marker-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ COPULA-PST-PERNUM-MARKER-FLAG +,
+                TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                CASE-POSITION-CLASS-FLAG #case-position-class,
+                COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ],
+    DTR copula-be-pst-cop-lex &
+        [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG #tense+role-position-class,
+                      COPULA-NP-PRED-NPST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-npst-verb-or-intransitive-verb,
+                      POSSESSIVE-POSITION-CLASS-FLAG #possessive-position-class,
+                      COPULA-NPST-PERNUM-MARKER-FLAG #copula-npst-pernum-marker,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      IN-TRANSITIVE-VERB-OR-MONO-TRANSITIVE-VERB-FLAG #in-transitive-verb-or-mono-transitive-verb,
+                      CASE-POSITION-CLASS-FLAG #case-position-class,
+                      COPULA-NP-PRED-PST-VERB-OR-INTRANSITIVE-VERB-FLAG #copula-np-pred-pst-verb-or-intransitive-verb,
+                      ADD-NEGATION-TO-VERB-FLAG #add-negation-to-verb,
+                      MONO-TRANSITIVE-VERB-FLAG #mono-transitive-verb,
+                      IN-TRANSITIVE-VERB-FLAG #in-transitive-verb ] ] ].
+
+copula-pst-1sg-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-1di-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-1pi-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-1de-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-1pe-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-2sg-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-2du-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-2pl-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-3sg-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-3du-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+copula-pst-3pl-lex-rule := copula-pst-pernum-marker-lex-rule-super.
+
+obj-prom-from-arg3of3-op-lex-rule := subj-and-comps-change-only-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL [ SUBJ < [ LOCAL.CONT.HOOK.INDEX #sidx ] >,
+                           COMPS < #oarg,
+                                   [ ] > ],
+    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < #oarg,
+                                     [ LOCAL.CONT.HOOK.INDEX #sidx ] > ].
+
+obj-rem-op-lex-rule := comps-change-only-lex-rule & no-ccont-lex-rule &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS #comps,
+    DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < unexpressed . #comps > ].
+
+same-subordinated-lex-rule := lex-rule &
+  [ SYNSEM.SUBORDINATED #subord,
+    DTR.SYNSEM.SUBORDINATED #subord ].
+
+;;;;;;;;;;;;;;;;;;;
+;;; Phrasal Types
+;;;;;;;;;;;;;;;;;;;
+
+my-adj-head-phrase := adj-head-int-phrase &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD +nvr,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD +jrp,
+                                    VAL.COMPS < > ] ].
+
+high-nominalized-clause-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun &
+                                [ NMZ +,
+                                  MOD < > ],
+                           VAL [ SPR < [ OPT + ] >,
+                                 COMPS < >,
+                                 SUBJ < >,
+                                 SPEC < > ] ],
+                     COORD - ],
+             NON-LOCAL #nl ],
+    C-CONT [ RELS.LIST < [ PRED "nominalized_rel",
+                           LBL #ltop,
+                           ARG0 ref-ind & #arg0,
+                           ARG1 #arg1 ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #arg1,
+                            LARG #larg ] >,
+             HOOK [ XARG #xarg,
+                    INDEX #arg0,
+                    LTOP #ltop ] ],
+    ARGS < [ SYNSEM [ NON-LOCAL #nl,
+                      LOCAL [ CAT [ HEAD verb &
+                                         [ NMZ + ],
+                                    VAL [ COMPS < >,
+                                          SUBJ < >,
+                                          SPR < >,
+                                          SPEC < > ] ],
+                              CONT.HOOK [ XARG #xarg,
+                                          LTOP #larg ],
+                              COORD - ] ] ] > ].
+
+locative-pp-phrase := unary-phrase &
+[ SYNSEM [ NON-LOCAL #nl,
+           LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                                                    [ CAT.HEAD verb,
+                                                      CONT.HOOK.INDEX #xarg ] ] > ],
+		          VAL [ COMPS < >,
+			        SUBJ < >,
+			        SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #xarg ],
+	  RELS.LIST < arg12-ev-relation &
+		   [ PRED "_in_p_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #xarg,
+		     ARG2 #dtr ] >,
+	     HCONS.LIST < >  ],
+	  ARGS < [ SYNSEM [ NON-LOCAL #nl,
+		            LOCAL [ CAT [ HEAD noun & [CASE loc],
+		                          VAL.SPR < > ],
+			                  CONT.HOOK [ INDEX #dtr ],
+                        COORD - ] ] ] >].
+
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+comp-head-phrase := basic-head-1st-comp-phrase & head-final &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.INIT - ].
+
+subj-head-phrase := decl-head-subj-phrase & head-final &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+
+possessum-mod-rule := basic-head-mod-phrase-simple &
+  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.POSSESSUM #poss,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
+
+adj-head-int-phrase :+ possessum-mod-rule &
+  [ HEAD-DTR.SYNSEM.NON-LOCAL.SLASH.LIST < > ].
+
+;Constraint on MC used to be part of matrix.tdl
+;;it applies to all wo implementations, except for v2
+
+; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
+; introduced to match the semantic effect of bare NPs in your language.
+
+bare-np-phrase := basic-bare-np-phrase &
+  [ C-CONT.RELS.LIST < [ PRED "exist_q_rel" ] >,
+    SYNSEM.LIGHT - ].
+
+no-subordinator-nominalized-subord-clause-phrase := unary-phrase &
+  [ SYNSEM.LOCAL [ CAT [ MC -,
+                         VAL [ SUBJ #subj,
+                               SPR < >,
+                               COMPS < > ],
+                         HEAD adp &
+                              [ MOD < [ LOCAL scopal-mod &
+                                              [ CAT [ HEAD verb,
+                                                      VAL [ SUBJ < >,
+                                                            COMPS < > ] ],
+                                                CONT.HOOK [ LTOP #mcl,
+                                                            INDEX #index ] ] ] > ] ],
+                   COORD - ],
+    C-CONT [ RELS.LIST < [ ARG1 #mch,
+                           ARG2 #scl ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #mch,
+                            LARG #mcl ] >,
+             ICONS.LIST < >,
+             HOOK.INDEX #index ],
+    ARGS < [ SYNSEM.LOCAL [ CONT.HOOK.INDEX #scl,
+                            CAT [ HEAD noun &
+                                       [ NMZ + ],
+                                  MC na-or-+,
+                                  VAL [ SUBJ #subj,
+                                        SPR < >,
+                                        COMPS < > ] ],
+                            COORD - ] ] > ].
+
+nmz-prehead-s-attach-modifying-clause-phrase := no-subordinator-nominalized-subord-clause-phrase &
+  [ ARGS < [ SYNSEM.LOCAL.CAT.VAL.SUBJ < > ] >,
+    SYNSEM.LOCAL.CAT [ HEAD.MOD < [ LOCAL.CAT.VAL.SUBJ < > ] >,
+                       POSTHEAD - ],
+    C-CONT.RELS.LIST < [ PRED "_nomn_subord_rel" ] > ].
+
+;;; Head Adjunct rules
+
+; For intersective adjuncts with underspecified attachment locations:
+
+my-head-adj-phrase := head-adj-int-phrase &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD +nvr,
+                                VAL [ SUBJ clist,
+                                      COMPS clist ] ],
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD +jrp,
+                                    VAL.COMPS < > ] ].
+
+basic-filler-phrase :+ [ SYNSEM.NON-LOCAL.SLASH.LIST < >,
+    ARGS < [ SYNSEM [ LOCAL #slash,
+                      NON-LOCAL.SLASH.LIST < > ] ],
+           [ SYNSEM.NON-LOCAL.SLASH.LIST < #slash > ] > ].
+
+extracted-subj-phrase := basic-extracted-subj-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb ].
+
+clause :+ [ SYNSEM.NON-LOCAL.QUE.LIST < > ].
+
+;;; Wh-question-related phrasal types
+
+;;;;;;;;;;;;;;;;;;
+;;; Coordination
+;;;;;;;;;;;;;;;;;;
+
+adv1-top-coord-rule := basic-adv-top-coord-rule & monopoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adv1-mid-coord-rule := basic-adv-mid-coord-rule & monopoly-mid-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+adv1-bottom-coord-rule := conj-first-bottom-coord-rule & adv-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+;;; Coordination Strategy 1
+
+s1-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+s1-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+
+;;; Coordination Strategy 2
+
+np2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                   COORD-STRAT "2" ],
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+    LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+np2-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
+  [ SYNSEM.LOCAL [ COORD-STRAT "2",
+                   COORD-REL.PRED "_and_coord_rel" ,
+                   CAT.HEAD.CASE #case ],
+    ARGS < [SYNSEM.LOCAL.CAT.HEAD.CASE #case ] > ].
