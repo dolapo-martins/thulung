@@ -2,7 +2,7 @@ Language: thulung
 Language code: tdh
 Lines: orth gloss translat
 Author: Dolapo Martins, Zoe Fang
-Date: January 27, 2023
+Date: March 3rd, 2023
 Source a: https://shs.hal.science/halshs-00004760/document
 Source b: https://journals.linguisticsociety.org/proceedings/index.php/BLS/article/viewFile/1036/819
 Source c: https://escholarship.org/uc/item/6vm893kj
@@ -73,7 +73,7 @@ ri ser thyr-ɖy
 sibling  louse send-3sg.pst
 'He sent a louse to sister.'
 
-#7
+#7 ditransitive + missing dative on obj
 Source: author
 Vetted: f
 Judgment: u
@@ -82,7 +82,7 @@ ri-ka ser thyr-ɖy
 sibling-erg louse send-3sg.pst
 'He sent a louse to sister.'
 
-#8 ditransitive
+#8 ditransitive and dative on subj not obj
 Source: author
 Vetted: f
 Judgment: u
@@ -109,7 +109,7 @@ go-ka ʌms-ŋu
 1sg-erg sleep-1sg
 'I sleep.'
 
-#11 intransitive
+#11
 Source: author
 Vetted: f
 Judgment: g
@@ -127,41 +127,42 @@ khlea-lai am-ʉ
 dog-dat sleep-3sg.3sg.npst
 '(Someone) makes the dog sleep.'
 
-#13 We have not implemented experiencer verb
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {case}
-go-lai kora ly-ra
-1sg-dat thirst feel-3sg.pst
-'I feel thirsty.'
+#13 need to add -ra as 3s.pst ending
+# ungrammatical because experiencer verbs take dative subj which is unsupported
+#Source: author
+#Vetted: f
+#Judgment: g
+#Phenomena: {case}
+#go-lai kora ly-ra
+#1sg-dat thirst feel-3sg.pst
+#'I am thirsty.'
 
-#14
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {case}
-go-ka kora ly-ra
-1sg-erg thirst feel-3sg.pst
-'I feel thirsty.'
+#14 wrong case for experiencer verb 
+#Source: author
+#Vetted: f
+#Judgment: u
+#Phenomena: {case}
+#go-ka kora ly-ra
+#1sg-erg thirst feel-3sg.pst
+#'I feel thirsty.'
 
-#15
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {case}
-go kora ly-ra
-1sg thirst feel-3sg.pst
-'I feel thirsty.'
+#15 wrong case for experiencer verb
+#Source: author
+#Vetted: f
+#Judgment: u
+#Phenomena: {case}
+#go kora ly-ra
+#1sg thirst feel-3sg.pst
+#'I feel thirsty.'
 
-#16
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {case}
-go-ra kora ly-ra
-1sg-loc thirst feel-3sg.pst
-'I feel thirsty.'
+#16 wrong case for experiencer verb
+#Source: author
+#Vetted: f
+#Judgment: u
+#Phenomena: {case}
+#go-ra kora ly-ra
+#1sg-loc thirst feel-3sg.pst
+#'I feel thirsty.'
 
 #17 expected dative marker on khlea
 Source: author
@@ -172,7 +173,7 @@ go khlea khlo-u
 1sg dog trap-1sg.3sg.npst
 'I trap the dog.'
 
-#18 should actually be ungrammatical because go should be NOM
+#18 should actually be ungrammatical because go should be NOM but we are NOM+ERG
 Source: author
 Vetted: f
 Judgment: g
@@ -217,7 +218,7 @@ go myʦy-lai khlo-u
 1sg myʦy-dat trap-1sg.3sg
 'I trap the person.'
 
-#23
+#23 no dative on object
 Source: author
 Vetted: f
 Judgment: u
@@ -235,7 +236,7 @@ gu-ka go-lai khlo-ŋi
 3sg-erg 1sg-dat trap-3sg.1sg
 'He traps me.'
 
-#25
+#25 missing dative on obj
 Source: author
 Vetted: f
 Judgment: u
@@ -244,7 +245,7 @@ gu-ka go khlo-ŋi
 3sg-erg 1sg trap-3sg.1sg
 'He traps me.'
 
-#26
+#26 missing erg case on subject
 Source: author
 Vetted: f
 Judgment: u
@@ -253,7 +254,7 @@ gu go-dat khlo-ŋi
 3sg 1sg-dat trap-3sg.1sg
 'He traps me.'
 
-#27
+#27 Valence changing rules are not working
 Source: author
 Vetted: f
 Judgment: g
@@ -262,7 +263,7 @@ gu-ka ganimim-lai si-be-ni
 3sg-erg 2pron.pl.-dat die-cau-3sg.pst
 'He ordered you to die.'
 
-#28
+#28 me-lai and si-dy can't find tokens + valchg not working
 Source: author
 Vetted: f
 Judgment: u
@@ -271,7 +272,7 @@ gu-ka me-lai si-ɖy
 3sg-erg that-dat die-3sg.pst
 'He ordered her to die.'
 
-#29
+#29 not working
 Source: author
 Vetted: f
 Judgment: g
@@ -280,7 +281,7 @@ gu-ka me-lai seʈ-ɖy
 3sg-erg that-dat kill-3sg.pst
 'He killed her.'
 
-#30
+#30 not working
 Source: author
 Vetted: f
 Judgment: g
@@ -298,7 +299,7 @@ Phenomena: {valchg}
 child-erg wood mother-dat fetch-cau-3sg.3sg.pst
 'The child took out wood for mother.'
 
-#32
+#32 
 Source: author
 Vetted: f
 Judgment: g
@@ -316,21 +317,12 @@ khel per-saʈ-ɖa
 leg pinch-ben-3sg.pst
 'Leg got pinched.'
 
-#34
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {valchg}
-khel per-saʈ-ɖa
-leg pinch-ben-3sg.pst
-'Leg got pinched.'
-
 #35
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-u-khlea am
+u-khlea ʌms
 3sg.poss-dog sleep.3sg
 'His dog sleeps.'
 
@@ -339,7 +331,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-uma-khlea am
+uma-khlea ʌms
 3sg.poss-dog sleep.3sg
 'His dog sleeps.'
 
@@ -348,7 +340,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-uma am
+uma ʌms
 3sg.pron sleep.3sg
 'His (dog) sleeps.'
 
@@ -357,7 +349,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {poss}
-u am
+u ʌms
 3sg.poss sleep.3sg
 'His sleeps.'
 
@@ -366,20 +358,20 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {pn}
-gu am
+gu ʌms
 3sg sleep.3sg
 'He sleeps.'
 
-#40
+#40 
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {pn}
-gumi am
+gumi ʌms
 3sg sleep.3sg
 'He sleeps.'
 
-#41
+#41 overt past currently unsupported
 Source: author
 Vetted: f
 Judgment: g
@@ -406,7 +398,7 @@ go ba-ttsi
 1sg be-3du.pst
 'I were.'
 
-#44
+#44 overt past tense not supported
 Source: author
 Vetted: f
 Judgment: g
@@ -415,7 +407,7 @@ ba-t-miri
 be-pst-3pl
 'There were three people.'
 
-#45
+#45 overt past tense not supported
 Source: author
 Vetted: f
 Judgment: u
@@ -436,9 +428,9 @@ be-3sg
 #47
 Source: author
 Vetted: f
-Judgment: u
+Judgment: g
 Phenomena: {tense}
-ʦysy khlea khlo-to
+ʦysy-ka khlea-lai khlo-ɖʉ
 child dog trap-1sg.3sg.pst
 'The child trapped the dog.'
 
@@ -447,7 +439,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {tense}
-ʦysy khlea khlo-ŋu
+ʦysy-ka khlea-lai khlo-ŋu
 child dog trap-1sg.npst
 'The child traps the dog.'
 
@@ -456,7 +448,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {tense}
-ʦysy khlea khlo-ɖa
+ʦysy-ka khlea-lai khlo-ɖa
 child dog trap-3sg.npst
 'The child traps the dog.'
 
@@ -465,7 +457,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {tense}
-ʦysy khlo-na
+ʦysy-ka khlo-na
 child trap-3sg.2sg.pst
 'The child trapped you.'
 
@@ -510,8 +502,8 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {crd}
-ba-ŋu ma am-ŋu
-be-1sg conj sleep-1sg
+go bu-ŋu ma ʌms-ŋu
+be-1sg.npst conj sleep-1sg.npst
 'I am and I sleep.'
 
 #56
@@ -519,17 +511,17 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {crd}
-ba-ŋu ma am-ŋu ma am-ŋu
-be-1sg conj sleep-1sg conj sleep-1sg
+go bu-ŋu ma ʌms-ŋu ma ʌms-ŋu
+be-1sg.npst conj sleep-1sg.npst conj sleep-1sg.npst
 'I am and I sleep and I sleep.'
 
-#57
+#57 missing coordinand, should have two ma 
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {crd}
-ba-ŋu am-ŋu ma am-ŋu
-be-1sg sleep-1sg conj sleep-1sg
+bu-ŋu ʌms-ŋu ma ʌms-ŋu
+be-1sg.npst sleep-1sg.npst conj sleep-1sg.npst
 'I am and I sleep and I sleep.'
 
 #58
@@ -537,11 +529,11 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {crd}
-gu am ma go am-ŋu
+gu ʌms ma go ʌms-ŋu
 3sg sleep.3sg conj 1sg sleep.1sg
 'He sleeps and I sleep.'
 
-#59
+#59 missing verb
 Source: author
 Vetted: f
 Judgment: u
@@ -550,13 +542,13 @@ gu ma go ba-ŋu
 3sg conj 1sg be.1sg
 'He and I exist.'
 
-#60
+#60 todo: update via feature resolution so this is dual instead of plural
 Source: d
 Vetted: f
 Judgment: g
 Phenomena: {crd}
-darembu popnar ba-t-ʦi
-Darembu Popnar be-pst-du
+darembu popnar bu-mi
+Darembu Popnar be-3pl.pst
 'There were two people called Darempu and Popnar.'
 
 #61
@@ -564,46 +556,45 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {crd}
-darembu ma popnar ba-t-ʦi
-Darembu conj Popnar be-pst-du
+darembu ma popnar bu-mi
+Darembu conj Popnar be-3pl.pst
 'There were two people called Darempu and Popnar.'
 
-#62
+#62 hearsay currently only goes with main-verbs
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {evid}
-darembu ma popnar ba-t-ʦi-ʔe
-Darembu conj Popnar be-pst-du-hs
+darembu ma popnar bu-mi-ʔe
+Darembu conj Popnar be-3pl.pst-hs
 'There were two people called Darempu and Popnar.'
 
-#63
+#63 mala currently attaches to VP and S so we get two trees
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {cl-mod}
-gu am mala go am-ŋu
+gu ʌms mala go ʌms-ŋu
 3sg sleep-3sg cond 1sg sleep-1sg
 'If he sleeps, I sleep.'
 
-#64
+#64 grammar currently licenses this but it should be ungrammatical
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {cl-mod}
-gu am mala
+gu ʌms mala
 3sg sleep-3sg
 'If he sleeps'
 
-#65
+#65 grammar currently licenses this but it should be ungrammatical
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {cl-mod}
-mala go am-ŋu
+mala go ʌms-ŋu
 cond 1sg sleep-1sg
 'If I sleep.'
-
 
 #66
 Source: author
@@ -614,23 +605,21 @@ khlea-mim ʌms-mi
 dog.3pl sleep-3pl.npst
 'Dogs sleep'
 
-
 #67
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tense}
-khlea-mim thuri-mim khat-mi
+khlea-mim thuri-mim-lai khat-mi
 dog.3pl car-3pl chase-3pl.3pl.npst
 'Dogs chase cars'
-
 
 #68
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tense}
-go gana khat-ni
+go gana-lai khat-ni
 1sg 2sg chase-1sg.2sg.npst
 'I chase you'
 
@@ -639,7 +628,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {neg}
-gana go mi-khat-ŋri-ja
+gana go-lai mi-khat-ŋri-ja
 2sg 1sg NEG.chase-2sg.1sg.pst-IRR
 'You did not chase me'
 
@@ -649,7 +638,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {neg}
-gana go khat-ŋri
+gana go-lai mi-khat-ŋri
 2sg 1sg NEG.chase-2sg.1sg.pst
 'You did not chase me'
 
@@ -668,7 +657,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-mɯ ʦysy am
+mɯ ʦysy ʌms
 det child sleep-3sg
 'That child sleeps.'
 
@@ -677,7 +666,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-mɯ am
+mɯ ʌms
 det sleep-3sg
 'That sleeps.'
 
@@ -717,7 +706,11 @@ gana gana bu-na
 2sg  2sg  be.2sg.npst
 'You are you.'
 
-# we don't have ungrammatical examples (yet) of copula because this is a 
-# pro-drop language and we have not correclty enforced subj-verb agreement 
-# our "ungrammatical" examples parse and we have the correct tree but also 
-# trees that should not be licensed.
+#78 ungrammatical because copula uses case nom for both agent and patient
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+gana gana-lai bu-na
+2sg  2sg  be.2sg.npst
+'You are you.'

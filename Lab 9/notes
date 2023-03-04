@@ -32,3 +32,7 @@ TO-DO
  #25 -> khlea-mim ʌms-mi mala subupo-mim ʌms-mi 
  but mala is "if then"
  it does show we have some sort of support for adverbial clause modifiers but would need more work to add because/after
+
+
+ need to add constraint where copula tense and affix tense must match
+ - go ba-ŋu ma ʌms-ŋu should not work but it does

@@ -7,11 +7,11 @@ Zoe Fang
 Description of MRS refinement
 --------------------------------------------------------------------------------
 In Lab 8, we worked on harmonizing our MRSes for sentences that were possible in
-Thulung. As such, we didn't need to make many changes in Lab 9 to harmonize the
-MRSes. The changes we needed to make were related to the semi.vpm.
+Thulung. As such, we didn't need to make predicate related changes in Lab 9 to harmonize the MRSes. The changes we needed to make were related to the semi.vpm.
 
 We added 
-no-mood: mood in our thulung.tdl file
+
+(1) no-mood: mood in our thulung.tdl file
 Then we changed our mood section in semi.vpm, keeping only irrealis mood, which
 is the mood we worked on for the past tense negation.
 This resulted in our semi.vpm section going from 
@@ -27,6 +27,17 @@ to,
     ;  OBL >> *
     * >> no-mood
     no-mood << [e]
+
+(2) Trigger rules
+Sentences 15-17 weren't working because we didn't have lexical rules for our semantically empty copula. In trigger.mtr we added 
+    ;;; non past
+    bu_2_gr := arg0e_gtr &
+    [ CONTEXT.RELS.LIST < [ PRED "~.*_[a|p]_rel"] >,
+        FLAGS.TRIGGER "bu_2" ].
+
+(3) Transfer rules
+In acm.mtr we added a transfer rule so that our _loc_p_rel would be translated to _in_p_rel. 
+    loc-mtr := in-loc-mtr.
 
 --------------------------------------------------------------------------------
 Description of changes made to constrain overgeneration
