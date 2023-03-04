@@ -6,11 +6,14 @@ Zoe Fang
 --------------------------------------------------------------------------------
 Description of MRS refinement
 --------------------------------------------------------------------------------
-In Lab 8, we worked on harmonizing our MRSes for sentences that were possible in Thulung. As such, we didn't need to make many changes in Lab 9 to harmonize the MRSes. The changes we needed to make were related to the semi.vpm.
+In Lab 8, we worked on harmonizing our MRSes for sentences that were possible in
+Thulung. As such, we didn't need to make many changes in Lab 9 to harmonize the
+MRSes. The changes we needed to make were related to the semi.vpm.
 
 We added 
 no-mood: mood in our thulung.tdl file
-Then we changed our mood section in semi.vpm, keeping only irrealis mood, which is the mood we worked on for the past tense negation.
+Then we changed our mood section in semi.vpm, keeping only irrealis mood, which
+is the mood we worked on for the past tense negation.
 This resulted in our semi.vpm section going from 
     E.MOOD : E.MOOD
     IRR <> IRR
@@ -27,14 +30,102 @@ to,
 --------------------------------------------------------------------------------
 Description of changes made to constrain overgeneration
 --------------------------------------------------------------------------------
-#Zoey Todo
+Miscellaneous Cleanup:
+    ;;;locative-genitivation-suffix :=
+    ;;;%suffix (* -ram)
+    ;;;locative-genitivation-lex-rule.
+and polysyllabic-general-relativizer-prefix, etc.
 
+Add case value to locatives:
+    loLOC-case-marker-lex-rule := CASE-POSITION-CLASS-lex-rule-super &
+    add-only-no-ccont-rule & infl-lex-rule &
+      [ SYNSEM.LOCAL.CAT.HEAD.CASE loL ].
 
+Number agreement:
+some were missing before:
+    1st-person-plural-inclusive-noun-lex := PERSONAL-PRONOUNS-noun-lex &
+      [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
+                       CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ] ].
+
+Squash realizations in irules:
+    LOC-case-marker-suffix :=
+    %suffix (* -ɖa) (* -ra) (* -nu)
+
+Make pluralization obligatory:
+
+    inflected :+ [ ...,
+        NOMINAL-PLURALIZATION-FLAG luk ].
+
+    infl-satisfied :+ [ ...,
+        NOMINAL-PLURALIZATION-FLAG na-or-+ ].
+
+    COMMON-NOUNS-noun-lex := noun-lex & CASE-POSITION-CLASS-rule-dtr &
+    POSSESSIVE-POSITION-CLASS-rule-dtr &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd,
+        INFLECTED [ NOMINAL-PLURALIZATION-FLAG -,
+                    CASE-POSITION-CLASS-FLAG -,
+                    POSSESSIVE-POSITION-CLASS-FLAG - ] ].
+
+    nominal-PLURALIZATION-lex-rule-super := CASE-POSITION-CLASS-rule-dtr &
+    POSSESSIVE-POSITION-CLASS-rule-dtr & add-only-no-ccont-rule &
+      [ INFLECTED [ NOMINAL-PLURALIZATION-FLAG +,
+                    ... ],
+        DTR COMMON-NOUNS-noun-lex &
+            [ INFLECTED [ ... ] ] ].
+
+    make_nominal_plurals-lex-rule := infl-lex-rule & nominal-PLURALIZATION-lex-rule-super &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM pl ].
+
+    make_duals-lex-rule := infl-lex-rule & nominal-PLURALIZATION-lex-rule-super &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM du ].
+
+    make_sg-lex-rule := const-lex-rule & nominal-PLURALIZATION-lex-rule-super &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM sg ].
+
+    make_sg-lex := make_sg-lex-rule. in lrules
+
+Add causative valence changing strategy to prevent it from freely attaching to
+verbs:
+    CAU-marker-lex-rule := Aspect-POSITION-CLASS-lex-rule-super &
+    causative-to-arg2-itr-op-lex-rule & same-non-local-lex-rule &
+      [ C-CONT.RELS.LIST < [ PRED "_CAU_v_rel" ] > ].
+
+    defined: causative-to-arg2-itr-op-lex-rule and scopal-rel-lex-rule.
+
+Negation:
+    main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
+    GENITIVIZATION-or-NOMINALIZATION-rule-dtr &
+    HEARSAY-Marking-Position-Class-rule-dtr &
+    MOOD-Position-Class-rule-dtr & NEGATION-position-class-rule-dtr &
+      TENSE+ROLE-position-class-rule-dtr & need-to-add-mood-rule-dtr &
+      [ INFLECTED [ TENSE+ROLE-POSITION-CLASS-FLAG -
+                    ;ADD-NEGATION-TO-VERB-FLAG na-or--
+                    ],
+        SYNSEM [ ... ],
+        ARG-ST.FIRST #subj &
+                     [ ... ] ].
+
+feature resolution in NP coordination:
+    3pl-3pl-3pl-pernum-coord-rule := coord-phrase &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+        LCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl,
+        RCOORD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3pl ].
+    np2-3pl-3pl-3pl-top-coord-rule := basic-np-top-coord-rule &
+    apoly-top-coord-rule & 3pl-3pl-3pl-pernum-coord-rule &
+      [ SYNSEM.LOCAL [ CAT.HEAD.CASE #case,
+                       COORD-STRAT "2" ],
+        RCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case,
+        LCOORD-DTR.SYNSEM.LOCAL.CAT.HEAD.CASE #case ].
+
+vp-coord?
 --------------------------------------------------------------------------------
 Sources of residual ambiguity
 --------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 #team todo
 
+=======
+>>>>>>> Stashed changes
 
 
 --------------------------------------------------------------------------------
