@@ -1,72 +1,20 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
-1st-Person-Possessive-prefix1 :=
-%prefix (* a-)
+1st-Person-Possessive-prefix :=
+%prefix (* a-) (* ama-) (* aki-) (* akima-) (* aʦi-)
 1st-Person-Possessive-lex-rule.
 
-1st-Person-Possessive-prefix2 :=
-%prefix (* ama-)
-1st-Person-Possessive-lex-rule.
-
-1st-Person-Possessive-prefix3 :=
-%prefix (* aki-)
-1st-Person-Possessive-lex-rule.
-
-1st-Person-Possessive-prefix4 :=
-%prefix (* akima-)
-1st-Person-Possessive-lex-rule.
-
-1st-Person-Possessive-prefix5 :=
-%prefix (* aʦi-)
-1st-Person-Possessive-lex-rule.
-
-2nd-Person-Possessive-prefix1 :=
-%prefix (* i-)
+2nd-Person-Possessive-prefix :=
+%prefix (* i-) (* ini-) (* ima-) (* inima-) (* iʦi-)
 2nd-Person-Possessive-lex-rule.
 
-2nd-Person-Possessive-prefix2 :=
-%prefix (* ini-)
-2nd-Person-Possessive-lex-rule.
-
-2nd-Person-Possessive-prefix3 :=
-%prefix (* ima-)
-2nd-Person-Possessive-lex-rule.
-
-2nd-Person-Possessive-prefix4 :=
-%prefix (* inima-)
-2nd-Person-Possessive-lex-rule.
-
-2nd-Person-Possessive-prefix5 :=
-%prefix (* iʦi-)
-2nd-Person-Possessive-lex-rule.
-
-3rd-Person-Possessive-prefix1 :=
-%prefix (* u-)
+3rd-Person-Possessive-prefix :=
+%prefix (* u-) (* uni-) (* uma-) (* unima-) (* uʦi-)
 3rd-Person-Possessive-lex-rule.
 
-3rd-Person-Possessive-prefix2 :=
-%prefix (* uni-)
-3rd-Person-Possessive-lex-rule.
-
-3rd-Person-Possessive-prefix3 :=
-%prefix (* uma-)
-3rd-Person-Possessive-lex-rule.
-
-3rd-Person-Possessive-prefix4 :=
-%prefix (* unima-)
-3rd-Person-Possessive-lex-rule.
-
-3rd-Person-Possessive-prefix5 :=
-%prefix (* uʦi-)
-3rd-Person-Possessive-lex-rule.
-
-1st-person-possessive-plural-inclusive-prefix1 :=
-%prefix (* iki-)
-1st-person-possessive-plural-inclusive-lex-rule.
-
-1st-person-possessive-plural-inclusive-prefix2 :=
-%prefix (* ikima-)
+1st-person-possessive-plural-inclusive-prefix :=
+%prefix (* iki-) (* ikima-)
 1st-person-possessive-plural-inclusive-lex-rule.
 
 make_nominal_plurals-suffix :=
