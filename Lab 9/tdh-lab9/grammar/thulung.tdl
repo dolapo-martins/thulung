@@ -580,7 +580,9 @@ subj-raise-aux-no-pred := subj-raise-aux & raise-sem-lex-item &
 
 ;;; parent type of the traditional copula(s)
 cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
+  [ 
+    INFLECTED [ COPULA-NPST-PERNUM-MARKER-FLAG -],
+    SYNSEM.LOCAL [ CAT.VAL [ SUBJ < #subj >,
                              COMPS < #comps >,
                              SPR < >,
                              SPEC < > ],
