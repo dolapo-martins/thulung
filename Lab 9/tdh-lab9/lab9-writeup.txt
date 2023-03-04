@@ -6,8 +6,20 @@ Zoe Fang
 --------------------------------------------------------------------------------
 Description of MRS refinement
 --------------------------------------------------------------------------------
-#Dolapo Todo
+In Lab 8, we worked on harmonizing our MRSes for sentences that were possible in Thulung. As such, we didn't need to make many changes in Lab 9 to harmonize the MRSes. The changes we needed to make were related to the semi.vpm.
 
+We added 
+no-mood: mood in our thulung.tdl file
+Then we changed our mood section in semi.vpm, keeping only irrealis mood, which is the mood we worked on for the past tense negation.
+This resulted in our semi.vpm section going from 
+
+to,
+    E.MOOD : MOOD
+    IRR <> IRR
+    ;  IMP >> *
+    ;  OBL >> *
+    * >> no-mood
+    no-mood << [e]
 --------------------------------------------------------------------------------
 Description of changes made to constrain overgeneration
 --------------------------------------------------------------------------------
